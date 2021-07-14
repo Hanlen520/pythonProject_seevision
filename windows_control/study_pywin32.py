@@ -96,11 +96,11 @@ if __name__ == '__main__':
     # SimpleFileDemo()
     # open_program()
     # find_handle()
-    # show_all_handle()
+    show_all_handle()
     # put_handle_on_top(find_handle())
     # sleep(2)
     # monitor_keyboard_input()
     # while True:
     #     sleep(1)
     #     monitor_mouse_input()
-    monitor_mouse_keyboard_input()
+    # monitor_mouse_keyboard_input()
