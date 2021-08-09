@@ -5,7 +5,6 @@ import multiprocessing
 import os
 import random
 import subprocess
-import sys
 
 from airtest.core.android.adb import ADB
 
