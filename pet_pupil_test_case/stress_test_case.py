@@ -86,11 +86,7 @@ def stress_webcam_test(device, poco, test_times=1000):
                 poco(text="OK").wait().click()
                 sleep(3)
             sleep(5)
-            test_result = exists(Template(
-                r"tpl1626862299337.png",
-                record_pos=(
-                    -0.385, -0.989),
-                resolution=(720, 1640)))
+            test_result = exists(Template(r"tpl1628944649838.png", record_pos=(-0.015, -0.426), resolution=(720, 1640)))
             print("Test times is：{} -- Check whether picture exists and result is {}".format(str(i), test_result))
             csv_result.append([i, cur_time, test_result])
             sleep(1)
@@ -122,7 +118,7 @@ if __name__ == '__main__':
     poco = init_item[0]
 
     test_pool = multiprocessing.Pool(2)
-    test_pool.apply_async(func=stress_webcam_test(device, poco, 5))
+    test_pool.apply_async(func=stress_webcam_test(device, poco, 101))
     # test_pool.apply_async(func=log_process)
     test_pool.close()
     test_pool.join()

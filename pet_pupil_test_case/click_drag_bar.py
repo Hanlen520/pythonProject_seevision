@@ -121,7 +121,7 @@ def seekbar_tap_stable_test(device_):
                                                                      seekbar_right_point_x, seekbar_right_point_y))
         screen_width = device.display_info["width"]
         screen_height = device.display_info["height"]
-        for i in range(5000):
+        for i in range(200):
             print("This is {} times test!".format(i + 1))
             x = random.uniform(seekbar_left_point_x, seekbar_right_point_x) * (screen_width)
             y = random.uniform(seekbar_left_point_y, seekbar_right_point_y) * (screen_height)

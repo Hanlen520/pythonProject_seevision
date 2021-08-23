@@ -1,0 +1,17 @@
+case1 run in ubuntu:
+1.kill all svc process:
+ps -ef | grep svc | grep -v grep |awk '{print $2}' | xargs kill -9
+
+2.run shell in ubuntu:
+sudo apt-get install dos2unix
+dos2unix case1.sh
+./case1.sh
+
+3.check all svc process:
+ps -ef | grep svc | grep -v grep
+
+case 3 run in camera system:
+1.use filezilla put run_simulation.sh into camera system
+2.open a terminal to run sdk
+3.execute sh run_simulation.sh in camera system
+
