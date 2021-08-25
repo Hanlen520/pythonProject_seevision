@@ -37,32 +37,32 @@ def stress_test(device, poco, test_times=1000):
     try:
         for i in range(i, test_times):
             # device.start_app(cur_test_app)
-            sleep(6)
+            sleep(3)
             poco(text="它物云门店").wait().click()
-            sleep(5)
+            sleep(2)
             poco(text=">>模拟采集").wait().click()
-            sleep(5)
+            sleep(2)
             poco(text="激活").wait().click()
-            sleep(5)
+            sleep(2)
 
             poco(text="开始采集").wait().click()
-            sleep(15)
+            sleep(8)
             if poco(text="OK").wait().exists():
                 poco(text="OK").wait().click()
-                sleep(6)
+                sleep(3)
             if poco(text="OK").wait().exists():
                 poco(text="OK").wait().click()
-                sleep(6)
+                sleep(3)
             test_result = assert_exists(Template(r"tpl1629811182456.png", record_pos=(0.178, 0.102), resolution=(1640, 720)), "请填写测试点")
             print("Test times is：{} -- Check whether picture exists and result is {}".format(str(i), test_result))
             csv_result.append([i, cur_time, test_result])
-            sleep(6)
+            sleep(3)
             device.keyevent("BACK")
-            sleep(4)
+            sleep(2)
             device.keyevent("BACK")
-            sleep(4)
+            sleep(2)
             device.keyevent("BACK")
-            sleep(4)
+            sleep(2)
     except Exception as ex:
         print("Current test is happened error, please check and error code is :{}".format(str(ex)))
     finally:
