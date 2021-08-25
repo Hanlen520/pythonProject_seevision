@@ -10,6 +10,7 @@ import pyautogui
 os.path.abspath(".")
 
 import uiautomation
+import pandas as pd
 
 """
     绝大多数Windows软件的自动化控件操作等可以用uiautomation库来实现：
@@ -31,6 +32,20 @@ def enterDeviceSettings():
     potplayer_frame = uiautomation.WindowControl(searchDepth=1, Name="PotPlayer")
     pyautogui.hotkey("alt", "d")
     settings_frame = uiautomation.WindowControl(searchDepth=2, Name="设备设置")
+
+
+formatList = []
+
+
+def getFormatList():
+    settings_frame.ComboBoxControl(AutomationId="3008").Click()
+    sleep(1)
+    format_list = settings_frame.ListControl(searchDepth=5, Name="格式：")
+    all_format = format_list.GetChildren()
+    for format in all_format:
+        # print(format.Name)
+        formatList.append(format.Name)
+    return formatList
 
 
 def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
@@ -61,18 +76,51 @@ def getPlayerInformation():
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
-    print("当前分辨率帧率为：{}".format(current_frameRate))
-    print("当前分辨率位率为：{}".format(current_bitRate))
+    print("帧率：{}".format(current_frameRate), end=" -- ")
+    print("位率：{}".format(current_bitRate))
+    return current_bitRate, current_bitRate
 
 
 def closePotplayer():
     potplayer.kill()
 
 
-if __name__ == '__main__':
-    for i in range(3):
-        openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe")
-        enterDeviceSettings()
-        switchResolution("YUY2 960×540P 30(P 16:9)")
-        getPlayerInformation()
+def firstResultAnalysis(result_list=[]):
+    resolution_list = []
+    frame_rate_list = []
+    bit_rate_list = []
+    for result in result_list:
+        resolution_list.append(result[0])
+        frame_rate_list.append(result[1])
+        bit_rate_list.append(result[2])
+    df = pd.DataFrame({"分辨率": resolution_list, "帧率": frame_rate_list, "位率": bit_rate_list})
+    df.to_excel("./resolutionTest.xlsx")
+
+
+def getFirstStandardData():
+    try:
+        result_list = []
+        for i in range(1):
+            openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe")
+            enterDeviceSettings()
+            all_format = getFormatList()
+            closePotplayer()
+            for j in range(1, len(all_format)):
+                resolution_now = all_format[j]
+                print("当前测试分辨率为：{}".format(resolution_now))
+                openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe")
+                enterDeviceSettings()
+                switchResolution(resolution_now)
+                list_cur = getPlayerInformation()
+                closePotplayer()
+                result_list.append([resolution_now, list_cur[0], list_cur[1]])
+                firstResultAnalysis(result_list)
+    except Exception as ex:
+        print("Some error happened : {}".format(str(ex)))
+    finally:
+        firstResultAnalysis(result_list)
         closePotplayer()
+
+
+if __name__ == '__main__':
+    getFirstStandardData()
