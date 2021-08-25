@@ -37,32 +37,32 @@ def stress_test(device, poco, test_times=1000):
     try:
         for i in range(i, test_times):
             # device.start_app(cur_test_app)
-            sleep(3)
+            sleep(6)
             poco(text="它物云门店").wait().click()
-            sleep(1)
+            sleep(5)
             poco(text=">>模拟采集").wait().click()
-            sleep(1)
+            sleep(5)
             poco(text="激活").wait().click()
-            sleep(3)
+            sleep(5)
 
             poco(text="开始采集").wait().click()
-            sleep(10)
+            sleep(15)
             if poco(text="OK").wait().exists():
                 poco(text="OK").wait().click()
-                sleep(3)
+                sleep(6)
             if poco(text="OK").wait().exists():
                 poco(text="OK").wait().click()
-                sleep(3)
-            sleep(5)
-            test_result = exists(Template(
-                r"tpl1626862299337.png",
-                record_pos=(
-                    -0.385, -0.989),
-                resolution=(720, 1640)))
+                sleep(6)
+            test_result = assert_exists(Template(r"tpl1629811182456.png", record_pos=(0.178, 0.102), resolution=(1640, 720)), "请填写测试点")
             print("Test times is：{} -- Check whether picture exists and result is {}".format(str(i), test_result))
             csv_result.append([i, cur_time, test_result])
-            sleep(1)
+            sleep(6)
             device.keyevent("BACK")
+            sleep(4)
+            device.keyevent("BACK")
+            sleep(4)
+            device.keyevent("BACK")
+            sleep(4)
     except Exception as ex:
         print("Current test is happened error, please check and error code is :{}".format(str(ex)))
     finally:
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     poco = init_item[0]
 
     test_pool = multiprocessing.Pool(2)
-    test_pool.apply_async(func=stress_webcam_test(device, poco, 101))
+    test_pool.apply_async(func=stress_test(device, poco, 101))
     # test_pool.apply_async(func=log_process)
     test_pool.close()
     test_pool.join()
