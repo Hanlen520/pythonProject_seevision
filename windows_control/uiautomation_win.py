@@ -72,14 +72,19 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
 
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
-    sleep(3)
+    sleep(5)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
     print("帧率：{}".format(current_frameRate), end=" -- ")
     print("位率：{}".format(current_bitRate))
-    return current_bitRate, current_bitRate
+    print("")
+    framerate = re.findall("->(.*)", current_frameRate)[0]
+    bitrate = re.findall("\/(.*)\skbps", current_bitRate)[0]
+    return framerate, bitrate
 
+
+# 帧率：30.039 -> 29.95 -- 位率：-1.64076e+06/107628 kbps
 
 def closePotplayer():
     potplayer.kill()
@@ -97,18 +102,18 @@ def firstResultAnalysis(result_list=[]):
     df.to_excel("./resolutionTest.xlsx")
 
 
-def getFirstStandardData():
+def getFirstStandardData(potplayerPath):
     try:
         result_list = []
         for i in range(1):
-            openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe")
+            openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
             all_format = getFormatList()
             closePotplayer()
-            for j in range(1, len(all_format)):
+            for j in range(2, len(all_format)):
                 resolution_now = all_format[j]
-                print("当前测试分辨率为：{}".format(resolution_now))
-                openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe")
+                print("第{}次测试 -- 当前测试分辨率为：{}".format(str(j - 1), resolution_now))
+                openPotplayer(potplayer_path=potplayerPath)
                 enterDeviceSettings()
                 switchResolution(resolution_now)
                 list_cur = getPlayerInformation()
@@ -122,5 +127,14 @@ def getFirstStandardData():
         closePotplayer()
 
 
+def compare2StandardDataTest():
+    # 进行第二次测试，完善与第一次测试的数据比较并得出结果
+    # 完善好后，学习PyQt5，将其转换成单独的工具：
+    # 1、功能分开
+    # 2、接口独立
+    pass
+
+
 if __name__ == '__main__':
-    getFirstStandardData()
+    potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
+    getFirstStandardData(potplayerPath)
