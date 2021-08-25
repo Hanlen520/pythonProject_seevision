@@ -90,7 +90,7 @@ def closePotplayer():
     potplayer.kill()
 
 
-def firstResultAnalysis(result_list=[]):
+def firstResultAnalysis(test_number="", result_list=[]):
     resolution_list = []
     frame_rate_list = []
     bit_rate_list = []
@@ -99,32 +99,33 @@ def firstResultAnalysis(result_list=[]):
         frame_rate_list.append(result[1])
         bit_rate_list.append(result[2])
     df = pd.DataFrame({"分辨率": resolution_list, "帧率": frame_rate_list, "位率": bit_rate_list})
-    df.to_excel("./resolutionTest.xlsx")
+    df.to_excel("./第{}次测试_resolutionTest.xlsx".format(test_number))
 
 
 def getFirstStandardData(potplayerPath):
-    try:
-        result_list = []
-        for i in range(1):
+    result_list = []
+    for i in range(50):
+        try:
             openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
             all_format = getFormatList()
             closePotplayer()
             for j in range(2, len(all_format)):
                 resolution_now = all_format[j]
-                print("第{}次测试 -- 当前测试分辨率为：{}".format(str(j - 1), resolution_now))
+                print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
                 openPotplayer(potplayer_path=potplayerPath)
                 enterDeviceSettings()
                 switchResolution(resolution_now)
                 list_cur = getPlayerInformation()
                 closePotplayer()
                 result_list.append([resolution_now, list_cur[0], list_cur[1]])
-                firstResultAnalysis(result_list)
-    except Exception as ex:
-        print("Some error happened : {}".format(str(ex)))
-    finally:
-        firstResultAnalysis(result_list)
-        closePotplayer()
+        except Exception as ex:
+            print("Some error happened : {}".format(str(ex)))
+            continue
+        finally:
+            firstResultAnalysis(test_number=str(i + 1), result_list=result_list)
+            result_list = []
+            closePotplayer()
 
 
 def compare2StandardDataTest():
@@ -132,9 +133,24 @@ def compare2StandardDataTest():
     # 完善好后，学习PyQt5，将其转换成单独的工具：
     # 1、功能分开
     # 2、接口独立
+    # 第二次测试和第一次测试数据进行读取后比较，再生成一个测试结果的Excel表格 -- ongoing
     pass
+
+
+def readExcel():
+    read = pd.read_excel(io="./第1次测试_resolutionTest.xlsx", header=0, names=["分辨率", "帧率", "位率"], sheet_name="Sheet1")
+    # print(read.values)
+    for i in read.values:
+        # 分辨率
+        print(i[0])
+        # 帧率
+        print(i[1])
+        # 位率
+        print(i[2])
 
 
 if __name__ == '__main__':
     potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
     getFirstStandardData(potplayerPath)
+    # compare2StandardDataTest()
+    # readExcel()
