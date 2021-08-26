@@ -1,14 +1,19 @@
 # coding = utf8
+import csv
 import os
 from time import sleep
-import csv
+
 os.path.abspath(".")
 from PIL import Image
 import imagehash
 import uiautomator2 as u2
 import time
 import sys
+
 cur_time = time.strftime("%Y%m%d_%H%M%S")
+
+
+# 通过Uiautomator2替代poco、airtest，脚本更加稳定
 
 def result_calculate(data=[["1", "2", "3"], "1", "2", "3"], form_name="result.csv"):
     with open("./{}".format(form_name), "w", encoding="utf-8-sig") as csv_file:
@@ -21,7 +26,9 @@ def result_calculate(data=[["1", "2", "3"], "1", "2", "3"], form_name="result.cs
 
 def stress_test():
     try:
+        # wireless connect
         d = u2.connect("192.168.50.107:5555")
+        # cable connect
         # d = u2.connect("1f56d837")
         csv_result = []
         for i in range(101):

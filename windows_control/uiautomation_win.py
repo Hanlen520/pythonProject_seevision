@@ -85,11 +85,11 @@ def getPlayerInformation():
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
-    print("帧率：{}".format(current_frameRate), end=" -- ")
-    print("位率：{}".format(current_bitRate))
-    print("")
     framerate = re.findall("->(.*)", current_frameRate)[0]
     bitrate = re.findall("\/(.*)\skbps", current_bitRate)[0]
+    print("帧率：{} fps".format(framerate), end=" -- ")
+    print("位率：{} kbps".format(bitrate))
+    print("")
     return framerate, bitrate
 
 
