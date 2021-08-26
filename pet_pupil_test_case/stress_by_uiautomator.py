@@ -7,6 +7,7 @@ from PIL import Image
 import imagehash
 import uiautomator2 as u2
 import time
+import sys
 cur_time = time.strftime("%Y%m%d_%H%M%S")
 
 def result_calculate(data=[["1", "2", "3"], "1", "2", "3"], form_name="result.csv"):
@@ -47,7 +48,9 @@ def stress_test():
             print("Test times is：{} -- result is {}".format(str(i), test_result))
             csv_result.append([i, cur_time, test_result])
             d.press("back")
+            sleep(2)
             d.press("back")
+            sleep(2)
             d.press("back")
             sleep(5)
     except Exception as ex:
