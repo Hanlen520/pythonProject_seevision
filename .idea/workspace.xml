@@ -41,8 +41,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pet_pupil_test_case" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -185,6 +185,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.apc_sdk_test" />
+      <item itemvalue="Python.click_drag_bar" />
+      <item itemvalue="Python.stress_test_case" />
+      <item itemvalue="Python.study_pyautogui" />
+      <item itemvalue="Python.study_pywin32 (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.stress_test_case" />
@@ -253,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629872223312</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add SDK test automation script">
+      <created>1629872877336</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629872877336</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
