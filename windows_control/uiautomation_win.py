@@ -12,6 +12,7 @@ os.path.abspath(".")
 import uiautomation
 import pandas as pd
 import time
+import logging
 
 # 实时获取时间
 cur_time = time.strftime("%Y%m%d_%H%M%S")
@@ -22,6 +23,27 @@ cur_time = time.strftime("%Y%m%d_%H%M%S")
     2、 automation.py（搜索控件）
     3、 pyautogui模拟键盘操作，快捷键等，对于一些uiautomation搜索不到的UI控件
 """
+
+"""
+    @description:logger构建器
+    @param:
+        log_path:log生成路径
+        logging_name:log名称
+"""
+
+
+def logger_config(log_path, logging_name):
+    # 获取logger对象,取名
+    logger = logging.getLogger(logging_name)
+    logger.setLevel(logging.INFO)
+    handler = logging.FileHandler(log_path, encoding='UTF-8')
+    # 生成并设置文件日志格式
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    # 为logger对象添加句柄
+    logger.addHandler(handler)
+
+    return logger
 
 
 # 打开Potplayer，传入potplayer启动exe路径
@@ -140,27 +162,37 @@ def generateResult(checked_list=[]):
 
 # 传入potplayer启动exe路径
 def test_standard_test_data(potplayerPath):
+    if not os.path.exists("./log/"):
+        os.makedirs("./log/")
+    logger = logger_config(log_path="./log/{}_{}_{}.log".format(cur_time, "resolutionSwitchStress", "mainLog"),
+                           logging_name="resolutionSwitchStress")
     result_list = []
-    for i in range(5):
+    for i in range(2):
         try:
             openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
+            formatList = []
             all_format = getFormatList()
             closePotplayer()
             for j in range(0, len(all_format)):
                 resolution_now = all_format[j]
                 if (str(resolution_now) == "开始播放时选择格式") | (str(resolution_now) == "默认格式(推荐)"):
+                    logger.info("跳过item：{}".format(resolution_now))
                     print("跳过item：{}".format(resolution_now))
                     continue
                 else:
+                    logger.info("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
                     print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
                     openPotplayer(potplayer_path=potplayerPath)
                     enterDeviceSettings()
                     switchResolution(resolution_now)
                     list_cur = getPlayerInformation()
+                    logger.info("\t帧率：{} fps".format(list_cur[0]))
+                    logger.info("\t位率：{} kbps".format(list_cur[1]))
                     closePotplayer()
                     result_list.append([resolution_now, list_cur[0], list_cur[1]])
         except Exception as ex:
+            logger.error("Some error happened : {}".format(str(ex)))
             print("Some error happened : {}".format(str(ex)))
             closePotplayer()
             continue
@@ -242,3 +274,5 @@ if __name__ == '__main__':
     finally:
         compareResult = compare2StandardDataTest()
         generateResult(compareResult)
+    # compareResult = compare2StandardDataTest()
+    # generateResult(compareResult)
