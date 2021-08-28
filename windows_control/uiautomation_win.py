@@ -141,7 +141,7 @@ def generateResult(checked_list=[]):
 # 传入potplayer启动exe路径
 def test_standard_test_data(potplayerPath):
     result_list = []
-    for i in range(8):
+    for i in range(5):
         try:
             openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
@@ -149,10 +149,11 @@ def test_standard_test_data(potplayerPath):
             closePotplayer()
             for j in range(0, len(all_format)):
                 resolution_now = all_format[j]
-                if str(resolution_now) == "开始播放时选择格式" | str(resolution_now) == "默认格式(推荐)":
+                if (str(resolution_now) == "开始播放时选择格式") | (str(resolution_now) == "默认格式(推荐)"):
+                    print("跳过item：{}".format(resolution_now))
                     continue
                 else:
-                    print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j + 1), resolution_now))
+                    print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
                     openPotplayer(potplayer_path=potplayerPath)
                     enterDeviceSettings()
                     switchResolution(resolution_now)
@@ -161,7 +162,8 @@ def test_standard_test_data(potplayerPath):
                     result_list.append([resolution_now, list_cur[0], list_cur[1]])
         except Exception as ex:
             print("Some error happened : {}".format(str(ex)))
-            break
+            closePotplayer()
+            continue
         finally:
             standard_test_DataGenerate(test_number=str(i + 1), result_list=result_list)
             result_list = []
@@ -189,7 +191,7 @@ def compare2StandardDataTest():
                 s_bitRate = standard_result[i][2]
                 t_frame = test_result[i][1]
                 t_bitRate = test_result[i][2]
-                # 改下位率的判断分段，位率判断进行标准分段，先判断帧率，如果帧率ok，就继续判断位率，如果帧率不OK，就直接FAIL
+                # 改下位率的判断分段，位率判断进行标准分段，先判断帧率，如果帧率ok，就继续判断位率，如果帧率不OK，就直接FAIL -- To do
                 frame_gap_value = abs(s_frame - t_frame)
                 bitRate_gap_value = abs(s_bitRate - t_bitRate)
                 if frame_gap_value <= 1:
