@@ -75,13 +75,13 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
             break
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
-    sleep(1)
+    sleep(35)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
-    sleep(5)
+    sleep(30)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
@@ -118,39 +118,47 @@ def generateResult(checked_list=[]):
     s_bit_rate_list = []
     t_frame_rate_list = []
     t_bit_rate_list = []
+    frame_gap_value_list = []
+    bitRate_gap_value_list = []
     compare_result_list = []
-    # [[分辨率、标准帧率、标准位率、测试帧率、测试位率、结果]、[]、[]……]
+    # [[分辨率、标准帧率、标准位率、测试帧率、测试位率、帧率差、位率差、结果]、[]、[]……]
     for result in checked_list:
         resolution_list.append(result[0])
         s_frame_rate_list.append(result[1])
         s_bit_rate_list.append(result[2])
         t_frame_rate_list.append(result[3])
         t_bit_rate_list.append(result[4])
-        compare_result_list.append(result[5])
+        frame_gap_value_list.append(result[5])
+        bitRate_gap_value_list.append(result[6])
+        compare_result_list.append(result[7])
     df = pd.DataFrame(
         {"分辨率": resolution_list, "标准帧率": s_frame_rate_list, "标准位率": s_bit_rate_list, "测试帧率": t_frame_rate_list,
-         "测试位率": t_bit_rate_list, "测试结果": compare_result_list})
+         "测试位率": t_bit_rate_list, "帧率差": frame_gap_value_list, "位率差": bitRate_gap_value_list,
+         "测试结果": compare_result_list})
     df.to_excel("compare_result_{}.xlsx".format(str(cur_time)))
 
 
 # 传入potplayer启动exe路径
-def test_tandard_test_data(potplayerPath):
+def test_standard_test_data(potplayerPath):
     result_list = []
-    for i in range(2):
+    for i in range(8):
         try:
             openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
             all_format = getFormatList()
             closePotplayer()
-            for j in range(2, len(all_format)):
+            for j in range(0, len(all_format)):
                 resolution_now = all_format[j]
-                print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
-                openPotplayer(potplayer_path=potplayerPath)
-                enterDeviceSettings()
-                switchResolution(resolution_now)
-                list_cur = getPlayerInformation()
-                closePotplayer()
-                result_list.append([resolution_now, list_cur[0], list_cur[1]])
+                if str(resolution_now) == "开始播放时选择格式" | str(resolution_now) == "默认格式(推荐)":
+                    continue
+                else:
+                    print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j + 1), resolution_now))
+                    openPotplayer(potplayer_path=potplayerPath)
+                    enterDeviceSettings()
+                    switchResolution(resolution_now)
+                    list_cur = getPlayerInformation()
+                    closePotplayer()
+                    result_list.append([resolution_now, list_cur[0], list_cur[1]])
         except Exception as ex:
             print("Some error happened : {}".format(str(ex)))
             break
@@ -181,14 +189,22 @@ def compare2StandardDataTest():
                 s_bitRate = standard_result[i][2]
                 t_frame = test_result[i][1]
                 t_bitRate = test_result[i][2]
-                if (abs(s_frame - t_frame) <= 3) & (abs(s_bitRate - t_bitRate) <= 1000):
-                    item_result = "PASS"
-                # 每行结果拼接：[分辨率、标准帧率、标准位率、测试帧率、测试位率、结果]
+                # 改下位率的判断分段，位率判断进行标准分段，先判断帧率，如果帧率ok，就继续判断位率，如果帧率不OK，就直接FAIL
+                frame_gap_value = abs(s_frame - t_frame)
+                bitRate_gap_value = abs(s_bitRate - t_bitRate)
+                if frame_gap_value <= 1:
+                    if bitRate_gap_value <= 1000:
+                        item_result = "PASS"
+                else:
+                    item_result = "FAIL"
+                # 每行结果拼接：[分辨率、标准帧率、标准位率、测试帧率、测试位率、帧率差、位率差、结果]
                 item_list.append(standard_result[i][0])
                 item_list.append(s_frame)
                 item_list.append(s_bitRate)
                 item_list.append(t_frame)
                 item_list.append(t_bitRate)
+                item_list.append(frame_gap_value)
+                item_list.append(bitRate_gap_value)
                 item_list.append(item_result)
             checked_list.append(item_list)
     else:
@@ -217,6 +233,10 @@ def readExcel(path="./第1次测试_resolutionTest.xlsx"):
 
 if __name__ == '__main__':
     potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
-    # test_tandard_test_data(potplayerPath)
-    compareResult = compare2StandardDataTest()
-    generateResult(compareResult)
+    try:
+        test_standard_test_data(potplayerPath)
+    except Exception as ex:
+        print("Main program has error please check: {}".format(str(ex)))
+    finally:
+        compareResult = compare2StandardDataTest()
+        generateResult(compareResult)
