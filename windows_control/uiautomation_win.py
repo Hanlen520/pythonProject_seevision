@@ -62,16 +62,13 @@ def enterDeviceSettings():
     settings_frame = uiautomation.WindowControl(searchDepth=2, Name="设备设置")
 
 
-# 暂存格式列表
-formatList = []
-
-
 # 获取当前摄像头支持的格式
 def getFormatList():
     settings_frame.ComboBoxControl(AutomationId="3008").Click()
     sleep(1)
     format_list = settings_frame.ListControl(searchDepth=5, Name="格式：")
     all_format = format_list.GetChildren()
+    formatList = []
     for format in all_format:
         formatList.append(format.Name)
     return formatList
@@ -97,13 +94,13 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
             break
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
-    sleep(35)
+    sleep(5)  # sleep(30)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
-    sleep(30)
+    sleep(5)  # sleep(30)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
@@ -266,6 +263,7 @@ def readExcel(path="./第1次测试_resolutionTest.xlsx"):
 
 
 if __name__ == '__main__':
+    sleep(3)
     potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
     try:
         test_standard_test_data(potplayerPath)
