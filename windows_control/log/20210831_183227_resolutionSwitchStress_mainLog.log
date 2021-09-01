@@ -1,0 +1,1776 @@
+2021-08-31 18:32:35,439 - resolutionSwitchStress - INFO - 跳过item：开始播放时选择格式
+2021-08-31 18:32:35,439 - resolutionSwitchStress - INFO - 跳过item：默认格式(推荐)
+2021-08-31 18:32:35,439 - resolutionSwitchStress - INFO - 第1轮1次测试 -- 当前测试分辨率为：YUY2 640×360 30
+2021-08-31 18:33:43,525 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-08-31 18:33:43,526 - resolutionSwitchStress - INFO - 	位率：105222 kbps
+2021-08-31 18:33:43,526 - resolutionSwitchStress - INFO - 第1轮2次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2021-08-31 18:34:50,997 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-08-31 18:34:50,999 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 18:34:50,999 - resolutionSwitchStress - INFO - 第1轮3次测试 -- 当前测试分辨率为：YUY2 160×90 30
+2021-08-31 18:35:59,141 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 18:35:59,141 - resolutionSwitchStress - INFO - 	位率：7144 kbps
+2021-08-31 18:35:59,141 - resolutionSwitchStress - INFO - 第1轮4次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
+2021-08-31 18:37:07,275 - resolutionSwitchStress - INFO - 	帧率： 29.91 fps
+2021-08-31 18:37:07,276 - resolutionSwitchStress - INFO - 	位率：7256 kbps
+2021-08-31 18:37:07,276 - resolutionSwitchStress - INFO - 第1轮5次测试 -- 当前测试分辨率为：YUY2 160×120 30
+2021-08-31 18:38:15,433 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 18:38:15,433 - resolutionSwitchStress - INFO - 	位率：9675 kbps
+2021-08-31 18:38:15,433 - resolutionSwitchStress - INFO - 第1轮6次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)
+2021-08-31 18:39:23,581 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-08-31 18:39:23,581 - resolutionSwitchStress - INFO - 	位率：9675 kbps
+2021-08-31 18:39:23,582 - resolutionSwitchStress - INFO - 第1轮7次测试 -- 当前测试分辨率为：YUY2 176×144 30
+2021-08-31 18:40:31,715 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-08-31 18:40:31,715 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-08-31 18:40:31,716 - resolutionSwitchStress - INFO - 第1轮8次测试 -- 当前测试分辨率为：YUY2 176×144P 30(P 11:9)
+2021-08-31 18:41:39,822 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 18:41:39,822 - resolutionSwitchStress - INFO - 	位率：12771 kbps
+2021-08-31 18:41:39,823 - resolutionSwitchStress - INFO - 第1轮9次测试 -- 当前测试分辨率为：YUY2 320×180 30
+2021-08-31 18:42:47,947 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 18:42:47,948 - resolutionSwitchStress - INFO - 	位率：28604 kbps
+2021-08-31 18:42:47,948 - resolutionSwitchStress - INFO - 第1轮10次测试 -- 当前测试分辨率为：YUY2 320×180P 30(P 16:9)
+2021-08-31 18:43:56,091 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 18:43:56,091 - resolutionSwitchStress - INFO - 	位率：28119 kbps
+2021-08-31 18:43:56,092 - resolutionSwitchStress - INFO - 第1轮11次测试 -- 当前测试分辨率为：YUY2 320×240 30
+2021-08-31 18:45:04,287 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 18:45:04,287 - resolutionSwitchStress - INFO - 	位率：38139 kbps
+2021-08-31 18:45:04,287 - resolutionSwitchStress - INFO - 第1轮12次测试 -- 当前测试分辨率为：YUY2 320×240P 30(P 4:3)
+2021-08-31 18:46:12,447 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 18:46:12,447 - resolutionSwitchStress - INFO - 	位率：37492 kbps
+2021-08-31 18:46:12,447 - resolutionSwitchStress - INFO - 第1轮13次测试 -- 当前测试分辨率为：YUY2 352×288 30
+2021-08-31 18:47:20,572 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 18:47:20,572 - resolutionSwitchStress - INFO - 	位率：51137 kbps
+2021-08-31 18:47:20,573 - resolutionSwitchStress - INFO - 第1轮14次测试 -- 当前测试分辨率为：YUY2 352×288P 30(P 11:9)
+2021-08-31 18:48:28,746 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 18:48:28,746 - resolutionSwitchStress - INFO - 	位率：50295 kbps
+2021-08-31 18:48:28,747 - resolutionSwitchStress - INFO - 第1轮15次测试 -- 当前测试分辨率为：YUY2 480×270 30
+2021-08-31 18:49:36,899 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 18:49:36,900 - resolutionSwitchStress - INFO - 	位率：64360 kbps
+2021-08-31 18:49:36,900 - resolutionSwitchStress - INFO - 第1轮16次测试 -- 当前测试分辨率为：YUY2 480×270P 30(P 16:9)
+2021-08-31 18:50:45,055 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 18:50:45,055 - resolutionSwitchStress - INFO - 	位率：63331 kbps
+2021-08-31 18:50:45,056 - resolutionSwitchStress - INFO - 第1轮17次测试 -- 当前测试分辨率为：YUY2 640×480 30
+2021-08-31 18:51:53,179 - resolutionSwitchStress - INFO - 	帧率： 27.63 fps
+2021-08-31 18:51:53,179 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-08-31 18:51:53,179 - resolutionSwitchStress - INFO - 第1轮18次测试 -- 当前测试分辨率为：YUY2 640×480P 30(P 4:3)
+2021-08-31 18:53:01,340 - resolutionSwitchStress - INFO - 	帧率： 27.83 fps
+2021-08-31 18:53:01,340 - resolutionSwitchStress - INFO - 	位率：140296 kbps
+2021-08-31 18:53:01,340 - resolutionSwitchStress - INFO - 第1轮19次测试 -- 当前测试分辨率为：YUY2 800×600 30
+2021-08-31 18:54:09,505 - resolutionSwitchStress - INFO - 	帧率： 20.3 fps
+2021-08-31 18:54:09,505 - resolutionSwitchStress - INFO - 	位率：166299 kbps
+2021-08-31 18:54:09,506 - resolutionSwitchStress - INFO - 第1轮20次测试 -- 当前测试分辨率为：YUY2 800×600P 30(P 4:3)
+2021-08-31 18:55:17,629 - resolutionSwitchStress - INFO - 	帧率： 20.24 fps
+2021-08-31 18:55:17,629 - resolutionSwitchStress - INFO - 	位率：163720 kbps
+2021-08-31 18:55:17,629 - resolutionSwitchStress - INFO - 第1轮21次测试 -- 当前测试分辨率为：YUY2 960×540 30
+2021-08-31 18:56:25,825 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-08-31 18:56:25,825 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-08-31 18:56:25,826 - resolutionSwitchStress - INFO - 第1轮22次测试 -- 当前测试分辨率为：YUY2 960×540P 30(P 16:9)
+2021-08-31 18:57:33,994 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-08-31 18:57:33,994 - resolutionSwitchStress - INFO - 	位率：166522 kbps
+2021-08-31 18:57:33,995 - resolutionSwitchStress - INFO - 第1轮23次测试 -- 当前测试分辨率为：MJPG 1920×1080 30
+2021-08-31 18:58:42,170 - resolutionSwitchStress - INFO - 	帧率： 29.7 fps
+2021-08-31 18:58:42,171 - resolutionSwitchStress - INFO - 	位率：121772 kbps
+2021-08-31 18:58:42,171 - resolutionSwitchStress - INFO - 第1轮24次测试 -- 当前测试分辨率为：MJPG 1920×1080P 30(P 16:9)
+2021-08-31 18:59:50,356 - resolutionSwitchStress - INFO - 	帧率： 29.6 fps
+2021-08-31 18:59:50,356 - resolutionSwitchStress - INFO - 	位率：123684 kbps
+2021-08-31 18:59:50,356 - resolutionSwitchStress - INFO - 第1轮25次测试 -- 当前测试分辨率为：MJPG 160×90 30
+2021-08-31 19:00:58,526 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 19:00:58,526 - resolutionSwitchStress - INFO - 	位率：1742 kbps
+2021-08-31 19:00:58,526 - resolutionSwitchStress - INFO - 第1轮26次测试 -- 当前测试分辨率为：MJPG 160×90P 30(P 16:9)
+2021-08-31 19:02:06,749 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 19:02:06,749 - resolutionSwitchStress - INFO - 	位率：1763 kbps
+2021-08-31 19:02:06,749 - resolutionSwitchStress - INFO - 第1轮27次测试 -- 当前测试分辨率为：MJPG 160×120 30
+2021-08-31 19:03:15,022 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:03:15,022 - resolutionSwitchStress - INFO - 	位率：2010 kbps
+2021-08-31 19:03:15,023 - resolutionSwitchStress - INFO - 第1轮28次测试 -- 当前测试分辨率为：MJPG 160×120P 30(P 4:3)
+2021-08-31 19:04:23,311 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:04:23,311 - resolutionSwitchStress - INFO - 	位率：2058 kbps
+2021-08-31 19:04:23,311 - resolutionSwitchStress - INFO - 第1轮29次测试 -- 当前测试分辨率为：MJPG 176×144 30
+2021-08-31 19:05:32,529 - resolutionSwitchStress - INFO - 	帧率： 30.03 fps
+2021-08-31 19:05:32,529 - resolutionSwitchStress - INFO - 	位率：2606 kbps
+2021-08-31 19:05:32,530 - resolutionSwitchStress - INFO - 第1轮30次测试 -- 当前测试分辨率为：MJPG 176×144P 30(P 11:9)
+2021-08-31 19:06:41,779 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:06:41,779 - resolutionSwitchStress - INFO - 	位率：2666 kbps
+2021-08-31 19:06:41,779 - resolutionSwitchStress - INFO - 第1轮31次测试 -- 当前测试分辨率为：MJPG 320×180 30
+2021-08-31 19:07:51,130 - resolutionSwitchStress - INFO - 	帧率： 29.59 fps
+2021-08-31 19:07:51,130 - resolutionSwitchStress - INFO - 	位率：5103 kbps
+2021-08-31 19:07:51,131 - resolutionSwitchStress - INFO - 第1轮32次测试 -- 当前测试分辨率为：MJPG 320×180P 30(P 16:9)
+2021-08-31 19:09:00,430 - resolutionSwitchStress - INFO - 	帧率： 29.91 fps
+2021-08-31 19:09:00,430 - resolutionSwitchStress - INFO - 	位率：5283 kbps
+2021-08-31 19:09:00,431 - resolutionSwitchStress - INFO - 第1轮33次测试 -- 当前测试分辨率为：MJPG 320×240 30
+2021-08-31 19:10:09,696 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:10:09,696 - resolutionSwitchStress - INFO - 	位率：6578 kbps
+2021-08-31 19:10:09,696 - resolutionSwitchStress - INFO - 第1轮34次测试 -- 当前测试分辨率为：MJPG 320×240P 30(P 4:3)
+2021-08-31 19:11:19,056 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 19:11:19,056 - resolutionSwitchStress - INFO - 	位率：6919 kbps
+2021-08-31 19:11:19,056 - resolutionSwitchStress - INFO - 第1轮35次测试 -- 当前测试分辨率为：MJPG 352×288 30
+2021-08-31 19:12:28,368 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:12:28,368 - resolutionSwitchStress - INFO - 	位率：8849 kbps
+2021-08-31 19:12:28,369 - resolutionSwitchStress - INFO - 第1轮36次测试 -- 当前测试分辨率为：MJPG 352×288P 30(P 11:9)
+2021-08-31 19:13:37,706 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:13:37,706 - resolutionSwitchStress - INFO - 	位率：9703 kbps
+2021-08-31 19:13:37,706 - resolutionSwitchStress - INFO - 第1轮37次测试 -- 当前测试分辨率为：MJPG 480×270 30
+2021-08-31 19:14:47,071 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 19:14:47,071 - resolutionSwitchStress - INFO - 	位率：12387 kbps
+2021-08-31 19:14:47,071 - resolutionSwitchStress - INFO - 第1轮38次测试 -- 当前测试分辨率为：MJPG 480×270P 30(P 16:9)
+2021-08-31 19:15:56,780 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 19:15:56,780 - resolutionSwitchStress - INFO - 	位率：12372 kbps
+2021-08-31 19:15:56,781 - resolutionSwitchStress - INFO - 第1轮39次测试 -- 当前测试分辨率为：MJPG 640×360 30
+2021-08-31 19:17:06,433 - resolutionSwitchStress - INFO - 	帧率： 29.85 fps
+2021-08-31 19:17:06,433 - resolutionSwitchStress - INFO - 	位率：18906 kbps
+2021-08-31 19:17:06,434 - resolutionSwitchStress - INFO - 第1轮40次测试 -- 当前测试分辨率为：MJPG 640×360P 30(P 16:9)
+2021-08-31 19:18:15,405 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:18:15,405 - resolutionSwitchStress - INFO - 	位率：19092 kbps
+2021-08-31 19:18:15,405 - resolutionSwitchStress - INFO - 第1轮41次测试 -- 当前测试分辨率为：MJPG 640×480 30
+2021-08-31 19:19:25,127 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:19:25,127 - resolutionSwitchStress - INFO - 	位率：24544 kbps
+2021-08-31 19:19:25,127 - resolutionSwitchStress - INFO - 第1轮42次测试 -- 当前测试分辨率为：MJPG 640×480P 30(P 4:3)
+2021-08-31 19:20:34,814 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:20:34,814 - resolutionSwitchStress - INFO - 	位率：24492 kbps
+2021-08-31 19:20:34,814 - resolutionSwitchStress - INFO - 第1轮43次测试 -- 当前测试分辨率为：MJPG 800×600 30
+2021-08-31 19:21:44,486 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-08-31 19:21:44,486 - resolutionSwitchStress - INFO - 	位率：39655 kbps
+2021-08-31 19:21:44,487 - resolutionSwitchStress - INFO - 第1轮44次测试 -- 当前测试分辨率为：MJPG 800×600P 30(P 4:3)
+2021-08-31 19:22:54,214 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 19:22:54,214 - resolutionSwitchStress - INFO - 	位率：36918 kbps
+2021-08-31 19:22:54,214 - resolutionSwitchStress - INFO - 第1轮45次测试 -- 当前测试分辨率为：MJPG 960×540 30
+2021-08-31 19:24:03,911 - resolutionSwitchStress - INFO - 	帧率： 29.52 fps
+2021-08-31 19:24:03,911 - resolutionSwitchStress - INFO - 	位率：43243 kbps
+2021-08-31 19:24:03,911 - resolutionSwitchStress - INFO - 第1轮46次测试 -- 当前测试分辨率为：MJPG 960×540P 30(P 16:9)
+2021-08-31 19:25:13,667 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 19:25:13,667 - resolutionSwitchStress - INFO - 	位率：44451 kbps
+2021-08-31 19:25:13,667 - resolutionSwitchStress - INFO - 第1轮47次测试 -- 当前测试分辨率为：MJPG 1024×576 30
+2021-08-31 19:26:23,435 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:26:23,435 - resolutionSwitchStress - INFO - 	位率：32780 kbps
+2021-08-31 19:26:23,436 - resolutionSwitchStress - INFO - 第1轮48次测试 -- 当前测试分辨率为：MJPG 1024×576P 30(P 16:9)
+2021-08-31 19:27:33,226 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 19:27:33,226 - resolutionSwitchStress - INFO - 	位率：33911 kbps
+2021-08-31 19:27:33,226 - resolutionSwitchStress - INFO - 第1轮49次测试 -- 当前测试分辨率为：MJPG 1280×720 30
+2021-08-31 19:28:42,978 - resolutionSwitchStress - INFO - 	帧率： 29.79 fps
+2021-08-31 19:28:42,978 - resolutionSwitchStress - INFO - 	位率：51603 kbps
+2021-08-31 19:28:42,979 - resolutionSwitchStress - INFO - 第1轮50次测试 -- 当前测试分辨率为：MJPG 1280×720P 30(P 16:9)
+2021-08-31 19:29:53,075 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 19:29:53,075 - resolutionSwitchStress - INFO - 	位率：50387 kbps
+2021-08-31 19:29:53,075 - resolutionSwitchStress - INFO - 第1轮51次测试 -- 当前测试分辨率为：MJPG 2560×1440 30
+2021-08-31 19:31:03,247 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 19:31:03,247 - resolutionSwitchStress - INFO - 	位率：121198 kbps
+2021-08-31 19:31:03,247 - resolutionSwitchStress - INFO - 第1轮52次测试 -- 当前测试分辨率为：MJPG 2560×1440P 30(P 16:9)
+2021-08-31 19:32:13,370 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:32:13,370 - resolutionSwitchStress - INFO - 	位率：122749 kbps
+2021-08-31 19:32:13,371 - resolutionSwitchStress - INFO - 第1轮53次测试 -- 当前测试分辨率为：MJPG 3840×2160 30
+2021-08-31 19:33:23,471 - resolutionSwitchStress - INFO - 	帧率： 25.76 fps
+2021-08-31 19:33:23,471 - resolutionSwitchStress - INFO - 	位率：148519 kbps
+2021-08-31 19:33:23,471 - resolutionSwitchStress - INFO - 第1轮54次测试 -- 当前测试分辨率为：MJPG 3840×2160P 30(P 16:9)
+2021-08-31 19:34:33,590 - resolutionSwitchStress - INFO - 	帧率： 26.11 fps
+2021-08-31 19:34:33,590 - resolutionSwitchStress - INFO - 	位率：150894 kbps
+2021-08-31 19:34:33,590 - resolutionSwitchStress - INFO - 第1轮55次测试 -- 当前测试分辨率为：H264 1920×1080 30
+2021-08-31 19:35:43,704 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 19:35:43,704 - resolutionSwitchStress - INFO - 	位率：12861 kbps
+2021-08-31 19:35:43,705 - resolutionSwitchStress - INFO - 第1轮56次测试 -- 当前测试分辨率为：H264 1920×1080P 30(P 16:9)
+2021-08-31 19:36:53,824 - resolutionSwitchStress - INFO - 	帧率： 29.69 fps
+2021-08-31 19:36:53,825 - resolutionSwitchStress - INFO - 	位率：12501 kbps
+2021-08-31 19:36:53,825 - resolutionSwitchStress - INFO - 第1轮57次测试 -- 当前测试分辨率为：H264 1280×720 30
+2021-08-31 19:38:03,982 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 19:38:03,982 - resolutionSwitchStress - INFO - 	位率：6986 kbps
+2021-08-31 19:38:03,982 - resolutionSwitchStress - INFO - 第1轮58次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2021-08-31 19:39:14,208 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 19:39:14,208 - resolutionSwitchStress - INFO - 	位率：7769 kbps
+2021-08-31 19:39:14,208 - resolutionSwitchStress - INFO - 第1轮59次测试 -- 当前测试分辨率为：H264 1024×576 30
+2021-08-31 19:40:24,519 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-08-31 19:40:24,519 - resolutionSwitchStress - INFO - 	位率：3822 kbps
+2021-08-31 19:40:24,519 - resolutionSwitchStress - INFO - 第1轮60次测试 -- 当前测试分辨率为：H264 1024×576P 30(P 16:9)
+2021-08-31 19:41:34,768 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:41:34,768 - resolutionSwitchStress - INFO - 	位率：3976 kbps
+2021-08-31 19:41:34,768 - resolutionSwitchStress - INFO - 第1轮61次测试 -- 当前测试分辨率为：H264 960×540 30
+2021-08-31 19:42:45,092 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:42:45,092 - resolutionSwitchStress - INFO - 	位率：12960 kbps
+2021-08-31 19:42:45,093 - resolutionSwitchStress - INFO - 第1轮62次测试 -- 当前测试分辨率为：H264 960×540P 30(P 16:9)
+2021-08-31 19:43:55,662 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:43:55,662 - resolutionSwitchStress - INFO - 	位率：12700 kbps
+2021-08-31 19:43:55,662 - resolutionSwitchStress - INFO - 第1轮63次测试 -- 当前测试分辨率为：H264 800×600 30
+2021-08-31 19:45:06,213 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 19:45:06,213 - resolutionSwitchStress - INFO - 	位率：13204 kbps
+2021-08-31 19:45:06,214 - resolutionSwitchStress - INFO - 第1轮64次测试 -- 当前测试分辨率为：H264 800×600P 30(P 4:3)
+2021-08-31 19:46:16,844 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-08-31 19:46:16,845 - resolutionSwitchStress - INFO - 	位率：13011 kbps
+2021-08-31 19:46:16,845 - resolutionSwitchStress - INFO - 第1轮65次测试 -- 当前测试分辨率为：H264 640×480 30
+2021-08-31 19:47:27,352 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 19:47:27,352 - resolutionSwitchStress - INFO - 	位率：4255 kbps
+2021-08-31 19:47:27,352 - resolutionSwitchStress - INFO - 第1轮66次测试 -- 当前测试分辨率为：H264 640×480P 30(P 4:3)
+2021-08-31 19:48:37,900 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 19:48:37,900 - resolutionSwitchStress - INFO - 	位率：4287 kbps
+2021-08-31 19:48:37,900 - resolutionSwitchStress - INFO - 第1轮67次测试 -- 当前测试分辨率为：H264 640×360 30
+2021-08-31 19:49:48,600 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 19:49:48,600 - resolutionSwitchStress - INFO - 	位率：4398 kbps
+2021-08-31 19:49:48,600 - resolutionSwitchStress - INFO - 第1轮68次测试 -- 当前测试分辨率为：H264 640×360P 30(P 16:9)
+2021-08-31 19:50:59,280 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-08-31 19:50:59,280 - resolutionSwitchStress - INFO - 	位率：4275 kbps
+2021-08-31 19:50:59,280 - resolutionSwitchStress - INFO - 第1轮69次测试 -- 当前测试分辨率为：H264 480×270 30
+2021-08-31 19:52:09,908 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-08-31 19:52:09,908 - resolutionSwitchStress - INFO - 	位率：3877 kbps
+2021-08-31 19:52:09,908 - resolutionSwitchStress - INFO - 第1轮70次测试 -- 当前测试分辨率为：H264 480×270P 30(P 16:9)
+2021-08-31 19:53:20,579 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 19:53:20,579 - resolutionSwitchStress - INFO - 	位率：3837 kbps
+2021-08-31 19:53:20,580 - resolutionSwitchStress - INFO - 第1轮71次测试 -- 当前测试分辨率为：H264 352×288 30
+2021-08-31 19:54:31,355 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-08-31 19:54:31,356 - resolutionSwitchStress - INFO - 	位率：2112 kbps
+2021-08-31 19:54:31,356 - resolutionSwitchStress - INFO - 第1轮72次测试 -- 当前测试分辨率为：H264 352×288P 30(P 11:9)
+2021-08-31 19:55:42,069 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 19:55:42,069 - resolutionSwitchStress - INFO - 	位率：2167 kbps
+2021-08-31 19:55:42,070 - resolutionSwitchStress - INFO - 第1轮73次测试 -- 当前测试分辨率为：H264 320×240 30
+2021-08-31 19:56:52,883 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-08-31 19:56:52,883 - resolutionSwitchStress - INFO - 	位率：862.4 kbps
+2021-08-31 19:56:52,884 - resolutionSwitchStress - INFO - 第1轮74次测试 -- 当前测试分辨率为：H264 320×240P 30(P 4:3)
+2021-08-31 19:58:03,989 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-08-31 19:58:03,989 - resolutionSwitchStress - INFO - 	位率：1007 kbps
+2021-08-31 19:58:03,990 - resolutionSwitchStress - INFO - 第1轮75次测试 -- 当前测试分辨率为：H264 320×180 30
+2021-08-31 19:59:15,087 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 19:59:15,087 - resolutionSwitchStress - INFO - 	位率：1127 kbps
+2021-08-31 19:59:15,087 - resolutionSwitchStress - INFO - 第1轮76次测试 -- 当前测试分辨率为：H264 320×180P 30(P 16:9)
+2021-08-31 20:00:26,191 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 20:00:26,191 - resolutionSwitchStress - INFO - 	位率：1139 kbps
+2021-08-31 20:00:26,191 - resolutionSwitchStress - INFO - 第1轮77次测试 -- 当前测试分辨率为：H264 2560×1440 30
+2021-08-31 20:01:37,348 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 20:01:37,349 - resolutionSwitchStress - INFO - 	位率：17529 kbps
+2021-08-31 20:01:37,349 - resolutionSwitchStress - INFO - 第1轮78次测试 -- 当前测试分辨率为：H264 2560×1440P 30(P 16:9)
+2021-08-31 20:02:48,467 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 20:02:48,467 - resolutionSwitchStress - INFO - 	位率：17006 kbps
+2021-08-31 20:02:48,468 - resolutionSwitchStress - INFO - 第1轮79次测试 -- 当前测试分辨率为：H264 3840×2160 30
+2021-08-31 20:03:59,627 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 20:03:59,627 - resolutionSwitchStress - INFO - 	位率：17047 kbps
+2021-08-31 20:03:59,628 - resolutionSwitchStress - INFO - 第1轮80次测试 -- 当前测试分辨率为：H264 3840×2160P 30(P 16:9)
+2021-08-31 20:05:10,757 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 20:05:10,757 - resolutionSwitchStress - INFO - 	位率：18093 kbps
+2021-08-31 20:05:10,757 - resolutionSwitchStress - INFO - 第1轮81次测试 -- 当前测试分辨率为：* 640×480 29.97
+2021-08-31 20:06:21,957 - resolutionSwitchStress - INFO - 	帧率： 27.73 fps
+2021-08-31 20:06:21,957 - resolutionSwitchStress - INFO - 	位率：140296 kbps
+2021-08-31 20:06:21,958 - resolutionSwitchStress - INFO - 第1轮82次测试 -- 当前测试分辨率为：* 704×480 29.97
+2021-08-31 20:07:33,103 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:07:33,103 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:07:33,104 - resolutionSwitchStress - INFO - 第1轮83次测试 -- 当前测试分辨率为：* 720×480 29.97
+2021-08-31 20:08:44,382 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:08:44,382 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:08:44,383 - resolutionSwitchStress - INFO - 第1轮84次测试 -- 当前测试分辨率为：* 768×576 29.97
+2021-08-31 20:09:55,650 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:09:55,650 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:09:55,650 - resolutionSwitchStress - INFO - 第1轮85次测试 -- 当前测试分辨率为：* 960×540 29.97
+2021-08-31 20:11:06,946 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-08-31 20:11:06,946 - resolutionSwitchStress - INFO - 	位率：161579 kbps
+2021-08-31 20:11:06,946 - resolutionSwitchStress - INFO - 第1轮86次测试 -- 当前测试分辨率为：* 1280×720 29.97
+2021-08-31 20:12:18,212 - resolutionSwitchStress - INFO - 	帧率： 28.1 fps
+2021-08-31 20:12:18,212 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:12:18,212 - resolutionSwitchStress - INFO - 第1轮87次测试 -- 当前测试分辨率为：* 1280×768 29.97
+2021-08-31 20:13:29,579 - resolutionSwitchStress - INFO - 	帧率： 28.23 fps
+2021-08-31 20:13:29,579 - resolutionSwitchStress - INFO - 	位率：105728 kbps
+2021-08-31 20:13:29,579 - resolutionSwitchStress - INFO - 第1轮88次测试 -- 当前测试分辨率为：* 1440×900 29.97
+2021-08-31 20:14:40,904 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-08-31 20:14:40,904 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:14:40,905 - resolutionSwitchStress - INFO - 第1轮89次测试 -- 当前测试分辨率为：* 1920×1080 29.97
+2021-08-31 20:15:52,570 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-08-31 20:15:52,570 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:15:52,570 - resolutionSwitchStress - INFO - 第1轮90次测试 -- 当前测试分辨率为：* 640×480 59.94
+2021-08-31 20:17:04,252 - resolutionSwitchStress - INFO - 	帧率： 27.63 fps
+2021-08-31 20:17:04,252 - resolutionSwitchStress - INFO - 	位率：140836 kbps
+2021-08-31 20:17:04,252 - resolutionSwitchStress - INFO - 第1轮91次测试 -- 当前测试分辨率为：* 704×480 59.94
+2021-08-31 20:18:16,184 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-08-31 20:18:16,184 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:18:16,184 - resolutionSwitchStress - INFO - 第1轮92次测试 -- 当前测试分辨率为：* 720×480 59.94
+2021-08-31 20:19:27,937 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:19:27,937 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:19:27,937 - resolutionSwitchStress - INFO - 第1轮93次测试 -- 当前测试分辨率为：* 768×576 59.94
+2021-08-31 20:20:39,606 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-08-31 20:20:39,606 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 20:20:39,606 - resolutionSwitchStress - INFO - 第1轮94次测试 -- 当前测试分辨率为：* 960×540 59.94
+2021-08-31 20:21:51,371 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-08-31 20:21:51,371 - resolutionSwitchStress - INFO - 	位率：163436 kbps
+2021-08-31 20:21:51,371 - resolutionSwitchStress - INFO - 第1轮95次测试 -- 当前测试分辨率为：* 1280×720 59.94
+2021-08-31 20:23:03,140 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:23:03,140 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-08-31 20:23:03,140 - resolutionSwitchStress - INFO - 第1轮96次测试 -- 当前测试分辨率为：* 1280×768 59.94
+2021-08-31 20:24:14,910 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-08-31 20:24:14,910 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-08-31 20:24:14,911 - resolutionSwitchStress - INFO - 第1轮97次测试 -- 当前测试分辨率为：* 1440×900 59.94
+2021-08-31 20:25:26,770 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-08-31 20:25:26,770 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 20:25:26,771 - resolutionSwitchStress - INFO - 第1轮98次测试 -- 当前测试分辨率为：* 1920×1080 59.94
+2021-08-31 20:26:38,572 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:26:38,573 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-08-31 20:26:44,332 - resolutionSwitchStress - INFO - 跳过item：开始播放时选择格式
+2021-08-31 20:26:44,332 - resolutionSwitchStress - INFO - 跳过item：默认格式(推荐)
+2021-08-31 20:26:44,332 - resolutionSwitchStress - INFO - 第2轮1次测试 -- 当前测试分辨率为：YUY2 640×360 30
+2021-08-31 20:27:52,104 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 20:27:52,104 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 20:27:52,105 - resolutionSwitchStress - INFO - 第2轮2次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2021-08-31 20:29:00,321 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-08-31 20:29:00,321 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 20:29:00,321 - resolutionSwitchStress - INFO - 第2轮3次测试 -- 当前测试分辨率为：YUY2 160×90 30
+2021-08-31 20:30:08,455 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 20:30:08,455 - resolutionSwitchStress - INFO - 	位率：7041 kbps
+2021-08-31 20:30:08,456 - resolutionSwitchStress - INFO - 第2轮4次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
+2021-08-31 20:31:16,634 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 20:31:16,634 - resolutionSwitchStress - INFO - 	位率：7144 kbps
+2021-08-31 20:31:16,634 - resolutionSwitchStress - INFO - 第2轮5次测试 -- 当前测试分辨率为：YUY2 160×120 30
+2021-08-31 20:32:24,843 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:32:24,843 - resolutionSwitchStress - INFO - 	位率：9534 kbps
+2021-08-31 20:32:24,844 - resolutionSwitchStress - INFO - 第2轮6次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)
+2021-08-31 20:33:33,029 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:33:33,029 - resolutionSwitchStress - INFO - 	位率：9675 kbps
+2021-08-31 20:33:33,029 - resolutionSwitchStress - INFO - 第2轮7次测试 -- 当前测试分辨率为：YUY2 176×144 30
+2021-08-31 20:34:41,165 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 20:34:41,165 - resolutionSwitchStress - INFO - 	位率：12384 kbps
+2021-08-31 20:34:41,165 - resolutionSwitchStress - INFO - 第2轮8次测试 -- 当前测试分辨率为：YUY2 176×144P 30(P 11:9)
+2021-08-31 20:35:49,316 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 20:35:49,316 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-08-31 20:35:49,316 - resolutionSwitchStress - INFO - 第2轮9次测试 -- 当前测试分辨率为：YUY2 320×180 30
+2021-08-31 20:36:57,462 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 20:36:57,462 - resolutionSwitchStress - INFO - 	位率：29026 kbps
+2021-08-31 20:36:57,462 - resolutionSwitchStress - INFO - 第2轮10次测试 -- 当前测试分辨率为：YUY2 320×180P 30(P 16:9)
+2021-08-31 20:38:05,630 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 20:38:05,630 - resolutionSwitchStress - INFO - 	位率：28119 kbps
+2021-08-31 20:38:05,630 - resolutionSwitchStress - INFO - 第2轮11次测试 -- 当前测试分辨率为：YUY2 320×240 30
+2021-08-31 20:39:13,819 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-08-31 20:39:13,819 - resolutionSwitchStress - INFO - 	位率：37529 kbps
+2021-08-31 20:39:13,819 - resolutionSwitchStress - INFO - 第2轮12次测试 -- 当前测试分辨率为：YUY2 320×240P 30(P 4:3)
+2021-08-31 20:40:22,092 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:40:22,092 - resolutionSwitchStress - INFO - 	位率：38702 kbps
+2021-08-31 20:40:22,093 - resolutionSwitchStress - INFO - 第2轮13次测试 -- 当前测试分辨率为：YUY2 352×288 30
+2021-08-31 20:41:30,255 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:41:30,255 - resolutionSwitchStress - INFO - 	位率：51137 kbps
+2021-08-31 20:41:30,255 - resolutionSwitchStress - INFO - 第2轮14次测试 -- 当前测试分辨率为：YUY2 352×288P 30(P 11:9)
+2021-08-31 20:42:38,451 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:42:38,451 - resolutionSwitchStress - INFO - 	位率：50343 kbps
+2021-08-31 20:42:38,452 - resolutionSwitchStress - INFO - 第2轮15次测试 -- 当前测试分辨率为：YUY2 480×270 30
+2021-08-31 20:43:46,606 - resolutionSwitchStress - INFO - 	帧率： 29.6 fps
+2021-08-31 20:43:46,606 - resolutionSwitchStress - INFO - 	位率：61228 kbps
+2021-08-31 20:43:46,607 - resolutionSwitchStress - INFO - 第2轮16次测试 -- 当前测试分辨率为：YUY2 480×270P 30(P 16:9)
+2021-08-31 20:44:54,778 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 20:44:54,778 - resolutionSwitchStress - INFO - 	位率：65310 kbps
+2021-08-31 20:44:54,778 - resolutionSwitchStress - INFO - 第2轮17次测试 -- 当前测试分辨率为：YUY2 640×480 30
+2021-08-31 20:46:02,936 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-08-31 20:46:02,936 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-08-31 20:46:02,937 - resolutionSwitchStress - INFO - 第2轮18次测试 -- 当前测试分辨率为：YUY2 640×480P 30(P 4:3)
+2021-08-31 20:47:11,096 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-08-31 20:47:11,096 - resolutionSwitchStress - INFO - 	位率：140434 kbps
+2021-08-31 20:47:11,096 - resolutionSwitchStress - INFO - 第2轮19次测试 -- 当前测试分辨率为：YUY2 800×600 30
+2021-08-31 20:48:19,225 - resolutionSwitchStress - INFO - 	帧率： 20.29 fps
+2021-08-31 20:48:19,225 - resolutionSwitchStress - INFO - 	位率：161375 kbps
+2021-08-31 20:48:19,226 - resolutionSwitchStress - INFO - 第2轮20次测试 -- 当前测试分辨率为：YUY2 800×600P 30(P 4:3)
+2021-08-31 20:49:27,396 - resolutionSwitchStress - INFO - 	帧率： 20.29 fps
+2021-08-31 20:49:27,396 - resolutionSwitchStress - INFO - 	位率：166463 kbps
+2021-08-31 20:49:27,396 - resolutionSwitchStress - INFO - 第2轮21次测试 -- 当前测试分辨率为：YUY2 960×540 30
+2021-08-31 20:50:35,567 - resolutionSwitchStress - INFO - 	帧率： 18.48 fps
+2021-08-31 20:50:35,568 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-08-31 20:50:35,568 - resolutionSwitchStress - INFO - 第2轮22次测试 -- 当前测试分辨率为：YUY2 960×540P 30(P 16:9)
+2021-08-31 20:51:43,755 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-08-31 20:51:43,756 - resolutionSwitchStress - INFO - 	位率：160744 kbps
+2021-08-31 20:51:43,756 - resolutionSwitchStress - INFO - 第2轮23次测试 -- 当前测试分辨率为：MJPG 1920×1080 30
+2021-08-31 20:52:51,987 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-08-31 20:52:51,987 - resolutionSwitchStress - INFO - 	位率：129878 kbps
+2021-08-31 20:52:51,987 - resolutionSwitchStress - INFO - 第2轮24次测试 -- 当前测试分辨率为：MJPG 1920×1080P 30(P 16:9)
+2021-08-31 20:54:00,177 - resolutionSwitchStress - INFO - 	帧率： 29.7 fps
+2021-08-31 20:54:00,177 - resolutionSwitchStress - INFO - 	位率：121931 kbps
+2021-08-31 20:54:00,178 - resolutionSwitchStress - INFO - 第2轮25次测试 -- 当前测试分辨率为：MJPG 160×90 30
+2021-08-31 20:55:08,410 - resolutionSwitchStress - INFO - 	帧率： 29.85 fps
+2021-08-31 20:55:08,410 - resolutionSwitchStress - INFO - 	位率：1774 kbps
+2021-08-31 20:55:08,411 - resolutionSwitchStress - INFO - 第2轮26次测试 -- 当前测试分辨率为：MJPG 160×90P 30(P 16:9)
+2021-08-31 20:56:16,643 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 20:56:16,643 - resolutionSwitchStress - INFO - 	位率：1773 kbps
+2021-08-31 20:56:16,643 - resolutionSwitchStress - INFO - 第2轮27次测试 -- 当前测试分辨率为：MJPG 160×120 30
+2021-08-31 20:57:24,853 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:57:24,853 - resolutionSwitchStress - INFO - 	位率：2128 kbps
+2021-08-31 20:57:24,853 - resolutionSwitchStress - INFO - 第2轮28次测试 -- 当前测试分辨率为：MJPG 160×120P 30(P 4:3)
+2021-08-31 20:58:33,205 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 20:58:33,205 - resolutionSwitchStress - INFO - 	位率：2126 kbps
+2021-08-31 20:58:33,206 - resolutionSwitchStress - INFO - 第2轮29次测试 -- 当前测试分辨率为：MJPG 176×144 30
+2021-08-31 20:59:42,426 - resolutionSwitchStress - INFO - 	帧率： 29.98 fps
+2021-08-31 20:59:42,426 - resolutionSwitchStress - INFO - 	位率：2577 kbps
+2021-08-31 20:59:42,426 - resolutionSwitchStress - INFO - 第2轮30次测试 -- 当前测试分辨率为：MJPG 176×144P 30(P 11:9)
+2021-08-31 21:00:51,692 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 21:00:51,693 - resolutionSwitchStress - INFO - 	位率：2690 kbps
+2021-08-31 21:00:51,693 - resolutionSwitchStress - INFO - 第2轮31次测试 -- 当前测试分辨率为：MJPG 320×180 30
+2021-08-31 21:02:00,910 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:02:00,910 - resolutionSwitchStress - INFO - 	位率：5375 kbps
+2021-08-31 21:02:00,910 - resolutionSwitchStress - INFO - 第2轮32次测试 -- 当前测试分辨率为：MJPG 320×180P 30(P 16:9)
+2021-08-31 21:03:10,225 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:03:10,225 - resolutionSwitchStress - INFO - 	位率：5533 kbps
+2021-08-31 21:03:10,225 - resolutionSwitchStress - INFO - 第2轮33次测试 -- 当前测试分辨率为：MJPG 320×240 30
+2021-08-31 21:04:19,517 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-08-31 21:04:19,517 - resolutionSwitchStress - INFO - 	位率：6651 kbps
+2021-08-31 21:04:19,518 - resolutionSwitchStress - INFO - 第2轮34次测试 -- 当前测试分辨率为：MJPG 320×240P 30(P 4:3)
+2021-08-31 21:05:28,792 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 21:05:28,792 - resolutionSwitchStress - INFO - 	位率：6850 kbps
+2021-08-31 21:05:28,792 - resolutionSwitchStress - INFO - 第2轮35次测试 -- 当前测试分辨率为：MJPG 352×288 30
+2021-08-31 21:06:38,115 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 21:06:38,115 - resolutionSwitchStress - INFO - 	位率：9219 kbps
+2021-08-31 21:06:38,115 - resolutionSwitchStress - INFO - 第2轮36次测试 -- 当前测试分辨率为：MJPG 352×288P 30(P 11:9)
+2021-08-31 21:07:47,418 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 21:07:47,418 - resolutionSwitchStress - INFO - 	位率：8950 kbps
+2021-08-31 21:07:47,418 - resolutionSwitchStress - INFO - 第2轮37次测试 -- 当前测试分辨率为：MJPG 480×270 30
+2021-08-31 21:08:56,776 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:08:56,776 - resolutionSwitchStress - INFO - 	位率：11949 kbps
+2021-08-31 21:08:56,777 - resolutionSwitchStress - INFO - 第2轮38次测试 -- 当前测试分辨率为：MJPG 480×270P 30(P 16:9)
+2021-08-31 21:10:06,437 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:10:06,438 - resolutionSwitchStress - INFO - 	位率：11189 kbps
+2021-08-31 21:10:06,438 - resolutionSwitchStress - INFO - 第2轮39次测试 -- 当前测试分辨率为：MJPG 640×360 30
+2021-08-31 21:11:16,069 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:11:16,069 - resolutionSwitchStress - INFO - 	位率：18522 kbps
+2021-08-31 21:11:16,070 - resolutionSwitchStress - INFO - 第2轮40次测试 -- 当前测试分辨率为：MJPG 640×360P 30(P 16:9)
+2021-08-31 21:12:25,683 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:12:25,683 - resolutionSwitchStress - INFO - 	位率：19073 kbps
+2021-08-31 21:12:25,684 - resolutionSwitchStress - INFO - 第2轮41次测试 -- 当前测试分辨率为：MJPG 640×480 30
+2021-08-31 21:13:35,319 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 21:13:35,319 - resolutionSwitchStress - INFO - 	位率：23498 kbps
+2021-08-31 21:13:35,319 - resolutionSwitchStress - INFO - 第2轮42次测试 -- 当前测试分辨率为：MJPG 640×480P 30(P 4:3)
+2021-08-31 21:14:45,029 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 21:14:45,029 - resolutionSwitchStress - INFO - 	位率：24475 kbps
+2021-08-31 21:14:45,030 - resolutionSwitchStress - INFO - 第2轮43次测试 -- 当前测试分辨率为：MJPG 800×600 30
+2021-08-31 21:15:54,725 - resolutionSwitchStress - INFO - 	帧率： 30.02 fps
+2021-08-31 21:15:54,725 - resolutionSwitchStress - INFO - 	位率：37491 kbps
+2021-08-31 21:15:54,725 - resolutionSwitchStress - INFO - 第2轮44次测试 -- 当前测试分辨率为：MJPG 800×600P 30(P 4:3)
+2021-08-31 21:17:04,480 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 21:17:04,480 - resolutionSwitchStress - INFO - 	位率：39930 kbps
+2021-08-31 21:17:04,481 - resolutionSwitchStress - INFO - 第2轮45次测试 -- 当前测试分辨率为：MJPG 960×540 30
+2021-08-31 21:18:14,194 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 21:18:14,194 - resolutionSwitchStress - INFO - 	位率：44181 kbps
+2021-08-31 21:18:14,195 - resolutionSwitchStress - INFO - 第2轮46次测试 -- 当前测试分辨率为：MJPG 960×540P 30(P 16:9)
+2021-08-31 21:19:23,916 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:19:23,916 - resolutionSwitchStress - INFO - 	位率：43748 kbps
+2021-08-31 21:19:23,916 - resolutionSwitchStress - INFO - 第2轮47次测试 -- 当前测试分辨率为：MJPG 1024×576 30
+2021-08-31 21:20:33,649 - resolutionSwitchStress - INFO - 	帧率： 29.74 fps
+2021-08-31 21:20:33,649 - resolutionSwitchStress - INFO - 	位率：32908 kbps
+2021-08-31 21:20:33,650 - resolutionSwitchStress - INFO - 第2轮48次测试 -- 当前测试分辨率为：MJPG 1024×576P 30(P 16:9)
+2021-08-31 21:21:43,452 - resolutionSwitchStress - INFO - 	帧率： 29.88 fps
+2021-08-31 21:21:43,452 - resolutionSwitchStress - INFO - 	位率：32422 kbps
+2021-08-31 21:21:43,452 - resolutionSwitchStress - INFO - 第2轮49次测试 -- 当前测试分辨率为：MJPG 1280×720 30
+2021-08-31 21:22:53,257 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:22:53,257 - resolutionSwitchStress - INFO - 	位率：50791 kbps
+2021-08-31 21:22:53,258 - resolutionSwitchStress - INFO - 第2轮50次测试 -- 当前测试分辨率为：MJPG 1280×720P 30(P 16:9)
+2021-08-31 21:24:03,322 - resolutionSwitchStress - INFO - 	帧率： 29.87 fps
+2021-08-31 21:24:03,322 - resolutionSwitchStress - INFO - 	位率：50623 kbps
+2021-08-31 21:24:03,323 - resolutionSwitchStress - INFO - 第2轮51次测试 -- 当前测试分辨率为：MJPG 2560×1440 30
+2021-08-31 21:25:13,471 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:25:13,471 - resolutionSwitchStress - INFO - 	位率：115720 kbps
+2021-08-31 21:25:13,472 - resolutionSwitchStress - INFO - 第2轮52次测试 -- 当前测试分辨率为：MJPG 2560×1440P 30(P 16:9)
+2021-08-31 21:26:23,828 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:26:23,828 - resolutionSwitchStress - INFO - 	位率：126121 kbps
+2021-08-31 21:26:23,829 - resolutionSwitchStress - INFO - 第2轮53次测试 -- 当前测试分辨率为：MJPG 3840×2160 30
+2021-08-31 21:27:33,992 - resolutionSwitchStress - INFO - 	帧率： 25.97 fps
+2021-08-31 21:27:33,992 - resolutionSwitchStress - INFO - 	位率：150210 kbps
+2021-08-31 21:27:33,993 - resolutionSwitchStress - INFO - 第2轮54次测试 -- 当前测试分辨率为：MJPG 3840×2160P 30(P 16:9)
+2021-08-31 21:28:44,119 - resolutionSwitchStress - INFO - 	帧率： 25.91 fps
+2021-08-31 21:28:44,119 - resolutionSwitchStress - INFO - 	位率：150646 kbps
+2021-08-31 21:28:44,120 - resolutionSwitchStress - INFO - 第2轮55次测试 -- 当前测试分辨率为：H264 1920×1080 30
+2021-08-31 21:29:54,238 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:29:54,238 - resolutionSwitchStress - INFO - 	位率：12804 kbps
+2021-08-31 21:29:54,239 - resolutionSwitchStress - INFO - 第2轮56次测试 -- 当前测试分辨率为：H264 1920×1080P 30(P 16:9)
+2021-08-31 21:31:04,406 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:31:04,406 - resolutionSwitchStress - INFO - 	位率：12738 kbps
+2021-08-31 21:31:04,407 - resolutionSwitchStress - INFO - 第2轮57次测试 -- 当前测试分辨率为：H264 1280×720 30
+2021-08-31 21:32:14,608 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:32:14,608 - resolutionSwitchStress - INFO - 	位率：8170 kbps
+2021-08-31 21:32:14,609 - resolutionSwitchStress - INFO - 第2轮58次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2021-08-31 21:33:24,790 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-08-31 21:33:24,790 - resolutionSwitchStress - INFO - 	位率：8574 kbps
+2021-08-31 21:33:24,790 - resolutionSwitchStress - INFO - 第2轮59次测试 -- 当前测试分辨率为：H264 1024×576 30
+2021-08-31 21:34:35,066 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 21:34:35,066 - resolutionSwitchStress - INFO - 	位率：3684 kbps
+2021-08-31 21:34:35,066 - resolutionSwitchStress - INFO - 第2轮60次测试 -- 当前测试分辨率为：H264 1024×576P 30(P 16:9)
+2021-08-31 21:35:45,295 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:35:45,295 - resolutionSwitchStress - INFO - 	位率：4274 kbps
+2021-08-31 21:35:45,295 - resolutionSwitchStress - INFO - 第2轮61次测试 -- 当前测试分辨率为：H264 960×540 30
+2021-08-31 21:36:55,558 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:36:55,558 - resolutionSwitchStress - INFO - 	位率：12940 kbps
+2021-08-31 21:36:55,559 - resolutionSwitchStress - INFO - 第2轮62次测试 -- 当前测试分辨率为：H264 960×540P 30(P 16:9)
+2021-08-31 21:38:06,290 - resolutionSwitchStress - INFO - 	帧率： 29.85 fps
+2021-08-31 21:38:06,290 - resolutionSwitchStress - INFO - 	位率：12791 kbps
+2021-08-31 21:38:06,290 - resolutionSwitchStress - INFO - 第2轮63次测试 -- 当前测试分辨率为：H264 800×600 30
+2021-08-31 21:39:16,922 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 21:39:16,922 - resolutionSwitchStress - INFO - 	位率：12649 kbps
+2021-08-31 21:39:16,922 - resolutionSwitchStress - INFO - 第2轮64次测试 -- 当前测试分辨率为：H264 800×600P 30(P 4:3)
+2021-08-31 21:40:27,495 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:40:27,495 - resolutionSwitchStress - INFO - 	位率：12982 kbps
+2021-08-31 21:40:27,496 - resolutionSwitchStress - INFO - 第2轮65次测试 -- 当前测试分辨率为：H264 640×480 30
+2021-08-31 21:41:38,083 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:41:38,084 - resolutionSwitchStress - INFO - 	位率：4279 kbps
+2021-08-31 21:41:38,084 - resolutionSwitchStress - INFO - 第2轮66次测试 -- 当前测试分辨率为：H264 640×480P 30(P 4:3)
+2021-08-31 21:42:48,726 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 21:42:48,726 - resolutionSwitchStress - INFO - 	位率：4340 kbps
+2021-08-31 21:42:48,727 - resolutionSwitchStress - INFO - 第2轮67次测试 -- 当前测试分辨率为：H264 640×360 30
+2021-08-31 21:43:59,334 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:43:59,334 - resolutionSwitchStress - INFO - 	位率：4473 kbps
+2021-08-31 21:43:59,334 - resolutionSwitchStress - INFO - 第2轮68次测试 -- 当前测试分辨率为：H264 640×360P 30(P 16:9)
+2021-08-31 21:45:09,980 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 21:45:09,980 - resolutionSwitchStress - INFO - 	位率：4470 kbps
+2021-08-31 21:45:09,981 - resolutionSwitchStress - INFO - 第2轮69次测试 -- 当前测试分辨率为：H264 480×270 30
+2021-08-31 21:46:20,692 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-08-31 21:46:20,692 - resolutionSwitchStress - INFO - 	位率：3916 kbps
+2021-08-31 21:46:20,693 - resolutionSwitchStress - INFO - 第2轮70次测试 -- 当前测试分辨率为：H264 480×270P 30(P 16:9)
+2021-08-31 21:47:31,386 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 21:47:31,386 - resolutionSwitchStress - INFO - 	位率：4045 kbps
+2021-08-31 21:47:31,387 - resolutionSwitchStress - INFO - 第2轮71次测试 -- 当前测试分辨率为：H264 352×288 30
+2021-08-31 21:48:42,132 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:48:42,132 - resolutionSwitchStress - INFO - 	位率：2188 kbps
+2021-08-31 21:48:42,133 - resolutionSwitchStress - INFO - 第2轮72次测试 -- 当前测试分辨率为：H264 352×288P 30(P 11:9)
+2021-08-31 21:49:52,997 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 21:49:52,997 - resolutionSwitchStress - INFO - 	位率：2197 kbps
+2021-08-31 21:49:52,998 - resolutionSwitchStress - INFO - 第2轮73次测试 -- 当前测试分辨率为：H264 320×240 30
+2021-08-31 21:51:03,827 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-08-31 21:51:03,827 - resolutionSwitchStress - INFO - 	位率：931.3 kbps
+2021-08-31 21:51:03,828 - resolutionSwitchStress - INFO - 第2轮74次测试 -- 当前测试分辨率为：H264 320×240P 30(P 4:3)
+2021-08-31 21:52:14,947 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-08-31 21:52:14,947 - resolutionSwitchStress - INFO - 	位率：1150 kbps
+2021-08-31 21:52:14,947 - resolutionSwitchStress - INFO - 第2轮75次测试 -- 当前测试分辨率为：H264 320×180 30
+2021-08-31 21:53:26,050 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 21:53:26,050 - resolutionSwitchStress - INFO - 	位率：1064 kbps
+2021-08-31 21:53:26,050 - resolutionSwitchStress - INFO - 第2轮76次测试 -- 当前测试分辨率为：H264 320×180P 30(P 16:9)
+2021-08-31 21:54:37,215 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:54:37,215 - resolutionSwitchStress - INFO - 	位率：1226 kbps
+2021-08-31 21:54:37,216 - resolutionSwitchStress - INFO - 第2轮77次测试 -- 当前测试分辨率为：H264 2560×1440 30
+2021-08-31 21:55:48,312 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 21:55:48,312 - resolutionSwitchStress - INFO - 	位率：17765 kbps
+2021-08-31 21:55:48,312 - resolutionSwitchStress - INFO - 第2轮78次测试 -- 当前测试分辨率为：H264 2560×1440P 30(P 16:9)
+2021-08-31 21:56:59,441 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 21:56:59,441 - resolutionSwitchStress - INFO - 	位率：16976 kbps
+2021-08-31 21:56:59,442 - resolutionSwitchStress - INFO - 第2轮79次测试 -- 当前测试分辨率为：H264 3840×2160 30
+2021-08-31 21:58:10,564 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 21:58:10,564 - resolutionSwitchStress - INFO - 	位率：16842 kbps
+2021-08-31 21:58:10,564 - resolutionSwitchStress - INFO - 第2轮80次测试 -- 当前测试分辨率为：H264 3840×2160P 30(P 16:9)
+2021-08-31 21:59:21,734 - resolutionSwitchStress - INFO - 	帧率： 29.91 fps
+2021-08-31 21:59:21,734 - resolutionSwitchStress - INFO - 	位率：17383 kbps
+2021-08-31 21:59:21,734 - resolutionSwitchStress - INFO - 第2轮81次测试 -- 当前测试分辨率为：* 640×480 29.97
+2021-08-31 22:00:32,955 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-08-31 22:00:32,955 - resolutionSwitchStress - INFO - 	位率：138847 kbps
+2021-08-31 22:00:32,955 - resolutionSwitchStress - INFO - 第2轮82次测试 -- 当前测试分辨率为：* 704×480 29.97
+2021-08-31 22:01:44,263 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-08-31 22:01:44,263 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 22:01:44,264 - resolutionSwitchStress - INFO - 第2轮83次测试 -- 当前测试分辨率为：* 720×480 29.97
+2021-08-31 22:02:55,478 - resolutionSwitchStress - INFO - 	帧率： 28.23 fps
+2021-08-31 22:02:55,478 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 22:02:55,479 - resolutionSwitchStress - INFO - 第2轮84次测试 -- 当前测试分辨率为：* 768×576 29.97
+2021-08-31 22:04:06,744 - resolutionSwitchStress - INFO - 	帧率： 28.23 fps
+2021-08-31 22:04:06,744 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 22:04:06,745 - resolutionSwitchStress - INFO - 第2轮85次测试 -- 当前测试分辨率为：* 960×540 29.97
+2021-08-31 22:05:18,005 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-08-31 22:05:18,005 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-08-31 22:05:18,005 - resolutionSwitchStress - INFO - 第2轮86次测试 -- 当前测试分辨率为：* 1280×720 29.97
+2021-08-31 22:06:29,284 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 22:06:29,284 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 22:06:29,284 - resolutionSwitchStress - INFO - 第2轮87次测试 -- 当前测试分辨率为：* 1280×768 29.97
+2021-08-31 22:07:40,584 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-08-31 22:07:40,585 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 22:07:40,585 - resolutionSwitchStress - INFO - 第2轮88次测试 -- 当前测试分辨率为：* 1440×900 29.97
+2021-08-31 22:08:51,936 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 22:08:51,936 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 22:08:51,936 - resolutionSwitchStress - INFO - 第2轮89次测试 -- 当前测试分辨率为：* 1920×1080 29.97
+2021-08-31 22:10:03,610 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-08-31 22:10:03,610 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-08-31 22:10:03,611 - resolutionSwitchStress - INFO - 第2轮90次测试 -- 当前测试分辨率为：* 640×480 59.94
+2021-08-31 22:11:15,258 - resolutionSwitchStress - INFO - 	帧率： 27.73 fps
+2021-08-31 22:11:15,258 - resolutionSwitchStress - INFO - 	位率：140836 kbps
+2021-08-31 22:11:15,258 - resolutionSwitchStress - INFO - 第2轮91次测试 -- 当前测试分辨率为：* 704×480 59.94
+2021-08-31 22:12:26,941 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-08-31 22:12:26,941 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-08-31 22:12:26,942 - resolutionSwitchStress - INFO - 第2轮92次测试 -- 当前测试分辨率为：* 720×480 59.94
+2021-08-31 22:13:38,765 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 22:13:38,765 - resolutionSwitchStress - INFO - 	位率：105222 kbps
+2021-08-31 22:13:38,766 - resolutionSwitchStress - INFO - 第2轮93次测试 -- 当前测试分辨率为：* 768×576 59.94
+2021-08-31 22:14:50,509 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 22:14:50,509 - resolutionSwitchStress - INFO - 	位率：105222 kbps
+2021-08-31 22:14:50,509 - resolutionSwitchStress - INFO - 第2轮94次测试 -- 当前测试分辨率为：* 960×540 59.94
+2021-08-31 22:16:02,231 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-08-31 22:16:02,231 - resolutionSwitchStress - INFO - 	位率：160900 kbps
+2021-08-31 22:16:02,231 - resolutionSwitchStress - INFO - 第2轮95次测试 -- 当前测试分辨率为：* 1280×720 59.94
+2021-08-31 22:17:13,984 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-08-31 22:17:13,984 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-08-31 22:17:13,984 - resolutionSwitchStress - INFO - 第2轮96次测试 -- 当前测试分辨率为：* 1280×768 59.94
+2021-08-31 22:18:25,725 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 22:18:25,725 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 22:18:25,726 - resolutionSwitchStress - INFO - 第2轮97次测试 -- 当前测试分辨率为：* 1440×900 59.94
+2021-08-31 22:19:37,631 - resolutionSwitchStress - INFO - 	帧率： 28.15 fps
+2021-08-31 22:19:37,631 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 22:19:37,632 - resolutionSwitchStress - INFO - 第2轮98次测试 -- 当前测试分辨率为：* 1920×1080 59.94
+2021-08-31 22:20:49,450 - resolutionSwitchStress - INFO - 	帧率： 28.23 fps
+2021-08-31 22:20:49,451 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-08-31 22:20:54,561 - resolutionSwitchStress - INFO - 跳过item：开始播放时选择格式
+2021-08-31 22:20:54,561 - resolutionSwitchStress - INFO - 跳过item：默认格式(推荐)
+2021-08-31 22:20:54,561 - resolutionSwitchStress - INFO - 第3轮1次测试 -- 当前测试分辨率为：YUY2 640×360 30
+2021-08-31 22:22:02,351 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-08-31 22:22:02,351 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 22:22:02,351 - resolutionSwitchStress - INFO - 第3轮2次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2021-08-31 22:23:10,516 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 22:23:10,516 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 22:23:10,517 - resolutionSwitchStress - INFO - 第3轮3次测试 -- 当前测试分辨率为：YUY2 160×90 30
+2021-08-31 22:24:18,761 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 22:24:18,761 - resolutionSwitchStress - INFO - 	位率：7151 kbps
+2021-08-31 22:24:18,761 - resolutionSwitchStress - INFO - 第3轮4次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
+2021-08-31 22:25:26,896 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 22:25:26,896 - resolutionSwitchStress - INFO - 	位率：7256 kbps
+2021-08-31 22:25:26,896 - resolutionSwitchStress - INFO - 第3轮5次测试 -- 当前测试分辨率为：YUY2 160×120 30
+2021-08-31 22:26:35,077 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 22:26:35,077 - resolutionSwitchStress - INFO - 	位率：9525 kbps
+2021-08-31 22:26:35,078 - resolutionSwitchStress - INFO - 第3轮6次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)
+2021-08-31 22:27:43,219 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 22:27:43,219 - resolutionSwitchStress - INFO - 	位率：9389 kbps
+2021-08-31 22:27:43,219 - resolutionSwitchStress - INFO - 第3轮7次测试 -- 当前测试分辨率为：YUY2 176×144 30
+2021-08-31 22:28:51,383 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 22:28:51,383 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-08-31 22:28:51,383 - resolutionSwitchStress - INFO - 第3轮8次测试 -- 当前测试分辨率为：YUY2 176×144P 30(P 11:9)
+2021-08-31 22:29:59,567 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 22:29:59,567 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-08-31 22:29:59,568 - resolutionSwitchStress - INFO - 第3轮9次测试 -- 当前测试分辨率为：YUY2 320×180 30
+2021-08-31 22:31:07,724 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 22:31:07,724 - resolutionSwitchStress - INFO - 	位率：28119 kbps
+2021-08-31 22:31:07,724 - resolutionSwitchStress - INFO - 第3轮10次测试 -- 当前测试分辨率为：YUY2 320×180P 30(P 16:9)
+2021-08-31 22:32:15,904 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-08-31 22:32:15,904 - resolutionSwitchStress - INFO - 	位率：28147 kbps
+2021-08-31 22:32:15,905 - resolutionSwitchStress - INFO - 第3轮11次测试 -- 当前测试分辨率为：YUY2 320×240 30
+2021-08-31 22:33:24,035 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-08-31 22:33:24,035 - resolutionSwitchStress - INFO - 	位率：38102 kbps
+2021-08-31 22:33:24,035 - resolutionSwitchStress - INFO - 第3轮12次测试 -- 当前测试分辨率为：YUY2 320×240P 30(P 4:3)
+2021-08-31 22:34:32,162 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 22:34:32,162 - resolutionSwitchStress - INFO - 	位率：38102 kbps
+2021-08-31 22:34:32,163 - resolutionSwitchStress - INFO - 第3轮13次测试 -- 当前测试分辨率为：YUY2 352×288 30
+2021-08-31 22:35:40,389 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 22:35:40,389 - resolutionSwitchStress - INFO - 	位率：49490 kbps
+2021-08-31 22:35:40,389 - resolutionSwitchStress - INFO - 第3轮14次测试 -- 当前测试分辨率为：YUY2 352×288P 30(P 11:9)
+2021-08-31 22:36:48,592 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 22:36:48,592 - resolutionSwitchStress - INFO - 	位率：49539 kbps
+2021-08-31 22:36:48,592 - resolutionSwitchStress - INFO - 第3轮15次测试 -- 当前测试分辨率为：YUY2 480×270 30
+2021-08-31 22:37:56,749 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 22:37:56,749 - resolutionSwitchStress - INFO - 	位率：64360 kbps
+2021-08-31 22:37:56,749 - resolutionSwitchStress - INFO - 第3轮16次测试 -- 当前测试分辨率为：YUY2 480×270P 30(P 16:9)
+2021-08-31 22:39:04,912 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 22:39:04,912 - resolutionSwitchStress - INFO - 	位率：63269 kbps
+2021-08-31 22:39:04,912 - resolutionSwitchStress - INFO - 第3轮17次测试 -- 当前测试分辨率为：YUY2 640×480 30
+2021-08-31 22:40:13,101 - resolutionSwitchStress - INFO - 	帧率： 27.83 fps
+2021-08-31 22:40:13,101 - resolutionSwitchStress - INFO - 	位率：142883 kbps
+2021-08-31 22:40:13,101 - resolutionSwitchStress - INFO - 第3轮18次测试 -- 当前测试分辨率为：YUY2 640×480P 30(P 4:3)
+2021-08-31 22:41:21,274 - resolutionSwitchStress - INFO - 	帧率： 27.81 fps
+2021-08-31 22:41:21,274 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-08-31 22:41:21,274 - resolutionSwitchStress - INFO - 第3轮19次测试 -- 当前测试分辨率为：YUY2 800×600 30
+2021-08-31 22:42:29,441 - resolutionSwitchStress - INFO - 	帧率： 20.24 fps
+2021-08-31 22:42:29,441 - resolutionSwitchStress - INFO - 	位率：163879 kbps
+2021-08-31 22:42:29,441 - resolutionSwitchStress - INFO - 第3轮20次测试 -- 当前测试分辨率为：YUY2 800×600P 30(P 4:3)
+2021-08-31 22:43:37,558 - resolutionSwitchStress - INFO - 	帧率： 20.29 fps
+2021-08-31 22:43:37,558 - resolutionSwitchStress - INFO - 	位率：163879 kbps
+2021-08-31 22:43:37,558 - resolutionSwitchStress - INFO - 第3轮21次测试 -- 当前测试分辨率为：YUY2 960×540 30
+2021-08-31 22:44:45,741 - resolutionSwitchStress - INFO - 	帧率： 18.66 fps
+2021-08-31 22:44:45,741 - resolutionSwitchStress - INFO - 	位率：164013 kbps
+2021-08-31 22:44:45,742 - resolutionSwitchStress - INFO - 第3轮22次测试 -- 当前测试分辨率为：YUY2 960×540P 30(P 16:9)
+2021-08-31 22:45:53,931 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-08-31 22:45:53,932 - resolutionSwitchStress - INFO - 	位率：166363 kbps
+2021-08-31 22:45:53,932 - resolutionSwitchStress - INFO - 第3轮23次测试 -- 当前测试分辨率为：MJPG 1920×1080 30
+2021-08-31 22:47:02,135 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-08-31 22:47:02,135 - resolutionSwitchStress - INFO - 	位率：63629 kbps
+2021-08-31 22:47:02,136 - resolutionSwitchStress - INFO - 第3轮24次测试 -- 当前测试分辨率为：MJPG 1920×1080P 30(P 16:9)
+2021-08-31 22:48:10,351 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 22:48:10,351 - resolutionSwitchStress - INFO - 	位率：64799 kbps
+2021-08-31 22:48:10,352 - resolutionSwitchStress - INFO - 第3轮25次测试 -- 当前测试分辨率为：MJPG 160×90 30
+2021-08-31 22:49:18,581 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 22:49:18,581 - resolutionSwitchStress - INFO - 	位率：1096 kbps
+2021-08-31 22:49:18,582 - resolutionSwitchStress - INFO - 第3轮26次测试 -- 当前测试分辨率为：MJPG 160×90P 30(P 16:9)
+2021-08-31 22:50:26,838 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 22:50:26,838 - resolutionSwitchStress - INFO - 	位率：1076 kbps
+2021-08-31 22:50:26,838 - resolutionSwitchStress - INFO - 第3轮27次测试 -- 当前测试分辨率为：MJPG 160×120 30
+2021-08-31 22:51:35,108 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-08-31 22:51:35,108 - resolutionSwitchStress - INFO - 	位率：1276 kbps
+2021-08-31 22:51:35,108 - resolutionSwitchStress - INFO - 第3轮28次测试 -- 当前测试分辨率为：MJPG 160×120P 30(P 4:3)
+2021-08-31 22:52:43,420 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 22:52:43,420 - resolutionSwitchStress - INFO - 	位率：1261 kbps
+2021-08-31 22:52:43,420 - resolutionSwitchStress - INFO - 第3轮29次测试 -- 当前测试分辨率为：MJPG 176×144 30
+2021-08-31 22:53:52,625 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 22:53:52,625 - resolutionSwitchStress - INFO - 	位率：1566 kbps
+2021-08-31 22:53:52,625 - resolutionSwitchStress - INFO - 第3轮30次测试 -- 当前测试分辨率为：MJPG 176×144P 30(P 11:9)
+2021-08-31 22:55:01,934 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-08-31 22:55:01,934 - resolutionSwitchStress - INFO - 	位率：1591 kbps
+2021-08-31 22:55:01,934 - resolutionSwitchStress - INFO - 第3轮31次测试 -- 当前测试分辨率为：MJPG 320×180 30
+2021-08-31 22:56:11,226 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 22:56:11,226 - resolutionSwitchStress - INFO - 	位率：3430 kbps
+2021-08-31 22:56:11,226 - resolutionSwitchStress - INFO - 第3轮32次测试 -- 当前测试分辨率为：MJPG 320×180P 30(P 16:9)
+2021-08-31 22:57:20,531 - resolutionSwitchStress - INFO - 	帧率： 29.8 fps
+2021-08-31 22:57:20,531 - resolutionSwitchStress - INFO - 	位率：3545 kbps
+2021-08-31 22:57:20,531 - resolutionSwitchStress - INFO - 第3轮33次测试 -- 当前测试分辨率为：MJPG 320×240 30
+2021-08-31 22:58:29,944 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 22:58:29,945 - resolutionSwitchStress - INFO - 	位率：3986 kbps
+2021-08-31 22:58:29,945 - resolutionSwitchStress - INFO - 第3轮34次测试 -- 当前测试分辨率为：MJPG 320×240P 30(P 4:3)
+2021-08-31 22:59:39,177 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 22:59:39,177 - resolutionSwitchStress - INFO - 	位率：4042 kbps
+2021-08-31 22:59:39,178 - resolutionSwitchStress - INFO - 第3轮35次测试 -- 当前测试分辨率为：MJPG 352×288 30
+2021-08-31 23:00:48,489 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-08-31 23:00:48,489 - resolutionSwitchStress - INFO - 	位率：5273 kbps
+2021-08-31 23:00:48,489 - resolutionSwitchStress - INFO - 第3轮36次测试 -- 当前测试分辨率为：MJPG 352×288P 30(P 11:9)
+2021-08-31 23:01:57,804 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-08-31 23:01:57,804 - resolutionSwitchStress - INFO - 	位率：5335 kbps
+2021-08-31 23:01:57,805 - resolutionSwitchStress - INFO - 第3轮37次测试 -- 当前测试分辨率为：MJPG 480×270 30
+2021-08-31 23:03:07,164 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-08-31 23:03:07,165 - resolutionSwitchStress - INFO - 	位率：7823 kbps
+2021-08-31 23:03:07,165 - resolutionSwitchStress - INFO - 第3轮38次测试 -- 当前测试分辨率为：MJPG 480×270P 30(P 16:9)
+2021-08-31 23:04:16,766 - resolutionSwitchStress - INFO - 	帧率： 29.9 fps
+2021-08-31 23:04:16,766 - resolutionSwitchStress - INFO - 	位率：7703 kbps
+2021-08-31 23:04:16,767 - resolutionSwitchStress - INFO - 第3轮39次测试 -- 当前测试分辨率为：MJPG 640×360 30
+2021-08-31 23:05:26,462 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-08-31 23:05:26,462 - resolutionSwitchStress - INFO - 	位率：13297 kbps
+2021-08-31 23:05:26,462 - resolutionSwitchStress - INFO - 第3轮40次测试 -- 当前测试分辨率为：MJPG 640×360P 30(P 16:9)
+2021-08-31 23:06:36,111 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 23:06:36,111 - resolutionSwitchStress - INFO - 	位率：12824 kbps
+2021-08-31 23:06:36,111 - resolutionSwitchStress - INFO - 第3轮41次测试 -- 当前测试分辨率为：MJPG 640×480 30
+2021-08-31 23:07:45,778 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-08-31 23:07:45,778 - resolutionSwitchStress - INFO - 	位率：14549 kbps
+2021-08-31 23:07:45,778 - resolutionSwitchStress - INFO - 第3轮42次测试 -- 当前测试分辨率为：MJPG 640×480P 30(P 4:3)
+2021-08-31 23:08:55,536 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 23:08:55,536 - resolutionSwitchStress - INFO - 	位率：14062 kbps
+2021-08-31 23:08:55,536 - resolutionSwitchStress - INFO - 第3轮43次测试 -- 当前测试分辨率为：MJPG 800×600 30
+2021-08-31 23:10:05,250 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-08-31 23:10:05,250 - resolutionSwitchStress - INFO - 	位率：23080 kbps
+2021-08-31 23:10:05,251 - resolutionSwitchStress - INFO - 第3轮44次测试 -- 当前测试分辨率为：MJPG 800×600P 30(P 4:3)
+2021-08-31 23:11:15,004 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-08-31 23:11:15,004 - resolutionSwitchStress - INFO - 	位率：22857 kbps
+2021-08-31 23:11:15,004 - resolutionSwitchStress - INFO - 第3轮45次测试 -- 当前测试分辨率为：MJPG 960×540 30
+2021-08-31 23:12:24,705 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 23:12:24,705 - resolutionSwitchStress - INFO - 	位率：31758 kbps
+2021-08-31 23:12:24,705 - resolutionSwitchStress - INFO - 第3轮46次测试 -- 当前测试分辨率为：MJPG 960×540P 30(P 16:9)
+2021-08-31 23:13:34,479 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 23:13:34,480 - resolutionSwitchStress - INFO - 	位率：31869 kbps
+2021-08-31 23:13:34,480 - resolutionSwitchStress - INFO - 第3轮47次测试 -- 当前测试分辨率为：MJPG 1024×576 30
+2021-08-31 23:14:44,274 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 23:14:44,274 - resolutionSwitchStress - INFO - 	位率：20192 kbps
+2021-08-31 23:14:44,274 - resolutionSwitchStress - INFO - 第3轮48次测试 -- 当前测试分辨率为：MJPG 1024×576P 30(P 16:9)
+2021-08-31 23:15:54,040 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:15:54,040 - resolutionSwitchStress - INFO - 	位率：19685 kbps
+2021-08-31 23:15:54,040 - resolutionSwitchStress - INFO - 第3轮49次测试 -- 当前测试分辨率为：MJPG 1280×720 30
+2021-08-31 23:17:03,896 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 23:17:03,896 - resolutionSwitchStress - INFO - 	位率：30524 kbps
+2021-08-31 23:17:03,896 - resolutionSwitchStress - INFO - 第3轮50次测试 -- 当前测试分辨率为：MJPG 1280×720P 30(P 16:9)
+2021-08-31 23:18:13,936 - resolutionSwitchStress - INFO - 	帧率： 30.03 fps
+2021-08-31 23:18:13,936 - resolutionSwitchStress - INFO - 	位率：29955 kbps
+2021-08-31 23:18:13,936 - resolutionSwitchStress - INFO - 第3轮51次测试 -- 当前测试分辨率为：MJPG 2560×1440 30
+2021-08-31 23:19:24,043 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 23:19:24,043 - resolutionSwitchStress - INFO - 	位率：56811 kbps
+2021-08-31 23:19:24,043 - resolutionSwitchStress - INFO - 第3轮52次测试 -- 当前测试分辨率为：MJPG 2560×1440P 30(P 16:9)
+2021-08-31 23:20:34,114 - resolutionSwitchStress - INFO - 	帧率： 29.88 fps
+2021-08-31 23:20:34,114 - resolutionSwitchStress - INFO - 	位率：57587 kbps
+2021-08-31 23:20:34,114 - resolutionSwitchStress - INFO - 第3轮53次测试 -- 当前测试分辨率为：MJPG 3840×2160 30
+2021-08-31 23:21:44,286 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 23:21:44,286 - resolutionSwitchStress - INFO - 	位率：109061 kbps
+2021-08-31 23:21:44,287 - resolutionSwitchStress - INFO - 第3轮54次测试 -- 当前测试分辨率为：MJPG 3840×2160P 30(P 16:9)
+2021-08-31 23:22:54,422 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 23:22:54,422 - resolutionSwitchStress - INFO - 	位率：109345 kbps
+2021-08-31 23:22:54,423 - resolutionSwitchStress - INFO - 第3轮55次测试 -- 当前测试分辨率为：H264 1920×1080 30
+2021-08-31 23:24:04,538 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 23:24:04,538 - resolutionSwitchStress - INFO - 	位率：5810 kbps
+2021-08-31 23:24:04,539 - resolutionSwitchStress - INFO - 第3轮56次测试 -- 当前测试分辨率为：H264 1920×1080P 30(P 16:9)
+2021-08-31 23:25:14,713 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 23:25:14,713 - resolutionSwitchStress - INFO - 	位率：5344 kbps
+2021-08-31 23:25:14,714 - resolutionSwitchStress - INFO - 第3轮57次测试 -- 当前测试分辨率为：H264 1280×720 30
+2021-08-31 23:26:24,949 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 23:26:24,949 - resolutionSwitchStress - INFO - 	位率：1707 kbps
+2021-08-31 23:26:24,949 - resolutionSwitchStress - INFO - 第3轮58次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2021-08-31 23:27:35,175 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-08-31 23:27:35,175 - resolutionSwitchStress - INFO - 	位率：1811 kbps
+2021-08-31 23:27:35,176 - resolutionSwitchStress - INFO - 第3轮59次测试 -- 当前测试分辨率为：H264 1024×576 30
+2021-08-31 23:28:45,421 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-08-31 23:28:45,421 - resolutionSwitchStress - INFO - 	位率：991.2 kbps
+2021-08-31 23:28:45,421 - resolutionSwitchStress - INFO - 第3轮60次测试 -- 当前测试分辨率为：H264 1024×576P 30(P 16:9)
+2021-08-31 23:29:55,606 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-08-31 23:29:55,606 - resolutionSwitchStress - INFO - 	位率：968.8 kbps
+2021-08-31 23:29:55,607 - resolutionSwitchStress - INFO - 第3轮61次测试 -- 当前测试分辨率为：H264 960×540 30
+2021-08-31 23:31:05,880 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-08-31 23:31:05,880 - resolutionSwitchStress - INFO - 	位率：13192 kbps
+2021-08-31 23:31:05,881 - resolutionSwitchStress - INFO - 第3轮62次测试 -- 当前测试分辨率为：H264 960×540P 30(P 16:9)
+2021-08-31 23:32:16,452 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:32:16,452 - resolutionSwitchStress - INFO - 	位率：12888 kbps
+2021-08-31 23:32:16,452 - resolutionSwitchStress - INFO - 第3轮63次测试 -- 当前测试分辨率为：H264 800×600 30
+2021-08-31 23:33:27,111 - resolutionSwitchStress - INFO - 	帧率： 30.08 fps
+2021-08-31 23:33:27,111 - resolutionSwitchStress - INFO - 	位率：4793 kbps
+2021-08-31 23:33:27,112 - resolutionSwitchStress - INFO - 第3轮64次测试 -- 当前测试分辨率为：H264 800×600P 30(P 4:3)
+2021-08-31 23:34:37,759 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 23:34:37,759 - resolutionSwitchStress - INFO - 	位率：4889 kbps
+2021-08-31 23:34:37,760 - resolutionSwitchStress - INFO - 第3轮65次测试 -- 当前测试分辨率为：H264 640×480 30
+2021-08-31 23:35:48,361 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:35:48,361 - resolutionSwitchStress - INFO - 	位率：1793 kbps
+2021-08-31 23:35:48,362 - resolutionSwitchStress - INFO - 第3轮66次测试 -- 当前测试分辨率为：H264 640×480P 30(P 4:3)
+2021-08-31 23:36:59,039 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 23:36:59,039 - resolutionSwitchStress - INFO - 	位率：1525 kbps
+2021-08-31 23:36:59,039 - resolutionSwitchStress - INFO - 第3轮67次测试 -- 当前测试分辨率为：H264 640×360 30
+2021-08-31 23:38:09,702 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 23:38:09,703 - resolutionSwitchStress - INFO - 	位率：3617 kbps
+2021-08-31 23:38:09,703 - resolutionSwitchStress - INFO - 第3轮68次测试 -- 当前测试分辨率为：H264 640×360P 30(P 16:9)
+2021-08-31 23:39:20,381 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:39:20,382 - resolutionSwitchStress - INFO - 	位率：3438 kbps
+2021-08-31 23:39:20,382 - resolutionSwitchStress - INFO - 第3轮69次测试 -- 当前测试分辨率为：H264 480×270 30
+2021-08-31 23:40:31,037 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:40:31,037 - resolutionSwitchStress - INFO - 	位率：1336 kbps
+2021-08-31 23:40:31,037 - resolutionSwitchStress - INFO - 第3轮70次测试 -- 当前测试分辨率为：H264 480×270P 30(P 16:9)
+2021-08-31 23:41:41,770 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:41:41,770 - resolutionSwitchStress - INFO - 	位率：1522 kbps
+2021-08-31 23:41:41,770 - resolutionSwitchStress - INFO - 第3轮71次测试 -- 当前测试分辨率为：H264 352×288 30
+2021-08-31 23:42:52,491 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:42:52,491 - resolutionSwitchStress - INFO - 	位率：305.4 kbps
+2021-08-31 23:42:52,492 - resolutionSwitchStress - INFO - 第3轮72次测试 -- 当前测试分辨率为：H264 352×288P 30(P 11:9)
+2021-08-31 23:44:03,252 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-08-31 23:44:03,252 - resolutionSwitchStress - INFO - 	位率：120.4 kbps
+2021-08-31 23:44:03,253 - resolutionSwitchStress - INFO - 第3轮73次测试 -- 当前测试分辨率为：H264 320×240 30
+2021-08-31 23:45:14,150 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-08-31 23:45:14,150 - resolutionSwitchStress - INFO - 	位率：80.8 kbps
+2021-08-31 23:45:14,151 - resolutionSwitchStress - INFO - 第3轮74次测试 -- 当前测试分辨率为：H264 320×240P 30(P 4:3)
+2021-08-31 23:46:25,324 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 23:46:25,324 - resolutionSwitchStress - INFO - 	位率：77.4 kbps
+2021-08-31 23:46:25,324 - resolutionSwitchStress - INFO - 第3轮75次测试 -- 当前测试分辨率为：H264 320×180 30
+2021-08-31 23:47:36,450 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 23:47:36,451 - resolutionSwitchStress - INFO - 	位率：43.1 kbps
+2021-08-31 23:47:36,451 - resolutionSwitchStress - INFO - 第3轮76次测试 -- 当前测试分辨率为：H264 320×180P 30(P 16:9)
+2021-08-31 23:48:47,564 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-08-31 23:48:47,564 - resolutionSwitchStress - INFO - 	位率：44.6 kbps
+2021-08-31 23:48:47,565 - resolutionSwitchStress - INFO - 第3轮77次测试 -- 当前测试分辨率为：H264 2560×1440 30
+2021-08-31 23:49:58,687 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-08-31 23:49:58,687 - resolutionSwitchStress - INFO - 	位率：999.5 kbps
+2021-08-31 23:49:58,687 - resolutionSwitchStress - INFO - 第3轮78次测试 -- 当前测试分辨率为：H264 2560×1440P 30(P 16:9)
+2021-08-31 23:51:09,793 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-08-31 23:51:09,793 - resolutionSwitchStress - INFO - 	位率：1379 kbps
+2021-08-31 23:51:09,793 - resolutionSwitchStress - INFO - 第3轮79次测试 -- 当前测试分辨率为：H264 3840×2160 30
+2021-08-31 23:52:21,005 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-08-31 23:52:21,005 - resolutionSwitchStress - INFO - 	位率：3093 kbps
+2021-08-31 23:52:21,005 - resolutionSwitchStress - INFO - 第3轮80次测试 -- 当前测试分辨率为：H264 3840×2160P 30(P 16:9)
+2021-08-31 23:53:32,170 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-08-31 23:53:32,170 - resolutionSwitchStress - INFO - 	位率：2786 kbps
+2021-08-31 23:53:32,171 - resolutionSwitchStress - INFO - 第3轮81次测试 -- 当前测试分辨率为：* 640×480 29.97
+2021-08-31 23:54:43,420 - resolutionSwitchStress - INFO - 	帧率： 27.74 fps
+2021-08-31 23:54:43,420 - resolutionSwitchStress - INFO - 	位率：140296 kbps
+2021-08-31 23:54:43,420 - resolutionSwitchStress - INFO - 第3轮82次测试 -- 当前测试分辨率为：* 704×480 29.97
+2021-08-31 23:55:54,637 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-08-31 23:55:54,637 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 23:55:54,637 - resolutionSwitchStress - INFO - 第3轮83次测试 -- 当前测试分辨率为：* 720×480 29.97
+2021-08-31 23:57:05,977 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-08-31 23:57:05,977 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-08-31 23:57:05,978 - resolutionSwitchStress - INFO - 第3轮84次测试 -- 当前测试分辨率为：* 768×576 29.97
+2021-08-31 23:58:17,289 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-08-31 23:58:17,289 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-08-31 23:58:17,289 - resolutionSwitchStress - INFO - 第3轮85次测试 -- 当前测试分辨率为：* 960×540 29.97
+2021-08-31 23:59:28,584 - resolutionSwitchStress - INFO - 	帧率： 18.7 fps
+2021-08-31 23:59:28,584 - resolutionSwitchStress - INFO - 	位率：163859 kbps
+2021-08-31 23:59:28,585 - resolutionSwitchStress - INFO - 第3轮86次测试 -- 当前测试分辨率为：* 1280×720 29.97
+2021-09-01 00:00:39,846 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-09-01 00:00:39,846 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:00:39,846 - resolutionSwitchStress - INFO - 第3轮87次测试 -- 当前测试分辨率为：* 1280×768 29.97
+2021-09-01 00:01:51,139 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 00:01:51,139 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 00:01:51,139 - resolutionSwitchStress - INFO - 第3轮88次测试 -- 当前测试分辨率为：* 1440×900 29.97
+2021-09-01 00:03:02,484 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 00:03:02,485 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 00:03:02,485 - resolutionSwitchStress - INFO - 第3轮89次测试 -- 当前测试分辨率为：* 1920×1080 29.97
+2021-09-01 00:04:14,145 - resolutionSwitchStress - INFO - 	帧率： 27.83 fps
+2021-09-01 00:04:14,145 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:04:14,145 - resolutionSwitchStress - INFO - 第3轮90次测试 -- 当前测试分辨率为：* 640×480 59.94
+2021-09-01 00:05:25,798 - resolutionSwitchStress - INFO - 	帧率： 27.73 fps
+2021-09-01 00:05:25,798 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-09-01 00:05:25,799 - resolutionSwitchStress - INFO - 第3轮91次测试 -- 当前测试分辨率为：* 704×480 59.94
+2021-09-01 00:06:37,543 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 00:06:37,543 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:06:37,544 - resolutionSwitchStress - INFO - 第3轮92次测试 -- 当前测试分辨率为：* 720×480 59.94
+2021-09-01 00:07:49,275 - resolutionSwitchStress - INFO - 	帧率： 28.1 fps
+2021-09-01 00:07:49,275 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-09-01 00:07:49,275 - resolutionSwitchStress - INFO - 第3轮93次测试 -- 当前测试分辨率为：* 768×576 59.94
+2021-09-01 00:09:01,134 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 00:09:01,134 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:09:01,135 - resolutionSwitchStress - INFO - 第3轮94次测试 -- 当前测试分辨率为：* 960×540 59.94
+2021-09-01 00:10:12,895 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-09-01 00:10:12,895 - resolutionSwitchStress - INFO - 	位率：163436 kbps
+2021-09-01 00:10:12,895 - resolutionSwitchStress - INFO - 第3轮95次测试 -- 当前测试分辨率为：* 1280×720 59.94
+2021-09-01 00:11:24,645 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 00:11:24,645 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:11:24,645 - resolutionSwitchStress - INFO - 第3轮96次测试 -- 当前测试分辨率为：* 1280×768 59.94
+2021-09-01 00:12:36,437 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 00:12:36,437 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 00:12:36,437 - resolutionSwitchStress - INFO - 第3轮97次测试 -- 当前测试分辨率为：* 1440×900 59.94
+2021-09-01 00:13:48,234 - resolutionSwitchStress - INFO - 	帧率： 28.03 fps
+2021-09-01 00:13:48,234 - resolutionSwitchStress - INFO - 	位率：105325 kbps
+2021-09-01 00:13:48,234 - resolutionSwitchStress - INFO - 第3轮98次测试 -- 当前测试分辨率为：* 1920×1080 59.94
+2021-09-01 00:14:59,995 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 00:14:59,995 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:15:05,090 - resolutionSwitchStress - INFO - 跳过item：开始播放时选择格式
+2021-09-01 00:15:05,091 - resolutionSwitchStress - INFO - 跳过item：默认格式(推荐)
+2021-09-01 00:15:05,091 - resolutionSwitchStress - INFO - 第4轮1次测试 -- 当前测试分辨率为：YUY2 640×360 30
+2021-09-01 00:16:12,848 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 00:16:12,848 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 00:16:12,848 - resolutionSwitchStress - INFO - 第4轮2次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2021-09-01 00:17:21,041 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 00:17:21,041 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 00:17:21,041 - resolutionSwitchStress - INFO - 第4轮3次测试 -- 当前测试分辨率为：YUY2 160×90 30
+2021-09-01 00:18:29,253 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 00:18:29,253 - resolutionSwitchStress - INFO - 	位率：7256 kbps
+2021-09-01 00:18:29,253 - resolutionSwitchStress - INFO - 第4轮4次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
+2021-09-01 00:19:37,475 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 00:19:37,475 - resolutionSwitchStress - INFO - 	位率：7036 kbps
+2021-09-01 00:19:37,475 - resolutionSwitchStress - INFO - 第4轮5次测试 -- 当前测试分辨率为：YUY2 160×120 30
+2021-09-01 00:20:45,585 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 00:20:45,585 - resolutionSwitchStress - INFO - 	位率：9685 kbps
+2021-09-01 00:20:45,585 - resolutionSwitchStress - INFO - 第4轮6次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)
+2021-09-01 00:21:53,743 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 00:21:53,743 - resolutionSwitchStress - INFO - 	位率：9373 kbps
+2021-09-01 00:21:53,744 - resolutionSwitchStress - INFO - 第4轮7次测试 -- 当前测试分辨率为：YUY2 176×144 30
+2021-09-01 00:23:01,883 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 00:23:01,883 - resolutionSwitchStress - INFO - 	位率：12384 kbps
+2021-09-01 00:23:01,883 - resolutionSwitchStress - INFO - 第4轮8次测试 -- 当前测试分辨率为：YUY2 176×144P 30(P 11:9)
+2021-09-01 00:24:10,079 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 00:24:10,079 - resolutionSwitchStress - INFO - 	位率：12372 kbps
+2021-09-01 00:24:10,079 - resolutionSwitchStress - INFO - 第4轮9次测试 -- 当前测试分辨率为：YUY2 320×180 30
+2021-09-01 00:25:18,208 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 00:25:18,208 - resolutionSwitchStress - INFO - 	位率：28576 kbps
+2021-09-01 00:25:18,209 - resolutionSwitchStress - INFO - 第4轮10次测试 -- 当前测试分辨率为：YUY2 320×180P 30(P 16:9)
+2021-09-01 00:26:26,359 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 00:26:26,359 - resolutionSwitchStress - INFO - 	位率：28604 kbps
+2021-09-01 00:26:26,359 - resolutionSwitchStress - INFO - 第4轮11次测试 -- 当前测试分辨率为：YUY2 320×240 30
+2021-09-01 00:27:34,542 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 00:27:34,542 - resolutionSwitchStress - INFO - 	位率：37492 kbps
+2021-09-01 00:27:34,542 - resolutionSwitchStress - INFO - 第4轮12次测试 -- 当前测试分辨率为：YUY2 320×240P 30(P 4:3)
+2021-09-01 00:28:42,689 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 00:28:42,689 - resolutionSwitchStress - INFO - 	位率：38139 kbps
+2021-09-01 00:28:42,689 - resolutionSwitchStress - INFO - 第4轮13次测试 -- 当前测试分辨率为：YUY2 352×288 30
+2021-09-01 00:29:50,827 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 00:29:50,827 - resolutionSwitchStress - INFO - 	位率：50343 kbps
+2021-09-01 00:29:50,827 - resolutionSwitchStress - INFO - 第4轮14次测试 -- 当前测试分辨率为：YUY2 352×288P 30(P 11:9)
+2021-09-01 00:30:59,108 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 00:30:59,108 - resolutionSwitchStress - INFO - 	位率：51087 kbps
+2021-09-01 00:30:59,109 - resolutionSwitchStress - INFO - 第4轮15次测试 -- 当前测试分辨率为：YUY2 480×270 30
+2021-09-01 00:32:07,262 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 00:32:07,262 - resolutionSwitchStress - INFO - 	位率：64297 kbps
+2021-09-01 00:32:07,263 - resolutionSwitchStress - INFO - 第4轮16次测试 -- 当前测试分辨率为：YUY2 480×270P 30(P 16:9)
+2021-09-01 00:33:15,399 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 00:33:15,399 - resolutionSwitchStress - INFO - 	位率：63269 kbps
+2021-09-01 00:33:15,400 - resolutionSwitchStress - INFO - 第4轮17次测试 -- 当前测试分辨率为：YUY2 640×480 30
+2021-09-01 00:34:23,580 - resolutionSwitchStress - INFO - 	帧率： 27.74 fps
+2021-09-01 00:34:23,580 - resolutionSwitchStress - INFO - 	位率：140836 kbps
+2021-09-01 00:34:23,580 - resolutionSwitchStress - INFO - 第4轮18次测试 -- 当前测试分辨率为：YUY2 640×480P 30(P 4:3)
+2021-09-01 00:35:31,773 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 00:35:31,773 - resolutionSwitchStress - INFO - 	位率：140434 kbps
+2021-09-01 00:35:31,774 - resolutionSwitchStress - INFO - 第4轮19次测试 -- 当前测试分辨率为：YUY2 800×600 30
+2021-09-01 00:36:39,993 - resolutionSwitchStress - INFO - 	帧率： 20.09 fps
+2021-09-01 00:36:39,993 - resolutionSwitchStress - INFO - 	位率：154040 kbps
+2021-09-01 00:36:39,994 - resolutionSwitchStress - INFO - 第4轮20次测试 -- 当前测试分辨率为：YUY2 800×600P 30(P 4:3)
+2021-09-01 00:37:48,084 - resolutionSwitchStress - INFO - 	帧率： 20.23 fps
+2021-09-01 00:37:48,084 - resolutionSwitchStress - INFO - 	位率：161375 kbps
+2021-09-01 00:37:48,084 - resolutionSwitchStress - INFO - 第4轮21次测试 -- 当前测试分辨率为：YUY2 960×540 30
+2021-09-01 00:38:56,262 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-09-01 00:38:56,262 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-09-01 00:38:56,262 - resolutionSwitchStress - INFO - 第4轮22次测试 -- 当前测试分辨率为：YUY2 960×540P 30(P 16:9)
+2021-09-01 00:40:04,473 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-09-01 00:40:04,473 - resolutionSwitchStress - INFO - 	位率：166363 kbps
+2021-09-01 00:40:04,474 - resolutionSwitchStress - INFO - 第4轮23次测试 -- 当前测试分辨率为：MJPG 1920×1080 30
+2021-09-01 00:41:12,682 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-09-01 00:41:12,682 - resolutionSwitchStress - INFO - 	位率：32420 kbps
+2021-09-01 00:41:12,682 - resolutionSwitchStress - INFO - 第4轮24次测试 -- 当前测试分辨率为：MJPG 1920×1080P 30(P 16:9)
+2021-09-01 00:42:20,916 - resolutionSwitchStress - INFO - 	帧率： 29.88 fps
+2021-09-01 00:42:20,916 - resolutionSwitchStress - INFO - 	位率：33654 kbps
+2021-09-01 00:42:20,916 - resolutionSwitchStress - INFO - 第4轮25次测试 -- 当前测试分辨率为：MJPG 160×90 30
+2021-09-01 00:43:29,139 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 00:43:29,139 - resolutionSwitchStress - INFO - 	位率：315.7 kbps
+2021-09-01 00:43:29,139 - resolutionSwitchStress - INFO - 第4轮26次测试 -- 当前测试分辨率为：MJPG 160×90P 30(P 16:9)
+2021-09-01 00:44:37,373 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 00:44:37,373 - resolutionSwitchStress - INFO - 	位率：313.5 kbps
+2021-09-01 00:44:37,374 - resolutionSwitchStress - INFO - 第4轮27次测试 -- 当前测试分辨率为：MJPG 160×120 30
+2021-09-01 00:45:45,586 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 00:45:45,586 - resolutionSwitchStress - INFO - 	位率：447.5 kbps
+2021-09-01 00:45:45,587 - resolutionSwitchStress - INFO - 第4轮28次测试 -- 当前测试分辨率为：MJPG 160×120P 30(P 4:3)
+2021-09-01 00:46:53,841 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 00:46:53,841 - resolutionSwitchStress - INFO - 	位率：444.8 kbps
+2021-09-01 00:46:53,841 - resolutionSwitchStress - INFO - 第4轮29次测试 -- 当前测试分辨率为：MJPG 176×144 30
+2021-09-01 00:48:03,070 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 00:48:03,070 - resolutionSwitchStress - INFO - 	位率：521 kbps
+2021-09-01 00:48:03,070 - resolutionSwitchStress - INFO - 第4轮30次测试 -- 当前测试分辨率为：MJPG 176×144P 30(P 11:9)
+2021-09-01 00:49:12,313 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 00:49:12,313 - resolutionSwitchStress - INFO - 	位率：511.3 kbps
+2021-09-01 00:49:12,313 - resolutionSwitchStress - INFO - 第4轮31次测试 -- 当前测试分辨率为：MJPG 320×180 30
+2021-09-01 00:50:21,628 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 00:50:21,628 - resolutionSwitchStress - INFO - 	位率：785.8 kbps
+2021-09-01 00:50:21,629 - resolutionSwitchStress - INFO - 第4轮32次测试 -- 当前测试分辨率为：MJPG 320×180P 30(P 16:9)
+2021-09-01 00:51:30,904 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 00:51:30,904 - resolutionSwitchStress - INFO - 	位率：799.7 kbps
+2021-09-01 00:51:30,904 - resolutionSwitchStress - INFO - 第4轮33次测试 -- 当前测试分辨率为：MJPG 320×240 30
+2021-09-01 00:52:40,238 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 00:52:40,238 - resolutionSwitchStress - INFO - 	位率：1512 kbps
+2021-09-01 00:52:40,238 - resolutionSwitchStress - INFO - 第4轮34次测试 -- 当前测试分辨率为：MJPG 320×240P 30(P 4:3)
+2021-09-01 00:53:49,610 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 00:53:49,610 - resolutionSwitchStress - INFO - 	位率：1436 kbps
+2021-09-01 00:53:49,610 - resolutionSwitchStress - INFO - 第4轮35次测试 -- 当前测试分辨率为：MJPG 352×288 30
+2021-09-01 00:54:58,982 - resolutionSwitchStress - INFO - 	帧率： 29.98 fps
+2021-09-01 00:54:58,982 - resolutionSwitchStress - INFO - 	位率：2145 kbps
+2021-09-01 00:54:58,982 - resolutionSwitchStress - INFO - 第4轮36次测试 -- 当前测试分辨率为：MJPG 352×288P 30(P 11:9)
+2021-09-01 00:56:08,333 - resolutionSwitchStress - INFO - 	帧率： 29.86 fps
+2021-09-01 00:56:08,333 - resolutionSwitchStress - INFO - 	位率：2150 kbps
+2021-09-01 00:56:08,334 - resolutionSwitchStress - INFO - 第4轮37次测试 -- 当前测试分辨率为：MJPG 480×270 30
+2021-09-01 00:57:17,641 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 00:57:17,641 - resolutionSwitchStress - INFO - 	位率：1751 kbps
+2021-09-01 00:57:17,641 - resolutionSwitchStress - INFO - 第4轮38次测试 -- 当前测试分辨率为：MJPG 480×270P 30(P 16:9)
+2021-09-01 00:58:27,322 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 00:58:27,322 - resolutionSwitchStress - INFO - 	位率：1763 kbps
+2021-09-01 00:58:27,322 - resolutionSwitchStress - INFO - 第4轮39次测试 -- 当前测试分辨率为：MJPG 640×360 30
+2021-09-01 00:59:36,956 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 00:59:36,957 - resolutionSwitchStress - INFO - 	位率：2876 kbps
+2021-09-01 00:59:36,957 - resolutionSwitchStress - INFO - 第4轮40次测试 -- 当前测试分辨率为：MJPG 640×360P 30(P 16:9)
+2021-09-01 01:00:46,648 - resolutionSwitchStress - INFO - 	帧率： 29.97 fps
+2021-09-01 01:00:46,648 - resolutionSwitchStress - INFO - 	位率：3022 kbps
+2021-09-01 01:00:46,648 - resolutionSwitchStress - INFO - 第4轮41次测试 -- 当前测试分辨率为：MJPG 640×480 30
+2021-09-01 01:01:56,354 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 01:01:56,354 - resolutionSwitchStress - INFO - 	位率：6840 kbps
+2021-09-01 01:01:56,354 - resolutionSwitchStress - INFO - 第4轮42次测试 -- 当前测试分辨率为：MJPG 640×480P 30(P 4:3)
+2021-09-01 01:03:06,036 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 01:03:06,036 - resolutionSwitchStress - INFO - 	位率：6421 kbps
+2021-09-01 01:03:06,036 - resolutionSwitchStress - INFO - 第4轮43次测试 -- 当前测试分辨率为：MJPG 800×600 30
+2021-09-01 01:04:15,778 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 01:04:15,778 - resolutionSwitchStress - INFO - 	位率：9746 kbps
+2021-09-01 01:04:15,779 - resolutionSwitchStress - INFO - 第4轮44次测试 -- 当前测试分辨率为：MJPG 800×600P 30(P 4:3)
+2021-09-01 01:05:25,552 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 01:05:25,552 - resolutionSwitchStress - INFO - 	位率：9093 kbps
+2021-09-01 01:05:25,552 - resolutionSwitchStress - INFO - 第4轮45次测试 -- 当前测试分辨率为：MJPG 960×540 30
+2021-09-01 01:06:35,239 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 01:06:35,239 - resolutionSwitchStress - INFO - 	位率：9472 kbps
+2021-09-01 01:06:35,239 - resolutionSwitchStress - INFO - 第4轮46次测试 -- 当前测试分辨率为：MJPG 960×540P 30(P 16:9)
+2021-09-01 01:07:44,970 - resolutionSwitchStress - INFO - 	帧率： 29.86 fps
+2021-09-01 01:07:44,970 - resolutionSwitchStress - INFO - 	位率：9337 kbps
+2021-09-01 01:07:44,970 - resolutionSwitchStress - INFO - 第4轮47次测试 -- 当前测试分辨率为：MJPG 1024×576 30
+2021-09-01 01:08:54,709 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 01:08:54,710 - resolutionSwitchStress - INFO - 	位率：5332 kbps
+2021-09-01 01:08:54,710 - resolutionSwitchStress - INFO - 第4轮48次测试 -- 当前测试分辨率为：MJPG 1024×576P 30(P 16:9)
+2021-09-01 01:10:04,538 - resolutionSwitchStress - INFO - 	帧率： 29.88 fps
+2021-09-01 01:10:04,538 - resolutionSwitchStress - INFO - 	位率：5292 kbps
+2021-09-01 01:10:04,538 - resolutionSwitchStress - INFO - 第4轮49次测试 -- 当前测试分辨率为：MJPG 1280×720 30
+2021-09-01 01:11:14,372 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 01:11:14,372 - resolutionSwitchStress - INFO - 	位率：8503 kbps
+2021-09-01 01:11:14,372 - resolutionSwitchStress - INFO - 第4轮50次测试 -- 当前测试分辨率为：MJPG 1280×720P 30(P 16:9)
+2021-09-01 01:12:24,465 - resolutionSwitchStress - INFO - 	帧率： 29.74 fps
+2021-09-01 01:12:24,465 - resolutionSwitchStress - INFO - 	位率：8602 kbps
+2021-09-01 01:12:24,465 - resolutionSwitchStress - INFO - 第4轮51次测试 -- 当前测试分辨率为：MJPG 2560×1440 30
+2021-09-01 01:13:34,576 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 01:13:34,576 - resolutionSwitchStress - INFO - 	位率：33841 kbps
+2021-09-01 01:13:34,576 - resolutionSwitchStress - INFO - 第4轮52次测试 -- 当前测试分辨率为：MJPG 2560×1440P 30(P 16:9)
+2021-09-01 01:14:44,720 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 01:14:44,720 - resolutionSwitchStress - INFO - 	位率：32734 kbps
+2021-09-01 01:14:44,721 - resolutionSwitchStress - INFO - 第4轮53次测试 -- 当前测试分辨率为：MJPG 3840×2160 30
+2021-09-01 01:15:54,839 - resolutionSwitchStress - INFO - 	帧率： 29.79 fps
+2021-09-01 01:15:54,839 - resolutionSwitchStress - INFO - 	位率：59110 kbps
+2021-09-01 01:15:54,839 - resolutionSwitchStress - INFO - 第4轮54次测试 -- 当前测试分辨率为：MJPG 3840×2160P 30(P 16:9)
+2021-09-01 01:17:05,082 - resolutionSwitchStress - INFO - 	帧率： 29.88 fps
+2021-09-01 01:17:05,082 - resolutionSwitchStress - INFO - 	位率：57673 kbps
+2021-09-01 01:17:05,083 - resolutionSwitchStress - INFO - 第4轮55次测试 -- 当前测试分辨率为：H264 1920×1080 30
+2021-09-01 01:18:15,299 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 01:18:15,299 - resolutionSwitchStress - INFO - 	位率：1466 kbps
+2021-09-01 01:18:15,299 - resolutionSwitchStress - INFO - 第4轮56次测试 -- 当前测试分辨率为：H264 1920×1080P 30(P 16:9)
+2021-09-01 01:19:25,477 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 01:19:25,477 - resolutionSwitchStress - INFO - 	位率：1554 kbps
+2021-09-01 01:19:25,478 - resolutionSwitchStress - INFO - 第4轮57次测试 -- 当前测试分辨率为：H264 1280×720 30
+2021-09-01 01:20:35,680 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 01:20:35,680 - resolutionSwitchStress - INFO - 	位率：85.1 kbps
+2021-09-01 01:20:35,681 - resolutionSwitchStress - INFO - 第4轮58次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2021-09-01 01:21:45,907 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 01:21:45,907 - resolutionSwitchStress - INFO - 	位率：86.6 kbps
+2021-09-01 01:21:45,907 - resolutionSwitchStress - INFO - 第4轮59次测试 -- 当前测试分辨率为：H264 1024×576 30
+2021-09-01 01:22:56,159 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 01:22:56,159 - resolutionSwitchStress - INFO - 	位率：55.3 kbps
+2021-09-01 01:22:56,159 - resolutionSwitchStress - INFO - 第4轮60次测试 -- 当前测试分辨率为：H264 1024×576P 30(P 16:9)
+2021-09-01 01:24:06,402 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 01:24:06,402 - resolutionSwitchStress - INFO - 	位率：40.1 kbps
+2021-09-01 01:24:06,402 - resolutionSwitchStress - INFO - 第4轮61次测试 -- 当前测试分辨率为：H264 960×540 30
+2021-09-01 01:25:16,694 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 01:25:16,694 - resolutionSwitchStress - INFO - 	位率：1874 kbps
+2021-09-01 01:25:16,695 - resolutionSwitchStress - INFO - 第4轮62次测试 -- 当前测试分辨率为：H264 960×540P 30(P 16:9)
+2021-09-01 01:26:27,279 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 01:26:27,279 - resolutionSwitchStress - INFO - 	位率：1717 kbps
+2021-09-01 01:26:27,280 - resolutionSwitchStress - INFO - 第4轮63次测试 -- 当前测试分辨率为：H264 800×600 30
+2021-09-01 01:27:37,874 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 01:27:37,874 - resolutionSwitchStress - INFO - 	位率：2696 kbps
+2021-09-01 01:27:37,874 - resolutionSwitchStress - INFO - 第4轮64次测试 -- 当前测试分辨率为：H264 800×600P 30(P 4:3)
+2021-09-01 01:28:48,565 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 01:28:48,565 - resolutionSwitchStress - INFO - 	位率：2346 kbps
+2021-09-01 01:28:48,566 - resolutionSwitchStress - INFO - 第4轮65次测试 -- 当前测试分辨率为：H264 640×480 30
+2021-09-01 01:29:59,144 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 01:29:59,144 - resolutionSwitchStress - INFO - 	位率：514.4 kbps
+2021-09-01 01:29:59,144 - resolutionSwitchStress - INFO - 第4轮66次测试 -- 当前测试分辨率为：H264 640×480P 30(P 4:3)
+2021-09-01 01:31:09,746 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 01:31:09,746 - resolutionSwitchStress - INFO - 	位率：631.3 kbps
+2021-09-01 01:31:09,746 - resolutionSwitchStress - INFO - 第4轮67次测试 -- 当前测试分辨率为：H264 640×360 30
+2021-09-01 01:32:20,340 - resolutionSwitchStress - INFO - 	帧率： 29.8 fps
+2021-09-01 01:32:20,340 - resolutionSwitchStress - INFO - 	位率：160.7 kbps
+2021-09-01 01:32:20,341 - resolutionSwitchStress - INFO - 第4轮68次测试 -- 当前测试分辨率为：H264 640×360P 30(P 16:9)
+2021-09-01 01:33:30,929 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 01:33:30,929 - resolutionSwitchStress - INFO - 	位率：167.8 kbps
+2021-09-01 01:33:30,929 - resolutionSwitchStress - INFO - 第4轮69次测试 -- 当前测试分辨率为：H264 480×270 30
+2021-09-01 01:34:41,549 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 01:34:41,549 - resolutionSwitchStress - INFO - 	位率：81.7 kbps
+2021-09-01 01:34:41,549 - resolutionSwitchStress - INFO - 第4轮70次测试 -- 当前测试分辨率为：H264 480×270P 30(P 16:9)
+2021-09-01 01:35:52,233 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 01:35:52,233 - resolutionSwitchStress - INFO - 	位率：94.2 kbps
+2021-09-01 01:35:52,234 - resolutionSwitchStress - INFO - 第4轮71次测试 -- 当前测试分辨率为：H264 352×288 30
+2021-09-01 01:37:02,944 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 01:37:02,944 - resolutionSwitchStress - INFO - 	位率：189.5 kbps
+2021-09-01 01:37:02,945 - resolutionSwitchStress - INFO - 第4轮72次测试 -- 当前测试分辨率为：H264 352×288P 30(P 11:9)
+2021-09-01 01:38:13,723 - resolutionSwitchStress - INFO - 	帧率： 30.03 fps
+2021-09-01 01:38:13,723 - resolutionSwitchStress - INFO - 	位率：139.5 kbps
+2021-09-01 01:38:13,723 - resolutionSwitchStress - INFO - 第4轮73次测试 -- 当前测试分辨率为：H264 320×240 30
+2021-09-01 01:39:24,514 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-09-01 01:39:24,515 - resolutionSwitchStress - INFO - 	位率：70.9 kbps
+2021-09-01 01:39:24,515 - resolutionSwitchStress - INFO - 第4轮74次测试 -- 当前测试分辨率为：H264 320×240P 30(P 4:3)
+2021-09-01 01:40:35,810 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-09-01 01:40:35,810 - resolutionSwitchStress - INFO - 	位率：83.5 kbps
+2021-09-01 01:40:35,811 - resolutionSwitchStress - INFO - 第4轮75次测试 -- 当前测试分辨率为：H264 320×180 30
+2021-09-01 01:41:46,938 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 01:41:46,939 - resolutionSwitchStress - INFO - 	位率：40.4 kbps
+2021-09-01 01:41:46,939 - resolutionSwitchStress - INFO - 第4轮76次测试 -- 当前测试分辨率为：H264 320×180P 30(P 16:9)
+2021-09-01 01:42:58,052 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 01:42:58,052 - resolutionSwitchStress - INFO - 	位率：54.1 kbps
+2021-09-01 01:42:58,052 - resolutionSwitchStress - INFO - 第4轮77次测试 -- 当前测试分辨率为：H264 2560×1440 30
+2021-09-01 01:44:09,220 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 01:44:09,220 - resolutionSwitchStress - INFO - 	位率：1054 kbps
+2021-09-01 01:44:09,220 - resolutionSwitchStress - INFO - 第4轮78次测试 -- 当前测试分辨率为：H264 2560×1440P 30(P 16:9)
+2021-09-01 01:45:20,343 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 01:45:20,343 - resolutionSwitchStress - INFO - 	位率：976.7 kbps
+2021-09-01 01:45:20,344 - resolutionSwitchStress - INFO - 第4轮79次测试 -- 当前测试分辨率为：H264 3840×2160 30
+2021-09-01 01:46:31,494 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 01:46:31,495 - resolutionSwitchStress - INFO - 	位率：3012 kbps
+2021-09-01 01:46:31,495 - resolutionSwitchStress - INFO - 第4轮80次测试 -- 当前测试分辨率为：H264 3840×2160P 30(P 16:9)
+2021-09-01 01:47:42,650 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 01:47:42,650 - resolutionSwitchStress - INFO - 	位率：3217 kbps
+2021-09-01 01:47:42,651 - resolutionSwitchStress - INFO - 第4轮81次测试 -- 当前测试分辨率为：* 640×480 29.97
+2021-09-01 01:48:53,781 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 01:48:53,781 - resolutionSwitchStress - INFO - 	位率：140296 kbps
+2021-09-01 01:48:53,782 - resolutionSwitchStress - INFO - 第4轮82次测试 -- 当前测试分辨率为：* 704×480 29.97
+2021-09-01 01:50:04,968 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 01:50:04,968 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 01:50:04,968 - resolutionSwitchStress - INFO - 第4轮83次测试 -- 当前测试分辨率为：* 720×480 29.97
+2021-09-01 01:51:16,200 - resolutionSwitchStress - INFO - 	帧率： 28.23 fps
+2021-09-01 01:51:16,200 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-09-01 01:51:16,201 - resolutionSwitchStress - INFO - 第4轮84次测试 -- 当前测试分辨率为：* 768×576 29.97
+2021-09-01 01:52:27,568 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 01:52:27,568 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-09-01 01:52:27,569 - resolutionSwitchStress - INFO - 第4轮85次测试 -- 当前测试分辨率为：* 960×540 29.97
+2021-09-01 01:53:38,903 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-09-01 01:53:38,903 - resolutionSwitchStress - INFO - 	位率：164013 kbps
+2021-09-01 01:53:38,903 - resolutionSwitchStress - INFO - 第4轮86次测试 -- 当前测试分辨率为：* 1280×720 29.97
+2021-09-01 01:54:50,151 - resolutionSwitchStress - INFO - 	帧率： 28.14 fps
+2021-09-01 01:54:50,151 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 01:54:50,151 - resolutionSwitchStress - INFO - 第4轮87次测试 -- 当前测试分辨率为：* 1280×768 29.97
+2021-09-01 01:56:01,441 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-09-01 01:56:01,441 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 01:56:01,442 - resolutionSwitchStress - INFO - 第4轮88次测试 -- 当前测试分辨率为：* 1440×900 29.97
+2021-09-01 01:57:12,761 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 01:57:12,761 - resolutionSwitchStress - INFO - 	位率：105325 kbps
+2021-09-01 01:57:12,761 - resolutionSwitchStress - INFO - 第4轮89次测试 -- 当前测试分辨率为：* 1920×1080 29.97
+2021-09-01 01:58:24,430 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 01:58:24,430 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 01:58:24,430 - resolutionSwitchStress - INFO - 第4轮90次测试 -- 当前测试分辨率为：* 640×480 59.94
+2021-09-01 01:59:36,098 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 01:59:36,098 - resolutionSwitchStress - INFO - 	位率：140836 kbps
+2021-09-01 01:59:36,098 - resolutionSwitchStress - INFO - 第4轮91次测试 -- 当前测试分辨率为：* 704×480 59.94
+2021-09-01 02:00:47,814 - resolutionSwitchStress - INFO - 	帧率： 28.02 fps
+2021-09-01 02:00:47,815 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 02:00:47,815 - resolutionSwitchStress - INFO - 第4轮92次测试 -- 当前测试分辨率为：* 720×480 59.94
+2021-09-01 02:01:59,524 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 02:01:59,524 - resolutionSwitchStress - INFO - 	位率：105325 kbps
+2021-09-01 02:01:59,525 - resolutionSwitchStress - INFO - 第4轮93次测试 -- 当前测试分辨率为：* 768×576 59.94
+2021-09-01 02:03:11,272 - resolutionSwitchStress - INFO - 	帧率： 28.04 fps
+2021-09-01 02:03:11,272 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-09-01 02:03:11,272 - resolutionSwitchStress - INFO - 第4轮94次测试 -- 当前测试分辨率为：* 960×540 59.94
+2021-09-01 02:04:23,131 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-09-01 02:04:23,131 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-09-01 02:04:23,132 - resolutionSwitchStress - INFO - 第4轮95次测试 -- 当前测试分辨率为：* 1280×720 59.94
+2021-09-01 02:05:34,996 - resolutionSwitchStress - INFO - 	帧率： 27.64 fps
+2021-09-01 02:05:34,996 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 02:05:34,997 - resolutionSwitchStress - INFO - 第4轮96次测试 -- 当前测试分辨率为：* 1280×768 59.94
+2021-09-01 02:06:46,806 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 02:06:46,806 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 02:06:46,806 - resolutionSwitchStress - INFO - 第4轮97次测试 -- 当前测试分辨率为：* 1440×900 59.94
+2021-09-01 02:07:58,655 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 02:07:58,655 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 02:07:58,656 - resolutionSwitchStress - INFO - 第4轮98次测试 -- 当前测试分辨率为：* 1920×1080 59.94
+2021-09-01 02:09:10,540 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 02:09:10,540 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 02:09:15,648 - resolutionSwitchStress - INFO - 跳过item：开始播放时选择格式
+2021-09-01 02:09:15,648 - resolutionSwitchStress - INFO - 跳过item：默认格式(推荐)
+2021-09-01 02:09:15,648 - resolutionSwitchStress - INFO - 第5轮1次测试 -- 当前测试分辨率为：YUY2 640×360 30
+2021-09-01 02:10:23,485 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-09-01 02:10:23,485 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 02:10:23,486 - resolutionSwitchStress - INFO - 第5轮2次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2021-09-01 02:11:31,656 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 02:11:31,656 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 02:11:31,656 - resolutionSwitchStress - INFO - 第5轮3次测试 -- 当前测试分辨率为：YUY2 160×90 30
+2021-09-01 02:12:39,794 - resolutionSwitchStress - INFO - 	帧率： 29.6 fps
+2021-09-01 02:12:39,795 - resolutionSwitchStress - INFO - 	位率：7151 kbps
+2021-09-01 02:12:39,795 - resolutionSwitchStress - INFO - 第5轮4次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
+2021-09-01 02:13:47,957 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 02:13:47,957 - resolutionSwitchStress - INFO - 	位率：7151 kbps
+2021-09-01 02:13:47,957 - resolutionSwitchStress - INFO - 第5轮5次测试 -- 当前测试分辨率为：YUY2 160×120 30
+2021-09-01 02:14:56,095 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 02:14:56,095 - resolutionSwitchStress - INFO - 	位率：9534 kbps
+2021-09-01 02:14:56,095 - resolutionSwitchStress - INFO - 第5轮6次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)
+2021-09-01 02:16:04,190 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 02:16:04,190 - resolutionSwitchStress - INFO - 	位率：9534 kbps
+2021-09-01 02:16:04,190 - resolutionSwitchStress - INFO - 第5轮7次测试 -- 当前测试分辨率为：YUY2 176×144 30
+2021-09-01 02:17:12,373 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:17:12,374 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-09-01 02:17:12,374 - resolutionSwitchStress - INFO - 第5轮8次测试 -- 当前测试分辨率为：YUY2 176×144P 30(P 11:9)
+2021-09-01 02:18:20,531 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 02:18:20,531 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-09-01 02:18:20,531 - resolutionSwitchStress - INFO - 第5轮9次测试 -- 当前测试分辨率为：YUY2 320×180 30
+2021-09-01 02:19:28,702 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 02:19:28,702 - resolutionSwitchStress - INFO - 	位率：28576 kbps
+2021-09-01 02:19:28,702 - resolutionSwitchStress - INFO - 第5轮10次测试 -- 当前测试分辨率为：YUY2 320×180P 30(P 16:9)
+2021-09-01 02:20:36,864 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 02:20:36,864 - resolutionSwitchStress - INFO - 	位率：29055 kbps
+2021-09-01 02:20:36,865 - resolutionSwitchStress - INFO - 第5轮11次测试 -- 当前测试分辨率为：YUY2 320×240 30
+2021-09-01 02:21:45,020 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:21:45,020 - resolutionSwitchStress - INFO - 	位率：38139 kbps
+2021-09-01 02:21:45,020 - resolutionSwitchStress - INFO - 第5轮12次测试 -- 当前测试分辨率为：YUY2 320×240P 30(P 4:3)
+2021-09-01 02:22:53,166 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 02:22:53,166 - resolutionSwitchStress - INFO - 	位率：38702 kbps
+2021-09-01 02:22:53,166 - resolutionSwitchStress - INFO - 第5轮13次测试 -- 当前测试分辨率为：YUY2 352×288 30
+2021-09-01 02:24:01,342 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:24:01,342 - resolutionSwitchStress - INFO - 	位率：49539 kbps
+2021-09-01 02:24:01,342 - resolutionSwitchStress - INFO - 第5轮14次测试 -- 当前测试分辨率为：YUY2 352×288P 30(P 11:9)
+2021-09-01 02:25:09,484 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:25:09,484 - resolutionSwitchStress - INFO - 	位率：51087 kbps
+2021-09-01 02:25:09,484 - resolutionSwitchStress - INFO - 第5轮15次测试 -- 当前测试分辨率为：YUY2 480×270 30
+2021-09-01 02:26:17,687 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 02:26:17,687 - resolutionSwitchStress - INFO - 	位率：64360 kbps
+2021-09-01 02:26:17,688 - resolutionSwitchStress - INFO - 第5轮16次测试 -- 当前测试分辨率为：YUY2 480×270P 30(P 16:9)
+2021-09-01 02:27:25,823 - resolutionSwitchStress - INFO - 	帧率： 29.97 fps
+2021-09-01 02:27:25,823 - resolutionSwitchStress - INFO - 	位率：64297 kbps
+2021-09-01 02:27:25,824 - resolutionSwitchStress - INFO - 第5轮17次测试 -- 当前测试分辨率为：YUY2 640×480 30
+2021-09-01 02:28:33,963 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 02:28:33,963 - resolutionSwitchStress - INFO - 	位率：140296 kbps
+2021-09-01 02:28:33,964 - resolutionSwitchStress - INFO - 第5轮18次测试 -- 当前测试分辨率为：YUY2 640×480P 30(P 4:3)
+2021-09-01 02:29:42,167 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 02:29:42,167 - resolutionSwitchStress - INFO - 	位率：140836 kbps
+2021-09-01 02:29:42,168 - resolutionSwitchStress - INFO - 第5轮19次测试 -- 当前测试分辨率为：YUY2 800×600 30
+2021-09-01 02:30:50,337 - resolutionSwitchStress - INFO - 	帧率： 20.24 fps
+2021-09-01 02:30:50,337 - resolutionSwitchStress - INFO - 	位率：161375 kbps
+2021-09-01 02:30:50,338 - resolutionSwitchStress - INFO - 第5轮20次测试 -- 当前测试分辨率为：YUY2 800×600P 30(P 4:3)
+2021-09-01 02:31:58,499 - resolutionSwitchStress - INFO - 	帧率： 20.24 fps
+2021-09-01 02:31:58,499 - resolutionSwitchStress - INFO - 	位率：161375 kbps
+2021-09-01 02:31:58,500 - resolutionSwitchStress - INFO - 第5轮21次测试 -- 当前测试分辨率为：YUY2 960×540 30
+2021-09-01 02:33:06,701 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-09-01 02:33:06,701 - resolutionSwitchStress - INFO - 	位率：163436 kbps
+2021-09-01 02:33:06,701 - resolutionSwitchStress - INFO - 第5轮22次测试 -- 当前测试分辨率为：YUY2 960×540P 30(P 16:9)
+2021-09-01 02:34:14,908 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-09-01 02:34:14,908 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-09-01 02:34:14,909 - resolutionSwitchStress - INFO - 第5轮23次测试 -- 当前测试分辨率为：MJPG 1920×1080 30
+2021-09-01 02:35:23,151 - resolutionSwitchStress - INFO - 	帧率： 29.48 fps
+2021-09-01 02:35:23,152 - resolutionSwitchStress - INFO - 	位率：31164 kbps
+2021-09-01 02:35:23,152 - resolutionSwitchStress - INFO - 第5轮24次测试 -- 当前测试分辨率为：MJPG 1920×1080P 30(P 16:9)
+2021-09-01 02:36:31,345 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 02:36:31,345 - resolutionSwitchStress - INFO - 	位率：33528 kbps
+2021-09-01 02:36:31,346 - resolutionSwitchStress - INFO - 第5轮25次测试 -- 当前测试分辨率为：MJPG 160×90 30
+2021-09-01 02:37:39,588 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 02:37:39,588 - resolutionSwitchStress - INFO - 	位率：312.4 kbps
+2021-09-01 02:37:39,588 - resolutionSwitchStress - INFO - 第5轮26次测试 -- 当前测试分辨率为：MJPG 160×90P 30(P 16:9)
+2021-09-01 02:38:47,783 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 02:38:47,783 - resolutionSwitchStress - INFO - 	位率：306.6 kbps
+2021-09-01 02:38:47,783 - resolutionSwitchStress - INFO - 第5轮27次测试 -- 当前测试分辨率为：MJPG 160×120 30
+2021-09-01 02:39:56,010 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:39:56,011 - resolutionSwitchStress - INFO - 	位率：452.8 kbps
+2021-09-01 02:39:56,011 - resolutionSwitchStress - INFO - 第5轮28次测试 -- 当前测试分辨率为：MJPG 160×120P 30(P 4:3)
+2021-09-01 02:41:04,231 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 02:41:04,231 - resolutionSwitchStress - INFO - 	位率：430.9 kbps
+2021-09-01 02:41:04,232 - resolutionSwitchStress - INFO - 第5轮29次测试 -- 当前测试分辨率为：MJPG 176×144 30
+2021-09-01 02:42:13,427 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:42:13,427 - resolutionSwitchStress - INFO - 	位率：521.4 kbps
+2021-09-01 02:42:13,428 - resolutionSwitchStress - INFO - 第5轮30次测试 -- 当前测试分辨率为：MJPG 176×144P 30(P 11:9)
+2021-09-01 02:43:22,704 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 02:43:22,704 - resolutionSwitchStress - INFO - 	位率：531.2 kbps
+2021-09-01 02:43:22,705 - resolutionSwitchStress - INFO - 第5轮31次测试 -- 当前测试分辨率为：MJPG 320×180 30
+2021-09-01 02:44:31,955 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 02:44:31,955 - resolutionSwitchStress - INFO - 	位率：806.2 kbps
+2021-09-01 02:44:31,955 - resolutionSwitchStress - INFO - 第5轮32次测试 -- 当前测试分辨率为：MJPG 320×180P 30(P 16:9)
+2021-09-01 02:45:41,280 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 02:45:41,281 - resolutionSwitchStress - INFO - 	位率：794.7 kbps
+2021-09-01 02:45:41,281 - resolutionSwitchStress - INFO - 第5轮33次测试 -- 当前测试分辨率为：MJPG 320×240 30
+2021-09-01 02:46:50,627 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 02:46:50,628 - resolutionSwitchStress - INFO - 	位率：1562 kbps
+2021-09-01 02:46:50,628 - resolutionSwitchStress - INFO - 第5轮34次测试 -- 当前测试分辨率为：MJPG 320×240P 30(P 4:3)
+2021-09-01 02:47:59,951 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:47:59,951 - resolutionSwitchStress - INFO - 	位率：1469 kbps
+2021-09-01 02:47:59,952 - resolutionSwitchStress - INFO - 第5轮35次测试 -- 当前测试分辨率为：MJPG 352×288 30
+2021-09-01 02:49:09,324 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 02:49:09,324 - resolutionSwitchStress - INFO - 	位率：2111 kbps
+2021-09-01 02:49:09,325 - resolutionSwitchStress - INFO - 第5轮36次测试 -- 当前测试分辨率为：MJPG 352×288P 30(P 11:9)
+2021-09-01 02:50:18,650 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-09-01 02:50:18,650 - resolutionSwitchStress - INFO - 	位率：2108 kbps
+2021-09-01 02:50:18,650 - resolutionSwitchStress - INFO - 第5轮37次测试 -- 当前测试分辨率为：MJPG 480×270 30
+2021-09-01 02:51:27,998 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 02:51:27,998 - resolutionSwitchStress - INFO - 	位率：1723 kbps
+2021-09-01 02:51:27,998 - resolutionSwitchStress - INFO - 第5轮38次测试 -- 当前测试分辨率为：MJPG 480×270P 30(P 16:9)
+2021-09-01 02:52:37,669 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 02:52:37,670 - resolutionSwitchStress - INFO - 	位率：1748 kbps
+2021-09-01 02:52:37,670 - resolutionSwitchStress - INFO - 第5轮39次测试 -- 当前测试分辨率为：MJPG 640×360 30
+2021-09-01 02:53:47,348 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 02:53:47,349 - resolutionSwitchStress - INFO - 	位率：2850 kbps
+2021-09-01 02:53:47,349 - resolutionSwitchStress - INFO - 第5轮40次测试 -- 当前测试分辨率为：MJPG 640×360P 30(P 16:9)
+2021-09-01 02:54:57,041 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 02:54:57,041 - resolutionSwitchStress - INFO - 	位率：2879 kbps
+2021-09-01 02:54:57,041 - resolutionSwitchStress - INFO - 第5轮41次测试 -- 当前测试分辨率为：MJPG 640×480 30
+2021-09-01 02:56:06,639 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 02:56:06,639 - resolutionSwitchStress - INFO - 	位率：7216 kbps
+2021-09-01 02:56:06,639 - resolutionSwitchStress - INFO - 第5轮42次测试 -- 当前测试分辨率为：MJPG 640×480P 30(P 4:3)
+2021-09-01 02:57:16,224 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 02:57:16,224 - resolutionSwitchStress - INFO - 	位率：6624 kbps
+2021-09-01 02:57:16,224 - resolutionSwitchStress - INFO - 第5轮43次测试 -- 当前测试分辨率为：MJPG 800×600 30
+2021-09-01 02:58:25,919 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 02:58:25,919 - resolutionSwitchStress - INFO - 	位率：9553 kbps
+2021-09-01 02:58:25,920 - resolutionSwitchStress - INFO - 第5轮44次测试 -- 当前测试分辨率为：MJPG 800×600P 30(P 4:3)
+2021-09-01 02:59:35,656 - resolutionSwitchStress - INFO - 	帧率： 30.07 fps
+2021-09-01 02:59:35,656 - resolutionSwitchStress - INFO - 	位率：9512 kbps
+2021-09-01 02:59:35,657 - resolutionSwitchStress - INFO - 第5轮45次测试 -- 当前测试分辨率为：MJPG 960×540 30
+2021-09-01 03:00:45,575 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 03:00:45,575 - resolutionSwitchStress - INFO - 	位率：9424 kbps
+2021-09-01 03:00:45,576 - resolutionSwitchStress - INFO - 第5轮46次测试 -- 当前测试分辨率为：MJPG 960×540P 30(P 16:9)
+2021-09-01 03:01:55,343 - resolutionSwitchStress - INFO - 	帧率： 29.7 fps
+2021-09-01 03:01:55,343 - resolutionSwitchStress - INFO - 	位率：9625 kbps
+2021-09-01 03:01:55,344 - resolutionSwitchStress - INFO - 第5轮47次测试 -- 当前测试分辨率为：MJPG 1024×576 30
+2021-09-01 03:03:05,129 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:03:05,129 - resolutionSwitchStress - INFO - 	位率：5457 kbps
+2021-09-01 03:03:05,129 - resolutionSwitchStress - INFO - 第5轮48次测试 -- 当前测试分辨率为：MJPG 1024×576P 30(P 16:9)
+2021-09-01 03:04:14,904 - resolutionSwitchStress - INFO - 	帧率： 29.87 fps
+2021-09-01 03:04:14,904 - resolutionSwitchStress - INFO - 	位率：5456 kbps
+2021-09-01 03:04:14,904 - resolutionSwitchStress - INFO - 第5轮49次测试 -- 当前测试分辨率为：MJPG 1280×720 30
+2021-09-01 03:05:24,691 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:05:24,691 - resolutionSwitchStress - INFO - 	位率：8654 kbps
+2021-09-01 03:05:24,692 - resolutionSwitchStress - INFO - 第5轮50次测试 -- 当前测试分辨率为：MJPG 1280×720P 30(P 16:9)
+2021-09-01 03:06:34,786 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:06:34,786 - resolutionSwitchStress - INFO - 	位率：8526 kbps
+2021-09-01 03:06:34,786 - resolutionSwitchStress - INFO - 第5轮51次测试 -- 当前测试分辨率为：MJPG 2560×1440 30
+2021-09-01 03:07:44,910 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 03:07:44,910 - resolutionSwitchStress - INFO - 	位率：33771 kbps
+2021-09-01 03:07:44,910 - resolutionSwitchStress - INFO - 第5轮52次测试 -- 当前测试分辨率为：MJPG 2560×1440P 30(P 16:9)
+2021-09-01 03:08:54,979 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 03:08:54,979 - resolutionSwitchStress - INFO - 	位率：33921 kbps
+2021-09-01 03:08:54,980 - resolutionSwitchStress - INFO - 第5轮53次测试 -- 当前测试分辨率为：MJPG 3840×2160 30
+2021-09-01 03:10:05,121 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 03:10:05,121 - resolutionSwitchStress - INFO - 	位率：58466 kbps
+2021-09-01 03:10:05,121 - resolutionSwitchStress - INFO - 第5轮54次测试 -- 当前测试分辨率为：MJPG 3840×2160P 30(P 16:9)
+2021-09-01 03:11:15,293 - resolutionSwitchStress - INFO - 	帧率： 29.6 fps
+2021-09-01 03:11:15,294 - resolutionSwitchStress - INFO - 	位率：59907 kbps
+2021-09-01 03:11:15,294 - resolutionSwitchStress - INFO - 第5轮55次测试 -- 当前测试分辨率为：H264 1920×1080 30
+2021-09-01 03:12:25,505 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 03:12:25,505 - resolutionSwitchStress - INFO - 	位率：1389 kbps
+2021-09-01 03:12:25,506 - resolutionSwitchStress - INFO - 第5轮56次测试 -- 当前测试分辨率为：H264 1920×1080P 30(P 16:9)
+2021-09-01 03:13:35,695 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:13:35,695 - resolutionSwitchStress - INFO - 	位率：1556 kbps
+2021-09-01 03:13:35,695 - resolutionSwitchStress - INFO - 第5轮57次测试 -- 当前测试分辨率为：H264 1280×720 30
+2021-09-01 03:14:45,894 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:14:45,895 - resolutionSwitchStress - INFO - 	位率：85.1 kbps
+2021-09-01 03:14:45,895 - resolutionSwitchStress - INFO - 第5轮58次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2021-09-01 03:15:56,128 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:15:56,128 - resolutionSwitchStress - INFO - 	位率：83.7 kbps
+2021-09-01 03:15:56,129 - resolutionSwitchStress - INFO - 第5轮59次测试 -- 当前测试分辨率为：H264 1024×576 30
+2021-09-01 03:17:06,404 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 03:17:06,404 - resolutionSwitchStress - INFO - 	位率：39 kbps
+2021-09-01 03:17:06,404 - resolutionSwitchStress - INFO - 第5轮60次测试 -- 当前测试分辨率为：H264 1024×576P 30(P 16:9)
+2021-09-01 03:18:16,665 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 03:18:16,666 - resolutionSwitchStress - INFO - 	位率：56.5 kbps
+2021-09-01 03:18:16,666 - resolutionSwitchStress - INFO - 第5轮61次测试 -- 当前测试分辨率为：H264 960×540 30
+2021-09-01 03:19:26,996 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 03:19:26,996 - resolutionSwitchStress - INFO - 	位率：1971 kbps
+2021-09-01 03:19:26,997 - resolutionSwitchStress - INFO - 第5轮62次测试 -- 当前测试分辨率为：H264 960×540P 30(P 16:9)
+2021-09-01 03:20:37,549 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 03:20:37,549 - resolutionSwitchStress - INFO - 	位率：1745 kbps
+2021-09-01 03:20:37,549 - resolutionSwitchStress - INFO - 第5轮63次测试 -- 当前测试分辨率为：H264 800×600 30
+2021-09-01 03:21:48,111 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 03:21:48,111 - resolutionSwitchStress - INFO - 	位率：2404 kbps
+2021-09-01 03:21:48,111 - resolutionSwitchStress - INFO - 第5轮64次测试 -- 当前测试分辨率为：H264 800×600P 30(P 4:3)
+2021-09-01 03:22:58,680 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 03:22:58,680 - resolutionSwitchStress - INFO - 	位率：2220 kbps
+2021-09-01 03:22:58,680 - resolutionSwitchStress - INFO - 第5轮65次测试 -- 当前测试分辨率为：H264 640×480 30
+2021-09-01 03:24:08,668 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 03:24:08,668 - resolutionSwitchStress - INFO - 	位率：550.7 kbps
+2021-09-01 03:24:08,668 - resolutionSwitchStress - INFO - 第5轮66次测试 -- 当前测试分辨率为：H264 640×480P 30(P 4:3)
+2021-09-01 03:25:19,247 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 03:25:19,247 - resolutionSwitchStress - INFO - 	位率：515.1 kbps
+2021-09-01 03:25:19,247 - resolutionSwitchStress - INFO - 第5轮67次测试 -- 当前测试分辨率为：H264 640×360 30
+2021-09-01 03:26:29,892 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 03:26:29,892 - resolutionSwitchStress - INFO - 	位率：164.2 kbps
+2021-09-01 03:26:29,892 - resolutionSwitchStress - INFO - 第5轮68次测试 -- 当前测试分辨率为：H264 640×360P 30(P 16:9)
+2021-09-01 03:27:40,566 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 03:27:40,567 - resolutionSwitchStress - INFO - 	位率：168.6 kbps
+2021-09-01 03:27:40,567 - resolutionSwitchStress - INFO - 第5轮69次测试 -- 当前测试分辨率为：H264 480×270 30
+2021-09-01 03:28:51,216 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 03:28:51,216 - resolutionSwitchStress - INFO - 	位率：79.7 kbps
+2021-09-01 03:28:51,217 - resolutionSwitchStress - INFO - 第5轮70次测试 -- 当前测试分辨率为：H264 480×270P 30(P 16:9)
+2021-09-01 03:30:01,933 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:30:01,933 - resolutionSwitchStress - INFO - 	位率：85.9 kbps
+2021-09-01 03:30:01,933 - resolutionSwitchStress - INFO - 第5轮71次测试 -- 当前测试分辨率为：H264 352×288 30
+2021-09-01 03:31:12,620 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 03:31:12,620 - resolutionSwitchStress - INFO - 	位率：140 kbps
+2021-09-01 03:31:12,621 - resolutionSwitchStress - INFO - 第5轮72次测试 -- 当前测试分辨率为：H264 352×288P 30(P 11:9)
+2021-09-01 03:32:23,340 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 03:32:23,340 - resolutionSwitchStress - INFO - 	位率：146.2 kbps
+2021-09-01 03:32:23,341 - resolutionSwitchStress - INFO - 第5轮73次测试 -- 当前测试分辨率为：H264 320×240 30
+2021-09-01 03:33:34,124 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 03:33:34,124 - resolutionSwitchStress - INFO - 	位率：72.5 kbps
+2021-09-01 03:33:34,124 - resolutionSwitchStress - INFO - 第5轮74次测试 -- 当前测试分辨率为：H264 320×240P 30(P 4:3)
+2021-09-01 03:34:45,203 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 03:34:45,203 - resolutionSwitchStress - INFO - 	位率：76.2 kbps
+2021-09-01 03:34:45,203 - resolutionSwitchStress - INFO - 第5轮75次测试 -- 当前测试分辨率为：H264 320×180 30
+2021-09-01 03:35:56,442 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:35:56,442 - resolutionSwitchStress - INFO - 	位率：45.5 kbps
+2021-09-01 03:35:56,442 - resolutionSwitchStress - INFO - 第5轮76次测试 -- 当前测试分辨率为：H264 320×180P 30(P 16:9)
+2021-09-01 03:37:07,626 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 03:37:07,626 - resolutionSwitchStress - INFO - 	位率：38.7 kbps
+2021-09-01 03:37:07,627 - resolutionSwitchStress - INFO - 第5轮77次测试 -- 当前测试分辨率为：H264 2560×1440 30
+2021-09-01 03:38:18,744 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 03:38:18,744 - resolutionSwitchStress - INFO - 	位率：962 kbps
+2021-09-01 03:38:18,745 - resolutionSwitchStress - INFO - 第5轮78次测试 -- 当前测试分辨率为：H264 2560×1440P 30(P 16:9)
+2021-09-01 03:39:29,936 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 03:39:29,936 - resolutionSwitchStress - INFO - 	位率：1050 kbps
+2021-09-01 03:39:29,936 - resolutionSwitchStress - INFO - 第5轮79次测试 -- 当前测试分辨率为：H264 3840×2160 30
+2021-09-01 03:40:41,098 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 03:40:41,099 - resolutionSwitchStress - INFO - 	位率：2717 kbps
+2021-09-01 03:40:41,099 - resolutionSwitchStress - INFO - 第5轮80次测试 -- 当前测试分辨率为：H264 3840×2160P 30(P 16:9)
+2021-09-01 03:41:52,294 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 03:41:52,295 - resolutionSwitchStress - INFO - 	位率：2672 kbps
+2021-09-01 03:41:52,295 - resolutionSwitchStress - INFO - 第5轮81次测试 -- 当前测试分辨率为：* 640×480 29.97
+2021-09-01 03:43:03,463 - resolutionSwitchStress - INFO - 	帧率： 27.74 fps
+2021-09-01 03:43:03,463 - resolutionSwitchStress - INFO - 	位率：140836 kbps
+2021-09-01 03:43:03,463 - resolutionSwitchStress - INFO - 第5轮82次测试 -- 当前测试分辨率为：* 704×480 29.97
+2021-09-01 03:44:14,712 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 03:44:14,712 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 03:44:14,712 - resolutionSwitchStress - INFO - 第5轮83次测试 -- 当前测试分辨率为：* 720×480 29.97
+2021-09-01 03:45:25,893 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 03:45:25,893 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-09-01 03:45:25,894 - resolutionSwitchStress - INFO - 第5轮84次测试 -- 当前测试分辨率为：* 768×576 29.97
+2021-09-01 03:46:37,155 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 03:46:37,155 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 03:46:37,155 - resolutionSwitchStress - INFO - 第5轮85次测试 -- 当前测试分辨率为：* 960×540 29.97
+2021-09-01 03:47:48,519 - resolutionSwitchStress - INFO - 	帧率： 18.65 fps
+2021-09-01 03:47:48,519 - resolutionSwitchStress - INFO - 	位率：160900 kbps
+2021-09-01 03:47:48,520 - resolutionSwitchStress - INFO - 第5轮86次测试 -- 当前测试分辨率为：* 1280×720 29.97
+2021-09-01 03:48:59,819 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 03:48:59,819 - resolutionSwitchStress - INFO - 	位率：105222 kbps
+2021-09-01 03:48:59,820 - resolutionSwitchStress - INFO - 第5轮87次测试 -- 当前测试分辨率为：* 1280×768 29.97
+2021-09-01 03:50:11,136 - resolutionSwitchStress - INFO - 	帧率： 28.23 fps
+2021-09-01 03:50:11,136 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 03:50:11,136 - resolutionSwitchStress - INFO - 第5轮88次测试 -- 当前测试分辨率为：* 1440×900 29.97
+2021-09-01 03:51:22,510 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 03:51:22,510 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 03:51:22,511 - resolutionSwitchStress - INFO - 第5轮89次测试 -- 当前测试分辨率为：* 1920×1080 29.97
+2021-09-01 03:52:34,132 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 03:52:34,133 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 03:52:34,133 - resolutionSwitchStress - INFO - 第5轮90次测试 -- 当前测试分辨率为：* 640×480 59.94
+2021-09-01 03:53:45,774 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 03:53:45,774 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-09-01 03:53:45,774 - resolutionSwitchStress - INFO - 第5轮91次测试 -- 当前测试分辨率为：* 704×480 59.94
+2021-09-01 03:54:57,483 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 03:54:57,483 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 03:54:57,484 - resolutionSwitchStress - INFO - 第5轮92次测试 -- 当前测试分辨率为：* 720×480 59.94
+2021-09-01 03:56:09,171 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 03:56:09,171 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 03:56:09,172 - resolutionSwitchStress - INFO - 第5轮93次测试 -- 当前测试分辨率为：* 768×576 59.94
+2021-09-01 03:57:20,912 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 03:57:20,912 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-09-01 03:57:20,912 - resolutionSwitchStress - INFO - 第5轮94次测试 -- 当前测试分辨率为：* 960×540 59.94
+2021-09-01 03:58:32,640 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-09-01 03:58:32,640 - resolutionSwitchStress - INFO - 	位率：163859 kbps
+2021-09-01 03:58:32,640 - resolutionSwitchStress - INFO - 第5轮95次测试 -- 当前测试分辨率为：* 1280×720 59.94
+2021-09-01 03:59:44,501 - resolutionSwitchStress - INFO - 	帧率： 28.14 fps
+2021-09-01 03:59:44,501 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 03:59:44,501 - resolutionSwitchStress - INFO - 第5轮96次测试 -- 当前测试分辨率为：* 1280×768 59.94
+2021-09-01 04:00:56,281 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 04:00:56,281 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 04:00:56,281 - resolutionSwitchStress - INFO - 第5轮97次测试 -- 当前测试分辨率为：* 1440×900 59.94
+2021-09-01 04:02:08,161 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 04:02:08,161 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 04:02:08,161 - resolutionSwitchStress - INFO - 第5轮98次测试 -- 当前测试分辨率为：* 1920×1080 59.94
+2021-09-01 04:03:20,020 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 04:03:20,020 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 04:03:25,112 - resolutionSwitchStress - INFO - 跳过item：开始播放时选择格式
+2021-09-01 04:03:25,112 - resolutionSwitchStress - INFO - 跳过item：默认格式(推荐)
+2021-09-01 04:03:25,112 - resolutionSwitchStress - INFO - 第6轮1次测试 -- 当前测试分辨率为：YUY2 640×360 30
+2021-09-01 04:04:32,944 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-09-01 04:04:32,944 - resolutionSwitchStress - INFO - 	位率：105325 kbps
+2021-09-01 04:04:32,945 - resolutionSwitchStress - INFO - 第6轮2次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2021-09-01 04:05:41,076 - resolutionSwitchStress - INFO - 	帧率： 28.1 fps
+2021-09-01 04:05:41,076 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-09-01 04:05:41,076 - resolutionSwitchStress - INFO - 第6轮3次测试 -- 当前测试分辨率为：YUY2 160×90 30
+2021-09-01 04:06:49,220 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 04:06:49,220 - resolutionSwitchStress - INFO - 	位率：7151 kbps
+2021-09-01 04:06:49,221 - resolutionSwitchStress - INFO - 第6轮4次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
+2021-09-01 04:07:57,374 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 04:07:57,374 - resolutionSwitchStress - INFO - 	位率：7263 kbps
+2021-09-01 04:07:57,374 - resolutionSwitchStress - INFO - 第6轮5次测试 -- 当前测试分辨率为：YUY2 160×120 30
+2021-09-01 04:09:05,513 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 04:09:05,513 - resolutionSwitchStress - INFO - 	位率：9675 kbps
+2021-09-01 04:09:05,514 - resolutionSwitchStress - INFO - 第6轮6次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)
+2021-09-01 04:10:13,636 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:10:13,636 - resolutionSwitchStress - INFO - 	位率：9382 kbps
+2021-09-01 04:10:13,636 - resolutionSwitchStress - INFO - 第6轮7次测试 -- 当前测试分辨率为：YUY2 176×144 30
+2021-09-01 04:11:21,775 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 04:11:21,775 - resolutionSwitchStress - INFO - 	位率：12585 kbps
+2021-09-01 04:11:21,775 - resolutionSwitchStress - INFO - 第6轮8次测试 -- 当前测试分辨率为：YUY2 176×144P 30(P 11:9)
+2021-09-01 04:12:29,906 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:12:29,906 - resolutionSwitchStress - INFO - 	位率：12771 kbps
+2021-09-01 04:12:29,907 - resolutionSwitchStress - INFO - 第6轮9次测试 -- 当前测试分辨率为：YUY2 320×180 30
+2021-09-01 04:13:38,045 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 04:13:38,045 - resolutionSwitchStress - INFO - 	位率：28604 kbps
+2021-09-01 04:13:38,045 - resolutionSwitchStress - INFO - 第6轮10次测试 -- 当前测试分辨率为：YUY2 320×180P 30(P 16:9)
+2021-09-01 04:14:46,212 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 04:14:46,212 - resolutionSwitchStress - INFO - 	位率：29026 kbps
+2021-09-01 04:14:46,212 - resolutionSwitchStress - INFO - 第6轮11次测试 -- 当前测试分辨率为：YUY2 320×240 30
+2021-09-01 04:15:54,334 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 04:15:54,334 - resolutionSwitchStress - INFO - 	位率：38139 kbps
+2021-09-01 04:15:54,335 - resolutionSwitchStress - INFO - 第6轮12次测试 -- 当前测试分辨率为：YUY2 320×240P 30(P 4:3)
+2021-09-01 04:17:02,495 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:17:02,495 - resolutionSwitchStress - INFO - 	位率：38102 kbps
+2021-09-01 04:17:02,496 - resolutionSwitchStress - INFO - 第6轮13次测试 -- 当前测试分辨率为：YUY2 352×288 30
+2021-09-01 04:18:10,645 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:18:10,645 - resolutionSwitchStress - INFO - 	位率：51087 kbps
+2021-09-01 04:18:10,645 - resolutionSwitchStress - INFO - 第6轮14次测试 -- 当前测试分辨率为：YUY2 352×288P 30(P 11:9)
+2021-09-01 04:19:18,836 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 04:19:18,836 - resolutionSwitchStress - INFO - 	位率：50295 kbps
+2021-09-01 04:19:18,836 - resolutionSwitchStress - INFO - 第6轮15次测试 -- 当前测试分辨率为：YUY2 480×270 30
+2021-09-01 04:20:26,973 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 04:20:26,973 - resolutionSwitchStress - INFO - 	位率：63331 kbps
+2021-09-01 04:20:26,973 - resolutionSwitchStress - INFO - 第6轮16次测试 -- 当前测试分辨率为：YUY2 480×270P 30(P 16:9)
+2021-09-01 04:21:35,190 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-09-01 04:21:35,191 - resolutionSwitchStress - INFO - 	位率：64360 kbps
+2021-09-01 04:21:35,191 - resolutionSwitchStress - INFO - 第6轮17次测试 -- 当前测试分辨率为：YUY2 640×480 30
+2021-09-01 04:22:43,320 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 04:22:43,320 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-09-01 04:22:43,320 - resolutionSwitchStress - INFO - 第6轮18次测试 -- 当前测试分辨率为：YUY2 640×480P 30(P 4:3)
+2021-09-01 04:23:51,497 - resolutionSwitchStress - INFO - 	帧率： 27.73 fps
+2021-09-01 04:23:51,497 - resolutionSwitchStress - INFO - 	位率：143022 kbps
+2021-09-01 04:23:51,498 - resolutionSwitchStress - INFO - 第6轮19次测试 -- 当前测试分辨率为：YUY2 800×600 30
+2021-09-01 04:24:59,676 - resolutionSwitchStress - INFO - 	帧率： 20.24 fps
+2021-09-01 04:24:59,676 - resolutionSwitchStress - INFO - 	位率：163879 kbps
+2021-09-01 04:24:59,677 - resolutionSwitchStress - INFO - 第6轮20次测试 -- 当前测试分辨率为：YUY2 800×600P 30(P 4:3)
+2021-09-01 04:26:07,857 - resolutionSwitchStress - INFO - 	帧率： 20.29 fps
+2021-09-01 04:26:07,858 - resolutionSwitchStress - INFO - 	位率：163879 kbps
+2021-09-01 04:26:07,858 - resolutionSwitchStress - INFO - 第6轮21次测试 -- 当前测试分辨率为：YUY2 960×540 30
+2021-09-01 04:27:16,004 - resolutionSwitchStress - INFO - 	帧率： 18.79 fps
+2021-09-01 04:27:16,004 - resolutionSwitchStress - INFO - 	位率：163436 kbps
+2021-09-01 04:27:16,005 - resolutionSwitchStress - INFO - 第6轮22次测试 -- 当前测试分辨率为：YUY2 960×540P 30(P 16:9)
+2021-09-01 04:28:24,136 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-09-01 04:28:24,136 - resolutionSwitchStress - INFO - 	位率：166363 kbps
+2021-09-01 04:28:24,136 - resolutionSwitchStress - INFO - 第6轮23次测试 -- 当前测试分辨率为：MJPG 1920×1080 30
+2021-09-01 04:29:32,301 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 04:29:32,301 - resolutionSwitchStress - INFO - 	位率：34171 kbps
+2021-09-01 04:29:32,301 - resolutionSwitchStress - INFO - 第6轮24次测试 -- 当前测试分辨率为：MJPG 1920×1080P 30(P 16:9)
+2021-09-01 04:30:40,467 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 04:30:40,467 - resolutionSwitchStress - INFO - 	位率：34153 kbps
+2021-09-01 04:30:40,468 - resolutionSwitchStress - INFO - 第6轮25次测试 -- 当前测试分辨率为：MJPG 160×90 30
+2021-09-01 04:31:48,634 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 04:31:48,635 - resolutionSwitchStress - INFO - 	位率：304.1 kbps
+2021-09-01 04:31:48,635 - resolutionSwitchStress - INFO - 第6轮26次测试 -- 当前测试分辨率为：MJPG 160×90P 30(P 16:9)
+2021-09-01 04:32:56,931 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 04:32:56,931 - resolutionSwitchStress - INFO - 	位率：303.6 kbps
+2021-09-01 04:32:56,931 - resolutionSwitchStress - INFO - 第6轮27次测试 -- 当前测试分辨率为：MJPG 160×120 30
+2021-09-01 04:34:05,171 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 04:34:05,171 - resolutionSwitchStress - INFO - 	位率：468.2 kbps
+2021-09-01 04:34:05,171 - resolutionSwitchStress - INFO - 第6轮28次测试 -- 当前测试分辨率为：MJPG 160×120P 30(P 4:3)
+2021-09-01 04:35:13,439 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 04:35:13,439 - resolutionSwitchStress - INFO - 	位率：445.2 kbps
+2021-09-01 04:35:13,439 - resolutionSwitchStress - INFO - 第6轮29次测试 -- 当前测试分辨率为：MJPG 176×144 30
+2021-09-01 04:36:22,716 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 04:36:22,716 - resolutionSwitchStress - INFO - 	位率：513.1 kbps
+2021-09-01 04:36:22,716 - resolutionSwitchStress - INFO - 第6轮30次测试 -- 当前测试分辨率为：MJPG 176×144P 30(P 11:9)
+2021-09-01 04:37:31,936 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:37:31,937 - resolutionSwitchStress - INFO - 	位率：519.6 kbps
+2021-09-01 04:37:31,937 - resolutionSwitchStress - INFO - 第6轮31次测试 -- 当前测试分辨率为：MJPG 320×180 30
+2021-09-01 04:38:41,208 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 04:38:41,208 - resolutionSwitchStress - INFO - 	位率：795.2 kbps
+2021-09-01 04:38:41,209 - resolutionSwitchStress - INFO - 第6轮32次测试 -- 当前测试分辨率为：MJPG 320×180P 30(P 16:9)
+2021-09-01 04:39:50,491 - resolutionSwitchStress - INFO - 	帧率： 29.98 fps
+2021-09-01 04:39:50,492 - resolutionSwitchStress - INFO - 	位率：791 kbps
+2021-09-01 04:39:50,492 - resolutionSwitchStress - INFO - 第6轮33次测试 -- 当前测试分辨率为：MJPG 320×240 30
+2021-09-01 04:40:59,779 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 04:40:59,779 - resolutionSwitchStress - INFO - 	位率：1495 kbps
+2021-09-01 04:40:59,779 - resolutionSwitchStress - INFO - 第6轮34次测试 -- 当前测试分辨率为：MJPG 320×240P 30(P 4:3)
+2021-09-01 04:42:09,069 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:42:09,069 - resolutionSwitchStress - INFO - 	位率：1518 kbps
+2021-09-01 04:42:09,069 - resolutionSwitchStress - INFO - 第6轮35次测试 -- 当前测试分辨率为：MJPG 352×288 30
+2021-09-01 04:43:18,447 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:43:18,447 - resolutionSwitchStress - INFO - 	位率：2227 kbps
+2021-09-01 04:43:18,448 - resolutionSwitchStress - INFO - 第6轮36次测试 -- 当前测试分辨率为：MJPG 352×288P 30(P 11:9)
+2021-09-01 04:44:27,964 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:44:27,964 - resolutionSwitchStress - INFO - 	位率：2140 kbps
+2021-09-01 04:44:27,965 - resolutionSwitchStress - INFO - 第6轮37次测试 -- 当前测试分辨率为：MJPG 480×270 30
+2021-09-01 04:45:37,275 - resolutionSwitchStress - INFO - 	帧率： 29.97 fps
+2021-09-01 04:45:37,275 - resolutionSwitchStress - INFO - 	位率：1692 kbps
+2021-09-01 04:45:37,275 - resolutionSwitchStress - INFO - 第6轮38次测试 -- 当前测试分辨率为：MJPG 480×270P 30(P 16:9)
+2021-09-01 04:46:46,993 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 04:46:46,993 - resolutionSwitchStress - INFO - 	位率：1758 kbps
+2021-09-01 04:46:46,993 - resolutionSwitchStress - INFO - 第6轮39次测试 -- 当前测试分辨率为：MJPG 640×360 30
+2021-09-01 04:47:56,685 - resolutionSwitchStress - INFO - 	帧率： 29.82 fps
+2021-09-01 04:47:56,685 - resolutionSwitchStress - INFO - 	位率：2946 kbps
+2021-09-01 04:47:56,685 - resolutionSwitchStress - INFO - 第6轮40次测试 -- 当前测试分辨率为：MJPG 640×360P 30(P 16:9)
+2021-09-01 04:49:06,368 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 04:49:06,369 - resolutionSwitchStress - INFO - 	位率：2780 kbps
+2021-09-01 04:49:06,369 - resolutionSwitchStress - INFO - 第6轮41次测试 -- 当前测试分辨率为：MJPG 640×480 30
+2021-09-01 04:50:16,088 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:50:16,088 - resolutionSwitchStress - INFO - 	位率：6768 kbps
+2021-09-01 04:50:16,089 - resolutionSwitchStress - INFO - 第6轮42次测试 -- 当前测试分辨率为：MJPG 640×480P 30(P 4:3)
+2021-09-01 04:51:25,798 - resolutionSwitchStress - INFO - 	帧率： 30 fps
+2021-09-01 04:51:25,798 - resolutionSwitchStress - INFO - 	位率：6692 kbps
+2021-09-01 04:51:25,799 - resolutionSwitchStress - INFO - 第6轮43次测试 -- 当前测试分辨率为：MJPG 800×600 30
+2021-09-01 04:52:35,506 - resolutionSwitchStress - INFO - 	帧率： 29.99 fps
+2021-09-01 04:52:35,506 - resolutionSwitchStress - INFO - 	位率：9363 kbps
+2021-09-01 04:52:35,507 - resolutionSwitchStress - INFO - 第6轮44次测试 -- 当前测试分辨率为：MJPG 800×600P 30(P 4:3)
+2021-09-01 04:53:45,239 - resolutionSwitchStress - INFO - 	帧率： 30.01 fps
+2021-09-01 04:53:45,239 - resolutionSwitchStress - INFO - 	位率：9654 kbps
+2021-09-01 04:53:45,240 - resolutionSwitchStress - INFO - 第6轮45次测试 -- 当前测试分辨率为：MJPG 960×540 30
+2021-09-01 04:54:54,928 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 04:54:54,928 - resolutionSwitchStress - INFO - 	位率：9718 kbps
+2021-09-01 04:54:54,928 - resolutionSwitchStress - INFO - 第6轮46次测试 -- 当前测试分辨率为：MJPG 960×540P 30(P 16:9)
+2021-09-01 04:56:04,784 - resolutionSwitchStress - INFO - 	帧率： 29.81 fps
+2021-09-01 04:56:04,784 - resolutionSwitchStress - INFO - 	位率：9580 kbps
+2021-09-01 04:56:04,785 - resolutionSwitchStress - INFO - 第6轮47次测试 -- 当前测试分辨率为：MJPG 1024×576 30
+2021-09-01 04:57:14,580 - resolutionSwitchStress - INFO - 	帧率： 29.87 fps
+2021-09-01 04:57:14,581 - resolutionSwitchStress - INFO - 	位率：5447 kbps
+2021-09-01 04:57:14,581 - resolutionSwitchStress - INFO - 第6轮48次测试 -- 当前测试分辨率为：MJPG 1024×576P 30(P 16:9)
+2021-09-01 04:58:24,365 - resolutionSwitchStress - INFO - 	帧率： 29.63 fps
+2021-09-01 04:58:24,365 - resolutionSwitchStress - INFO - 	位率：5254 kbps
+2021-09-01 04:58:24,365 - resolutionSwitchStress - INFO - 第6轮49次测试 -- 当前测试分辨率为：MJPG 1280×720 30
+2021-09-01 04:59:34,182 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 04:59:34,182 - resolutionSwitchStress - INFO - 	位率：8810 kbps
+2021-09-01 04:59:34,183 - resolutionSwitchStress - INFO - 第6轮50次测试 -- 当前测试分辨率为：MJPG 1280×720P 30(P 16:9)
+2021-09-01 05:00:44,223 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 05:00:44,223 - resolutionSwitchStress - INFO - 	位率：8650 kbps
+2021-09-01 05:00:44,223 - resolutionSwitchStress - INFO - 第6轮51次测试 -- 当前测试分辨率为：MJPG 2560×1440 30
+2021-09-01 05:01:54,260 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 05:01:54,260 - resolutionSwitchStress - INFO - 	位率：33856 kbps
+2021-09-01 05:01:54,260 - resolutionSwitchStress - INFO - 第6轮52次测试 -- 当前测试分辨率为：MJPG 2560×1440P 30(P 16:9)
+2021-09-01 05:03:04,410 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 05:03:04,410 - resolutionSwitchStress - INFO - 	位率：33355 kbps
+2021-09-01 05:03:04,410 - resolutionSwitchStress - INFO - 第6轮53次测试 -- 当前测试分辨率为：MJPG 3840×2160 30
+2021-09-01 05:04:14,503 - resolutionSwitchStress - INFO - 	帧率： 29.86 fps
+2021-09-01 05:04:14,503 - resolutionSwitchStress - INFO - 	位率：56752 kbps
+2021-09-01 05:04:14,504 - resolutionSwitchStress - INFO - 第6轮54次测试 -- 当前测试分辨率为：MJPG 3840×2160P 30(P 16:9)
+2021-09-01 05:05:24,609 - resolutionSwitchStress - INFO - 	帧率： 29.91 fps
+2021-09-01 05:05:24,609 - resolutionSwitchStress - INFO - 	位率：57859 kbps
+2021-09-01 05:05:24,610 - resolutionSwitchStress - INFO - 第6轮55次测试 -- 当前测试分辨率为：H264 1920×1080 30
+2021-09-01 05:06:34,799 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-09-01 05:06:34,799 - resolutionSwitchStress - INFO - 	位率：1478 kbps
+2021-09-01 05:06:34,800 - resolutionSwitchStress - INFO - 第6轮56次测试 -- 当前测试分辨率为：H264 1920×1080P 30(P 16:9)
+2021-09-01 05:07:45,021 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 05:07:45,021 - resolutionSwitchStress - INFO - 	位率：1414 kbps
+2021-09-01 05:07:45,021 - resolutionSwitchStress - INFO - 第6轮57次测试 -- 当前测试分辨率为：H264 1280×720 30
+2021-09-01 05:08:55,213 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 05:08:55,213 - resolutionSwitchStress - INFO - 	位率：84.7 kbps
+2021-09-01 05:08:55,214 - resolutionSwitchStress - INFO - 第6轮58次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2021-09-01 05:10:05,450 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 05:10:05,450 - resolutionSwitchStress - INFO - 	位率：86.7 kbps
+2021-09-01 05:10:05,450 - resolutionSwitchStress - INFO - 第6轮59次测试 -- 当前测试分辨率为：H264 1024×576 30
+2021-09-01 05:11:15,640 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 05:11:15,640 - resolutionSwitchStress - INFO - 	位率：43.8 kbps
+2021-09-01 05:11:15,641 - resolutionSwitchStress - INFO - 第6轮60次测试 -- 当前测试分辨率为：H264 1024×576P 30(P 16:9)
+2021-09-01 05:12:25,911 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-09-01 05:12:25,911 - resolutionSwitchStress - INFO - 	位率：43.5 kbps
+2021-09-01 05:12:25,912 - resolutionSwitchStress - INFO - 第6轮61次测试 -- 当前测试分辨率为：H264 960×540 30
+2021-09-01 05:13:36,125 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 05:13:36,125 - resolutionSwitchStress - INFO - 	位率：1844 kbps
+2021-09-01 05:13:36,126 - resolutionSwitchStress - INFO - 第6轮62次测试 -- 当前测试分辨率为：H264 960×540P 30(P 16:9)
+2021-09-01 05:14:46,708 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 05:14:46,708 - resolutionSwitchStress - INFO - 	位率：1725 kbps
+2021-09-01 05:14:46,709 - resolutionSwitchStress - INFO - 第6轮63次测试 -- 当前测试分辨率为：H264 800×600 30
+2021-09-01 05:15:57,321 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 05:15:57,321 - resolutionSwitchStress - INFO - 	位率：2439 kbps
+2021-09-01 05:15:57,321 - resolutionSwitchStress - INFO - 第6轮64次测试 -- 当前测试分辨率为：H264 800×600P 30(P 4:3)
+2021-09-01 05:17:07,934 - resolutionSwitchStress - INFO - 	帧率： 30.06 fps
+2021-09-01 05:17:07,935 - resolutionSwitchStress - INFO - 	位率：2314 kbps
+2021-09-01 05:17:07,935 - resolutionSwitchStress - INFO - 第6轮65次测试 -- 当前测试分辨率为：H264 640×480 30
+2021-09-01 05:18:18,595 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 05:18:18,595 - resolutionSwitchStress - INFO - 	位率：535.8 kbps
+2021-09-01 05:18:18,596 - resolutionSwitchStress - INFO - 第6轮66次测试 -- 当前测试分辨率为：H264 640×480P 30(P 4:3)
+2021-09-01 05:19:29,303 - resolutionSwitchStress - INFO - 	帧率： 30.04 fps
+2021-09-01 05:19:29,304 - resolutionSwitchStress - INFO - 	位率：461 kbps
+2021-09-01 05:19:29,304 - resolutionSwitchStress - INFO - 第6轮67次测试 -- 当前测试分辨率为：H264 640×360 30
+2021-09-01 05:20:39,917 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 05:20:39,917 - resolutionSwitchStress - INFO - 	位率：163.4 kbps
+2021-09-01 05:20:39,917 - resolutionSwitchStress - INFO - 第6轮68次测试 -- 当前测试分辨率为：H264 640×360P 30(P 16:9)
+2021-09-01 05:21:50,580 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 05:21:50,580 - resolutionSwitchStress - INFO - 	位率：162 kbps
+2021-09-01 05:21:50,581 - resolutionSwitchStress - INFO - 第6轮69次测试 -- 当前测试分辨率为：H264 480×270 30
+2021-09-01 05:23:01,184 - resolutionSwitchStress - INFO - 	帧率： 29.96 fps
+2021-09-01 05:23:01,184 - resolutionSwitchStress - INFO - 	位率：89.6 kbps
+2021-09-01 05:23:01,184 - resolutionSwitchStress - INFO - 第6轮70次测试 -- 当前测试分辨率为：H264 480×270P 30(P 16:9)
+2021-09-01 05:24:11,864 - resolutionSwitchStress - INFO - 	帧率： 29.93 fps
+2021-09-01 05:24:11,864 - resolutionSwitchStress - INFO - 	位率：92.9 kbps
+2021-09-01 05:24:11,865 - resolutionSwitchStress - INFO - 第6轮71次测试 -- 当前测试分辨率为：H264 352×288 30
+2021-09-01 05:25:22,673 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 05:25:22,673 - resolutionSwitchStress - INFO - 	位率：168.8 kbps
+2021-09-01 05:25:22,674 - resolutionSwitchStress - INFO - 第6轮72次测试 -- 当前测试分辨率为：H264 352×288P 30(P 11:9)
+2021-09-01 05:26:33,392 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 05:26:33,392 - resolutionSwitchStress - INFO - 	位率：140.9 kbps
+2021-09-01 05:26:33,392 - resolutionSwitchStress - INFO - 第6轮73次测试 -- 当前测试分辨率为：H264 320×240 30
+2021-09-01 05:27:44,133 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 05:27:44,133 - resolutionSwitchStress - INFO - 	位率：69.6 kbps
+2021-09-01 05:27:44,133 - resolutionSwitchStress - INFO - 第6轮74次测试 -- 当前测试分辨率为：H264 320×240P 30(P 4:3)
+2021-09-01 05:28:55,291 - resolutionSwitchStress - INFO - 	帧率： 30.05 fps
+2021-09-01 05:28:55,291 - resolutionSwitchStress - INFO - 	位率：72.2 kbps
+2021-09-01 05:28:55,291 - resolutionSwitchStress - INFO - 第6轮75次测试 -- 当前测试分辨率为：H264 320×180 30
+2021-09-01 05:30:06,442 - resolutionSwitchStress - INFO - 	帧率： 29.8 fps
+2021-09-01 05:30:06,442 - resolutionSwitchStress - INFO - 	位率：56.3 kbps
+2021-09-01 05:30:06,442 - resolutionSwitchStress - INFO - 第6轮76次测试 -- 当前测试分辨率为：H264 320×180P 30(P 16:9)
+2021-09-01 05:31:17,601 - resolutionSwitchStress - INFO - 	帧率： 29.83 fps
+2021-09-01 05:31:17,601 - resolutionSwitchStress - INFO - 	位率：50.5 kbps
+2021-09-01 05:31:17,601 - resolutionSwitchStress - INFO - 第6轮77次测试 -- 当前测试分辨率为：H264 2560×1440 30
+2021-09-01 05:32:28,735 - resolutionSwitchStress - INFO - 	帧率： 29.84 fps
+2021-09-01 05:32:28,735 - resolutionSwitchStress - INFO - 	位率：958.8 kbps
+2021-09-01 05:32:28,736 - resolutionSwitchStress - INFO - 第6轮78次测试 -- 当前测试分辨率为：H264 2560×1440P 30(P 16:9)
+2021-09-01 05:33:39,914 - resolutionSwitchStress - INFO - 	帧率： 29.94 fps
+2021-09-01 05:33:39,914 - resolutionSwitchStress - INFO - 	位率：991.1 kbps
+2021-09-01 05:33:39,915 - resolutionSwitchStress - INFO - 第6轮79次测试 -- 当前测试分辨率为：H264 3840×2160 30
+2021-09-01 05:34:51,137 - resolutionSwitchStress - INFO - 	帧率： 29.95 fps
+2021-09-01 05:34:51,137 - resolutionSwitchStress - INFO - 	位率：2666 kbps
+2021-09-01 05:34:51,137 - resolutionSwitchStress - INFO - 第6轮80次测试 -- 当前测试分辨率为：H264 3840×2160P 30(P 16:9)
+2021-09-01 05:36:02,340 - resolutionSwitchStress - INFO - 	帧率： 29.92 fps
+2021-09-01 05:36:02,340 - resolutionSwitchStress - INFO - 	位率：2734 kbps
+2021-09-01 05:36:02,341 - resolutionSwitchStress - INFO - 第6轮81次测试 -- 当前测试分辨率为：* 640×480 29.97
+2021-09-01 05:37:13,458 - resolutionSwitchStress - INFO - 	帧率： 27.72 fps
+2021-09-01 05:37:13,458 - resolutionSwitchStress - INFO - 	位率：138254 kbps
+2021-09-01 05:37:13,459 - resolutionSwitchStress - INFO - 第6轮82次测试 -- 当前测试分辨率为：* 704×480 29.97
+2021-09-01 05:38:24,635 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 05:38:24,635 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 05:38:24,635 - resolutionSwitchStress - INFO - 第6轮83次测试 -- 当前测试分辨率为：* 720×480 29.97
+2021-09-01 05:39:35,932 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 05:39:35,932 - resolutionSwitchStress - INFO - 	位率：105728 kbps
+2021-09-01 05:39:35,932 - resolutionSwitchStress - INFO - 第6轮84次测试 -- 当前测试分辨率为：* 768×576 29.97
+2021-09-01 05:40:47,196 - resolutionSwitchStress - INFO - 	帧率： 28.14 fps
+2021-09-01 05:40:47,196 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-09-01 05:40:47,196 - resolutionSwitchStress - INFO - 第6轮85次测试 -- 当前测试分辨率为：* 960×540 29.97
+2021-09-01 05:41:58,554 - resolutionSwitchStress - INFO - 	帧率： 18.75 fps
+2021-09-01 05:41:58,554 - resolutionSwitchStress - INFO - 	位率：163275 kbps
+2021-09-01 05:41:58,554 - resolutionSwitchStress - INFO - 第6轮86次测试 -- 当前测试分辨率为：* 1280×720 29.97
+2021-09-01 05:43:09,926 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 05:43:09,926 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 05:43:09,926 - resolutionSwitchStress - INFO - 第6轮87次测试 -- 当前测试分辨率为：* 1280×768 29.97
+2021-09-01 05:44:21,259 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 05:44:21,259 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 05:44:21,260 - resolutionSwitchStress - INFO - 第6轮88次测试 -- 当前测试分辨率为：* 1440×900 29.97
+2021-09-01 05:45:32,618 - resolutionSwitchStress - INFO - 	帧率： 28.13 fps
+2021-09-01 05:45:32,618 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 05:45:32,618 - resolutionSwitchStress - INFO - 第6轮89次测试 -- 当前测试分辨率为：* 1920×1080 29.97
+2021-09-01 05:46:44,277 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 05:46:44,278 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 05:46:44,278 - resolutionSwitchStress - INFO - 第6轮90次测试 -- 当前测试分辨率为：* 640×480 59.94
+2021-09-01 05:47:55,916 - resolutionSwitchStress - INFO - 	帧率： 27.62 fps
+2021-09-01 05:47:55,916 - resolutionSwitchStress - INFO - 	位率：138716 kbps
+2021-09-01 05:47:55,917 - resolutionSwitchStress - INFO - 第6轮91次测试 -- 当前测试分辨率为：* 704×480 59.94
+2021-09-01 05:49:07,527 - resolutionSwitchStress - INFO - 	帧率： 28.22 fps
+2021-09-01 05:49:07,528 - resolutionSwitchStress - INFO - 	位率：108957 kbps
+2021-09-01 05:49:07,528 - resolutionSwitchStress - INFO - 第6轮92次测试 -- 当前测试分辨率为：* 720×480 59.94
+2021-09-01 05:50:19,227 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 05:50:19,227 - resolutionSwitchStress - INFO - 	位率：107266 kbps
+2021-09-01 05:50:19,227 - resolutionSwitchStress - INFO - 第6轮93次测试 -- 当前测试分辨率为：* 768×576 59.94
+2021-09-01 05:51:30,955 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 05:51:30,955 - resolutionSwitchStress - INFO - 	位率：107162 kbps
+2021-09-01 05:51:30,955 - resolutionSwitchStress - INFO - 第6轮94次测试 -- 当前测试分辨率为：* 960×540 59.94
+2021-09-01 05:52:42,741 - resolutionSwitchStress - INFO - 	帧率： 18.74 fps
+2021-09-01 05:52:42,741 - resolutionSwitchStress - INFO - 	位率：164013 kbps
+2021-09-01 05:52:42,741 - resolutionSwitchStress - INFO - 第6轮95次测试 -- 当前测试分辨率为：* 1280×720 59.94
+2021-09-01 05:53:54,448 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 05:53:54,448 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 05:53:54,449 - resolutionSwitchStress - INFO - 第6轮96次测试 -- 当前测试分辨率为：* 1280×768 59.94
+2021-09-01 05:55:06,380 - resolutionSwitchStress - INFO - 	帧率： 28.21 fps
+2021-09-01 05:55:06,380 - resolutionSwitchStress - INFO - 	位率：105627 kbps
+2021-09-01 05:55:06,380 - resolutionSwitchStress - INFO - 第6轮97次测试 -- 当前测试分辨率为：* 1440×900 59.94
+2021-09-01 05:56:18,199 - resolutionSwitchStress - INFO - 	帧率： 28.12 fps
+2021-09-01 05:56:18,199 - resolutionSwitchStress - INFO - 	位率：108850 kbps
+2021-09-01 05:56:18,200 - resolutionSwitchStress - INFO - 第6轮98次测试 -- 当前测试分辨率为：* 1920×1080 59.94
+2021-09-01 05:57:30,000 - resolutionSwitchStress - INFO - 	帧率： 28.11 fps
+2021-09-01 05:57:30,000 - resolutionSwitchStress - INFO - 	位率：107266 kbps

@@ -94,13 +94,13 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
             break
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
-    sleep(5)  # sleep(30)
+    sleep(30)  # sleep(30)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
-    sleep(5)  # sleep(30)
+    sleep(30)  # sleep(30)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
@@ -164,7 +164,7 @@ def test_standard_test_data(potplayerPath):
     logger = logger_config(log_path="./log/{}_{}_{}.log".format(cur_time, "resolutionSwitchStress", "mainLog"),
                            logging_name="resolutionSwitchStress")
     result_list = []
-    for i in range(2):
+    for i in range(6):
         try:
             openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
