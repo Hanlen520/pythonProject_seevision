@@ -32,9 +32,17 @@ def init_device(device_serial):
     device_ = connect_device("Android:///{}".format(device_serial[0]))
     device_.wake()
     device_.unlock()
-    device_.shell("settings put system screen_brightness_mode 0")
-    device_.shell("settings put system screen_brightness 999999")
-    device_.shell("settings put system screen_off_timeout 1")
+    # device_.shell("settings put system screen_brightness_mode 0")
+    # device_.shell("settings put system screen_brightness 999999")
+    # device_.shell("settings put system screen_off_timeout 1")
+    poco = AndroidUiautomationPoco(device=device_, use_airtest_input=False, screenshot_each_action=False)
+    return device_, poco
+
+
+def init_device_2(device_serial):
+    device_ = connect_device("Android:///{}".format(device_serial[0]))
+    device_.wake()
+    device_.unlock()
     poco = AndroidUiautomationPoco(device=device_, use_airtest_input=False, screenshot_each_action=False)
     return device_, poco
 
@@ -191,10 +199,10 @@ def camera_operate_capture_noGap(device_, poco, times):
 def device_reboot(device_, poco, times):
     # try:
     device_serialno = device_.serialno
-    sleep(5)
+    sleep(1)
     for i in range(times):
         try:
-            """ 
+            """
                 实现区域：begin
             """
             print("第{}次重启测试".format(i + 1))
@@ -213,11 +221,8 @@ def device_reboot(device_, poco, times):
                     if "com.android.launcher3" in device_ready_now.shell("dumpsys window | grep mCurrentFocus"):
                         device_reboot_result = True
                         device_end_reboot_time = time.strftime("%Y%m%d_%H%M%S")
-                        sleep(3)
-                        device_ = device_ready_now
                         break
                     elif count_time >= 600:
-                        sleep(3)
                         device_reboot_result = False
                         break
                 except Exception as ex:
@@ -301,7 +306,7 @@ def auto_case_test(device_, poco):
     # 这里func改成需要测试的case方法名即可
     # test_pool.apply_async(func=camera_operate(device_, poco, 1000))
     # test_pool.apply_async(func=camera_operate_capture_noGap(device_, poco, 2000))
-    test_pool.apply_async(func=device_reboot(device_, poco, 3))
+    test_pool.apply_async(func=device_reboot(device_, poco, 1000))
     test_pool.close()
     test_pool.join()
 
