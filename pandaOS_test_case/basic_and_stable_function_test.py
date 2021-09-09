@@ -148,7 +148,7 @@ def camera_operate_capture_noGap(device_, poco, times):
         sleep(1)
         for i in range(times):
             try:
-                poco("com.android.camera2:id/front_back_switcher").wait().parent().children()[3].click()
+                poco("com.android.camera2:id/front_back_switcher").wait().parent().children()[2].click()
                 current_time = time.strftime("%Y%m%d_%H%M%S")
                 sleep(1)
                 result_list.append(
@@ -305,8 +305,8 @@ def auto_case_test(device_, poco):
     test_pool.apply_async(func=log_process)
     # 这里func改成需要测试的case方法名即可
     # test_pool.apply_async(func=camera_operate(device_, poco, 1000))
-    # test_pool.apply_async(func=camera_operate_capture_noGap(device_, poco, 2000))
-    test_pool.apply_async(func=device_reboot(device_, poco, 1000))
+    test_pool.apply_async(func=camera_operate_capture_noGap(device_, poco, 2000))
+    # test_pool.apply_async(func=device_reboot(device_, poco, 1000))
     test_pool.close()
     test_pool.join()
 
