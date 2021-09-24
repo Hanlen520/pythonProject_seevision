@@ -12,6 +12,12 @@ os.path.abspath(".")
     先用升级到新版本，然后再push进去update.zip包，再执行如下的循环刷入当前版本的测试即可
     2、再Root（每次刷入版本后都需要Root）
     手机自带的/system/bin/update_engine_client 驱动，adb shell /system/bin/update_engine_client  --reset_status
+    3、判断升级成功与否
+    new_version = [ro.fota.version]: [EM_TK1032_20210924_v1.1.0_20210924-1222]
+    old_version = [ro.fota.version]: [EM_TK1032_20210924_v1.1.0_20210924-0524]
+    判断当前是否在new version，升级从old to new
+    
+    压力测试需要UserDebug版本才能进行测试，User版本无法disable-verity
 """
 
 
