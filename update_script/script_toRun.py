@@ -17,4 +17,5 @@ if __name__ == "__main__":
         update_command_file.write(b.decode())
     update_command = "update.txt"
     subprocess.Popen("adb shell < {}".format(update_command), shell=True, stdout=subprocess.PIPE).communicate()[0]
+    print("YES")
     print("OK2")
