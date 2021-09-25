@@ -98,6 +98,8 @@ def update_to_new_version(old_version, new_version):
         update_command_execute = \
             subprocess.Popen("adb shell < {}".format(update_command), shell=True, stdout=subprocess.PIPE).communicate()[
                 0]
+        sleep(10)
+        print("After update ,reboot deivce……")
         reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
             0]
         if check_current_version(old_version, new_version):
@@ -107,9 +109,10 @@ def update_to_new_version(old_version, new_version):
 
 
 def check_current_version(old_version, new_version):
-    print("Check current version……")
     if wait_for_device_reboot():
+        print("Check current version……")
         current_version = str(subprocess.Popen("adb shell getprop ro.fota.version"))
+        print("Current Version is {}".format(current_version))
         if current_version == new_version:
             print("New version update success!")
             return True
