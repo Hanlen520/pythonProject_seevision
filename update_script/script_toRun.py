@@ -93,20 +93,21 @@ def update_to_new_version(old_version, new_version):
         with open("update.txt", "w") as update_command_file:
             print("Get update code and write in update.txt……")
             update_command_file.write(update_command_write.decode())
-            update_command = "update.txt"
-            print("Execute update process……")
-            update_command_execute = \
-                subprocess.Popen("adb shell < {}".format(update_command), shell=True,
-                                 stdout=subprocess.PIPE).communicate()[
-                    0]
-            sleep(10)
-            print("After update ,reboot deivce……")
-            reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
+            update_command_file.close()
+        update_command = "update.txt"
+        print("Execute update process……")
+        update_command_execute = \
+            subprocess.Popen("adb shell < {}".format(update_command), shell=True,
+                             stdout=subprocess.PIPE).communicate()[
                 0]
-            if check_current_version(old_version, new_version):
-                print("First version upgrade success ,Begin new version cycle flash test!")
-            else:
-                print("Please check, new version upgrade fail, cannot continue test,please check……")
+        sleep(10)
+        print("After update ,reboot deivce……")
+        reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
+            0]
+        if check_current_version(old_version, new_version):
+            print("First version upgrade success ,Begin new version cycle flash test!")
+        else:
+            print("Please check, new version upgrade fail, cannot continue test,please check……")
 
 
 def check_current_version(old_version, new_version):
@@ -125,21 +126,48 @@ def check_current_version(old_version, new_version):
 
 
 # 开始循环升级测试 --reset_status
-def begin_upgrade_test():
-    pass
+def begin_upgrade_test(old_version, new_version):
+    if check_adb_online():
+        print("Analysis update.zip package……")
+        update_command_write = subprocess.Popen("python ota.py update.zip", stdout=subprocess.PIPE).communicate()[0]
+        with open("update_cycle.txt", "w") as update_command_cycle_file:
+            print("Get update cycle code and write in update_cycle.txt……")
+            update_command_cycle_file.write("update_engine_client  --reset_status\r\n")
+            update_command_cycle_file.write(update_command_write.decode())
+            update_command_cycle_file.close()
+        update_command = "update_cycle.txt"
+        print("Execute upgrade cycle update process……")
+        update_command_execute = \
+            subprocess.Popen("adb shell < {}".format(update_command), shell=True,
+                             stdout=subprocess.PIPE).communicate()[0]
+        sleep(10)
+        print("After update ,reboot deivce……")
+        reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
+            0]
+        if check_current_version(old_version, new_version):
+            print("First version upgrade success ,Begin new version cycle flash test!")
+        else:
+            print("Please check, new version upgrade fail, cannot continue test,please check……")
 
 
 if __name__ == "__main__":
-    for i in range(5):
-        old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
-        new_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
-        print(
-            "Start {} test and wait for device……\n We will update from\n: old - 【{}】 to new -  【{}】".format(str(i + 1),
-                                                                                                            old_version,
-                                                                                                            new_version))
-        # device = connect_device("android:///{}?cap_method=javacap&touch_method=adb".format("c59a06bf"))
-        # poco = AndroidUiautomationPoco(device, use_airtest_input=True, screenshot_each_action=False)
+    # for i in range(5):
+    old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
+    new_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
+    print(
+        "Start test and wait for device……\n We will update from\n: old - 【{}】 to new -  【{}】".format(
+            old_version,
+            new_version))
+    # device = connect_device("android:///{}?cap_method=javacap&touch_method=adb".format("c59a06bf"))
+    # poco = AndroidUiautomationPoco(device, use_airtest_input=True, screenshot_each_action=False)
+    root()
+    push_updateZip_to()
+    update_to_new_version(old_version, new_version)
+    for i in range(11):
+        print("Begin {} times reset cycle version upgrade test……".format(str(i + 1)))
         root()
         push_updateZip_to()
-        print("End {} test……".format(str(i + 1)))
-        sleep(5)
+        begin_upgrade_test(old_version, new_version)
+        print("The {} times reset cycle version upgrade test done!".format(str(i + 1)))
+    print("End test……")
+    sleep(5)
