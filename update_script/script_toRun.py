@@ -111,7 +111,9 @@ def update_to_new_version(old_version, new_version):
 def check_current_version(old_version, new_version):
     if wait_for_device_reboot():
         print("Check current version……")
-        current_version = str(subprocess.Popen("adb shell getprop ro.fota.version"))
+        current_version = (
+            subprocess.Popen("adb shell getprop ro.fota.version", shell=True, stdout=subprocess.PIPE).communicate()[
+                0]).decode().strip()
         print("Current Version is {}".format(current_version))
         if current_version == new_version:
             print("New version update success!")
@@ -122,13 +124,17 @@ def check_current_version(old_version, new_version):
 
 
 if __name__ == "__main__":
-    old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
-    new_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
-    print("Start test and wait for device……\n We will update from\n: old - 【{}】 to new -  【{}】".format(old_version,
-                                                                                                       new_version))
-    # device = connect_device("android:///{}?cap_method=javacap&touch_method=adb".format("c59a06bf"))
-    # poco = AndroidUiautomationPoco(device, use_airtest_input=True, screenshot_each_action=False)
-    root()
-    push_updateZip_to()
-    update_to_new_version(old_version, new_version)
-    print("End test……")
+    for i in range(5):
+        old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
+        new_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
+        print(
+            "Start {} test and wait for device……\n We will update from\n: old - 【{}】 to new -  【{}】".format(str(i + 1),
+                                                                                                            old_version,
+                                                                                                            new_version))
+        # device = connect_device("android:///{}?cap_method=javacap&touch_method=adb".format("c59a06bf"))
+        # poco = AndroidUiautomationPoco(device, use_airtest_input=True, screenshot_each_action=False)
+        root()
+        push_updateZip_to()
+        update_to_new_version(old_version, new_version)
+        print("End {} test……".format(str(i + 1)))
+        sleep(5)
