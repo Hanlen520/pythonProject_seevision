@@ -132,7 +132,7 @@ def begin_upgrade_test(old_version, new_version):
         update_command_write = subprocess.Popen("python ota.py update.zip", stdout=subprocess.PIPE).communicate()[0]
         with open("update_cycle.txt", "w") as update_command_cycle_file:
             print("Get update cycle code and write in update_cycle.txt……")
-            update_command_cycle_file.write("update_engine_client  --reset_status\r\n")
+            update_command_cycle_file.write("update_engine_client  --reset_status=true\r\n")
             update_command_cycle_file.write(update_command_write.decode())
             update_command_cycle_file.close()
         update_command = "update_cycle.txt"
