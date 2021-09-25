@@ -1,5 +1,0 @@
-update_engine_client --update --follow --payload=file:///data/ota_package/update.zip --offset=41138 --size=796330045 --headers="FILE_HASH=sEBM3tHPq+v/pDbdF45y3762sbvh450WRz7RbU5q65c=
-FILE_SIZE=796330045
-METADATA_HASH=OSCJX4myFASD7MvRfTUxgFnYU2AN3wceTk66Fw2kvak=
-METADATA_SIZE=63214
-"

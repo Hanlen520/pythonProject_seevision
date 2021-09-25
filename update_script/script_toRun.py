@@ -93,19 +93,20 @@ def update_to_new_version(old_version, new_version):
         with open("update.txt", "w") as update_command_file:
             print("Get update code and write in update.txt……")
             update_command_file.write(update_command_write.decode())
-        update_command = "update.txt"
-        print("Execute update process……")
-        update_command_execute = \
-            subprocess.Popen("adb shell < {}".format(update_command), shell=True, stdout=subprocess.PIPE).communicate()[
+            update_command = "update.txt"
+            print("Execute update process……")
+            update_command_execute = \
+                subprocess.Popen("adb shell < {}".format(update_command), shell=True,
+                                 stdout=subprocess.PIPE).communicate()[
+                    0]
+            sleep(10)
+            print("After update ,reboot deivce……")
+            reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
                 0]
-        sleep(10)
-        print("After update ,reboot deivce……")
-        reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
-            0]
-        if check_current_version(old_version, new_version):
-            print("First version upgrade success ,Begin new version cycle flash test!")
-        else:
-            print("Please check, new version upgrade fail, cannot continue test,please check……")
+            if check_current_version(old_version, new_version):
+                print("First version upgrade success ,Begin new version cycle flash test!")
+            else:
+                print("Please check, new version upgrade fail, cannot continue test,please check……")
 
 
 def check_current_version(old_version, new_version):
@@ -123,6 +124,11 @@ def check_current_version(old_version, new_version):
             return False
 
 
+# 开始循环升级测试 --reset_status
+def begin_upgrade_test():
+    pass
+
+
 if __name__ == "__main__":
     for i in range(5):
         old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
@@ -135,6 +141,5 @@ if __name__ == "__main__":
         # poco = AndroidUiautomationPoco(device, use_airtest_input=True, screenshot_each_action=False)
         root()
         push_updateZip_to()
-        update_to_new_version(old_version, new_version)
         print("End {} test……".format(str(i + 1)))
         sleep(5)
