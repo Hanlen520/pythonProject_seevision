@@ -98,8 +98,7 @@ def update_to_new_version(old_version, new_version):
         print("Execute update process……")
         update_command_execute = \
             subprocess.Popen("adb shell < {}".format(update_command), shell=True,
-                             stdout=subprocess.PIPE).communicate()[
-                0]
+                             stdout=subprocess.PIPE).communicate()[0]
         sleep(10)
         print("After update ,reboot deivce……")
         reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
@@ -128,26 +127,35 @@ def check_current_version(old_version, new_version):
 # 开始循环升级测试 --reset_status
 def begin_upgrade_test(old_version, new_version):
     if check_adb_online():
-        print("Analysis update.zip package……")
-        update_command_write = subprocess.Popen("python ota.py update.zip", stdout=subprocess.PIPE).communicate()[0]
-        with open("update_cycle.txt", "w") as update_command_cycle_file:
-            print("Get update cycle code and write in update_cycle.txt……")
-            update_command_cycle_file.write("update_engine_client  --reset_status=true\r\n")
-            update_command_cycle_file.write(update_command_write.decode())
-            update_command_cycle_file.close()
-        update_command = "update_cycle.txt"
-        print("Execute upgrade cycle update process……")
-        update_command_execute = \
-            subprocess.Popen("adb shell < {}".format(update_command), shell=True,
-                             stdout=subprocess.PIPE).communicate()[0]
-        sleep(10)
+        print("Begin reset system upgrade status……")
+        reset_device_status = subprocess.Popen("adb shell update_engine_client --reset_status=true", shell=True,
+                                               stdout=subprocess.PIPE).communicate()[0]
         print("After update ,reboot deivce……")
-        reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
-            0]
-        if check_current_version(old_version, new_version):
-            print("First version upgrade success ,Begin new version cycle flash test!")
-        else:
-            print("Please check, new version upgrade fail, cannot continue test,please check……")
+        sleep(3)
+        reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[0]
+        if wait_for_device_reboot():
+            if check_adb_online():
+                print("Analysis update.zip package……")
+                update_command_write = \
+                    subprocess.Popen("python ota.py update.zip", stdout=subprocess.PIPE).communicate()[0]
+                with open("update_cycle.txt", "w") as update_command_cycle_file:
+                    print("Get update cycle code and write in update_cycle.txt……")
+                    # update_command_cycle_file.write("update_engine_client  --reset_status=true\r\n")
+                    update_command_cycle_file.write(update_command_write.decode())
+                    update_command_cycle_file.close()
+                update_command = "update_cycle.txt"
+                print("Execute upgrade cycle update process……")
+                update_command_execute = \
+                    subprocess.Popen("adb shell < {}".format(update_command), shell=True,
+                                     stdout=subprocess.PIPE).communicate()[0]
+                sleep(10)
+                print("After update ,reboot deivce……")
+                reboot_device = subprocess.Popen("adb reboot", shell=True, stdout=subprocess.PIPE).communicate()[
+                    0]
+                if check_current_version(old_version, new_version):
+                    print("First version upgrade success ,Begin new version cycle flash test!")
+                else:
+                    print("Please check, new version upgrade fail, cannot continue test,please check……")
 
 
 if __name__ == "__main__":
