@@ -1,5 +1,5 @@
-update_engine_client --update --follow --payload=file:///data/ota_package/update.zip --offset=40686 --size=770148964 --headers="FILE_HASH=9dqmxHxgLzUo2Z7LOG4Na+q/tw1JtQcwi7ZLwpWfpRQ=
-FILE_SIZE=770148964
-METADATA_HASH=WRnbmKGU/Ny1hD7EKbwccya5fhvW6EF7pZH+WsRaFM4=
-METADATA_SIZE=60702
+update_engine_client --update --follow --payload=file:///data/ota_package/update.zip --offset=41138 --size=796330045 --headers="FILE_HASH=sEBM3tHPq+v/pDbdF45y3762sbvh450WRz7RbU5q65c=
+FILE_SIZE=796330045
+METADATA_HASH=OSCJX4myFASD7MvRfTUxgFnYU2AN3wceTk66Fw2kvak=
+METADATA_SIZE=63214
 "
