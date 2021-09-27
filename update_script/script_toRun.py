@@ -161,7 +161,7 @@ def begin_upgrade_test(old_version, new_version):
 class Logger(object):
     def __init__(self, logFile="Default.log"):
         self.terminal = sys.stdout
-        self.log = open(logFile, 'a')
+        self.log = open(logFile, 'w')
 
     def write(self, message):
         self.terminal.write(message)
@@ -174,7 +174,6 @@ class Logger(object):
 if __name__ == "__main__":
     sys.stdout = Logger("running.log")
     """ test area: 方式1，通过reset status进行重复当前版本升降级"""
-    # for i in range(5):
     old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
     new_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
     print(
@@ -186,16 +185,16 @@ if __name__ == "__main__":
     root()
     push_updateZip_to()
     update_to_new_version(old_version, new_version)
-    for i in range(101):
+    for i in range(5):
+        test_number = str(i + 1)
         print("-------------------------------------------Begin {} times reset cycle version upgrade test……".format(
-            str(i + 1)))
+            test_number))
         root()
         push_updateZip_to()
         begin_upgrade_test(old_version, new_version)
         print("-------------------------------------------The {} times reset cycle version upgrade test done!".format(
-            str(i + 1)))
+            test_number))
     print("-------------------------------------------End test……")
-    sleep(5)
     # """ test area: 方式2，通过升级后通过QFIL重新刷入旧版本再进行重复当前版本升降级"""暂时不做，使用方式一根据规律判断测试结果
     # old_version = ""
     # new_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
