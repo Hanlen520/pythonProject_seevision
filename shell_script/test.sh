@@ -45,4 +45,36 @@ echo "$cgt_length"
 :<<EOF
 当前上下两行组成多行注释
 EOF
+# adb shell ls >> show_all_file.txt
+# 传递参数
+echo "Shell 传递参数："
+echo "打印第一个参数（执行的文件名）：$0"
+echo "打印第二个参数：$1"
+echo "打印第三个参数：$2"
+# 传递参数个数
+echo "当前传递的参数个数为：$#"
+# 获取所有传递的参数
+echo "当前所有的传递的参数为：$*"
+echo "当前所有的传递的参数为：$@"
+# 获取当前脚本运行进程ID号
+echo "当前脚本运行Process ID：$$"
+# 获取后台运行的最后一个进程ID号
+echo "Last Process ID which running in background：$!"
+# 获取shell使用的当前选项
+echo "shell choose：$-"
+# 获取最后命令的退出状态，0表示没有错误，其他值为有错误
+echo "Last command exit status is ：$?"
+# 使用`expr x + x`完成表达式求值操作
+# shellcheck disable=SC2006
+# shellcheck disable=SC2003
+Bruce=12
+# shellcheck disable=SC2006
+# shellcheck disable=SC2003
+val=`expr $Bruce + 2`
+# shellcheck disable=SC2154
+echo "2+2=$val"
+
+
+
+
 
