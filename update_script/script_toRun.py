@@ -185,7 +185,7 @@ if __name__ == "__main__":
     root()
     push_updateZip_to()
     update_to_new_version(old_version, new_version)
-    for i in range(5):
+    for i in range(101):
         test_number = str(i + 1)
         print("-------------------------------------------Begin {} times reset cycle version upgrade test……".format(
             test_number))
