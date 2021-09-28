@@ -172,6 +172,9 @@ class Logger(object):
 
 
 if __name__ == "__main__":
+
+    # 测试前，Pycharm设置log输出方式：Run->Edit Configurations……->Logs->Save console output to file:设置自己保存的输出的文件log信息，每次测试测完更新log文件即可
+
     sys.stdout = Logger("running.log")
     """ test area: 方式1，通过reset status进行重复当前版本升降级"""
     old_version = "EM_TK1032_20210924_v1.1.0_20210924-1315"
