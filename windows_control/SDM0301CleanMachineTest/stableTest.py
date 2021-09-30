@@ -28,14 +28,14 @@ def checkDeviceConnect():
         for port in plist:
             print("Current test number is : {} - {}".format(str(cycle_count), str(list(port))))
             for port_number in list(port):
-                if "Prolific USB-to-Serial Comm Port" in port_number:
+                if "Silicon Labs CP210x USB to UART Bridge" in port_number:
                     isConnect = True
                     current_port = re.findall("\((.*)\)", port_number)
     return current_port[0]
 
 
 def openSeevisionVisualizer(
-        seevisionVisualizer_path=r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.0_20210901_MSVC2019_64bit-Release.zip\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\SeeVisionSerialVisualizer.exe"):
+        seevisionVisualizer_path=r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.2_20210929_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\SeeVisionSerialVisualizer.exe"):
     global seevisionVisualizer
     seevisionVisualizer = subprocess.Popen(seevisionVisualizer_path)
     sleep(2)
@@ -84,7 +84,7 @@ def get_basic_data():
 def connect_disconnectTest():
     result_list = []
     # 1000次4H，测2000次，8H，当前120次30分钟
-    for i in range(2001):
+    for i in range(10):
         result = False
         current_port = checkDeviceConnect()
         test_number = str(i + 1)
@@ -109,7 +109,7 @@ def connect_disconnectTest():
 
 
 if __name__ == '__main__':
-    seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.0_20210901_MSVC2019_64bit-Release.zip\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release"
+    seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.2_20210929_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release"
     os.chdir(seevisionVisualizerRootPath)
     for result in connect_disconnectTest():
         print(result)
