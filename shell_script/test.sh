@@ -111,6 +111,7 @@ fi
   echo "算数关系运算"
 
 # ！非运算 -o或运算 -a与运算，&& 逻辑And运算，|| 逻辑Or运算
+# shellcheck disable=SC2166
 if [ $a -lt $b -a $a -le $b ]
 then
   echo "It's -a与运算，两边表达式都为True才执行"
@@ -226,6 +227,9 @@ echo '$your_name\n'
 # shellcheck disable=SC2006
 # shellcheck disable=SC2005
 echo `adb devices` > ./temp/redirect.txt
+# shellcheck disable=SC2046
+# shellcheck disable=SC2006
+# shellcheck disable=SC2005
 echo `date`
 
 # printf 命令
@@ -334,6 +338,7 @@ done
 # 需要注意的是文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。
 
 source ./outside.sh
+# shellcheck disable=SC2154
 echo "case1.sh的外部变量调用：$outside_value"
 
 
