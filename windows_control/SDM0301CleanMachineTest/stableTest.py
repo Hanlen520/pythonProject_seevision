@@ -4,11 +4,12 @@ import subprocess
 import time
 from time import sleep
 
+import pyautogui
 import uiautomation
 
 os.path.abspath(".")
 os.path.join(
-    r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.0_20210901_MSVC2019_64bit-Release.zip\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\resource\model.json")
+    r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.4.2_20211012_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\resource\model.json")
 
 from serial.tools.list_ports import *
 
@@ -35,7 +36,7 @@ def checkDeviceConnect():
 
 
 def openSeevisionVisualizer(
-        seevisionVisualizer_path=r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.2_20210929_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\SeeVisionSerialVisualizer.exe"):
+        seevisionVisualizer_path=r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.4.2_20211012_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\SeeVisionSerialVisualizer.exe"):
     global seevisionVisualizer
     seevisionVisualizer = subprocess.Popen(seevisionVisualizer_path)
     sleep(2)
@@ -64,6 +65,17 @@ def connect_device(current_port):
     cur_port = uiautomation.ListItemControl(searchDepth=7, Name=current_port)
     cur_port.Click()
     sleep(1)
+
+    # 增加一个选择波特率115200，通过键盘输入+回车进行对ComboBox的item进行选择
+    baud_rate = uiautomation.ComboBoxControl(
+        AutomationId="MainWindow.centralwidget.wRootCtrlTab.qt_tabwidget_stackedwidget.wCtrlTab.wSetBaudCombo")
+    baud_rate.Click()
+    sleep(1)
+    pyautogui.typewrite("115200")
+    sleep(0.5)
+    pyautogui.press("enter")
+    sleep(0.5)
+
     connect_button = uiautomation.ButtonControl(searchDepth=6, Name="连接设备")
     connect_button.Click()
     sleep(1)
@@ -109,7 +121,7 @@ def connect_disconnectTest():
 
 
 if __name__ == '__main__':
-    seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.2_20210929_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release"
+    seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.4.2_20211012_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release"
     os.chdir(seevisionVisualizerRootPath)
     for result in connect_disconnectTest():
         print(result)
