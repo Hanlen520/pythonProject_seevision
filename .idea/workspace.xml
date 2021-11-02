@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a6412e2-0d8d-4c3d-ac26-6d859971540a" name="Default Changelist" comment="Add SDK test automation script">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet_pupil_test_case/stress_by_uiautomator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pet_pupil_test_case/stress_by_uiautomator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
