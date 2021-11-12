@@ -120,7 +120,7 @@ def connect_disconnectTest():
     return result_list
 
 
-def frequency_get():
+def frequency_Test():
     result_list = []
     # 1000次4H，测2000次，8H，当前120次30分钟
     current_port = checkDeviceConnect()
@@ -145,5 +145,7 @@ def frequency_get():
 if __name__ == '__main__':
     seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\激光雷达数据采集程序v1.0.4.8_20211111_MSVC2019_64bit-Release"
     os.chdir(seevisionVisualizerRootPath)
-    for result in connect_disconnectTest():
+    # for result in connect_disconnectTest():
+    #     print(result)
+    for result in frequency_Test():
         print(result)
