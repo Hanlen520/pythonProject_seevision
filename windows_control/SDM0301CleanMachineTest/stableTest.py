@@ -4,6 +4,7 @@ import subprocess
 import time
 from time import sleep
 
+import pandas as pd
 import pyautogui
 import uiautomation
 
@@ -36,7 +37,7 @@ def checkDeviceConnect():
 
 
 def openSeevisionVisualizer(
-        seevisionVisualizer_path=r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.4.2_20211012_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release\SeeVisionSerialVisualizer.exe"):
+        seevisionVisualizer_path=r"C:\Users\CHENGUANGTAO\Desktop\激光雷达数据采集程序v1.0.4.8_20211111_MSVC2019_64bit-Release\SeeVisionSerialVisualizer.exe"):
     global seevisionVisualizer
     seevisionVisualizer = subprocess.Popen(seevisionVisualizer_path)
     sleep(2)
@@ -121,6 +122,7 @@ def connect_disconnectTest():
 
 
 def frequency_Test():
+    # 获取后写入excel，在result folder目录下，result folder在上位机根目录
     result_list = []
     # 1000次4H，测2000次，8H，当前120次30分钟
     current_port = checkDeviceConnect()
@@ -128,7 +130,8 @@ def frequency_Test():
         openSeevisionVisualizer()
         connect_device(current_port)
         sleep(3)
-    for i in range(10):
+    result_list.append(["number", "时间", "测量频率"])
+    for i in range(3):
         test_number = str(i + 1)
         print("第{}次测试：".format(test_number))
         print("OK,connect success!")
@@ -138,8 +141,18 @@ def frequency_Test():
             print("等待5s")
             sleep(5)
             result_list.append([test_number, cur_time, measure_frequence])
-    print("{}:Current test result is {}".format(cur_time, str(result)))
+    # print("{}:Current test result is {}".format(cur_time, str(result)))
     return result_list
+
+
+def write_into_excel(filename="test_result_frequence.xlsx", list_all=[]):
+    if not os.path.exists("./result"):
+        os.mkdir("./result")
+        print("Create folder success")
+    file_path = "./result/{}".format(filename)
+    df = pd.DataFrame(columns=list_all)
+    df.to_excel(file_path, index=True)
+    print("{} file create success!".format(filename))
 
 
 if __name__ == '__main__':
@@ -147,5 +160,5 @@ if __name__ == '__main__':
     os.chdir(seevisionVisualizerRootPath)
     # for result in connect_disconnectTest():
     #     print(result)
-    for result in frequency_Test():
-        print(result)
+    write_into_excel(filename="test_result_frequence.xlsx", list_all=frequency_Test())
+    closeSeevisionVisualizer()
