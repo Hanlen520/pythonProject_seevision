@@ -131,7 +131,7 @@ def frequency_Test():
         connect_device(current_port)
         sleep(3)
     result_list.append(["number", "时间", "测量频率"])
-    for i in range(3):
+    for i in range(100):
         test_number = str(i + 1)
         print("第{}次测试：".format(test_number))
         print("OK,connect success!")
