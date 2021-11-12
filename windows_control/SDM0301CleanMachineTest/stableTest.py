@@ -120,8 +120,30 @@ def connect_disconnectTest():
     return result_list
 
 
+def frequency_get():
+    result_list = []
+    # 1000次4H，测2000次，8H，当前120次30分钟
+    current_port = checkDeviceConnect()
+    if current_port:
+        openSeevisionVisualizer()
+        connect_device(current_port)
+        sleep(3)
+    for i in range(10):
+        test_number = str(i + 1)
+        print("第{}次测试：".format(test_number))
+        print("OK,connect success!")
+        measure_frequence = get_basic_data()
+        if measure_frequence:
+            print("当前测量频率为：{}".format(measure_frequence))
+            print("等待5s")
+            sleep(5)
+            result_list.append([test_number, cur_time, measure_frequence])
+    print("{}:Current test result is {}".format(cur_time, str(result)))
+    return result_list
+
+
 if __name__ == '__main__':
-    seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\SMD0301扫地机\上位机\视熙\激光雷达数据采集程序v1.0.4.2_20211012_MSVC2019_64bit-Release\build-seevision-smd0301-gui-Desktop_Qt_5_15_2_MSVC2019_64bit-Release"
+    seevisionVisualizerRootPath = r"C:\Users\CHENGUANGTAO\Desktop\激光雷达数据采集程序v1.0.4.8_20211111_MSVC2019_64bit-Release"
     os.chdir(seevisionVisualizerRootPath)
     for result in connect_disconnectTest():
         print(result)
