@@ -66,12 +66,12 @@ def closeFlashTool():
     os.system("taskkill /pid {}".format(pid))
 
 
-def getSerialPort():
+def getSerialPort(comport_i):
     print("获取序列端口信息")
     while True:
         print("Get Serial Port now!")
         for port in getDeviceUSBPort():
-            if "OK Ports Silicon Labs CP210x USB to UART Bridge (COM22) USB" in port:
+            if "OK Ports Silicon Labs CP210x USB to UART Bridge ({}) USB".format(comport_i) in port:
                 return port
 
 
@@ -101,9 +101,9 @@ def enterBootLoaderMode():
     sleep(5)
 
 
-def fastbootCommand():
+def fastbootCommand(comport_i):
     print("进入Fastboot模式")
-    if getSerialPort():
+    if getSerialPort(comport_i):
         print("Serial port存在，可以执行fastboot")
         erase = subprocess.Popen("fastboot erase all")
         sleep(1)
@@ -152,12 +152,13 @@ if __name__ == '__main__':
     softwareName = "20211112_012300"
     testCount = 10
     type = "nand"
+    comport_i = "COM22"
     for i in range(testCount):
         print("\n\n当前是第{}次测试".format(str(i + 1)))
         openHidTool(hidTool)
         enterBootLoaderMode()
         closeHidTool()
-        fastbootCommand()
+        fastbootCommand(comport_i)
         flashImageIntoDevice(flashFolder, softwareName, type)
         closeFlashTool()
         sleep(8)
