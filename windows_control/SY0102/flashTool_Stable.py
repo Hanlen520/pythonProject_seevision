@@ -143,6 +143,7 @@ if __name__ == '__main__':
         3、将flashFolder、hidTool、flashTool、flash_software、softwareName都替换成正确的路径和名称
         4、定义testCount测试次数
         5、测试类型：type->nand或nor
+        6、修改当前设备的对应端口号：comport_i = "COM22"
         6、以管理员模式启动cmd：python flashTool_Stable.py >> log_record.log，运行时的log会记录在该文件中，或者不记录直接执行python flashTool_Stable.py
     """
     flashFolder = r"D:\PycharmProjects\pythonProject_seevision\windows_control\SY0102\FlashTool"
