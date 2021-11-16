@@ -41,23 +41,26 @@ def root():
         print("-------------------------------------------Begin adb root……")
         root_step_1 = subprocess.Popen("adb root", shell=True,
                                        stdout=subprocess.PIPE).communicate()[0]
-        sleep(3)
-        print("-------------------------------------------Begin adb disable-verity……")
-        root_step_2 = subprocess.Popen("adb disable-verity", shell=True,
-                                       stdout=subprocess.PIPE).communicate()[0]
-        sleep(3)
-        print("-------------------------------------------Begin adb reboot……")
-        root_step_3 = subprocess.Popen("adb reboot", shell=True,
-                                       stdout=subprocess.PIPE).communicate()[0]
-        sleep(3)
-        if wait_for_device_reboot():
-            print("-------------------------------------------Begin adb root……")
-            root_step_4 = subprocess.Popen("adb root", shell=True,
-                                           stdout=subprocess.PIPE).communicate()[0]
-            sleep(3)
-            print("-------------------------------------------Begin adb remount……")
-            root_step_5 = subprocess.Popen("adb remount", shell=True,
-                                           stdout=subprocess.PIPE).communicate()[0]
+        """
+            该部分会导致无法重复升级，故去掉
+        """
+        # sleep(3)
+        # print("-------------------------------------------Begin adb disable-verity……")
+        # root_step_2 = subprocess.Popen("adb disable-verity", shell=True,
+        #                                stdout=subprocess.PIPE).communicate()[0]
+        # sleep(3)
+        # print("-------------------------------------------Begin adb reboot……")
+        # root_step_3 = subprocess.Popen("adb reboot", shell=True,
+        #                                stdout=subprocess.PIPE).communicate()[0]
+        # sleep(3)
+        # if wait_for_device_reboot():
+        #     print("-------------------------------------------Begin adb root……")
+        #     root_step_4 = subprocess.Popen("adb root", shell=True,
+        #                                    stdout=subprocess.PIPE).communicate()[0]
+        #     sleep(3)
+        #     print("-------------------------------------------Begin adb remount……")
+        #     root_step_5 = subprocess.Popen("adb remount", shell=True,
+        #                                    stdout=subprocess.PIPE).communicate()[0]
 
 
 def get_current_page():
