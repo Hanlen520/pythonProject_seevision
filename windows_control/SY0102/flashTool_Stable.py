@@ -113,7 +113,8 @@ def fastbootCommand(comport_i):
 
 def flashImageIntoDevice(flashFolder, softwareName, type):
     print("开始将固件刷入设备")
-    if getPortablePort():
+    # if getPortablePort():
+    if True:
         print("Portable port存在，可以执行刷机操作")
         openFlashToolByClick(flashFolder)
         uiautomation.ButtonControl(searchDepth=2, Name="选择固件路径").Click()
@@ -151,7 +152,7 @@ if __name__ == '__main__':
     flashTool = r"D:\PycharmProjects\pythonProject_seevision\windows_control\SY0102\FlashTool\FlashTool.exe"
     flash_software = r"D:\PycharmProjects\pythonProject_seevision\windows_control\SY0102\20211101_201937_V112-20211101-201937\nor\images"
     softwareName = "20211112_012300"
-    testCount = 10
+    testCount = 1
     type = "nand"
     comport_i = "COM22"
     for i in range(testCount):
@@ -159,7 +160,7 @@ if __name__ == '__main__':
         openHidTool(hidTool)
         enterBootLoaderMode()
         closeHidTool()
-        fastbootCommand(comport_i)
+        # fastbootCommand(comport_i)
         flashImageIntoDevice(flashFolder, softwareName, type)
         closeFlashTool()
         sleep(8)
