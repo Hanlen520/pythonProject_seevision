@@ -105,7 +105,9 @@ def fastbootCommand(comport_i):
     print("进入Fastboot模式")
     if getSerialPort(comport_i):
         print("Serial port存在，可以执行fastboot")
-        erase = subprocess.Popen("fastboot erase all")
+        # 阻塞式等待擦除完成！
+        os.system("fastboot erase all")
+        # erase = subprocess.Popen("fastboot erase all")
         sleep(1)
         reboot = subprocess.Popen("fastboot reboot")
         sleep(1)
@@ -160,7 +162,7 @@ if __name__ == '__main__':
         openHidTool(hidTool)
         enterBootLoaderMode()
         closeHidTool()
-        # fastbootCommand(comport_i)
+        fastbootCommand(comport_i)
         flashImageIntoDevice(flashFolder, softwareName, type)
         closeFlashTool()
         sleep(8)
