@@ -113,4 +113,6 @@ if __name__ == '__main__':
     # connect to SecurtCRT in background to check the log whether exists ldxldx sig
     # close_time = 20
     # cycle_time = 288
-    scene_test(close_time, cycle_time)
+    # scene_test(close_time, cycle_time)
+    inf = os.popen("adb devices").read()
+    print(inf)
