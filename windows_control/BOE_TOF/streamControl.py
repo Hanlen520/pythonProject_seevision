@@ -114,5 +114,3 @@ if __name__ == '__main__':
     # close_time = 20
     # cycle_time = 288
     # scene_test(close_time, cycle_time)
-    inf = os.popen("adb devices").read()
-    print(inf)
