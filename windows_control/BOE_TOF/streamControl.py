@@ -104,13 +104,18 @@ def write_into_excel(filename, data):
 if __name__ == '__main__':
     global boe_tof_path
     boe_tof_path = r"C:\Users\Liuwe\Desktop\BOE_TOF\BOE_TOF\SeeVision3DCameraViewer_V1.8.7_20211105190051_win_x64_2\SeeVision3DCameraViewer.exe"
-    # test wait 5s close_time = 5, cycle_time = 720
-    # test wait 20s close_time = 20, cycle_time = 288
-    # connect to SecurtCRT in background to check the log whether exists ldxldx sig
-    close_time = 5
-    cycle_time = 720
-    # test wait 20s close_time = 20, cycle_time = 288
-    # connect to SecurtCRT in background to check the log whether exists ldxldx sig
-    # close_time = 20
-    # cycle_time = 288
-    # scene_test(close_time, cycle_time)
+    test_suite = [{"close_time": 5, "cycle_time": 720}, {"close_time": 20, "cycle_time": 288}]
+    for i in test_suite:
+        close_time = i["close_time"]
+        cycle_time = i["cycle_time"]
+        print("Current test - close time: {} , - cycle time: {}".format(close_time, cycle_time))
+        # test wait 5s close_time = 5, cycle_time = 720
+        # test wait 20s close_time = 20, cycle_time = 288
+        # connect to SecurtCRT in background to check the log whether exists ldxldx sig
+        # close_time = 5
+        # cycle_time = 720
+        # test wait 20s close_time = 20, cycle_time = 288
+        # connect to SecurtCRT in background to check the log whether exists ldxldx sig
+        # close_time = 20
+        # cycle_time = 288
+        scene_test(close_time, cycle_time)
