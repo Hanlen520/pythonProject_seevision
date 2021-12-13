@@ -29,4 +29,4 @@ if __name__ == "__main__":
 	switch_obj.switch_pin1_on()
 	#switch_obj.switch_pin1_off()
 	# os.system("pause")
-	print("OK1")
+	print("OK - test")
