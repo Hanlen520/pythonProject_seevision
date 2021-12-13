@@ -1,0 +1,469 @@
+2021-12-06 15:46:14,878 INFO [default] Opened HID device.
+2021-12-06 15:46:14,879 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:46:15,178 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:46:15,179 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:46:15,192 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:46:22,004 INFO [default] Opened HID device.
+2021-12-06 15:46:22,005 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:46:22,016 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:46:22,016 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:46:22,032 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:46:28,796 INFO [default] Opened HID device.
+2021-12-06 15:46:28,798 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:46:28,813 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:46:28,814 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:46:28,829 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:48:28,856 INFO [default] Opened HID device.
+2021-12-06 15:48:28,856 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:48:29,132 ERROR [default] unable to read data buffer from device.
+2021-12-06 15:48:29,132 ERROR [default] unable to write data buffer from device.
+2021-12-06 15:50:19,349 INFO [default] Opened HID device.
+2021-12-06 15:50:19,349 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:50:19,627 ERROR [default] unable to read data buffer from device.
+2021-12-06 15:50:19,627 ERROR [default] unable to write data buffer from device.
+2021-12-06 15:51:37,006 INFO [default] Opened HID device.
+2021-12-06 15:51:37,007 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:51:37,302 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:51:37,302 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:51:37,313 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:51:43,647 INFO [default] Opened HID device.
+2021-12-06 15:51:43,647 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:51:43,659 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 15:51:43,659 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 15:51:43,674 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:09:44,238 INFO [default] Opened HID device.
+2021-12-06 17:09:44,238 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:09:44,530 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:09:44,531 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:09:44,552 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:26:50,578 INFO [default] Opened HID device.
+2021-12-06 17:26:50,579 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:26:50,874 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:26:50,875 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:26:50,896 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:28:23,696 INFO [default] Opened HID device.
+2021-12-06 17:28:23,697 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:28:23,987 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:28:23,988 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:28:24,010 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:29:59,660 INFO [default] Opened HID device.
+2021-12-06 17:29:59,661 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:29:59,958 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:29:59,958 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:29:59,970 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:06,339 INFO [default] Opened HID device.
+2021-12-06 17:30:06,339 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:06,362 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:06,363 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:06,377 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:26,370 INFO [default] Opened HID device.
+2021-12-06 17:30:26,370 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:26,394 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:26,395 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:26,410 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:33,051 INFO [default] Opened HID device.
+2021-12-06 17:30:33,052 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:33,077 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:33,078 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:33,088 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:52,492 INFO [default] Opened HID device.
+2021-12-06 17:30:52,494 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:52,519 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:52,520 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:52,535 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:59,155 INFO [default] Opened HID device.
+2021-12-06 17:30:59,156 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:59,182 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:30:59,183 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:30:59,197 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:18,613 INFO [default] Opened HID device.
+2021-12-06 17:31:18,614 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:18,636 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:18,636 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:18,652 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:25,259 INFO [default] Opened HID device.
+2021-12-06 17:31:25,260 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:25,286 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:25,286 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:25,296 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:44,733 INFO [default] Opened HID device.
+2021-12-06 17:31:44,734 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:44,756 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:44,756 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:44,772 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:51,390 INFO [default] Opened HID device.
+2021-12-06 17:31:51,390 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:51,401 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:31:51,401 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:31:51,416 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:10,870 INFO [default] Opened HID device.
+2021-12-06 17:32:10,870 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:10,883 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:10,883 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:10,898 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:17,491 INFO [default] Opened HID device.
+2021-12-06 17:32:17,491 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:17,502 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:17,502 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:17,518 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:36,976 INFO [default] Opened HID device.
+2021-12-06 17:32:36,976 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:36,994 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:36,994 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:37,009 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:43,627 INFO [default] Opened HID device.
+2021-12-06 17:32:43,628 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:43,640 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:32:43,640 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:32:43,656 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:03,062 INFO [default] Opened HID device.
+2021-12-06 17:33:03,062 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:03,082 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:03,082 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:03,097 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:09,683 INFO [default] Opened HID device.
+2021-12-06 17:33:09,684 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:09,710 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:09,710 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:09,721 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:29,177 INFO [default] Opened HID device.
+2021-12-06 17:33:29,178 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:29,189 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:29,190 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:29,205 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:35,802 INFO [default] Opened HID device.
+2021-12-06 17:33:35,803 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:35,829 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:35,829 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:35,844 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:55,337 INFO [default] Opened HID device.
+2021-12-06 17:33:55,338 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:55,357 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:33:55,357 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:33:55,373 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:01,949 INFO [default] Opened HID device.
+2021-12-06 17:34:01,950 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:01,961 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:01,961 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:01,976 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:21,540 INFO [default] Opened HID device.
+2021-12-06 17:34:21,541 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:21,552 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:21,553 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:21,568 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:28,213 INFO [default] Opened HID device.
+2021-12-06 17:34:28,214 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:28,225 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:28,225 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:28,240 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:47,881 INFO [default] Opened HID device.
+2021-12-06 17:34:47,882 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:47,908 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:47,908 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:47,924 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:54,617 INFO [default] Opened HID device.
+2021-12-06 17:34:54,618 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:54,643 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:34:54,643 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:34:54,655 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:14,365 INFO [default] Opened HID device.
+2021-12-06 17:35:14,366 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:14,392 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:14,392 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:14,407 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:20,987 INFO [default] Opened HID device.
+2021-12-06 17:35:20,988 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:21,005 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:21,005 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:21,020 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:40,509 INFO [default] Opened HID device.
+2021-12-06 17:35:40,509 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:40,529 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:40,529 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:40,545 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:47,164 INFO [default] Opened HID device.
+2021-12-06 17:35:47,164 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:47,175 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:35:47,175 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:35:47,190 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:06,681 INFO [default] Opened HID device.
+2021-12-06 17:36:06,683 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:06,696 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:06,697 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:06,712 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:13,325 INFO [default] Opened HID device.
+2021-12-06 17:36:13,326 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:13,337 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:13,337 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:13,352 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:33,016 INFO [default] Opened HID device.
+2021-12-06 17:36:33,018 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:33,044 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:33,045 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:33,059 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:39,693 INFO [default] Opened HID device.
+2021-12-06 17:36:39,694 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:39,720 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:39,720 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:39,731 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:59,431 INFO [default] Opened HID device.
+2021-12-06 17:36:59,432 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:59,456 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:36:59,456 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:36:59,472 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:06,099 INFO [default] Opened HID device.
+2021-12-06 17:37:06,099 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:06,110 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:06,110 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:06,126 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:25,577 INFO [default] Opened HID device.
+2021-12-06 17:37:25,577 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:25,601 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:25,601 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:25,617 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:32,298 INFO [default] Opened HID device.
+2021-12-06 17:37:32,299 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:32,311 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:32,312 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:32,327 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:51,993 INFO [default] Opened HID device.
+2021-12-06 17:37:51,993 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:52,019 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:52,020 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:52,034 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:58,654 INFO [default] Opened HID device.
+2021-12-06 17:37:58,654 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:58,679 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:37:58,680 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:37:58,691 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:18,289 INFO [default] Opened HID device.
+2021-12-06 17:38:18,289 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:18,300 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:18,300 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:18,316 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:24,963 INFO [default] Opened HID device.
+2021-12-06 17:38:24,964 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:24,985 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:24,986 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:25,001 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:44,467 INFO [default] Opened HID device.
+2021-12-06 17:38:44,468 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:44,480 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:44,481 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:44,495 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:51,166 INFO [default] Opened HID device.
+2021-12-06 17:38:51,166 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:51,177 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:38:51,177 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:38:51,193 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:39:10,742 INFO [default] Opened HID device.
+2021-12-06 17:39:10,743 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:39:10,766 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
+2021-12-06 17:39:10,766 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::write_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:54] Write to HID results in success.
+
+2021-12-06 17:39:10,782 DEBUG [default] [CHENGUANGTAO@DESKTOP-7I5F5CR] [bool __cdecl svkit::platform::sv_hidapi_control_device::read_raw_data_buffer(char *)] [D:\Workspace\Projects\svkit-project\svkit\src\SVCore\windows\hidapi\hidapi-backend.cpp:93] Read from HID results in success.
+
