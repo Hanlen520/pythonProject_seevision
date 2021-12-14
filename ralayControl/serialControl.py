@@ -1,6 +1,8 @@
 # coding = utf8
 import os
 
+from pythonProject_seevision.ralayControl import serialComportList
+
 os.path.abspath(".")
 """
     @Project:PycharmProjects
@@ -22,17 +24,21 @@ class SerialSwitch(object):
     def __init__(self, com_id):
         self.s_obj = serial.Serial(com_id, baudrate=9600)
 
-    def switch_pin1_on(self):
-        self.s_obj.write([0xFE, 0x05, 0x00, 0x00, 0xFF, 0x00, 0x98, 0x35])
-        print(self.s_obj.readall())
+    def switch_on(self, COMPORT):
+        self.s_obj.write(COMPORT)
+        b = self.s_obj.read(8)
+        print(b)
 
-    def switch_pin1_off(self):
-        self.s_obj.write([0xFE, 0x05, 0x00, 0x00, 0x00, 0x00, 0xD9, 0xC5])
-        print(self.s_obj.readall())
+    def switch_off(self, COMPORT):
+        self.s_obj.write(COMPORT)
+        b = self.s_obj.read(8)
+        print(b)
 
-    def check_all_status(self):
-        self.s_obj.write([0xFE, 0x01, 0x00, 0x00, 0x00, 0x10, 0x29, 0xC9])
-        print(self.s_obj.readall())
+    def open_all_comport(self):
+        self.s_obj.write(serialComportList.RELAY_CONTROL_COMPORT_OPEN_ALL)
+
+    def close_all_comport(self):
+        self.s_obj.write(serialComportList.RELAY_CONTROL_COMPORT_CLOSE_ALL)
 
     def close(self):
         self.s_obj.close()
@@ -46,9 +52,17 @@ if __name__ == "__main__":
         switch_obj = SerialSwitch(com_id)
         for i in range(10):
             print("Begin relay power on/off test")
-            switch_obj.switch_pin1_on()
+            switch_obj.switch_on(serialComportList.RELAY_CONTROL_COMPORT_1_OPEN)
             sleep(1)
-            switch_obj.switch_pin1_off()
+            switch_obj.switch_off(serialComportList.RELAY_CONTROL_COMPORT_1_CLOSE)
+            sleep(1)
+            switch_obj.open_all_comport()
+            sleep(1)
+            switch_obj.close_all_comport()
+            sleep(1)
+            switch_obj.switch_on(serialComportList.RELAY_CONTROL_COMPORT_16_OPEN)
+            sleep(1)
+            switch_obj.switch_off(serialComportList.RELAY_CONTROL_COMPORT_16_CLOSE)
             sleep(1)
     except SerialException:
         print("Not find Serial or somthing went wrong please check connection.")
