@@ -18,6 +18,7 @@ def get_all_running_handle(handle_, mouse):
 
 
 if __name__ == '__main__':
+    print("OK!!你好")
     win32gui.EnumWindows(get_all_running_handle, 0)
     for handle, title in handle_title.items():
         if title:
