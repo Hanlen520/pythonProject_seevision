@@ -212,11 +212,11 @@ echo -e "OK! \c"
 if [ -e "./temp/" ]
 then
   echo "temp文件夹已存在，直接读写"
-  echo "It is a test" > ./temp/redirect.txt
+  echo "It is a test" > ./seevision_pyqt5/redirect.txt
 else
   echo "temp文件夹不存在，先创建文件夹再进行读写"
-  mkdir ./temp/
-  echo "It is a test" > ./temp/redirect.txt
+  mkdir ./seevision_pyqt5/
+  echo "It is a test" > ./seevision_pyqt5/redirect.txt
 fi
 # 使用单引号 - 原样输出字符串，不进行转义或取变量
 # shellcheck disable=SC2016
@@ -226,7 +226,7 @@ echo '$your_name\n'
 # shellcheck disable=SC2046
 # shellcheck disable=SC2006
 # shellcheck disable=SC2005
-echo `adb devices` > ./temp/redirect.txt
+echo `adb devices` > ./seevision_pyqt5/redirect.txt
 # shellcheck disable=SC2046
 # shellcheck disable=SC2006
 # shellcheck disable=SC2005

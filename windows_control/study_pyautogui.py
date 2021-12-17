@@ -77,14 +77,14 @@ def screenshot_function():
     if not os.path.exists("./temp"):
         os.makedirs("./temp")
     else:
-        img_screenshot.save("./temp/screenshot_temp.png")
-        img2 = pyautogui.screenshot("./temp/screenshot_temp_2.png")
+        img_screenshot.save("./seevision_pyqt5/screenshot_temp.png")
+        img2 = pyautogui.screenshot("./seevision_pyqt5/screenshot_temp_2.png")
 
 
 # 获取当前屏幕截图的中心点
 def get_picture_center_point():
     screenshot_function()
-    picture = pyautogui.locateOnScreen("./temp/screenshot_temp.png")
+    picture = pyautogui.locateOnScreen("./seevision_pyqt5/screenshot_temp.png")
     # (x, y) = pyautogui.center(picture)
     pyautogui.rightClick(pyautogui.center(picture))
 
