@@ -1,6 +1,8 @@
 # coding = utf8
 import os
 
+import numpy as np
+
 os.path.abspath(".")
 """
     @Project:PycharmProjects
@@ -14,7 +16,8 @@ import glob
 from PIL import Image
 
 
-def convertPNG(pngfile, outdir):
+def convertPNG2RGB(pngfile, outdir):
+    # Depth to RGB
     # 读取16位深度图（像素范围0～65535），并将其转化为8位（像素范围0～255）
     uint16_img = cv2.imread(pngfile, -1)  # 在cv2.imread参数中加入-1，表示不改变读取图像的类型直接读取，否则默认的读取类型为8位。
     uint16_img -= uint16_img.min()
@@ -31,6 +34,20 @@ def convertPNG(pngfile, outdir):
     im.save(os.path.join(outdir, os.path.basename(pngfile)))
 
 
+def convertPNG2Gray(pngfile, outdir):
+    # Depth to 灰度
+    uint8_img = cv2.imread(pngfile)
+    uint16_img = cv2.imread(pngfile, -1)
+    uint16_img -= uint16_img.min()
+    uint16_img = uint16_img / (uint16_img.max() - uint16_img.min())
+    uint16_img *= 255
+    new_uint16_img = uint16_img.astype(np.uint8)
+
+    im = Image.fromarray(new_uint16_img)
+    im.save(os.path.join(outdir, os.path.basename(pngfile)))
+
+
 if __name__ == '__main__':
-    for pngfile in glob.glob("./temp/*.png"):  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/depth/*.png
-        convertPNG(pngfile, "./temp/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
+    for i in range(100):
+        for pngfile in glob.glob("./temp/*.png"):  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/depth/*.png
+            convertPNG2Gray(pngfile, "./temp/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
