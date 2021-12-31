@@ -48,6 +48,5 @@ def convertPNG2Gray(pngfile, outdir):
 
 
 if __name__ == '__main__':
-    for i in range(100):
-        for pngfile in glob.glob("./temp/*.png"):  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/depth/*.png
-            convertPNG2Gray(pngfile, "./temp/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
+    for pngfile in glob.glob("./temp/*.png"):  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/depth/*.png
+        convertPNG2RGB(pngfile, "./temp/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
