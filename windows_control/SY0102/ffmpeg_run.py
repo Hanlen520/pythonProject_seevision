@@ -24,7 +24,7 @@ def create_10_folder():
 
 
 if __name__ == "__main__":
-    path = r"D:\音视频一体机\IMX581_48M_114\testData\PART2\N"
+    path = r"D:\temp"
     # videoCount = 10
     videoCount = 1
     for i in range(videoCount):
