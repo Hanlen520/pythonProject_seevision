@@ -277,4 +277,3 @@ if __name__ == '__main__':
         # generateResult(compareResult)
     # compareResult = compare2StandardDataTest()
     # generateResult(compareResult)
-
