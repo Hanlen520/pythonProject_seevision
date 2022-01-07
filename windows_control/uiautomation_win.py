@@ -164,7 +164,7 @@ def test_standard_test_data(potplayerPath):
     logger = logger_config(log_path="./log/{}_{}_{}.log".format(cur_time, "resolutionSwitchStress", "mainLog"),
                            logging_name="resolutionSwitchStress")
     result_list = []
-    for i in range(6):
+    for i in range(1):
         try:
             openPotplayer(potplayer_path=potplayerPath)
             enterDeviceSettings()
@@ -199,7 +199,7 @@ def test_standard_test_data(potplayerPath):
             closePotplayer()
 
 
-# 对比标准和测试数据并返回一个最终结果list
+# 对比标准和测试数据并返回一个最终结果list -- Need modified
 def compare2StandardDataTest():
     # 进行第二次测试，完善与第一次测试的数据比较并得出结果
     # 完善好后，学习PyQt5，将其转换成单独的工具：
@@ -275,4 +275,3 @@ if __name__ == '__main__':
     # compareResult = compare2StandardDataTest()
     # generateResult(compareResult)
 
-    uiautomation.WalkTree()
