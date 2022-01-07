@@ -1,0 +1,2 @@
+2022-01-07 19:17:58.458 uiautomation_win.py[70] getFormatList -> Find Control Timeout: {Name: '格式：', ControlType: ListControl}
+2022-01-07 19:20:01.226 uiautomation_win.py[98] switchResolution -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'YUY2 640×360P 30(P 16:9)', ControlType: ListItemControl}
