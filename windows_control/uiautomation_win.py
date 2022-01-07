@@ -70,7 +70,8 @@ def getFormatList():
     all_format = format_list.GetChildren()
     formatList = []
     for format in all_format:
-        formatList.append(format.Name)
+        if "(P" in str(format):
+            formatList.append(format.Name)
     return formatList
 
 
@@ -172,6 +173,8 @@ def test_standard_test_data(potplayerPath):
             enterDeviceSettings()
             formatList = []
             all_format = getFormatList()
+            print(len(all_format))
+            print(all_format)
             closePotplayer()
             for j in range(0, len(all_format)):
                 resolution_now = all_format[j]
