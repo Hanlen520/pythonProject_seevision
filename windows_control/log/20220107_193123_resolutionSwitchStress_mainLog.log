@@ -1,0 +1,4 @@
+2022-01-07 19:31:37,280 - resolutionSwitchStress - INFO - 
+ 当前存在40种分辨率，即将对这些分辨率格式开始测试……
+2022-01-07 19:31:37,280 - resolutionSwitchStress - INFO - 第1次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
+2022-01-07 19:31:55,120 - resolutionSwitchStress - ERROR - Some error happened : list index out of range
