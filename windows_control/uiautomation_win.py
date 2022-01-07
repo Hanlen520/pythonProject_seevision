@@ -3,6 +3,7 @@
 import os
 import re
 import subprocess
+import traceback
 from time import sleep
 
 import pyautogui
@@ -70,8 +71,10 @@ def getFormatList():
     all_format = format_list.GetChildren()
     formatList = []
     for format in all_format:
-        if "(P" in str(format):
-            formatList.append(format.Name)
+        # 筛选掉重复的分辨率格式
+        if (str(format) != "开始播放时选择格式") | (str(format) != "默认格式(推荐)"):
+            if "(P" in str(format):
+                formatList.append(format.Name)
     return formatList
 
 
@@ -82,7 +85,7 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
     find = False
     count = 0
     while not find:
-        if count < 5:
+        if count < 10:
             pyautogui.scroll(500)
         else:
             pyautogui.scroll(-500)
@@ -96,14 +99,14 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
     # -- Need Modified, 等待时间
-    sleep(5)  # sleep(5)
+    sleep(3)  # sleep(3)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
     # -- Need Modified, 等待时间
-    sleep(5)  # sleep(5)
+    sleep(8)  # sleep(3)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
@@ -173,33 +176,31 @@ def test_standard_test_data(potplayerPath):
             enterDeviceSettings()
             formatList = []
             all_format = getFormatList()
-            print(len(all_format))
+            print("\n 当前存在{}种分辨率，即将对这些分辨率格式开始测试……".format(len(all_format)))
+            logger.info("\n 当前存在{}种分辨率，即将对这些分辨率格式开始测试……".format(len(all_format)))
             print(all_format)
             closePotplayer()
-            for j in range(0, len(all_format)):
-                resolution_now = all_format[j]
-                if (str(resolution_now) == "开始播放时选择格式") | (str(resolution_now) == "默认格式(推荐)"):
-                    logger.info("跳过item：{}".format(resolution_now))
-                    print("跳过item：{}".format(resolution_now))
-                    continue
-                else:
-                    logger.info("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
-                    print("第{}轮{}次测试 -- 当前测试分辨率为：{}".format(str(i + 1), str(j - 1), resolution_now))
-                    openPotplayer(potplayer_path=potplayerPath)
-                    enterDeviceSettings()
-                    switchResolution(resolution_now)
-                    list_cur = getPlayerInformation()
-                    logger.info("\t帧率：{} fps".format(list_cur[0]))
-                    logger.info("\t位率：{} kbps".format(list_cur[1]))
-                    closePotplayer()
-                    result_list.append([resolution_now, list_cur[0], list_cur[1]])
+            i = 0
+            for format in all_format:
+                i += 1
+                logger.info("第{}次测试 -- 当前测试分辨率为：{}".format(str(i), format))
+                print("第{}次测试 -- 当前测试分辨率为：{}".format(str(i), format))
+                openPotplayer(potplayer_path=potplayerPath)
+                enterDeviceSettings()
+                switchResolution(format)
+                list_cur = getPlayerInformation()
+                logger.info("\t帧率：{} fps".format(list_cur[0]))
+                logger.info("\t位率：{} kbps".format(list_cur[1]))
+                closePotplayer()
+                result_list.append([format, list_cur[0], list_cur[1]])
         except Exception as ex:
             logger.error("Some error happened : {}".format(str(ex)))
+            logging.error("\n" + traceback.format_exc())
             print("Some error happened : {}".format(str(ex)))
             closePotplayer()
             continue
         finally:
-            standard_test_DataGenerate(test_number=str(i + 1), result_list=result_list)
+            standard_test_DataGenerate(test_number=str(1), result_list=result_list)
             result_list = []
             closePotplayer()
 
