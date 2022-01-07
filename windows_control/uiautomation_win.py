@@ -94,12 +94,14 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
             break
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
+    # -- Need Modified, 等待时间
     sleep(30)  # sleep(30)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
+    # -- Need Modified, 等待时间
     sleep(30)  # sleep(30)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
