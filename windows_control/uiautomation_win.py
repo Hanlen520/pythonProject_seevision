@@ -95,14 +95,14 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
     # -- Need Modified, 等待时间
-    sleep(30)  # sleep(30)
+    sleep(5)  # sleep(5)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
 def getPlayerInformation():
     pyautogui.hotkey("ctrl", "f1")
     # -- Need Modified, 等待时间
-    sleep(30)  # sleep(30)
+    sleep(5)  # sleep(5)
     player_information = uiautomation.WindowControl(searchDepth=1, Name="播放信息")
     current_frameRate = player_information.TextControl(AutomationId="3201").GetWindowText()
     current_bitRate = player_information.TextControl(AutomationId="3386").GetWindowText()
@@ -272,8 +272,9 @@ if __name__ == '__main__':
     except Exception as ex:
         print("Main program has error please check: {}".format(str(ex)))
     finally:
-        compareResult = compare2StandardDataTest()
-        generateResult(compareResult)
+        print("Test Finished!")
+        # compareResult = compare2StandardDataTest()
+        # generateResult(compareResult)
     # compareResult = compare2StandardDataTest()
     # generateResult(compareResult)
 
