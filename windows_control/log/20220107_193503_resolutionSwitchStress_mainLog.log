@@ -1,9 +1,0 @@
-2022-01-07 19:35:17,051 - resolutionSwitchStress - INFO - 
- 当前存在53种分辨率，即将对这些分辨率格式开始测试……
-2022-01-07 19:35:17,051 - resolutionSwitchStress - INFO - 第1次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
-2022-01-07 19:35:39,819 - resolutionSwitchStress - INFO - 	帧率： 29.78 fps
-2022-01-07 19:35:39,820 - resolutionSwitchStress - INFO - 	位率：8499 kbps
-2022-01-07 19:35:39,820 - resolutionSwitchStress - INFO - 第2次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)
-2022-01-07 19:36:02,802 - resolutionSwitchStress - INFO - 	帧率： 29.54 fps
-2022-01-07 19:36:02,802 - resolutionSwitchStress - INFO - 	位率：10851 kbps
-2022-01-07 19:36:02,804 - resolutionSwitchStress - INFO - 第3次测试 -- 当前测试分辨率为：H264 1280×720P 30(P 16:9)

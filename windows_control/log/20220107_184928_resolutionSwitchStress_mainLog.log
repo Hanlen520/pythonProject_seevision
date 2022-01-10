@@ -1,9 +1,0 @@
-2022-01-07 18:49:42,133 - resolutionSwitchStress - INFO - 
- 当前存在40种分辨率，即将对这些分辨率格式开始测试……
-2022-01-07 18:49:42,133 - resolutionSwitchStress - INFO - 第1轮-1次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
-2022-01-07 18:50:01,942 - resolutionSwitchStress - INFO - 	帧率： 29.5 fps
-2022-01-07 18:50:01,942 - resolutionSwitchStress - INFO - 	位率：110734 kbps
-2022-01-07 18:50:01,942 - resolutionSwitchStress - INFO - 第1轮0次测试 -- 当前测试分辨率为：YUY2 160×90P 30(P 16:9)
-2022-01-07 18:50:22,094 - resolutionSwitchStress - INFO - 	帧率： 29.51 fps
-2022-01-07 18:50:22,094 - resolutionSwitchStress - INFO - 	位率：7029 kbps
-2022-01-07 18:50:22,096 - resolutionSwitchStress - INFO - 第1轮1次测试 -- 当前测试分辨率为：YUY2 160×120P 30(P 4:3)

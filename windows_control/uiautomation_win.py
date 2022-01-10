@@ -85,21 +85,27 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
     find = False
     count = 0
     while not find:
+        if resolution:
+            resolution_checked = settings_frame.ListItemControl(searchDepth=6, Name=resolution)
+            findResolution = str(re.findall("Rect:(.*)(\[)", str(resolution_checked))[0][0]).strip()
+            if findResolution != "(0,0,0,0)":
+                find = True
+                resolution_checked.Click()
+                break
+        else:
+            print("Resolution error")
         if count < 10:
             pyautogui.scroll(500)
+            sleep(0.5)
         else:
             pyautogui.scroll(-500)
+            sleep(0.5)
         count += 1
-        resolution_checked = settings_frame.ListItemControl(searchDepth=6, Name=resolution)
-        findResolution = str(re.findall("Rect:(.*)(\[)", str(resolution_checked))[0][0]).strip()
-        if findResolution != "(0,0,0,0)":
-            find = True
-            resolution_checked.Click()
-            break
+        sleep(0.5)
     sleep(1)
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
     # -- Need Modified, 等待时间
-    sleep(3)  # sleep(3)
+    sleep(5)  # sleep(3)
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
@@ -214,9 +220,6 @@ def compare2StandardDataTest():
     # 第二次测试和第一次测试数据进行读取后比较，再生成一个测试结果的Excel表格 -- ongoing
     standard_result = readStandardResultExcel(path="./标准值表格.xlsx")
     test_result = readExcel(path="./第1次测试_resolutionTest.xlsx")
-    # print(standard_result)
-    # print(test_result)
-
     checked_list = []
     if len(standard_result) == len(test_result):
         print("Test result is the same count!")
@@ -299,14 +302,13 @@ def readStandardResultExcel(path="./标准值表格.xlsx"):
 
 
 if __name__ == '__main__':
-    # sleep(3)
-    # potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
-    # try:
-    #     test_standard_test_data(potplayerPath)
-    # except Exception as ex:
-    #     print("Main program has error please check: {}".format(str(ex)))
-    # finally:
-    #     print("Test Finished!")
-    # compareResult = compare2StandardDataTest()
-    # generateResult(compareResult)
-    generateResult(compare2StandardDataTest())
+    sleep(3)
+    potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
+    try:
+        test_standard_test_data(potplayerPath)
+    except Exception as ex:
+        print("Main program has error please check: {}".format(str(ex)))
+    finally:
+        print("Test Finished!")
+        compareResult = compare2StandardDataTest()
+        generateResult(compareResult)
