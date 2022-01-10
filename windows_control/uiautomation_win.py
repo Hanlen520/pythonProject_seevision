@@ -212,43 +212,62 @@ def compare2StandardDataTest():
     # 1、功能分开
     # 2、接口独立
     # 第二次测试和第一次测试数据进行读取后比较，再生成一个测试结果的Excel表格 -- ongoing
-    standard_result = readExcel(path="./第1次测试_resolutionTest.xlsx")
-    test_result = readExcel(path="./第2次测试_resolutionTest.xlsx")
+    standard_result = readStandardResultExcel(path="./标准值表格.xlsx")
+    test_result = readExcel(path="./第1次测试_resolutionTest.xlsx")
+    # print(standard_result)
+    # print(test_result)
+
     checked_list = []
     if len(standard_result) == len(test_result):
         print("Test result is the same count!")
-        for i in range(0, len(standard_result)):
-            item_list = []
-            item_result = "FAIL"
-            """
-                此处判断是否是同一个格式的结果 -- Need Modified，需要改成两层遍历，因为是打乱的，所以每个格式都要遍历一遍标准值列表的格式title再进行结果判断
-                先判断帧率是否在30帧左右，如果帧率OK，则再进行下一步判断
-                将标准值范围进行划分两个列，判断在之间即PASS，否则FAIL
-            """
-            if standard_result[i][0] == test_result[i][0]:
-                # print("Same row compare:当前check分辨率为：{}".format(standard_result[i][0]))
-                s_frame = standard_result[i][1]
-                s_bitRate = standard_result[i][2]
-                t_frame = test_result[i][1]
-                t_bitRate = test_result[i][2]
-                # 改下位率的判断分段，位率判断进行标准分段，先判断帧率，如果帧率ok，就继续判断位率，如果帧率不OK，就直接FAIL -- To do
-                frame_gap_value = abs(s_frame - t_frame)
-                bitRate_gap_value = abs(s_bitRate - t_bitRate)
-                if frame_gap_value <= 1:
-                    if bitRate_gap_value <= 1000:
-                        item_result = "PASS"
-                else:
-                    item_result = "FAIL"
-                # 每行结果拼接：[分辨率、标准帧率、标准位率、测试帧率、测试位率、帧率差、位率差、结果]
-                item_list.append(standard_result[i][0])
-                item_list.append(s_frame)
-                item_list.append(s_bitRate)
-                item_list.append(t_frame)
-                item_list.append(t_bitRate)
-                item_list.append(frame_gap_value)
-                item_list.append(bitRate_gap_value)
-                item_list.append(item_result)
-            checked_list.append(item_list)
+        for j in range(0, len(test_result)):
+            for i in range(0, len(standard_result)):
+                item_list = []
+                item_result = "FAIL"
+                """
+                    此处判断是否是同一个格式的结果 -- Need Modified，需要改成两层遍历，因为是打乱的，所以每个格式都要遍历一遍标准值列表的格式title再进行结果判断
+                    先判断帧率是否在30帧左右，帧率不小于29，则再进行下一步判断
+                    将标准值范围进行划分两个列，判断在之间即PASS，否则FAIL
+                """
+                if standard_result[i][1] == test_result[j][1]:
+                    print("Same row compare:当前check分辨率为：{}".format(test_result[j][1]))
+                    t_frame = int(test_result[j][2])
+                    t_bitRate = int(test_result[j][3])
+                    if standard_result[i][2] == "\\":
+                        print("Current standard value is not give!")
+                        item_result = "Current standard value is not give!"
+                        # 每行结果拼接：[分辨率、标准帧率、标准位率、测试帧率、测试位率、帧率差、位率差、结果]
+                        item_list.append(test_result[j][1])
+                        item_list.append("\\")
+                        item_list.append("{}~{}".format("\\", "\\"))
+                        item_list.append(t_frame)
+                        item_list.append(t_bitRate)
+                        item_list.append(str(t_frame - 30))
+                        item_list.append("{}~{}".format("\\", "\\"))
+                        item_list.append(item_result)
+                        checked_list.append(item_list)
+                        continue
+                    s_bitRate_minimum = int(standard_result[i][2])
+                    s_bitRate_maximum = int(standard_result[i][3])
+                    print(t_frame, t_bitRate, s_bitRate_minimum, s_bitRate_maximum)
+                    if t_frame >= 29:
+                        if s_bitRate_minimum <= t_bitRate <= s_bitRate_maximum:
+                            item_result = "PASS"
+                            print("Pass")
+                        else:
+                            item_result = "FAIL"
+                    else:
+                        item_result = "FAIL"
+                    # 每行结果拼接：[分辨率、标准帧率、标准位率、测试帧率、测试位率、帧率差、位率差、结果]
+                    item_list.append(test_result[j][1])
+                    item_list.append("30")
+                    item_list.append("{}~{}".format(s_bitRate_minimum, s_bitRate_maximum))
+                    item_list.append(t_frame)
+                    item_list.append(t_bitRate)
+                    item_list.append(str(t_frame - 30))
+                    item_list.append("{}~{}".format(t_bitRate - s_bitRate_minimum, t_bitRate - s_bitRate_maximum))
+                    item_list.append(item_result)
+                    checked_list.append(item_list)
     else:
         print("Compare data length is different , please check your orignial data")
     if checked_list:
@@ -260,7 +279,7 @@ def compare2StandardDataTest():
 
 # 按结果格式，读取Excel表格
 def readExcel(path="./第1次测试_resolutionTest.xlsx"):
-    read = pd.read_excel(io=path, header=0, names=["分辨率", "帧率", "位率"], sheet_name="Sheet1")
+    read = pd.read_excel(io=path, header=0, names=["", "分辨率", "帧率", "位率"], sheet_name="Sheet1", engine="openpyxl")
     # print(read.values)  # 结果为[[],[],[]……]形式
     result = read.values
     return result
@@ -273,16 +292,21 @@ def readExcel(path="./第1次测试_resolutionTest.xlsx"):
     # print(i[2])
 
 
+def readStandardResultExcel(path="./标准值表格.xlsx"):
+    read = pd.read_excel(io=path, header=0, names=["", "分辨率", "位率Minimum", "位率Maximum"], sheet_name="Sheet1",
+                         engine="openpyxl")
+    return read.values
+
+
 if __name__ == '__main__':
-    sleep(3)
-    potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
-    try:
-        test_standard_test_data(potplayerPath)
-    except Exception as ex:
-        print("Main program has error please check: {}".format(str(ex)))
-    finally:
-        print("Test Finished!")
-        # compareResult = compare2StandardDataTest()
-        # generateResult(compareResult)
+    # sleep(3)
+    # potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
+    # try:
+    #     test_standard_test_data(potplayerPath)
+    # except Exception as ex:
+    #     print("Main program has error please check: {}".format(str(ex)))
+    # finally:
+    #     print("Test Finished!")
     # compareResult = compare2StandardDataTest()
     # generateResult(compareResult)
+    generateResult(compare2StandardDataTest())
