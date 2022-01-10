@@ -220,6 +220,11 @@ def compare2StandardDataTest():
         for i in range(0, len(standard_result)):
             item_list = []
             item_result = "FAIL"
+            """
+                此处判断是否是同一个格式的结果 -- Need Modified，需要改成两层遍历，因为是打乱的，所以每个格式都要遍历一遍标准值列表的格式title再进行结果判断
+                先判断帧率是否在30帧左右，如果帧率OK，则再进行下一步判断
+                将标准值范围进行划分两个列，判断在之间即PASS，否则FAIL
+            """
             if standard_result[i][0] == test_result[i][0]:
                 # print("Same row compare:当前check分辨率为：{}".format(standard_result[i][0]))
                 s_frame = standard_result[i][1]
