@@ -24,10 +24,10 @@ def create_10_folder():
 
 
 if __name__ == "__main__":
-    path = r"D:\音视频一体机\13M\testData\PART2\H265"
+    path = r"D:\PycharmProjects\temp_test\number_analysis"
     # videoCount = 10
-    # videoCount = 1
-    videoCount = 5
+    videoCount = 1
+    # videoCount = 5
     for i in range(videoCount):
         i += 1
         print(i)
