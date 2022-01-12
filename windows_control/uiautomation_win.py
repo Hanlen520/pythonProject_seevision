@@ -24,13 +24,13 @@ cur_time = time.strftime("%Y%m%d_%H%M%S")
     2、 automation.py（搜索控件）
     3、 pyautogui模拟键盘操作，快捷键等，对于一些uiautomation搜索不到的UI控件
 """
-
 """
-    @description:logger构建器
     @param:
+    @description:logger构建器
         log_path:log生成路径
         logging_name:log名称
 """
+
 
 
 def logger_config(log_path, logging_name):
