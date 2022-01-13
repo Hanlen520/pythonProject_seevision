@@ -3,10 +3,10 @@ import os
 
 import numpy as np
 
-os.path.abspath(".")
+os.path.abspath("..")
 """
     @Project:PycharmProjects
-    @File:temp.py
+    @File:depth2Visible.py
     @Author:十二点前要睡觉
     @Date:2021/12/29 17:18
 """
@@ -48,5 +48,6 @@ def convertPNG2Gray(pngfile, outdir):
 
 
 if __name__ == '__main__':
-    for pngfile in glob.glob("./temp/*.png"):  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/depth/*.png
-        convertPNG2RGB(pngfile, "./temp/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
+    for pngfile in glob.glob("./depth/*.png"):  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/depth/*.png
+        convertPNG2RGB(pngfile, "./depth/transformerRGB/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
+        convertPNG2Gray(pngfile, "./depth/transformerGray/")  # C:/Users/BAMBOO/Desktop/source pics/rgbd_6/color
