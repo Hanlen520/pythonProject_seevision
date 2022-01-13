@@ -1,0 +1,1 @@
+2022-01-12 20:59:44.142 streeTest_bug.py[44] <module> -> Find Control Timeout: {Depth: 7, Name: '3840 x 2160  (default)', ControlType: ListItemControl}
