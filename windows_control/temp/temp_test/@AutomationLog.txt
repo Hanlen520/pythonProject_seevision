@@ -1,0 +1,2 @@
+2022-01-12 17:52:40.930 streeTest_bug.py[31] <module> -> Find Control Timeout: {ClassName: 'ComboLBox', ControlType: ListControl}
+2022-01-12 18:10:49.154 streeTest_bug.py[19] <module> -> Find Control Timeout: {Name: 'Capture Application (Sample)', ControlType: ButtonControl}
