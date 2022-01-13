@@ -24,7 +24,7 @@ def create_10_folder():
 
 
 if __name__ == "__main__":
-    path = r"D:\PycharmProjects\temp_test\number_analysis"
+    path = r"D:\音视频一体机\13M\testData\PART2\I"
     # videoCount = 10
     videoCount = 1
     # videoCount = 5
