@@ -120,3 +120,4 @@ if __name__ == '__main__':
             logger.error("i-1，重新开始本轮测试，以满足总轮数， -- 重跑机制")
             i -= 1
             continue
+            print("OK")
