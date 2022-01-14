@@ -4,7 +4,7 @@ import os
 import re
 import subprocess
 
-from rich import traceback
+import traceback
 
 os.path.abspath(".")
 """
