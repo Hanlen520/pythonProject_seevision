@@ -1,0 +1,4 @@
+2022-01-14 22:25:40,785 - codecSwitchTest - INFO - 压测轮数：3000
+2022-01-14 22:25:40,785 - codecSwitchTest - INFO - =====================================第0次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-14 22:25:40,785 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-14 22:25:40,785 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
