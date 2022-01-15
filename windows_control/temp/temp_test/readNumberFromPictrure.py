@@ -5,6 +5,7 @@ from windows_control.temp.temp_test.grabImage import grab_StopWatch, grab_Camera
 
 os.path.abspath(".")
 import pytesseract
+import sys
 from PIL import Image
 
 """
@@ -49,15 +50,15 @@ class ReadNumberFromPicture:
         imgPath = "./number_analysis/1.png"
         rootName = "number_analysis"
         folderName = "1"
-        # for imgName in os.listdir("./{}/{}".format(rootName, folderName)):
-        #     imgPath = "./{}/{}/{}".format(rootName, folderName, imgName)
-        #     print(imgPath)
-        #     c_targetimg = grab_StopWatch(imgPath)
-        #     read_string = self.readFromPic(path=c_targetimg).replace("\n", "").strip().replace(" ", "")
-        #     print(read_string)
+        for imgName in os.listdir("./{}/{}".format(rootName, folderName)):
+            imgPath = "./{}/{}/{}".format(rootName, folderName, imgName)
+            print(imgPath)
+            # c_targetimg = grab_StopWatch(imgPath)
+            read_string = self.readFromPic(path=imgPath.format(imgName)).replace("\n", "").strip().replace(" ", "")
+            print(read_string)
         # c_targetimg = grab_CameraStopWatch(imgPath)
-        c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
-        print(c_read_string)
+        # c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
+        # print(c_read_string)
 
 
 if __name__ == '__main__':
