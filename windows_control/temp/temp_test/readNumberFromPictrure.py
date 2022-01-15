@@ -1,7 +1,7 @@
 # coding = utf8
 import os
 
-from temp_test.grabImage import grab_StopWatch, grab_CameraStopWatch
+from windows_control.temp.temp_test.grabImage import grab_StopWatch, grab_CameraStopWatch
 
 os.path.abspath(".")
 import pytesseract
@@ -46,7 +46,7 @@ class ReadNumberFromPicture:
             1、裁剪
             2、OCR读取文字：得到实际值
         """
-        imgPath = "./number_analysis/1/xxx_00001.jpg"
+        imgPath = "./number_analysis/1.png"
         rootName = "number_analysis"
         folderName = "1"
         # for imgName in os.listdir("./{}/{}".format(rootName, folderName)):
@@ -55,8 +55,8 @@ class ReadNumberFromPicture:
         #     c_targetimg = grab_StopWatch(imgPath)
         #     read_string = self.readFromPic(path=c_targetimg).replace("\n", "").strip().replace(" ", "")
         #     print(read_string)
-        c_targetimg = grab_CameraStopWatch(imgPath)
-        c_read_string = self.readFromPic(path=c_targetimg).replace("\n", "").strip().replace(" ", "")
+        # c_targetimg = grab_CameraStopWatch(imgPath)
+        c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
         print(c_read_string)
 
 

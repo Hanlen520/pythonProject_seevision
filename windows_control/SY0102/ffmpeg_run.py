@@ -24,7 +24,7 @@ def create_10_folder():
 
 
 if __name__ == "__main__":
-    path = r"D:\音视频一体机\13M\testData\PART2\I"
+    path = r"D:\PycharmProjects\pythonProject_seevision\windows_control\BaiduOCR_AnalysisPicture\picture"
     # videoCount = 10
     videoCount = 1
     # videoCount = 5
