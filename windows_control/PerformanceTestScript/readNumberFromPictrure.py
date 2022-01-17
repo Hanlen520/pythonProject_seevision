@@ -1,12 +1,8 @@
 # coding = utf8
 import os
-import re
-
-from windows_control.PerformanceTestScript.grabImage import grab_StopWatch, grab_CameraStopWatch
 
 os.path.abspath(".")
 import pytesseract
-import sys
 from PIL import Image
 
 """
@@ -22,74 +18,28 @@ class ReadNumberFromPicture:
     def __int__(self):
         pass
 
-    def readFromPic(self, path=""):
+    def OCR_Model(self, path=""):
+        """
+        pytesseract OCR文字识别模块
+        :param path:传入待读取的图片路径
+        :return:返回读取并处理过的时间
+        """
         text = pytesseract.image_to_string(Image.open(path), lang="eng", config="--psm 6")
         return text
 
-    def readWindowsStopWatch(self):
+    def readPicture(self, imgPath):
         """
-            Windows StopWatch读取流程：
-            1、裁剪
-            2、OCR读取文字：得到实际值
+        读取图片上的秒表时间文字信息
+        :param imgPath:传入待读取的图片路径
+        :return:返回读取并处理过的时间
         """
-        # imgPath = "./number_analysis/1/xxx_00001.jpg"
-        rootName = "number_analysis"
-        folderName = "1"
-        for imgName in os.listdir("./{}/{}".format(rootName, folderName)):
-            imgPath = "./{}/{}/{}".format(rootName, folderName, imgName)
-            print(imgPath)
-            targetimg = grab_StopWatch(imgPath)
-            read_string = self.readFromPic(path=targetimg).replace("\n", "").strip().replace(" ", "")
-            print(read_string)
-
-    def readCameraStopWatch(self):
-        """
-            Camera StopWatch读取流程：
-            1、裁剪
-            2、OCR读取文字：得到实际值
-        """
-        # imgPath = "./number_analysis/1.png"
-        imgPath = "./numberPic.jpg"
-        rootName = "number_analysis"
-        folderName = "1"
-        for imgName in os.listdir("./{}/{}".format(rootName, folderName)):
-            imgPath = "./{}/{}/{}".format(rootName, folderName, imgName)
-            print(imgPath)
-            # c_targetimg = grab_StopWatch(imgPath)
-            read_string = self.readFromPic(path=imgPath.format(imgName)).replace("\n", "").strip().replace(" ", "")
-            print(read_string)
-            print("\n seperate line \n")
-            match_string = re.findall("(.*):(.*):(.*).(.*)", read_string)
-            print(match_string)
-        # c_targetimg = grab_CameraStopWatch(imgPath)
-        # c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
-        # print(c_read_string)
-
-    def readOnePicture(self):
-        # imgPath = "./xxx_00016.jpg"
-        # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\FourthStopWatchModel_lowResolution\xxx_00001_grab.jpg"
-        # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\FourthStopWatchModel_lowResolution\xxx_00001_C_grab.jpg"
-        # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh\xxx_00246_grab.jpg"
-        imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh\xxx_00246_C_grab.jpg"
-        c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
+        c_read_string = self.OCR_Model(path=imgPath).replace("\n", "").strip().replace(" ", "")
         print(c_read_string)
         print("\n seperate line \n")
-        # match_string = re.findall("(.*):(.*):(.*).(.*)", c_read_string)
-        # print(match_string)
-
-    def readListPicture(self):
-        imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\FourthStopWatchModel_lowResolution\\"
-        for imgName in os.listdir(imgPath):
-            print(imgName)
-            c_read_string = self.readFromPic(path=imgPath + imgName).replace("\n", "").strip().replace(" ", "")
-            print(c_read_string)
-            print("seperate line\n")
-            # match_string = re.findall("(.*):(.*):(.*).(.*)", c_read_string)
-            # print(match_string, end="\n\n")
+        return c_read_string
 
 
 if __name__ == '__main__':
+    imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00005_C_grab.jpg"
     rnfp = ReadNumberFromPicture()
-    # rnfp.readCameraStopWatch()
-    rnfp.readOnePicture()
-    # rnfp.readListPicture()
+    rnfp.readPicture(imgPath)
