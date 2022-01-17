@@ -10,7 +10,7 @@ os.path.abspath(".")
 """
 
 """
-    性能测试主入口
+    性能测试主入口：now function is image recognize to analysis the data then make calculate
 """
 
 
