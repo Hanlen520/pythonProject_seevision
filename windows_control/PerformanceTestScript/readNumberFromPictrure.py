@@ -40,8 +40,8 @@ class ReadNumberFromPicture:
 
 
 if __name__ == '__main__':
-    camera_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00005_camera_grab.jpg"
-    windows_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00005_windows_grab.jpg"
+    camera_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007_camera_grab.jpg"
+    windows_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007_windows_grab.jpg"
     rnfp = ReadNumberFromPicture()
     rnfp.readPicture(camera_imgPath)
     rnfp.readPicture(windows_imgPath)

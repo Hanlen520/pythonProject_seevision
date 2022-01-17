@@ -38,6 +38,6 @@ def grab_CameraStopWatch(imgPath):
 
 if __name__ == '__main__':
     grab_StopWatch(
-        imgPath=r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00005.jpg")
+        imgPath=r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007.jpg")
     grab_CameraStopWatch(
-        imgPath=r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00005.jpg")
+        imgPath=r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007.jpg")
