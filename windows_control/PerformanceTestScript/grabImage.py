@@ -13,7 +13,7 @@ import numpy as np
 def grab_StopWatch(imgPath):
     # 实际windows秒表的内容
     image = Image.open(imgPath)  # 用PIL中的Image.open打开图像
-    windows_targetimg = imgPath.replace(".jpg", "_grab.jpg")
+    windows_targetimg = imgPath.replace(".jpg", "_windows_grab.jpg")
     image_arr = np.array(image)  # 转化成numpy数组
     # 设置截取的帧图片的读取范围，范围越小，OCR读取越精准，此处Windows秒表是左半张图片，且只截取中间时间部分
     image_tar = image_arr[int(image_arr.shape[0] / 3):int(2 * image_arr.shape[0] / 3),
@@ -26,7 +26,7 @@ def grab_StopWatch(imgPath):
 def grab_CameraStopWatch(imgPath):
     # 摄像头录制秒表的内容
     image = Image.open(imgPath)  # 用PIL中的Image.open打开图像
-    camera_targetimg = imgPath.replace(".jpg", "_C_grab.jpg")
+    camera_targetimg = imgPath.replace(".jpg", "_camera_grab.jpg")
     image_arr = np.array(image)  # 转化成numpy数组
     # 设置截取的帧图片的读取范围，范围越小，OCR读取越精准，此处摄像头录制秒表是右半张图片，且只截取中间时间部分
     image_tar = image_arr[int(image_arr.shape[0] / 3):int(2 * image_arr.shape[0] / 3),
