@@ -2,7 +2,7 @@
 import os
 import re
 
-from windows_control.temp.temp_test.grabImage import grab_StopWatch, grab_CameraStopWatch
+from windows_control.temp.picture_compare.grabImage import grab_StopWatch, grab_CameraStopWatch
 
 os.path.abspath(".")
 import pytesseract
