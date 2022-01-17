@@ -1,5 +1,6 @@
 # coding = utf8
 import os
+import re
 
 from windows_control.temp.temp_test.grabImage import grab_StopWatch, grab_CameraStopWatch
 
@@ -47,7 +48,8 @@ class ReadNumberFromPicture:
             1、裁剪
             2、OCR读取文字：得到实际值
         """
-        imgPath = "./number_analysis/1.png"
+        # imgPath = "./number_analysis/1.png"
+        imgPath = "./numberPic.jpg"
         rootName = "number_analysis"
         folderName = "1"
         for imgName in os.listdir("./{}/{}".format(rootName, folderName)):
@@ -56,11 +58,38 @@ class ReadNumberFromPicture:
             # c_targetimg = grab_StopWatch(imgPath)
             read_string = self.readFromPic(path=imgPath.format(imgName)).replace("\n", "").strip().replace(" ", "")
             print(read_string)
+            print("\n seperate line \n")
+            match_string = re.findall("(.*):(.*):(.*).(.*)", read_string)
+            print(match_string)
         # c_targetimg = grab_CameraStopWatch(imgPath)
         # c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
         # print(c_read_string)
 
+    def readOnePicture(self):
+        # imgPath = "./xxx_00016.jpg"
+        # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\FourthStopWatchModel_lowResolution\xxx_00001_grab.jpg"
+        # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\FourthStopWatchModel_lowResolution\xxx_00001_C_grab.jpg"
+        # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh\xxx_00246_grab.jpg"
+        imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh\xxx_00246_C_grab.jpg"
+        c_read_string = self.readFromPic(path=imgPath).replace("\n", "").strip().replace(" ", "")
+        print(c_read_string)
+        print("\n seperate line \n")
+        # match_string = re.findall("(.*):(.*):(.*).(.*)", c_read_string)
+        # print(match_string)
+
+    def readListPicture(self):
+        imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\FourthStopWatchModel_lowResolution\\"
+        for imgName in os.listdir(imgPath):
+            print(imgName)
+            c_read_string = self.readFromPic(path=imgPath + imgName).replace("\n", "").strip().replace(" ", "")
+            print(c_read_string)
+            print("seperate line\n")
+            # match_string = re.findall("(.*):(.*):(.*).(.*)", c_read_string)
+            # print(match_string, end="\n\n")
+
 
 if __name__ == '__main__':
     rnfp = ReadNumberFromPicture()
-    rnfp.readCameraStopWatch()
+    # rnfp.readCameraStopWatch()
+    rnfp.readOnePicture()
+    # rnfp.readListPicture()
