@@ -1,3 +1,8 @@
 # Project exclude paths
 /venv/
 /windows_control/BOE_TOF/.idea/workspace.xml
+/windows_control/PerformanceTestScript/Sample/grab_image/
+/windows_control/PerformanceTestScript/Sample/MJPEG1080P_NORMALMODE/
+/windows_control/PerformanceTestScript/Sample/MJPG4K_NORMALMODE/
+/windows_control/PerformanceTestScript/Sample/MJPEG1080P_NORMALMODE.mp4
+/windows_control/PerformanceTestScript/Sample/MJPG4K_NORMALMODE.mp4

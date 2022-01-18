@@ -4,6 +4,7 @@ os.path.abspath(".")
 from PIL import Image
 
 import numpy as np
+import stat
 
 """
     搭配读取数字 图片的截取类
@@ -35,6 +36,7 @@ def grab_StopWatch(imgPath):
 def grab_CameraStopWatch(imgPath):
     if not os.path.exists("./Sample/grab_image/"):
         os.mkdir("./Sample/grab_image/")
+        os.chmod("./Sample/grab_image/", stat.S_IREAD | stat.S_IWRITE)
     # 摄像头录制秒表的内容
     image = Image.open(imgPath)  # 用PIL中的Image.open打开图像
     imgName = imgPath.split("xxx")[1]
