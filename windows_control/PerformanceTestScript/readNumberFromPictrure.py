@@ -34,8 +34,8 @@ class ReadNumberFromPicture:
         :return:返回读取并处理过的时间
         """
         c_read_string = self.OCR_Model(path=imgPath).replace("\n", "").strip().replace(" ", "")
-        print(c_read_string)
-        print("\n seperate line \n")
+        # print(c_read_string)
+        # print("\n seperate line \n")
         return c_read_string
 
 
