@@ -36,4 +36,4 @@ if __name__ == "__main__":
         os.system(command)
     # create_10_folder()
 
-    # ffmpeg -i D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh.mp4 -q:v 1 -f image2 D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh\xxx_%05d.jpg
+    # ffmpeg -i D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh_MJPG_4K.mp4 -q:v 1 -f image2 D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh_MJPG_4K\xxx_%05d.jpg

@@ -58,7 +58,7 @@ class PerformanceTestEnterance:
 if __name__ == '__main__':
     # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007.jpg"
     PT = PerformanceTestEnterance()
-    testDir = "./Sample/Seventh/"
+    testDir = "./Sample/Seventh_MJPG_4K/"
     for imgPath in os.listdir(testDir):
         singleImagePath = testDir + imgPath
         PT.DELAY_TEST_MAIN(singleImagePath)
