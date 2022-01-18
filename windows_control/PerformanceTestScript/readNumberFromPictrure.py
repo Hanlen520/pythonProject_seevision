@@ -24,7 +24,7 @@ class ReadNumberFromPicture:
         :param path:传入待读取的图片路径
         :return:返回读取并处理过的时间
         """
-        text = pytesseract.image_to_string(Image.open(path), lang="eng", config="--psm 6")
+        text = pytesseract.image_to_string(Image.open(path), lang="eng", config="--psm 8")
         return text
 
     def readPicture(self, imgPath):
@@ -40,8 +40,8 @@ class ReadNumberFromPicture:
 
 
 if __name__ == '__main__':
-    camera_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007_camera_grab.jpg"
-    windows_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007_windows_grab.jpg"
+    camera_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\camera_grab_00009.jpg"
+    windows_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\windows_grab_00009.jpg"
     rnfp = ReadNumberFromPicture()
     rnfp.readPicture(camera_imgPath)
     rnfp.readPicture(windows_imgPath)

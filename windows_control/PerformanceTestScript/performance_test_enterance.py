@@ -38,27 +38,31 @@ class PerformanceTestEnterance:
         # print(windows_stopwatch_time, camera_stopwatch_time)
         try:
             if windows_stopwatch_time and camera_stopwatch_time:
-                w_temp = int(str(windows_stopwatch_time).replace(":", ""))
-                c_temp = int(str(camera_stopwatch_time).replace(":", ""))
+                w_temp = int(str(windows_stopwatch_time).replace(":", "").replace(".", "").replace(",", ""))
+                c_temp = int(str(camera_stopwatch_time).replace(":", "").replace(".", "").replace(",", ""))
+                # print(w_temp,c_temp)
                 delay_time = abs(w_temp - c_temp)
-                # print(abs(w_temp - c_temp))
-                return {"windows_stopwatch_time": windows_stopwatch_time,
-                        "camera_stopwatch_time": camera_stopwatch_time,
-                        "delay_time": delay_time}
+                if 100 <= delay_time <= 500:
+                    # print(abs(w_temp - c_temp))
+                    return {"windows_stopwatch_time": windows_stopwatch_time,
+                            "camera_stopwatch_time": camera_stopwatch_time,
+                            "delay_time": delay_time}
         except ValueError:
-            print("skip it!")
+            # print("skip it!")
+            pass
 
     def DELAY_TEST_MAIN(self, imgPath):
         time_list = self.performance_view_delay_test_GET_TIME(imgPath)
         # print(time_list)
         result_delay_list = self.performance_view_delay_test_DATA_OPTIMIZE(time_list)
-        print(result_delay_list)
+        if result_delay_list:
+            print(result_delay_list)
 
 
 if __name__ == '__main__':
     # imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\Seventh\xxx_00007.jpg"
     PT = PerformanceTestEnterance()
-    testDir = "./Sample/SECOND_WAYS/"
+    testDir = "./Sample/1/"
     for imgPath in os.listdir(testDir):
         singleImagePath = testDir + imgPath
         PT.DELAY_TEST_MAIN(singleImagePath)
