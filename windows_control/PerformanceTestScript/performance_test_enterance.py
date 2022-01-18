@@ -79,7 +79,7 @@ class PerformanceTestEnterance:
             cameraList.append(singleResult["camera_stopwatch_time"])
             delayList.append(singleResult["delay_time"])
         df = pd.DataFrame(
-            {"windows stopwatch time": windowsList, "camera_stopwatch_time": cameraList, "delay_time": delayList})
+            {"电脑实际时间": windowsList, "相机预览时间": cameraList, "延时时间": delayList})
         df.to_excel("./Result/{}_result_{}.xlsx".format(test_resolution, str(cur_time)))
 
     def cut_videoFrame(self, video_path, videoName):
@@ -92,7 +92,7 @@ class PerformanceTestEnterance:
 
 if __name__ == '__main__':
     videoName = "MJPEG1080P_NORMALMODE"
-    video_path = "D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\\"
+    video_path = ".\Sample\\"
 
     PT = PerformanceTestEnterance()
     PT.cut_videoFrame(video_path, videoName)
