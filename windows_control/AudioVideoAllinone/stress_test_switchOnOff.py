@@ -122,7 +122,7 @@ if __name__ == '__main__':
     path = r"D:\coolpro2\coolpro2.exe"
     sts = StressTestSwitchOnOff(path)
     result = []
-    for i in range(3):
+    for i in range(5):
         i += 1
         screenshot_path = sts.SwitchOnOffStressTest(i)
         compare_result = sts.ComparePic("./standard.png", screenshot_path)
