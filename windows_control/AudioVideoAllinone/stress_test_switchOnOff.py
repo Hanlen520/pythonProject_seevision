@@ -4,7 +4,9 @@ import re
 import subprocess
 from time import sleep
 
+import imagehash
 import pyautogui
+from PIL import Image
 
 os.path.abspath(".")
 import uiautomation as ui
@@ -71,13 +73,23 @@ class StressTestSwitchOnOff:
             os.mkdir("./Screenshot/")
         pyautogui.screenshot("./Screenshot/{}.jpg".format(imgName))
 
-    def ComparePic(self):
+    def ComparePic(self, standardImgPath, testImgPath):
+        hash_standard = imagehash.average_hash(Image.open(standardImgPath))
+        hash_test = imagehash.average_hash(Image.open(testImgPath))
+        if hash_standard == hash_test:
+            print("2 images has no different!")
+        else:
+            print("2 images has different!")
+
+    def SaveToExcel(self):
         pass
 
 
 if __name__ == '__main__':
     path = r"D:\coolpro2\coolpro2.exe"
     sts = StressTestSwitchOnOff(path)
-    for i in range(3):
-        i += 1
-        sts.SwitchOnOffStressTest(i)
+    sts.ComparePic("./Screenshot/1.jpg", "./Screenshot/3.jpg")
+
+    # for i in range(3):
+    #     i += 1
+    #     sts.SwitchOnOffStressTest(i)
