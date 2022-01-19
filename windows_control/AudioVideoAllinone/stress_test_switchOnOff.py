@@ -40,7 +40,13 @@ class StressTestSwitchOnOff:
     def GetWaveDisplayArea(self):
         controlPanel = ui.PaneControl(searchDepth=4, Name="WaveCtrl")
         controlPanelBoundingRectangle = str(controlPanel.BoundingRectangle)
-        print(re.findall("(.*),(.*),(.*),(.*)\[.*\]", controlPanelBoundingRectangle)[0])
+        rex = re.findall("(.*),(.*),(.*),(.*)\[.*\]", controlPanelBoundingRectangle)[0]
+        # ('(218', '105', '913', '928)')
+        x1 = rex[0].split("(")[1]
+        y1 = rex[1]
+        x2 = rex[2]
+        y2 = rex[3].split(")")[0]
+        return (x1, y1, x2, y2)
 
     def ChooseRecordProperties(self):
         ui.ListItemControl(searchDepth=4, Name="16000").Click()
@@ -76,7 +82,7 @@ class StressTestSwitchOnOff:
     def SaveScreenShot(self, imgName):
         if not os.path.exists("./Screenshot/"):
             os.mkdir("./Screenshot/")
-        pyautogui.screenshot("./Screenshot/{}.jpg".format(imgName), region=(x1, y1, x2, y2))
+        pyautogui.screenshot("./Screenshot/{}.jpg".format(imgName), region=self.GetWaveDisplayArea())
 
     def ComparePic(self, standardImgPath, testImgPath):
         hash_standard = imagehash.average_hash(Image.open(standardImgPath))
@@ -93,8 +99,7 @@ class StressTestSwitchOnOff:
 if __name__ == '__main__':
     path = r"D:\coolpro2\coolpro2.exe"
     sts = StressTestSwitchOnOff(path)
-    # sts.ComparePic("./Screenshot/1.jpg", "./Screenshot/3.jpg")
-    sts.GetWaveDisplayArea()
     # for i in range(3):
     #     i += 1
     #     sts.SwitchOnOffStressTest(i)
+    sts.ComparePic("./Screenshot/s.png", "./Screenshot/2.jpg")
