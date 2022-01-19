@@ -2,9 +2,11 @@
 import os
 import re
 import subprocess
+import time
 from time import sleep
 
 import imagehash
+import pandas as pd
 import pyautogui
 from PIL import Image
 
@@ -17,6 +19,8 @@ import uiautomation as ui
     @Author:十二点前要睡觉
     @Date:2022/1/19 10:12
 """
+# 实时获取时间
+cur_time = time.strftime("%Y%m%d_%H%M%S")
 
 
 class StressTestSwitchOnOff:
@@ -62,6 +66,8 @@ class StressTestSwitchOnOff:
             sleep(3)
         except Exception:
             pass
+        finally:
+            ui.ButtonControl(searchDepth=3, Name="最大化").Click()
 
     def StopCoolEdit(self):
         if cooledit_process:
@@ -74,32 +80,52 @@ class StressTestSwitchOnOff:
         ui.Click(record_size[0], record_size[1])
         self.ChooseRecordProperties()
         sleep(3)
-        self.SaveScreenShot(i)
+        screenshot_path = self.SaveScreenShot(i)
         ui.Click(record_size[0], record_size[1])
         sleep(0.5)
         self.StopCoolEdit()
+        return screenshot_path
 
     def SaveScreenShot(self, imgName):
         if not os.path.exists("./Screenshot/"):
             os.mkdir("./Screenshot/")
-        pyautogui.screenshot("./Screenshot/{}.jpg".format(imgName), region=self.GetWaveDisplayArea())
+        screenshot_path = "./Screenshot/{}.jpg".format(imgName)
+        pyautogui.screenshot(screenshot_path, region=self.GetWaveDisplayArea())
+        sleep(0.5)
+        return screenshot_path
 
     def ComparePic(self, standardImgPath, testImgPath):
         hash_standard = imagehash.average_hash(Image.open(standardImgPath))
         hash_test = imagehash.average_hash(Image.open(testImgPath))
         if hash_standard == hash_test:
-            print("2 images has no different!")
+            print("Frequence is same!")
+            return "Frequence is same!"
         else:
-            print("2 images has different!")
+            print("Frequence is different!")
+            return "Frequence is different!"
 
-    def SaveToExcel(self):
-        pass
+    def SaveToExcel(self, result):
+        if not os.path.exists("./Result/"):
+            os.mkdir("./Result/")
+        recordList = []
+        compareList = []
+        standardList = []
+        for singleResult in result:
+            recordList.append(singleResult["Record image"])
+            compareList.append(singleResult["Compare result"])
+            standardList.append("standard.png")
+        df = pd.DataFrame({"录制音频频率图": recordList, "标准频率图": standardList, "对比结果": compareList})
+        df.to_excel("./Result/{}_CompareResult.xlsx".format(cur_time))
 
 
 if __name__ == '__main__':
     path = r"D:\coolpro2\coolpro2.exe"
     sts = StressTestSwitchOnOff(path)
-    # for i in range(3):
-    #     i += 1
-    #     sts.SwitchOnOffStressTest(i)
-    sts.ComparePic("./Screenshot/s.png", "./Screenshot/2.jpg")
+    result = []
+    for i in range(3):
+        i += 1
+        screenshot_path = sts.SwitchOnOffStressTest(i)
+        compare_result = sts.ComparePic("./standard.png", screenshot_path)
+        result.append({"Record image": screenshot_path, "Compare result": compare_result})
+    if result:
+        sts.SaveToExcel(result)

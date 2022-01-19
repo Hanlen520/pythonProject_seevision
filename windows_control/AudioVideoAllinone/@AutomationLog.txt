@@ -5,3 +5,6 @@
 2022-01-19 11:33:02.412 stress_test_switchOnOff.py[46] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', time: 1, ControlType: ButtonControl}
 2022-01-19 11:38:37.088 stress_test_switchOnOff.py[48] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', ControlType: ButtonControl}
 2022-01-19 13:02:37.089 stress_test_switchOnOff.py[61] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', ControlType: ButtonControl}
+2022-01-19 14:12:15.709 stress_test_switchOnOff.py[62] LaunchCoolEdit -> 2022-01-19 14:16:32.902 stress_test_switchOnOff.py[61] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', ControlType: ButtonControl}
+2022-01-19 14:17:02.989 stress_test_switchOnOff.py[66] LaunchCoolEdit -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: '最大化', ControlType: ButtonControl}
+2022-01-19 14:35:40.800 stress_test_switchOnOff.py[70] LaunchCoolEdit -> 
