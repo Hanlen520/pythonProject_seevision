@@ -91,18 +91,21 @@ class PerformanceTestEnterance:
 
 
 if __name__ == '__main__':
-    videoName = "MJPEG1080P_NORMALMODE"
+    # videoName = "MJPEG1080P_NORMALMODE"
     video_path = ".\Sample\\"
-
-    PT = PerformanceTestEnterance()
-    PT.cut_videoFrame(video_path, videoName)
-    result = []
-    for imgPath in os.listdir(video_path + videoName):
-        singleImagePath = video_path + videoName + "\\" + imgPath
-        single_result = PT.DELAY_TEST_MAIN(singleImagePath)
-        if len(result) >= 10:
-            break
-        if single_result is not None:
-            result.append(single_result)
-    print(result)
-    PT.write_intoExcel(videoName, result)
+    for videoName in os.listdir(video_path):
+        if videoName.endswith(".mp4"):
+            print(videoName)
+            videoName = videoName.split(".mp4")[0]
+            PT = PerformanceTestEnterance()
+            PT.cut_videoFrame(video_path, videoName)
+            result = []
+            for imgPath in os.listdir(video_path + videoName):
+                singleImagePath = video_path + videoName + "\\" + imgPath
+                single_result = PT.DELAY_TEST_MAIN(singleImagePath)
+                if len(result) >= 10:
+                    break
+                if single_result is not None:
+                    result.append(single_result)
+            print(result)
+            PT.write_intoExcel(videoName, result)
