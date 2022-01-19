@@ -1,0 +1,6 @@
+2022-01-19 11:22:12.538 stress_test_switchOnOff.py[25] GetRecordButton -> Find Control Timeout(10s): {Name: 'Transport', ControlType: PaneControl}
+2022-01-19 11:25:26.505 stress_test_switchOnOff.py[25] GetRecordButton -> Find Control Timeout(10s): {Name: 'Transport', ControlType: PaneControl}
+2022-01-19 11:27:46.536 stress_test_switchOnOff.py[46] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', ControlType: ButtonControl}
+2022-01-19 11:28:49.252 stress_test_switchOnOff.py[46] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', ControlType: ButtonControl}
+2022-01-19 11:33:02.412 stress_test_switchOnOff.py[46] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', time: 1, ControlType: ButtonControl}
+2022-01-19 11:38:37.088 stress_test_switchOnOff.py[48] LaunchCoolEdit -> Find Control Timeout(10s): {Name: 'Delete', ControlType: ButtonControl}
