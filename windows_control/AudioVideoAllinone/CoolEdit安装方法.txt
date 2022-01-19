@@ -1,0 +1,9 @@
+cool edit pro 2.5汉化破解方法：
+
+5、先运行“cep_v2.0 setup.exe”文件来安装Cool Edit Pro v2.0！
+一般都会安装到默认的路径
+2、跟着运行破解注册程序“cep2reg.exe”来程序注册，输入注册码：
+Name：mydaj
+Code：200-00-NKLYUBNZ
+3、然后运行“cep_v2.5 setup.exe”程序来安装Cool Edit Pro v2.5！
+4、最后运行汉化程序“Cool2chinese”汉化包来安装到上面安装程序的路径下即可。
