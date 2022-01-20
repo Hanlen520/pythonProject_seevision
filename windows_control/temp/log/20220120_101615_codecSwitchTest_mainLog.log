@@ -1,0 +1,281 @@
+2022-01-20 10:16:15,964 - codecSwitchTest - INFO - 压测轮数：3000
+2022-01-20 10:16:15,964 - codecSwitchTest - INFO - =====================================第0次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:16:15,964 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:16:15,964 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:16:17,162 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:16:17,162 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:16:18,512 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:16:18,514 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:16:19,245 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:16:19,245 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:16:20,040 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:16:20,040 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:16:20,812 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:16:20,812 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:16:21,510 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:16:21,618 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:16:22,456 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:16:22,456 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:16:26,176 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:16:26,733 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:16:26,959 - codecSwitchTest - INFO - =====================================第1次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:16:26,959 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:16:26,960 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:16:29,163 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:16:29,166 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:16:30,502 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:16:30,502 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:16:31,248 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:16:31,249 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:16:32,041 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:16:32,042 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:16:32,801 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:16:32,802 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:16:33,516 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:16:33,624 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:16:34,478 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:16:34,481 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:16:38,202 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:16:38,735 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:16:38,943 - codecSwitchTest - INFO - =====================================第2次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:16:38,943 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:16:38,945 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:16:41,113 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:16:41,113 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:16:42,514 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:16:42,514 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:16:43,247 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:16:43,248 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:16:44,038 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:16:44,039 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:16:44,813 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:16:44,813 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:16:45,526 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:16:45,634 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:16:46,493 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:16:46,497 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:16:50,208 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:16:50,755 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:16:50,956 - codecSwitchTest - INFO - =====================================第3次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:16:50,956 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:16:50,957 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:16:53,215 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:16:53,219 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:16:54,671 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:16:54,671 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:16:55,399 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:16:55,399 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:16:56,188 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:16:56,189 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:16:56,965 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:16:56,966 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:16:57,680 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:16:57,788 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:16:58,641 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:16:58,643 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:17:02,361 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:17:02,908 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:17:03,133 - codecSwitchTest - INFO - =====================================第4次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:17:03,133 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:17:03,134 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:17:05,426 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:17:05,429 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:17:06,763 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:17:06,763 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:17:07,514 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:17:07,514 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:17:18,172 - codecSwitchTest - ERROR - Some error happened : Find Control Timeout(10s): {AutomationId: '1058', Depth: 5, ControlType: ComboBoxControl}
+2022-01-20 10:17:18,360 - codecSwitchTest - ERROR - i-1，重新开始本轮测试，以满足总轮数， -- 重跑机制
+2022-01-20 10:17:18,360 - codecSwitchTest - INFO - =====================================第5次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:17:18,360 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:17:18,361 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:17:20,207 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:17:20,209 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:17:21,633 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:17:21,635 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:17:22,378 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:17:22,378 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:17:23,172 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:17:23,173 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:17:23,947 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:17:23,948 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:17:24,658 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:17:24,767 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:17:25,619 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:17:25,620 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:17:29,362 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:17:29,904 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:17:30,102 - codecSwitchTest - INFO - =====================================第6次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:17:30,102 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:17:30,103 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:17:32,364 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:17:32,367 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:17:33,674 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:17:33,674 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:17:34,405 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:17:34,406 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:17:35,215 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:17:35,215 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:17:35,980 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:17:35,980 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:17:36,690 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:17:36,797 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:17:37,651 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:17:37,655 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:17:41,390 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:17:41,950 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:17:42,151 - codecSwitchTest - INFO - =====================================第7次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:17:42,151 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:17:42,152 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:17:44,287 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:17:44,290 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:17:45,627 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:17:45,627 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:17:46,359 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:17:46,359 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:17:47,164 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:17:47,165 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:17:47,927 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:17:47,927 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:17:48,626 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:17:48,734 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:17:49,575 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:17:49,580 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:17:53,298 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:17:53,842 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:17:54,068 - codecSwitchTest - INFO - =====================================第8次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:17:54,068 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:17:54,069 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:17:56,224 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:17:56,227 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:17:57,621 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:17:57,621 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:17:58,369 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:17:58,369 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:17:59,161 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:17:59,162 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:17:59,923 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:17:59,923 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:18:00,620 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:18:00,728 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:18:01,583 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:18:01,587 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:18:05,331 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:18:05,875 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:18:06,076 - codecSwitchTest - INFO - =====================================第9次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:18:06,077 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:18:06,078 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:18:08,294 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:18:08,299 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:18:09,753 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:18:09,753 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:18:10,502 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:18:10,502 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:18:11,309 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:18:11,310 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:18:12,069 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:18:12,070 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:18:12,765 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:18:12,875 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:18:13,731 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:18:13,734 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:18:17,468 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:18:18,028 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:18:18,230 - codecSwitchTest - INFO - =====================================第10次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:18:18,230 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:18:18,230 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:18:20,521 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:18:20,525 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:18:21,845 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:18:21,845 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:18:22,578 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:18:22,579 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:18:23,369 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:18:23,369 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:18:24,125 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:18:24,125 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:18:24,820 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:18:24,929 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:18:25,795 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:18:25,800 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:18:29,541 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:18:30,104 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:18:30,327 - codecSwitchTest - INFO - =====================================第11次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:18:30,327 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:18:30,328 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:18:32,475 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:18:32,478 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:18:33,862 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:18:33,862 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:18:34,583 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:18:34,584 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:18:35,373 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:18:35,374 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:18:36,134 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:18:36,135 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:18:36,849 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:18:36,958 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:18:37,808 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:18:37,812 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:18:41,525 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:18:42,071 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:18:42,272 - codecSwitchTest - INFO - =====================================第12次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:18:42,272 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:18:42,276 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:18:44,503 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:18:44,505 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:18:45,925 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:18:45,925 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:18:46,659 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:18:46,659 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:18:47,465 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:18:47,466 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:18:48,223 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:18:48,223 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:18:48,923 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:18:49,030 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:18:49,901 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:18:49,905 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:18:53,634 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:18:54,178 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:18:54,370 - codecSwitchTest - INFO - =====================================第13次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:18:54,371 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:18:54,372 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:18:56,610 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:18:56,615 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:18:57,918 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:18:57,919 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:18:58,650 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:18:58,651 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:18:59,441 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:18:59,442 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:19:00,200 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:19:00,201 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:19:00,913 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:19:01,021 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:19:01,855 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:19:01,859 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:19:05,581 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:19:06,128 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:19:06,322 - codecSwitchTest - INFO - =====================================第14次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:19:06,322 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:19:06,325 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标
+2022-01-20 10:19:08,462 - codecSwitchTest - INFO - 查找Options菜单
+2022-01-20 10:19:08,464 - codecSwitchTest - INFO - 点击菜单：Options
+2022-01-20 10:19:09,817 - codecSwitchTest - INFO - 查找Video Capture Pin...菜单
+2022-01-20 10:19:09,817 - codecSwitchTest - INFO - 点击菜单：Video Capture Pin...
+2022-01-20 10:19:10,565 - codecSwitchTest - INFO - 查找格式选择列表
+2022-01-20 10:19:10,566 - codecSwitchTest - INFO - 点击展开格式选择列表
+2022-01-20 10:19:11,358 - codecSwitchTest - INFO - 查找H264格式选项
+2022-01-20 10:19:11,359 - codecSwitchTest - INFO - 点击选择H264格式
+2022-01-20 10:19:12,121 - codecSwitchTest - INFO - 查找分辨率选择列表
+2022-01-20 10:19:12,122 - codecSwitchTest - INFO - 点击展开分辨率选择列表
+2022-01-20 10:19:12,822 - codecSwitchTest - INFO - 滚动查找4K分辨率
+2022-01-20 10:19:12,931 - codecSwitchTest - INFO - 点击选择4K分辨率
+2022-01-20 10:19:13,797 - codecSwitchTest - INFO - 查找确定按钮
+2022-01-20 10:19:13,800 - codecSwitchTest - INFO - 点击确定按钮
+2022-01-20 10:19:17,539 - codecSwitchTest - INFO - 截取当前4K分辨率显示情况
+2022-01-20 10:19:18,097 - codecSwitchTest - INFO - 关闭Amcap应用程序
+2022-01-20 10:19:18,298 - codecSwitchTest - INFO - =====================================第15次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================
+2022-01-20 10:19:18,298 - codecSwitchTest - INFO - 查找Capture Application (Sample)应用图标
+2022-01-20 10:19:18,299 - codecSwitchTest - INFO - 点击图标：Capture Application (Sample)应用图标

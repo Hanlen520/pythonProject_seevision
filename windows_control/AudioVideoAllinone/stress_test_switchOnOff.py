@@ -4,6 +4,7 @@ import os
 import re
 import subprocess
 import time
+import traceback
 from time import sleep
 
 import imagehash
@@ -94,7 +95,7 @@ class StressTestSwitchOnOff:
         record_size = self.GetRecordButton()
         ui.Click(record_size[0], record_size[1])
         self.ChooseRecordProperties()
-        sleep(10)
+        sleep(5)
         screenshot_path = self.SaveScreenShot(i)
         ui.Click(record_size[0], record_size[1])
         sleep(0.5)
@@ -132,13 +133,20 @@ class StressTestSwitchOnOff:
         compareList = []
         standardList = []
         for singleResult in result:
-            recordList.append(singleResult["Record image"])
-            compareList.append(singleResult["Compare result"])
-            standardList.append("standard.png")
+            ri = singleResult["Record_image"]
+            cr = singleResult["Compare_result"]
+            if ri and cr:
+                recordList.append(ri)
+                compareList.append(cr)
+                standardList.append("standard.png")
+            else:
+                recordList.append("Current test abort!")
+                compareList.append("Current test abort!")
+                standardList.append("standard.png")
         print("保存结果至Excel表格中！")
         logger.info("保存结果至Excel表格中！")
         df = pd.DataFrame({"录制音频频率图": recordList, "标准频率图": standardList, "对比结果": compareList})
-        df.to_excel("./Result/{}_CompareResult.xlsx".format(cur_time))
+        df.to_excel(r"./Result/{}_CompareResult.xlsx".format(cur_time), index=True)
 
     def logger_config(self, log_path, logging_name):
         # 获取logger对象,取名
@@ -164,17 +172,27 @@ if __name__ == '__main__':
     result = []
     logger.info("测试开始:")
     print("测试开始:")
-    for i in range(5):
-        i += 1
-        logger.info("Curren test count: {}".format(str(i)))
-        screenshot_path = sts.SwitchOnOffStressTest(i)
-        logger.info("该轮测试完成")
-        print("该轮测试完成")
-        compare_result = sts.ComparePic("./standard.png", screenshot_path)
-        logger.info("结果比对完成")
-        print("结果比对完成")
-        result.append({"Record image": screenshot_path, "Compare result": compare_result})
-    if result:
-        sts.SaveToExcel(result)
-        logger.info("测试结果输出完成！")
-        print("测试结果输出完成！")
+    try:
+        for i in range(5):
+            i += 1
+            logger.info("Curren test count: {}".format(str(i)))
+            screenshot_path = sts.SwitchOnOffStressTest(i)
+            logger.info("该轮测试完成")
+            print("该轮测试完成")
+            compare_result = sts.ComparePic("./standard.png", screenshot_path)
+            logger.info("结果比对完成")
+            print("结果比对完成")
+            result.append({"Record_image": screenshot_path, "Compare_result": compare_result})
+            print("测试结果输出完成！")
+            if result:
+                sts.SaveToExcel(result)
+                logger.info("测试结果拼接！")
+                print("测试结果拼接完成！")
+    except (Exception or KeyboardInterrupt) as ex:
+        print("Main program has error please check: {}".format(str(ex)))
+        logger.error("==========\n" + traceback.format_exc() + "\n==========")
+    finally:
+        if result:
+            sts.SaveToExcel(result)
+            logger.info("测试结果输出完成！")
+            print("测试结果输出完成！")

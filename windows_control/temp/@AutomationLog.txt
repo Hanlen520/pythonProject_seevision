@@ -1,3 +1,1 @@
-2022-01-12 20:59:44.142 streeTest_bug.py[44] <module> -> Find Control Timeout: {Depth: 7, Name: '3840 x 2160  (default)', ControlType: ListItemControl}
-2022-01-14 08:15:00.586 streeTest_bug.py[67] <module> -> Find Control Timeout: {Name: 'Video Capture Pin...', ControlType: MenuItemControl}
-2022-01-15 02:05:30.587 streeTest_bug.py[62] <module> -> Find Control Timeout(10s): {Name: 'Options', ControlType: MenuItemControl}
+2022-01-20 10:17:18.168 streeTest_bug.py[69] <module> -> Find Control Timeout(10s): {AutomationId: '1058', Depth: 5, ControlType: ComboBoxControl}

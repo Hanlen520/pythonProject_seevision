@@ -1,0 +1,52 @@
+2022-01-20 12:17:11,089 - StressTestSwitchOnOff - INFO - 测试开始:
+2022-01-20 12:17:11,089 - StressTestSwitchOnOff - INFO - Curren test count: 1
+2022-01-20 12:17:11,094 - StressTestSwitchOnOff - INFO - 打开CoolEdit应用程序
+2022-01-20 12:17:15,128 - StressTestSwitchOnOff - INFO - 不是第一次打开，需要删除上一次Session
+2022-01-20 12:17:18,129 - StressTestSwitchOnOff - INFO - 窗口最大化
+2022-01-20 12:17:18,352 - StressTestSwitchOnOff - INFO - 获取录制按钮位置
+2022-01-20 12:17:18,920 - StressTestSwitchOnOff - INFO - 选择16000采样率，Stereo类型，16-bit进行录制参数
+2022-01-20 12:17:27,423 - StressTestSwitchOnOff - INFO - 开始区域范围截图，截取频率波形图
+2022-01-20 12:17:27,479 - StressTestSwitchOnOff - INFO - 获取频率波形图
+2022-01-20 12:17:29,113 - StressTestSwitchOnOff - INFO - 关闭CoolEdit应用程序
+2022-01-20 12:17:30,119 - StressTestSwitchOnOff - INFO - 该轮测试完成
+2022-01-20 12:17:30,134 - StressTestSwitchOnOff - INFO - 进行图片比对，将标准图片与测试图片进行Hash比对
+2022-01-20 12:17:30,134 - StressTestSwitchOnOff - INFO - Frequence FAIL!
+2022-01-20 12:17:30,134 - StressTestSwitchOnOff - INFO - 结果比对完成
+2022-01-20 12:17:30,134 - StressTestSwitchOnOff - INFO - 保存结果至Excel表格中！
+2022-01-20 12:17:30,361 - StressTestSwitchOnOff - INFO - 测试结果拼接！
+2022-01-20 12:17:30,361 - StressTestSwitchOnOff - INFO - Curren test count: 2
+2022-01-20 12:17:30,365 - StressTestSwitchOnOff - INFO - 打开CoolEdit应用程序
+2022-01-20 12:17:34,511 - StressTestSwitchOnOff - INFO - 不是第一次打开，需要删除上一次Session
+2022-01-20 12:17:37,515 - StressTestSwitchOnOff - INFO - 窗口最大化
+2022-01-20 12:17:37,740 - StressTestSwitchOnOff - INFO - 获取录制按钮位置
+2022-01-20 12:17:38,322 - StressTestSwitchOnOff - INFO - 选择16000采样率，Stereo类型，16-bit进行录制参数
+2022-01-20 12:17:46,824 - StressTestSwitchOnOff - INFO - 开始区域范围截图，截取频率波形图
+2022-01-20 12:17:46,881 - StressTestSwitchOnOff - INFO - 获取频率波形图
+2022-01-20 12:17:48,515 - StressTestSwitchOnOff - INFO - 关闭CoolEdit应用程序
+2022-01-20 12:17:49,526 - StressTestSwitchOnOff - INFO - 该轮测试完成
+2022-01-20 12:17:49,542 - StressTestSwitchOnOff - INFO - 进行图片比对，将标准图片与测试图片进行Hash比对
+2022-01-20 12:17:49,542 - StressTestSwitchOnOff - INFO - Frequence FAIL!
+2022-01-20 12:17:49,542 - StressTestSwitchOnOff - INFO - 结果比对完成
+2022-01-20 12:17:49,542 - StressTestSwitchOnOff - INFO - 保存结果至Excel表格中！
+2022-01-20 12:17:49,553 - StressTestSwitchOnOff - INFO - 测试结果拼接！
+2022-01-20 12:17:49,553 - StressTestSwitchOnOff - INFO - Curren test count: 3
+2022-01-20 12:17:49,557 - StressTestSwitchOnOff - INFO - 打开CoolEdit应用程序
+2022-01-20 12:17:53,641 - StressTestSwitchOnOff - INFO - 不是第一次打开，需要删除上一次Session
+2022-01-20 12:17:56,651 - StressTestSwitchOnOff - INFO - 窗口最大化
+2022-01-20 12:17:56,880 - StressTestSwitchOnOff - INFO - 获取录制按钮位置
+2022-01-20 12:17:57,457 - StressTestSwitchOnOff - INFO - 选择16000采样率，Stereo类型，16-bit进行录制参数
+2022-01-20 12:18:05,976 - StressTestSwitchOnOff - INFO - 开始区域范围截图，截取频率波形图
+2022-01-20 12:18:06,032 - StressTestSwitchOnOff - INFO - 获取频率波形图
+2022-01-20 12:18:07,651 - StressTestSwitchOnOff - INFO - 关闭CoolEdit应用程序
+2022-01-20 12:18:08,664 - StressTestSwitchOnOff - INFO - 该轮测试完成
+2022-01-20 12:18:08,679 - StressTestSwitchOnOff - INFO - 进行图片比对，将标准图片与测试图片进行Hash比对
+2022-01-20 12:18:08,680 - StressTestSwitchOnOff - INFO - Frequence FAIL!
+2022-01-20 12:18:08,680 - StressTestSwitchOnOff - INFO - 结果比对完成
+2022-01-20 12:18:08,680 - StressTestSwitchOnOff - INFO - 保存结果至Excel表格中！
+2022-01-20 12:18:08,691 - StressTestSwitchOnOff - INFO - 测试结果拼接！
+2022-01-20 12:18:08,692 - StressTestSwitchOnOff - INFO - Curren test count: 4
+2022-01-20 12:18:08,696 - StressTestSwitchOnOff - INFO - 打开CoolEdit应用程序
+2022-01-20 12:18:11,301 - StressTestSwitchOnOff - INFO - 不是第一次打开，需要删除上一次Session
+2022-01-20 12:18:11,359 - StressTestSwitchOnOff - INFO - 窗口最大化
+2022-01-20 12:18:11,409 - StressTestSwitchOnOff - INFO - 保存结果至Excel表格中！
+2022-01-20 12:18:11,417 - StressTestSwitchOnOff - INFO - 测试结果输出完成！
