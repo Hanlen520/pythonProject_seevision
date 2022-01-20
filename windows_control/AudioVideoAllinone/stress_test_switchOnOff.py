@@ -126,7 +126,7 @@ class StressTestSwitchOnOff:
             logger.info("Frequence FAIL!")
             return "Frequence FAIL!"
 
-    def SaveToExcel(self, result):
+    def SaveToExcel(self, result=[]):
         if not os.path.exists("./Result/"):
             os.mkdir("./Result/")
         recordList = []
@@ -146,7 +146,11 @@ class StressTestSwitchOnOff:
         print("保存结果至Excel表格中！")
         logger.info("保存结果至Excel表格中！")
         df = pd.DataFrame({"录制音频频率图": recordList, "标准频率图": standardList, "对比结果": compareList})
-        df.to_excel(r"./Result/{}_CompareResult.xlsx".format(cur_time), index=True)
+
+        df.to_excel("./Result/{}_CompareResult.xlsx".format(str(cur_time)))
+        """
+            手动中断没有保存，执行df.to_excel没有成功 
+        """
 
     def logger_config(self, log_path, logging_name):
         # 获取logger对象,取名
@@ -173,8 +177,9 @@ if __name__ == '__main__':
     logger.info("测试开始:")
     print("测试开始:")
     try:
-        for i in range(5):
+        for i in range(100):
             i += 1
+            print("第{}轮测试：".format(i))
             logger.info("Curren test count: {}".format(str(i)))
             screenshot_path = sts.SwitchOnOffStressTest(i)
             logger.info("该轮测试完成")

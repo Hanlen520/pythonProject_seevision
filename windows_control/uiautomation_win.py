@@ -162,7 +162,6 @@ def generateResult(checked_list=[]):
         frame_gap_value_list.append(result[5])
         bitRate_gap_value_list.append(result[6])
         compare_result_list.append(result[7])
-    print(checked_list)
     df = pd.DataFrame(
         {"分辨率": resolution_list, "标准帧率": s_frame_rate_list, "标准位率": s_bit_rate_list, "测试帧率": t_frame_rate_list,
          "测试位率": t_bit_rate_list, "帧率差": frame_gap_value_list, "位率差": bitRate_gap_value_list,
