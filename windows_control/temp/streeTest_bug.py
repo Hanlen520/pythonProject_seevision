@@ -43,7 +43,7 @@ if __name__ == '__main__':
                            logging_name="codecSwitchTest")
     logger.info("压测轮数：3000")
     print("压测轮数：3000")
-    for i in range(3000):
+    for i in range(6000):
         try:
             logger.info(
                 "=====================================第{}次Amcap MJPEG 1080P->H264 4K分辨率切换压测=====================================".format(

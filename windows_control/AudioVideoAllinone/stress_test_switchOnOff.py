@@ -177,7 +177,7 @@ if __name__ == '__main__':
     logger.info("测试开始:")
     print("测试开始:")
     try:
-        for i in range(100):
+        for i in range(6000):
             i += 1
             print("第{}轮测试：".format(i))
             logger.info("Curren test count: {}".format(str(i)))
