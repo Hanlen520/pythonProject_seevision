@@ -1,1 +1,0 @@
-2022-01-20 10:17:18.168 streeTest_bug.py[69] <module> -> Find Control Timeout(10s): {AutomationId: '1058', Depth: 5, ControlType: ComboBoxControl}
