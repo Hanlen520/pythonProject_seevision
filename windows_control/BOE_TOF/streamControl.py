@@ -27,8 +27,10 @@ def open_BOE_TOF(boe_tof_path):
     :param boe_tof_path:上位机程序所在路径
     :return: None
     """
+    sleep(1)
     global boe_tof
     boe_tof = subprocess.Popen(boe_tof_path)
+    sleep(1)
 
 
 def scene_test(close_time, cycle_times):
@@ -43,7 +45,7 @@ def scene_test(close_time, cycle_times):
 
     for i in range(cycle_times):
         open_BOE_TOF(boe_tof_path)
-        ui.TabItemControl(searchDepth=5, Name="相机控制").Click()
+        # ui.TabItemControl(searchDepth=5, Name="相机控制").Click()
         middle_x = get_data()[0]
         middle_y = get_data()[1]
         number = str(i + 1)
@@ -59,18 +61,23 @@ def scene_test(close_time, cycle_times):
         sleep(close_time)
         close_camera()
         pyautogui.click(middle_x, middle_y)
+        sleep(0.5)
         cur_time = time.strftime("%Y%m%d_%H%M%S")
         data.append([number, cur_time, "相机开启时FPS:{}".format(fps_open)])
         write_into_excel(filename, data)
+        sleep(0.5)
 
         boe_tof.kill()
 
 
 def open_camera():
     ui.ButtonControl(searchDepth=6, Name="刷新相机列表").Click()
+    sleep(0.5)
     ui.ListItemControl(searchDepth=7, Name="UVC DEPTH").Click()
+    sleep(0.5)
     open_camera = ui.ButtonControl(searchDepth=6, Name="打开相机")
     open_camera.Click()
+    sleep(0.5)
 
 
 def close_camera():
@@ -103,7 +110,7 @@ def write_into_excel(filename, data):
 
 if __name__ == '__main__':
     global boe_tof_path
-    boe_tof_path = r"D:\PycharmProjects\pythonProject_seevision\windows_control\BOE_TOF\SeeVision3DCameraViewer_V1.9.0_20211130104018_win_x64\SeeVision3DCameraViewer.exe"
+    boe_tof_path = r"D:\BOE_TOF\最新机器2022\SeeVision3DCameraViewer_V1.9.0_20211130104018_win_x64\SeeVision3DCameraViewer.exe"
     test_suite = [{"close_time": 5, "cycle_time": 720}, {"close_time": 20, "cycle_time": 288}]
     for i in test_suite:
         close_time = i["close_time"]

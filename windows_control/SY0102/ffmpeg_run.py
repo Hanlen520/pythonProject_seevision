@@ -24,10 +24,10 @@ def create_10_folder():
 
 
 if __name__ == "__main__":
-    path = r"D:\PycharmProjects\pythonProject_seevision\windows_control\BaiduOCR_AnalysisPicture\picture"
+    path = r"D:\BOE_TOF\最新机器2022\testdata\2"
     # videoCount = 10
-    videoCount = 1
-    # videoCount = 5
+    # videoCount = 1
+    videoCount = 5
     for i in range(videoCount):
         i += 1
         print(i)

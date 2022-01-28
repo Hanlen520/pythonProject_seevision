@@ -41,8 +41,8 @@ if __name__ == '__main__':
         os.makedirs("./log/")
     logger = logger_config(log_path="./log/{}_{}_{}.log".format(cur_time, "codecSwitchTest", "mainLog"),
                            logging_name="codecSwitchTest")
-    logger.info("压测轮数：3000")
-    print("压测轮数：3000")
+    logger.info("压测轮数：6000")
+    print("压测轮数：6000")
     for i in range(6000):
         try:
             logger.info(
