@@ -1,7 +1,7 @@
 # coding = utf8
 import os
 
-from pythonProject_seevision.ralayControl import serialComportList
+from ralayControl import serialComportList
 
 os.path.abspath(".")
 """
