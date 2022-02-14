@@ -5,4 +5,12 @@
 
 运行步骤：
 1、在StreeTest_SnapshotSDK文件夹下，当前sdk工具已放好
-2、
+2、打开stress_test_snapshotSDK.py文件，修改以下内容：
+	test_count = 100	测试次数，如需测试5000次，即改成5000即可，注意树莓派存储空间
+	snapshotSDKPath = "./snapshot_sdk/build/test"	测试SDK test启动的路径
+	original_image = "./originalImage.jpg"	结果对比的原始图片
+	
+3、先运行一次脚本，将当前运行的图片改名为originalImage.jpg作为后续测试对比的原始图片（注意测试场景不要变化）
+4、打开终端->运行脚本：python3 stress_test_snapshotSDK.py
+
+5、等待运行完成即可，运行过程中，会同步生成拍摄的图片以及结果将同步写入Result.txt文件中
