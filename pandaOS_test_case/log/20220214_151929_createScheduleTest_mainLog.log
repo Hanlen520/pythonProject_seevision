@@ -1,0 +1,453 @@
+2022-02-14 15:19:34,838 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:19:36,628 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程1]
+2022-02-14 15:19:36,628 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:19:40,225 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:19:45,507 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:19:47,551 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:19:47,595 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:19:49,467 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程2]
+2022-02-14 15:19:49,467 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:19:51,414 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:19:55,934 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:19:57,986 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:19:58,030 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:19:59,846 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程3]
+2022-02-14 15:19:59,846 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:20:01,766 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:20:06,240 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:20:08,258 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:20:08,300 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:20:10,098 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程4]
+2022-02-14 15:20:10,098 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:20:11,977 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:20:16,393 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:20:18,407 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:20:18,440 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:20:20,248 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程5]
+2022-02-14 15:20:20,248 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:20:22,120 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:20:27,783 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:20:29,817 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:20:29,853 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:20:31,683 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程6]
+2022-02-14 15:20:31,683 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:20:33,599 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:20:39,224 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:20:41,271 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:20:41,308 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:20:43,115 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程7]
+2022-02-14 15:20:43,115 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:20:44,971 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:20:49,357 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:20:51,745 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:20:51,781 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:20:53,561 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程8]
+2022-02-14 15:20:53,561 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:20:55,814 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:21:01,396 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:21:03,406 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:21:03,453 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:21:05,256 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程9]
+2022-02-14 15:21:05,256 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:21:07,114 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:21:11,590 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:21:13,584 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:21:13,615 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:21:15,448 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程10]
+2022-02-14 15:21:15,448 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:21:17,308 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:21:21,791 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:21:23,869 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:21:23,909 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:21:25,744 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程11]
+2022-02-14 15:21:25,744 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:21:27,689 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:21:32,157 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:21:34,149 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:21:34,189 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:21:36,046 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程12]
+2022-02-14 15:21:36,046 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:21:37,916 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:21:42,394 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:21:44,362 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:21:44,397 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:21:46,164 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程13]
+2022-02-14 15:21:46,164 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:21:48,017 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:21:53,485 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:21:55,429 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:21:55,467 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:21:57,303 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程14]
+2022-02-14 15:21:57,303 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:21:59,163 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:22:03,568 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:22:05,582 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:22:05,619 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:22:07,443 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程15]
+2022-02-14 15:22:07,443 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:22:09,314 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:22:13,787 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:22:15,736 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:22:15,767 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:22:17,603 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程16]
+2022-02-14 15:22:17,603 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:22:19,476 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:22:23,875 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:22:25,841 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:22:25,875 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:22:27,717 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程17]
+2022-02-14 15:22:27,717 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:22:29,576 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:22:34,073 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:22:36,043 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:22:36,078 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:22:37,948 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程18]
+2022-02-14 15:22:37,948 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:22:39,786 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:22:44,259 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:22:46,237 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:22:46,274 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:22:48,169 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程19]
+2022-02-14 15:22:48,169 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:22:50,023 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:22:55,052 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:22:57,047 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:22:57,083 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:22:58,884 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程20]
+2022-02-14 15:22:58,884 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:23:00,741 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:23:05,346 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:23:07,345 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:23:07,383 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:23:09,242 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程21]
+2022-02-14 15:23:09,242 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:23:11,422 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:23:15,884 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:23:17,892 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:23:17,930 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:23:19,771 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程22]
+2022-02-14 15:23:19,771 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:23:21,658 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:23:26,141 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:23:28,109 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:23:28,144 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:23:29,924 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程23]
+2022-02-14 15:23:29,924 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:23:31,770 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:23:37,345 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:23:39,701 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:23:39,735 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:23:41,516 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程24]
+2022-02-14 15:23:41,516 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:23:43,363 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:23:47,744 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:23:49,808 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:23:49,841 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:23:51,607 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程25]
+2022-02-14 15:23:51,607 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:23:53,474 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:23:59,413 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:24:01,374 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:24:01,415 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:24:03,215 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程26]
+2022-02-14 15:24:03,215 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:24:05,060 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:24:10,633 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:24:12,649 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:24:12,684 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:24:14,472 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程27]
+2022-02-14 15:24:14,472 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:24:16,367 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:24:20,764 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:24:22,717 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:24:22,750 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:24:24,602 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程28]
+2022-02-14 15:24:24,602 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:24:26,482 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:24:30,960 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:24:32,924 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:24:32,956 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:24:34,800 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程29]
+2022-02-14 15:24:34,800 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:24:36,685 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:24:41,145 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:24:43,096 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:24:43,129 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:24:44,915 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程30]
+2022-02-14 15:24:44,915 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:24:46,766 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:24:52,273 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:24:54,255 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:24:54,292 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:24:56,091 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程31]
+2022-02-14 15:24:56,091 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:24:57,982 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:25:02,758 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:25:04,774 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:25:04,803 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:25:06,635 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程32]
+2022-02-14 15:25:06,635 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:25:08,451 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:25:14,181 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:25:16,172 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:25:16,201 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:25:18,010 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程33]
+2022-02-14 15:25:18,010 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:25:19,862 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:25:25,379 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:25:27,378 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:25:27,409 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:25:29,278 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程34]
+2022-02-14 15:25:29,278 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:25:31,120 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:25:35,679 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:25:37,621 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:25:37,660 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:25:39,482 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程35]
+2022-02-14 15:25:39,482 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:25:41,374 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:25:46,858 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:25:48,833 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:25:48,862 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:25:50,678 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程36]
+2022-02-14 15:25:50,678 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:25:52,556 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:25:58,100 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:26:00,362 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:26:00,392 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:26:02,231 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程37]
+2022-02-14 15:26:02,231 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:26:04,095 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:26:09,438 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:26:11,423 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:26:11,451 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:26:13,279 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程38]
+2022-02-14 15:26:13,279 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:26:15,178 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:26:20,219 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:26:22,167 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:26:22,197 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:26:24,001 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程39]
+2022-02-14 15:26:24,001 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:26:25,881 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:26:31,526 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:26:33,481 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:26:33,512 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:26:35,318 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程40]
+2022-02-14 15:26:35,318 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:26:37,158 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:26:42,104 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:26:44,135 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:26:44,171 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:26:45,950 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程41]
+2022-02-14 15:26:45,950 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:26:47,783 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:26:52,873 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:26:54,841 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:26:54,872 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:26:56,691 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程42]
+2022-02-14 15:26:56,691 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:26:58,538 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:27:03,620 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:27:05,636 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:27:05,670 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:27:07,466 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程43]
+2022-02-14 15:27:07,466 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:27:09,332 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:27:15,002 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:27:16,970 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:27:17,002 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:27:18,803 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程44]
+2022-02-14 15:27:18,803 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:27:20,671 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:27:26,769 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:27:28,697 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:27:28,727 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:27:30,548 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程45]
+2022-02-14 15:27:30,548 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:27:32,400 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:27:37,514 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:27:39,439 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:27:39,474 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:27:41,264 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程46]
+2022-02-14 15:27:41,264 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:27:43,141 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:27:48,197 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:27:50,137 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:27:50,166 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:27:52,000 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程47]
+2022-02-14 15:27:52,000 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:27:53,861 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:27:58,866 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:28:00,811 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:28:00,838 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:28:02,690 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程48]
+2022-02-14 15:28:02,690 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:28:04,503 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:28:09,504 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:28:11,433 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:28:11,462 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:28:13,256 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程49]
+2022-02-14 15:28:13,256 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:28:15,110 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:28:20,182 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:28:22,152 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:28:22,182 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:28:24,004 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程50]
+2022-02-14 15:28:24,004 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:28:25,851 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:28:30,744 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:28:32,699 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:28:32,727 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:28:34,562 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程51]
+2022-02-14 15:28:34,562 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:28:36,442 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:28:40,837 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:28:42,759 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:28:42,788 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:28:44,639 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程52]
+2022-02-14 15:28:44,639 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:28:46,451 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:28:51,409 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:28:53,398 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:28:53,433 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:28:55,300 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程53]
+2022-02-14 15:28:55,300 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:28:57,159 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:29:03,072 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:29:05,044 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:29:05,073 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:29:06,892 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程54]
+2022-02-14 15:29:06,892 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:29:08,785 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:29:13,884 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:29:15,861 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:29:15,889 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:29:17,714 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程55]
+2022-02-14 15:29:17,714 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:29:19,533 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:29:24,618 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:29:26,564 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:29:26,588 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:29:28,438 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程56]
+2022-02-14 15:29:28,438 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:29:30,312 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:29:35,530 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:29:37,856 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:29:37,889 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:29:39,738 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程57]
+2022-02-14 15:29:39,738 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:29:41,601 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:29:46,640 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:29:48,692 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:29:48,725 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:29:50,574 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程58]
+2022-02-14 15:29:50,574 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:29:52,414 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:29:57,608 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:29:59,618 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:29:59,647 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:30:01,466 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程59]
+2022-02-14 15:30:01,466 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:30:03,330 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:30:08,355 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:30:10,282 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:30:10,312 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:30:12,143 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程60]
+2022-02-14 15:30:12,143 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:30:14,012 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:30:19,543 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:30:21,517 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:30:21,549 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:30:23,369 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程61]
+2022-02-14 15:30:23,369 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:30:25,266 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:30:30,394 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:30:32,392 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:30:32,416 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:30:34,299 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程62]
+2022-02-14 15:30:34,299 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:30:36,175 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:30:41,337 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:30:43,292 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:30:43,319 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:30:45,201 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程63]
+2022-02-14 15:30:45,201 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:30:47,093 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:30:52,309 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:30:54,236 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:30:54,265 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:30:56,092 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程64]
+2022-02-14 15:30:56,092 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:30:57,934 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:31:03,038 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:31:04,991 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:31:05,020 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:31:06,936 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程65]
+2022-02-14 15:31:06,936 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:31:08,809 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:31:14,810 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:31:16,762 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:31:16,793 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:31:18,608 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程66]
+2022-02-14 15:31:18,608 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:31:20,481 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:31:26,173 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:31:28,189 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:31:28,216 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:31:30,050 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程67]
+2022-02-14 15:31:30,050 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:31:31,915 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:31:37,058 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:31:38,971 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:31:38,998 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:31:40,877 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程68]
+2022-02-14 15:31:40,877 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:31:42,727 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:31:48,080 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:31:49,994 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:31:50,021 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:31:51,870 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程69]
+2022-02-14 15:31:51,870 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:31:53,734 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:31:58,856 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:32:00,824 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:32:00,851 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:32:02,731 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程70]
+2022-02-14 15:32:02,731 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:32:04,558 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:32:10,172 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:32:12,168 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:32:12,196 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:32:14,044 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程71]
+2022-02-14 15:32:14,044 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:32:15,903 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:32:21,183 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:32:23,102 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:32:23,130 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:32:24,978 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程72]
+2022-02-14 15:32:24,978 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:32:26,821 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:32:32,141 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:32:34,078 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:32:34,105 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:32:35,965 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程73]
+2022-02-14 15:32:35,965 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:32:37,798 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:32:43,031 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:32:44,968 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:32:44,995 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:32:46,898 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程74]
+2022-02-14 15:32:46,898 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:32:48,821 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:32:53,169 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:32:55,136 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:32:55,163 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:32:57,100 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程75]
+2022-02-14 15:32:57,100 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
+2022-02-14 15:32:58,972 - createScheduleTest - INFO - Search com.android.calendar:id/title
+2022-02-14 15:33:03,992 - createScheduleTest - INFO - Search com.android.calendar:id/edit_event_save
+2022-02-14 15:33:05,962 - createScheduleTest - INFO - Saved status is [True]
+2022-02-14 15:33:05,992 - createScheduleTest - INFO - Launch calendar！
+2022-02-14 15:33:07,486 - createScheduleTest - INFO - Let's create schedule its title is [测试批量创建日程76]
+2022-02-14 15:33:07,486 - createScheduleTest - INFO - Search com.android.calendar:id/action_create_events 
