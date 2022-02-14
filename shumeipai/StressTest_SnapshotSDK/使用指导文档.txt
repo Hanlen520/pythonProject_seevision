@@ -1,0 +1,8 @@
+运行环境：
+1、Python
+2、树莓派中库已经安装好，imagehash
+
+
+运行步骤：
+1、在StreeTest_SnapshotSDK文件夹下，当前sdk工具已放好
+2、

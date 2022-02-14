@@ -1,0 +1,3 @@
+renamedImage1.jpg is FAIL
+renamedImage2.jpg is PASS
+renamedImage1.jpg is FAIL

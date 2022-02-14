@@ -1,0 +1,3 @@
+/home/pi/Desktop/StressTest_SnapshotSDK/snapshot_sdk/build/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/StressTest_SnapshotSDK/snapshot_sdk/build/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/StressTest_SnapshotSDK/snapshot_sdk/build/CMakeFiles/test.dir

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/svcontroller_factory.h
+svcontroller_interface.h
+../include/svcontroller_interface.h
+svsnapshoter_interface.h
+../include/svsnapshoter_interface.h
+list
+-
+string
+-
+
+../include/svcontroller_interface.h
+string
+-
+
+../include/svsnapshoter_interface.h
+string
+-
+
+/home/pi/Desktop/StressTest_SnapshotSDK/snapshot_sdk/main.cpp
+svcontroller_factory.h
+/home/pi/Desktop/StressTest_SnapshotSDK/snapshot_sdk/svcontroller_factory.h
+sys/time.h
+-
+iostream
+-
+
