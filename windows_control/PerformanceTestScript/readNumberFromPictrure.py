@@ -24,7 +24,10 @@ class ReadNumberFromPicture:
         :param path:传入待读取的图片路径
         :return:返回读取并处理过的时间
         """
+        # img = cv.imread(path)
+        # gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         text = pytesseract.image_to_string(Image.open(path), lang="eng", config="--psm 8")
+        # text = pytesseract.image_to_string(gray, lang="eng", config="--psm 8")
         return text
 
     def readPicture(self, imgPath):
@@ -40,8 +43,13 @@ class ReadNumberFromPicture:
 
 
 if __name__ == '__main__':
-    camera_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\camera_grab_00009.jpg"
-    windows_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\windows_grab_00009.jpg"
+    # camera_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\camera_grab_00009.jpg"
+    # camera_imgPath =r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\MJPEG1080P_NORMALMODE\xxx_00010.jpg"
+    # windows_imgPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\windows_grab_00009.jpg"
     rnfp = ReadNumberFromPicture()
-    rnfp.readPicture(camera_imgPath)
-    rnfp.readPicture(windows_imgPath)
+    # dirPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\temp\ocr_identifyDir\\"
+    dirPath = r"D:\PycharmProjects\pythonProject_seevision\windows_control\PerformanceTestScript\Sample\grab_image\\"
+    for imageName in os.listdir(dirPath):
+        if imageName.endswith(".jpg"):
+            print(rnfp.readPicture("{}{}".format(dirPath, imageName)))
+    # print(rnfp.readPicture(windows_imgPath))
