@@ -45,6 +45,7 @@ def open_camera(circle_times):
     sleep(0.5)
     ui.ButtonControl(searchDepth=6, Name="刷新相机列表").Click()
     sleep(0.5)
+    # ui.ListItemControl(searchDepth=7, Name="UVC DEPTH").Click()
     ui.ListItemControl(searchDepth=7, Name="UVC DEPTH").Click()
     sleep(0.5)
     open_camera = ui.ButtonControl(searchDepth=6, Name="打开相机")
@@ -136,8 +137,8 @@ if __name__ == '__main__':
     for i in range(2500):
         # for i in range(5):
         i += 1
-        voltage_5V_on(serialControl)
         voltage_12V_on(serialControl)
+        voltage_5V_on(serialControl)
         sleep(10)
         open_camera(i)
         close_camera()
@@ -145,6 +146,6 @@ if __name__ == '__main__':
             kill_BOE_TOF()
             open_BOE_TOF(boe_tof_path)
         picture_compare(original_image, "./screenshot/{}.jpg".format(i))
-        voltage_5V_off(serialControl)
         voltage_12V_off(serialControl)
+        voltage_5V_off(serialControl)
         sleep(3)
