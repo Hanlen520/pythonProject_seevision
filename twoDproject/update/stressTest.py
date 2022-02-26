@@ -77,7 +77,6 @@ class StreeTest:
         print("Begin getCurrentVersion")
         if self.checkPortOpen():
             while True:
-                # self.enterADPSD()
                 sleep(0.1)
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
@@ -115,7 +114,6 @@ class StreeTest:
             st_obj.port_obj.write(
                 "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
                     "UTF-8"))
-            #sleep(60)
             while True:
                 sleep(0.1)
                 print("正在XMOS刷机……")
@@ -167,8 +165,8 @@ def log_area(st_obj):
         st_obj.enterADPSD()
     while True:
         try:
+            sleep(0.1)
             if st_obj.port_obj.inWaiting() > 0:
-                sleep(0.1)
                 try:
                     data = str(st_obj.port_obj.readline())
                 except (AttributeError, TypeError):
@@ -197,6 +195,7 @@ if __name__ == '__main__':
     #         pass
     #     finally:
     #         st_obj.log_process()
+    # 最好的方式还是，关闭log线程，因为线程会两边获取导致部分数据不全，关闭log线程，只有test运行，然后输出内容重定向到文件中即可，tail实时查看输出内容
     t1 = threading.Thread(target=test_area)
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
