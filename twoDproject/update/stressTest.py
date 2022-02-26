@@ -128,7 +128,7 @@ def log_area(st_obj):
                 sleep(0.1)
                 try:
                     data = str(st_obj.port_obj.readline())
-                except AttributeError:
+                except (AttributeError, TypeError):
                     data = "empty"
                 if not os.path.exists("./log/"):
                     os.mkdir("./log/")
