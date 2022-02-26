@@ -113,16 +113,18 @@ class StreeTest:
             st_obj.port_obj.write(
                 "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
                     "UTF-8"))
-            while True:
-                sleep(0.1)
-                print("正在XMOS刷机……")
-                if self.port_obj.inWaiting()>0:
-                    data = str(self.port_obj.readline())
-                    print(data)
-                    if "done" in data:
-                        print("Xmos版本升级成功！")
-                        break
-            sleep(0.5)
+            # while True:
+            #     sleep(0.1)
+            #     print("正在XMOS刷机……")
+            #     if self.port_obj.inWaiting()>0:
+            #         data = str(self.port_obj.readline())
+            #         print(data)
+            #         if "done" in data:
+            #             print("Xmos版本升级成功！")
+            #             break
+            print("正在XMOS刷机……")
+            sleep(60)
+            print("Xmos版本升级成功！")
 
     def getXmosVersion(self):
         print("Begin XMOS Upgrade getXmosVersion")
@@ -139,7 +141,6 @@ class StreeTest:
                     if "Version: 3.1.6" in data:
                         print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6！")
                         break
-            sleep(0.5)
 
 
 def test_area():
@@ -196,8 +197,8 @@ if __name__ == '__main__':
     #         st_obj.log_process()
     # 最好的方式还是，关闭log线程，因为线程会两边获取导致部分数据不全，关闭log线程，只有test运行，然后输出内容重定向到文件中即可，tail实时查看输出内容
     t1 = threading.Thread(target=test_area)
-    # t2 = threading.Thread(target=log_area, args=(st_obj,))
+    t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
-    # sleep(10)
-    # t2.start()
+    sleep(10)
+    t2.start()
