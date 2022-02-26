@@ -117,6 +117,7 @@ def test_area():
         st_obj.getCurrentVersion()
 
         # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作
+        # sbin/dfu_i2c -> write upgrade-> reboot-> read version
 
 
 def log_area(st_obj):
