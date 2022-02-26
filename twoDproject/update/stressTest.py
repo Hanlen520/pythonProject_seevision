@@ -51,7 +51,6 @@ class StreeTest:
         self.port_obj.write("root\r\n".encode("UTF-8"))
         sleep(3)
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
-        # self.port_obj.write("\r\n".encode("UTF-8"))
 
     def flashModuleUpdate(self, image_path):
         print("Start MODULE upgrade")
@@ -197,8 +196,8 @@ if __name__ == '__main__':
     #         st_obj.log_process()
     # 最好的方式还是，关闭log线程，因为线程会两边获取导致部分数据不全，关闭log线程，只有test运行，然后输出内容重定向到文件中即可，tail实时查看输出内容
     t1 = threading.Thread(target=test_area)
-    t2 = threading.Thread(target=log_area, args=(st_obj,))
+    # t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
-    sleep(10)
-    t2.start()
+    # sleep(10)
+    # t2.start()
