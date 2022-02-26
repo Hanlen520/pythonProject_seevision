@@ -118,7 +118,7 @@ def test_area():
 
         # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码
         # sbin/dfu_i2c -> write upgrade-> reboot-> read version
-
+        
 
 def log_area(st_obj):
     print("Begin log process")
