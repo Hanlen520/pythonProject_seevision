@@ -108,6 +108,38 @@ class StreeTest:
     #     else:
     #         print("NOK")
 
+    def writeXmosUpgrade(self):
+        print("Begin XMOS Upgrade")
+        if self.checkPortOpen():
+            st_obj.port_obj.write(
+                "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
+                    "UTF-8"))
+            while True:
+                sleep(1)
+                print("正在XMOS刷机……")
+                data = str(self.port_obj.readline())
+                print(data)
+                if "done" in data:
+                    print("Xmos版本升级成功！")
+                    break
+            sleep(0.5)
+
+    def getXmosVersion(self):
+        print("Begin XMOS Upgrade getXmosVersion")
+        if self.checkPortOpen():
+            while True:
+                st_obj.port_obj.write(
+                    "dfu_i2c read_version\r\n".encode(
+                        "UTF-8"))
+                sleep(1)
+                print("正在获取XMOS版本……")
+                data = str(self.port_obj.readline())
+                print(data)
+                if "Version: 3.1.6" in data:
+                    print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6！")
+                    break
+            sleep(0.5)
+
 
 def test_area():
     for i in range(cycle_times):
@@ -118,6 +150,10 @@ def test_area():
 
         # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
         # sbin/dfu_i2c -> write upgrade-> reboot-> read version
+        # \\file.ad.seevision.cn\DailyBuild\sytj0101\sytj0101\20220226_172822_for_xmos_ota
+
+        st_obj.writeXmosUpgrade()
+        st_obj.getXmosVersion()
 
 
 def log_area(st_obj):
@@ -147,7 +183,7 @@ def log_area(st_obj):
 if __name__ == '__main__':
     image_path = "./release_images/"
     st_obj = StreeTest("COM3", 115200)
-    cycle_times = 100
+    cycle_times = 321
     # for i in range(cycle_times):
     #     try:
     #         print("第{}次升级测试".format(str(i + 1)))
