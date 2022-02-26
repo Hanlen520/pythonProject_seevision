@@ -123,6 +123,9 @@ class StreeTest:
                     print("Xmos版本升级成功！")
                     break
             sleep(0.5)
+            subprocess.Popen("fastboot reboot", shell=True).communicate()
+            print("XMOS Upgrade upgrade done !!!")
+            sleep(30)
 
     def getXmosVersion(self):
         print("Begin XMOS Upgrade getXmosVersion")
@@ -139,6 +142,9 @@ class StreeTest:
                     print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6！")
                     break
             sleep(0.5)
+            subprocess.Popen("fastboot reboot", shell=True).communicate()
+            print("getXmosVersion upgrade done !!!")
+            sleep(30)
 
 
 def test_area():
