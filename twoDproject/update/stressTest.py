@@ -116,9 +116,9 @@ def test_area():
         print(st_obj.flashModuleUpdate(image_path))
         st_obj.getCurrentVersion()
 
-        # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码
+        # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
         # sbin/dfu_i2c -> write upgrade-> reboot-> read version
-        
+
 
 def log_area(st_obj):
     print("Begin log process")
