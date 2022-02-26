@@ -158,5 +158,6 @@ if __name__ == '__main__':
     t1 = threading.Thread(target=test_area)
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
+    # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
     sleep(10)
     t2.start()
