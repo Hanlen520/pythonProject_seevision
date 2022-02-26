@@ -78,13 +78,14 @@ class StreeTest:
         if self.checkPortOpen():
             while True:
                 # self.enterADPSD()
-                sleep(1)
+                sleep(0.1)
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
-                data = str(self.port_obj.readline())
-                print(data)
-                if "Linux" in data:
-                    print("版本升级成功！")
-                    break
+                if self.port_obj.inWaiting() > 0:
+                    data = str(self.port_obj.readline())
+                    print(data)
+                    if "Linux" in data:
+                        print("版本升级成功！")
+                        break
             self.port_obj.write("ls -l\r\n".encode("UTF-8"))
             sleep(0.5)
 
@@ -114,37 +115,34 @@ class StreeTest:
             st_obj.port_obj.write(
                 "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
                     "UTF-8"))
+            #sleep(60)
             while True:
-                sleep(1)
+                sleep(0.1)
                 print("正在XMOS刷机……")
-                data = str(self.port_obj.readline())
-                print(data)
-                if "done" in data:
-                    print("Xmos版本升级成功！")
-                    break
+                if self.port_obj.inWaiting()>0:
+                    data = str(self.port_obj.readline())
+                    print(data)
+                    if "done" in data:
+                        print("Xmos版本升级成功！")
+                        break
             sleep(0.5)
-            subprocess.Popen("fastboot reboot", shell=True).communicate()
-            print("XMOS Upgrade upgrade done !!!")
-            sleep(30)
 
     def getXmosVersion(self):
         print("Begin XMOS Upgrade getXmosVersion")
         if self.checkPortOpen():
             while True:
+                sleep(0.1)
+                print("正在获取XMOS版本……")
                 st_obj.port_obj.write(
                     "dfu_i2c read_version\r\n".encode(
                         "UTF-8"))
-                sleep(1)
-                print("正在获取XMOS版本……")
-                data = str(self.port_obj.readline())
-                print(data)
-                if "Version: 3.1.6" in data:
-                    print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6！")
-                    break
+                if self.port_obj.inWaiting() > 0:
+                    data = str(self.port_obj.readline())
+                    print(data)
+                    if "Version: 3.1.6" in data:
+                        print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6！")
+                        break
             sleep(0.5)
-            subprocess.Popen("fastboot reboot", shell=True).communicate()
-            print("getXmosVersion upgrade done !!!")
-            sleep(30)
 
 
 def test_area():
@@ -180,7 +178,6 @@ def log_area(st_obj):
                 with open("./log/{}_serialLog.log".format(cur_time), "a+") as logF:
                     logF.write(data + "\n")
             else:
-                sleep(1)
                 continue
         except SerialException:
             continue
