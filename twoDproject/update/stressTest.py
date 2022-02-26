@@ -116,7 +116,7 @@ def test_area():
         print(st_obj.flashModuleUpdate(image_path))
         st_obj.getCurrentVersion()
 
-        # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作
+        # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码
         # sbin/dfu_i2c -> write upgrade-> reboot-> read version
 
 
