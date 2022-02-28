@@ -186,7 +186,6 @@ class StreeTest:
         self.toTxt("Get specific field")
         if self.checkPortOpen():
             while True:
-                sleep(0.1)
                 if self.port_obj.inWaiting() > 0:
                     field = str(self.port_obj.readline())
                     print("正在Get specific field : [{}]……".format(field))
