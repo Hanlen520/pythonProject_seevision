@@ -237,6 +237,8 @@ def test_area():
                 print("B->A降级成功")
                 st_obj.toTxt("Result：【第{}次测试: B->A降级成功】\n".format(str(i + 1)))
             # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
+    print("测试结束，请查看Result.txt查看结果")
+    st_obj.toTxt("测试结束，请查看Result.txt查看结果")
 
 
 def log_area(st_obj):
