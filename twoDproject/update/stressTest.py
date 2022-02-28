@@ -90,7 +90,7 @@ class StreeTest:
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
-                    self.toTxt(data)
+                    # self.toTxt(data)
                     print(data)
                     if "Linux" in data:
                         print("339版本刷机成功！")
@@ -154,7 +154,7 @@ class StreeTest:
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
                     print(data)
-                    self.toTxt(data)
+                    # self.toTxt(data)
                     if "Version: 3.1.7" in data:
                         print("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
                         self.toTxt("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
@@ -189,7 +189,7 @@ class StreeTest:
                 if self.port_obj.inWaiting() > 0:
                     field = str(self.port_obj.readline())
                     print("正在Get specific field : [{}]……".format(field))
-                    self.toTxt("正在Get specific field : [{}]……".format(field))
+                    # self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "upgrade start" in field:
@@ -222,7 +222,7 @@ def test_area():
             st_obj.toTxt("Xmos version Flash done : to 3.1.7")
             if st_obj.getXmosVersion() == "Version: 3.1.7":
                 print("A->B升级成功")
-                st_obj.toTxt("第{}次测试: A->B升级成功".format(str(i + 1)))
+                st_obj.toTxt("Result：【第{}次测试: A->B升级成功】\n".format(str(i + 1)))
         else:
             """
                 3、检测当前Xmos版本，如果是新版本，则开始刷入旧Firmware然后手动刷入Xmos旧版本等待降级完成
@@ -235,7 +235,7 @@ def test_area():
             st_obj.toTxt("Xmos version Flash done : to 3.1.6")
             if st_obj.getXmosVersion() == "Version: 3.1.6":
                 print("B->A降级成功")
-                st_obj.toTxt("第{}次测试: B->A降级成功".format(str(i + 1)))
+                st_obj.toTxt("Result：【第{}次测试: B->A降级成功】\n".format(str(i + 1)))
             # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
 
 
