@@ -38,29 +38,37 @@ class StreeTest:
         if self.checkPortOpen():
             print("进入BootLoader模式 - port open,current port info:[{} - {}]".format(self.port_obj.portstr,
                                                                                   self.port_obj.baudrate))
+            self.toTxt("进入BootLoader模式 - port open,current port info:[{} - {}]".format(self.port_obj.portstr,
+                                                                                       self.port_obj.baudrate))
             self.enterADPSD()
             self.port_obj.write("reboot-bootloader\r\n".encode("UTF-8"))
             self.port_obj.close()
             sleep(3)
             return "Enter Bootloader Done"
         else:
+            self.toTxt("port not open")
             print("port not open")
 
     def enterADPSD(self):
         print("输入账号密码……")
+        self.toTxt("输入账号密码……")
         self.port_obj.write("root\r\n".encode("UTF-8"))
         sleep(3)
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
 
     def flashModuleUpdate(self, image_path):
         print("Start MODULE upgrade")
+        self.toTxt("Start MODULE upgrade")
         subprocess.Popen("fastboot flash lk {}lk.bin".format(image_path), shell=True).communicate()
         subprocess.Popen("fastboot flash boot {}boot.img".format(image_path), shell=True).communicate()
         subprocess.Popen("fastboot flash system {}system.img".format(image_path), shell=True).communicate()
         subprocess.Popen("fastboot oem finish_upgrade", shell=True).communicate()
         subprocess.Popen("fastboot reboot", shell=True).communicate()
         print("MODULE upgrade done !!!")
-        print(self.check_SpecificField())
+        self.toTxt("MODULE upgrade done !!!")
+        fieldCheckR = self.check_SpecificField()
+        self.toTxt(fieldCheckR)
+        print(fieldCheckR)
         # sleep(30)
         return "Flash Module Update Done"
 
@@ -75,15 +83,18 @@ class StreeTest:
 
     def getCurrentVersion(self):
         print("Begin getCurrentVersion")
+        self.toTxt("Begin getCurrentVersion")
         if self.checkPortOpen():
             while True:
                 sleep(0.1)
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
+                    self.toTxt(data)
                     print(data)
                     if "Linux" in data:
                         print("339版本刷机成功！")
+                        self.toTxt("339版本刷机成功！")
                         break
             sleep(0.5)
 
@@ -109,6 +120,7 @@ class StreeTest:
 
     def writeXmosUpgrade(self):
         print("Begin XMOS Upgrade")
+        self.toTxt("Begin XMOS Upgrade")
         if self.checkPortOpen():
             st_obj.port_obj.write(
                 "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
@@ -123,14 +135,18 @@ class StreeTest:
             #             print("Xmos版本升级成功！")
             #             break
             print("正在XMOS刷机……")
+            self.toTxt("正在XMOS刷机……")
             sleep(60)
             print("Xmos版本升级成功！")
+            self.toTxt("Xmos版本升级成功！")
 
     def getXmosVersion(self):
         print("Begin XMOS version： getXmosVersion")
+        self.toTxt("Begin XMOS version： getXmosVersion")
         if self.checkPortOpen():
             while True:
                 sleep(0.1)
+                self.toTxt("正在获取当前XMOS版本……")
                 print("正在获取当前XMOS版本……")
                 st_obj.port_obj.write(
                     "dfu_i2c read_version\r\n".encode(
@@ -138,29 +154,43 @@ class StreeTest:
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
                     print(data)
+                    self.toTxt(data)
                     if "Version: 3.1.7" in data:
                         print("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
+                        self.toTxt("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
                         return "Version: 3.1.7"
                     elif "Version: 3.1.6" in data:
+                        print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6, 开始降升级刷机到Version 3.1.7！")
+                        self.toTxt("Xmos版本升级成功，版本匹配正确：Version: 3.1.6, 开始降升级刷机到Version 3.1.7！")
                         return "Version: 3.1.6"
 
     def falsh_into_SpecificVersion(self, image_path):
-        print(self.enterBootloaderMode())
-        print(self.flashModuleUpdate(image_path))
+        enterBootLM = self.enterBootloaderMode()
+        print(enterBootLM)
+        self.toTxt(enterBootLM)
+        flashMU = self.flashModuleUpdate(image_path)
+        print(flashMU)
+        self.toTxt(flashMU)
         self.getCurrentVersion()
 
     # def check_reboot_version(self):
     #     self.port_obj.write("reboot\r\n".encode("UTF-8"))
     #     sleep(60)
 
+    def toTxt(self, result):
+        with open("./Result.txt", "a+") as f:
+            f.write(result + "\n")
+
     def check_SpecificField(self):
         print("Get specific field")
+        self.toTxt("Get specific field")
         if self.checkPortOpen():
             while True:
                 sleep(0.1)
                 if self.port_obj.inWaiting() > 0:
                     field = str(self.port_obj.readline())
                     print("正在Get specific field : [{}]……".format(field))
+                    self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "upgrade start" in field:
@@ -170,12 +200,12 @@ class StreeTest:
 def test_area():
     """
         1、先刷入旧Firmware版本，循环测试开始
-    :return:
     """
-    image_path = "oldversion"
+    image_path = oldversion
     st_obj.falsh_into_SpecificVersion(image_path)
     for i in range(cycle_times):
         print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
+        st_obj.toTxt("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
         # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
         # sbin/dfu_i2c -> write upgrade-> reboot-> read version
         # \\file.ad.seevision.cn\DailyBuild\sytj0101\sytj0101\20220226_172822_for_xmos_ota
@@ -186,23 +216,27 @@ def test_area():
         """
         if st_obj.getXmosVersion() == "Version: 3.1.6":
             # 刷入newversion
-            image_path = "newversion"
+            image_path = newversion
             st_obj.falsh_into_SpecificVersion(image_path)
             sleep(60)
             print("Xmos version Flash done : to 3.1.7")
+            st_obj.toTxt("Xmos version Flash done : to 3.1.7")
             if st_obj.getXmosVersion() == "Version: 3.1.7":
                 print("A->B升级成功")
+                st_obj.toTxt("第{}次测试: A->B升级成功".format(str(i + 1)))
         else:
             """
                 3、检测当前Xmos版本，如果是新版本，则开始刷入旧Firmware然后手动刷入Xmos旧版本等待降级完成
             """
-            image_path = "oldversion"
+            image_path = oldversion
             st_obj.falsh_into_SpecificVersion(image_path)
             sleep(60)
             # st_obj.writeXmosUpgrade()
             print("Xmos version Flash done : to 3.1.6")
+            st_obj.toTxt("Xmos version Flash done : to 3.1.6")
             if st_obj.getXmosVersion() == "Version: 3.1.6":
                 print("B->A降级成功")
+                st_obj.toTxt("第{}次测试: B->A降级成功".format(str(i + 1)))
             # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
 
 
@@ -230,9 +264,8 @@ def log_area(st_obj):
 
 
 if __name__ == '__main__':
-    image_path = "./release_images/"
     st_obj = StreeTest("COM3", 115200)
-    cycle_times = 321
+    cycle_times = 10
     # for i in range(cycle_times):
     #     try:
     #         print("第{}次升级测试".format(str(i + 1)))
@@ -256,6 +289,8 @@ if __name__ == '__main__':
         刷317,检测到done\Version: 3.1.7
         重启一次,需检测"未升级xmos"
     """
+    oldversion = "./release_A/"
+    newversion = "./release_B/"
     t1 = threading.Thread(target=test_area)
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
