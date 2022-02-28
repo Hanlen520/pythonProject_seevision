@@ -60,7 +60,8 @@ class StreeTest:
         subprocess.Popen("fastboot oem finish_upgrade", shell=True).communicate()
         subprocess.Popen("fastboot reboot", shell=True).communicate()
         print("MODULE upgrade done !!!")
-        sleep(30)
+        print(self.check_SpecificField())
+        # sleep(30)
         return "Flash Module Update Done"
 
     def checkPortOpen(self):
@@ -152,6 +153,19 @@ class StreeTest:
     #     self.port_obj.write("reboot\r\n".encode("UTF-8"))
     #     sleep(60)
 
+    def check_SpecificField(self):
+        print("Get specific field")
+        if self.checkPortOpen():
+            while True:
+                sleep(0.1)
+                if self.port_obj.inWaiting() > 0:
+                    field = str(self.port_obj.readline())
+                    print("正在Get specific field : [{}]……".format(field))
+                    if "no need" in field:
+                        return "结果获取完毕：xmos firmware no need for upgrade!!!"
+                    elif "upgrade start" in field:
+                        return "结果获取完毕：xmos firmware upgrade start!!!"
+
 
 def test_area():
     """
@@ -159,7 +173,7 @@ def test_area():
     :return:
     """
     image_path = "oldversion"
-    st_obj.flashModuleUpdate(image_path)
+    st_obj.falsh_into_SpecificVersion(image_path)
     for i in range(cycle_times):
         print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
         # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
@@ -173,8 +187,9 @@ def test_area():
         if st_obj.getXmosVersion() == "Version: 3.1.6":
             # 刷入newversion
             image_path = "newversion"
-            st_obj.flashModuleUpdate(image_path)
+            st_obj.falsh_into_SpecificVersion(image_path)
             sleep(60)
+            print("Xmos version Flash done : to 3.1.7")
             if st_obj.getXmosVersion() == "Version: 3.1.7":
                 print("A->B升级成功")
         else:
@@ -182,8 +197,10 @@ def test_area():
                 3、检测当前Xmos版本，如果是新版本，则开始刷入旧Firmware然后手动刷入Xmos旧版本等待降级完成
             """
             image_path = "oldversion"
-            st_obj.flashModuleUpdate(image_path)
-            st_obj.writeXmosUpgrade()
+            st_obj.falsh_into_SpecificVersion(image_path)
+            sleep(60)
+            # st_obj.writeXmosUpgrade()
+            print("Xmos version Flash done : to 3.1.6")
             if st_obj.getXmosVersion() == "Version: 3.1.6":
                 print("B->A降级成功")
             # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
