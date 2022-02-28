@@ -82,9 +82,8 @@ class StreeTest:
                     data = str(self.port_obj.readline())
                     print(data)
                     if "Linux" in data:
-                        print("版本升级成功！")
+                        print("339版本刷机成功！")
                         break
-            self.port_obj.write("ls -l\r\n".encode("UTF-8"))
             sleep(0.5)
 
     # def log_process(self):
@@ -131,31 +130,53 @@ class StreeTest:
         if self.checkPortOpen():
             while True:
                 sleep(0.1)
-                print("正在获取XMOS版本……")
+                print("正在获取当前XMOS版本……")
                 st_obj.port_obj.write(
                     "dfu_i2c read_version\r\n".encode(
                         "UTF-8"))
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
                     print(data)
-                    if "Version: 3.1.6" in data:
-                        print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6！")
-                        break
+                    if "Version: 3.1.7" in data:
+                        print("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
+                        return "Version: 3.1.7"
+                    elif "Version: 3.1.6" in data:
+                        return "Version: 3.1.6"
+
+    def falsh_into_SpecificVersion(self, image_path):
+        print(self.enterBootloaderMode())
+        print(self.flashModuleUpdate(image_path))
+        self.getCurrentVersion()
+
+    # def check_reboot_version(self):
+    #     self.port_obj.write("reboot\r\n".encode("UTF-8"))
+    #     sleep(60)
 
 
 def test_area():
+    image_path = "oldversion"
+    st_obj.flashModuleUpdate(image_path)
     for i in range(cycle_times):
-        print("第{}次升级测试".format(str(i + 1)))
-        print(st_obj.enterBootloaderMode())
-        print(st_obj.flashModuleUpdate(image_path))
-        st_obj.getCurrentVersion()
-
+        print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
         # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
         # sbin/dfu_i2c -> write upgrade-> reboot-> read version
         # \\file.ad.seevision.cn\DailyBuild\sytj0101\sytj0101\20220226_172822_for_xmos_ota
 
-        st_obj.writeXmosUpgrade()
-        st_obj.getXmosVersion()
+        # 会自动升级到3.1.7,新版本Firmware刷入,自动输入xmos，339刷完等待60s即可xmos自动完成，获取版本对比
+        if st_obj.getXmosVersion() == "Version: 3.1.6":
+            # 刷入newversion
+            image_path = "newversion"
+            st_obj.flashModuleUpdate(image_path)
+            sleep(60)
+            if st_obj.getXmosVersion() == "Version: 3.1.7":
+                print("A->B升级成功")
+        else:
+            image_path = "oldversion"
+            st_obj.flashModuleUpdate(image_path)
+            st_obj.writeXmosUpgrade()
+            if st_obj.getXmosVersion() == "Version: 3.1.6":
+                print("B->A降级成功")
+            # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
 
 
 def log_area(st_obj):
@@ -197,8 +218,17 @@ if __name__ == '__main__':
     #         st_obj.log_process()
     # 最好的方式还是，关闭log线程，因为线程会两边获取导致部分数据不全，关闭log线程，只有test运行，然后输出内容重定向到文件中即可，tail实时查看输出内容
     # 从A版本升级到B版本
+    # 如果当前是316版本，就执行升级到317版本
+    # 如果当前是317版本，就执行刷机到316版本
+
     # A版本:fw version 316
     # B版本:fw version 317
+    """
+        刷316,检测到done\Version: 3.1.6
+        重启一次,需检测"未升级xmos"
+        刷317,检测到done\Version: 3.1.7
+        重启一次,需检测"未升级xmos"
+    """
     t1 = threading.Thread(target=test_area)
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
