@@ -126,7 +126,7 @@ class StreeTest:
             print("Xmos版本升级成功！")
 
     def getXmosVersion(self):
-        print("Begin XMOS Upgrade getXmosVersion")
+        print("Begin XMOS version： getXmosVersion")
         if self.checkPortOpen():
             while True:
                 sleep(0.1)
@@ -154,6 +154,10 @@ class StreeTest:
 
 
 def test_area():
+    """
+        1、先刷入旧Firmware版本，循环测试开始
+    :return:
+    """
     image_path = "oldversion"
     st_obj.flashModuleUpdate(image_path)
     for i in range(cycle_times):
@@ -163,6 +167,9 @@ def test_area():
         # \\file.ad.seevision.cn\DailyBuild\sytj0101\sytj0101\20220226_172822_for_xmos_ota
 
         # 会自动升级到3.1.7,新版本Firmware刷入,自动输入xmos，339刷完等待60s即可xmos自动完成，获取版本对比
+        """
+            2、检测当前Xmos版本，如果是旧版本，则开始刷入新Firmware然后等待60sxmos自动升级完成
+        """
         if st_obj.getXmosVersion() == "Version: 3.1.6":
             # 刷入newversion
             image_path = "newversion"
@@ -171,6 +178,9 @@ def test_area():
             if st_obj.getXmosVersion() == "Version: 3.1.7":
                 print("A->B升级成功")
         else:
+            """
+                3、检测当前Xmos版本，如果是新版本，则开始刷入旧Firmware然后手动刷入Xmos旧版本等待降级完成
+            """
             image_path = "oldversion"
             st_obj.flashModuleUpdate(image_path)
             st_obj.writeXmosUpgrade()
