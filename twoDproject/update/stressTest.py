@@ -196,6 +196,9 @@ if __name__ == '__main__':
     #     finally:
     #         st_obj.log_process()
     # 最好的方式还是，关闭log线程，因为线程会两边获取导致部分数据不全，关闭log线程，只有test运行，然后输出内容重定向到文件中即可，tail实时查看输出内容
+    # 从A版本升级到B版本
+    # A版本:fw version 316
+    # B版本:fw version 317
     t1 = threading.Thread(target=test_area)
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
