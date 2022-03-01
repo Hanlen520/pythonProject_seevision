@@ -182,8 +182,11 @@ class StreeTest:
     #     sleep(60)
 
     def toTxt(self, result):
-        with open("./【{}】Result.txt".format(self.port_obj.portstr), "a+") as f:
-            f.write(result + "\n")
+        try:
+            with open("./【{}】Result.txt".format(self.port_obj.portstr), "a+") as f:
+                f.write(result + "\n")
+        except (AttributeError, TypeError):
+            pass
 
     def check_SpecificField(self):
         print("Get specific field")
