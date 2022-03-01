@@ -1,5 +1,7 @@
 # coding = utf8
+import multiprocessing
 import os
+import re
 import subprocess
 import threading
 import time
@@ -7,6 +9,7 @@ from time import sleep
 
 import serial
 from serial import SerialException
+from serial.tools.list_ports_windows import comports
 
 os.path.abspath(".")
 """
@@ -52,6 +55,7 @@ class StreeTest:
     def enterADPSD(self):
         print("输入账号密码……")
         self.toTxt("输入账号密码……")
+        self.port_obj.write("\r\n".encode("UTF-8"))
         self.port_obj.write("root\r\n".encode("UTF-8"))
         sleep(3)
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
@@ -122,7 +126,7 @@ class StreeTest:
         print("Begin XMOS Upgrade")
         self.toTxt("Begin XMOS Upgrade")
         if self.checkPortOpen():
-            st_obj.port_obj.write(
+            self.port_obj.write(
                 "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
                     "UTF-8"))
             # while True:
@@ -148,7 +152,7 @@ class StreeTest:
                 sleep(0.1)
                 self.toTxt("正在获取当前XMOS版本……")
                 print("正在获取当前XMOS版本……")
-                st_obj.port_obj.write(
+                self.port_obj.write(
                     "dfu_i2c read_version\r\n".encode(
                         "UTF-8"))
                 if self.port_obj.inWaiting() > 0:
@@ -178,7 +182,7 @@ class StreeTest:
     #     sleep(60)
 
     def toTxt(self, result):
-        with open("./Result.txt", "a+") as f:
+        with open("./【{}】Result.txt".format(self.port_obj.portstr), "a+") as f:
             f.write(result + "\n")
 
     def check_SpecificField(self):
@@ -198,7 +202,7 @@ class StreeTest:
                         return
 
 
-def test_area():
+def test_area(oldversion, newversion, st_obj, cycle_times):
     """
         1、先刷入旧Firmware版本，循环测试开始
     """
@@ -258,7 +262,7 @@ def log_area(st_obj):
                     data = "empty"
                 if not os.path.exists("./log/"):
                     os.mkdir("./log/")
-                with open("./log/{}_serialLog.log".format(cur_time), "a+") as logF:
+                with open("./log/{}【{}】_serialLog.log".format(st_obj.port_obj.portstr, cur_time), "a+") as logF:
                     logF.write(data + "\n")
             else:
                 continue
@@ -266,26 +270,10 @@ def log_area(st_obj):
             continue
 
 
-if __name__ == '__main__':
-    st_obj = StreeTest("COM3", 115200)
+def initCOMTest(comNumber):
+    # st_obj = StreeTest("COM3", 115200)
+    st_obj = StreeTest(comNumber, 115200)
     cycle_times = 10
-    # for i in range(cycle_times):
-    #     try:
-    #         print("第{}次升级测试".format(str(i + 1)))
-    #         print(st_obj.enterBootloaderMode())
-    #         print(st_obj.flashModuleUpdate(image_path))
-    #         st_obj.getCurrentVersion()
-    #     except Exception:
-    #         pass
-    #     finally:
-    #         st_obj.log_process()
-    # 最好的方式还是，关闭log线程，因为线程会两边获取导致部分数据不全，关闭log线程，只有test运行，然后输出内容重定向到文件中即可，tail实时查看输出内容
-    # 从A版本升级到B版本
-    # 如果当前是316版本，就执行升级到317版本
-    # 如果当前是317版本，就执行刷机到316版本
-
-    # A版本:fw version 316
-    # B版本:fw version 317
     """
         刷316,检测到done\Version: 3.1.6
         重启一次,需检测"未升级xmos"
@@ -294,9 +282,24 @@ if __name__ == '__main__':
     """
     oldversion = "./release_A/"
     newversion = "./release_B/"
-    t1 = threading.Thread(target=test_area)
+    t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times,))
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
     sleep(10)
     t2.start()
+
+
+if __name__ == '__main__':
+    ports = []
+    for port in list(comports()):
+        if "Silicon Labs CP210x USB to UART Bridge" in str(port):
+            current_port = re.findall("\((.*)\)", str(port))[0]
+            ports.append(current_port)
+    print(ports)
+    test_pool = multiprocessing.Pool(len(ports))
+    for coms in ports:
+        test_pool.apply_async(func=initCOMTest, args=(coms,))
+        sleep(5)
+    test_pool.close()
+    test_pool.join()
