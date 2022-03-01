@@ -194,6 +194,8 @@ class StreeTest:
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "upgrade start" in field:
                         return "结果获取完毕：xmos firmware upgrade start!!!"
+                    elif "timed out" in field:
+                        return
 
 
 def test_area():
