@@ -303,6 +303,6 @@ if __name__ == '__main__':
     test_pool = multiprocessing.Pool(len(ports))
     for coms in ports:
         test_pool.apply_async(func=initCOMTest, args=(coms,))
-        sleep(5)
+        sleep(10)
     test_pool.close()
     test_pool.join()
