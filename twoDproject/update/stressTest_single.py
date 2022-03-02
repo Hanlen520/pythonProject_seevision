@@ -11,7 +11,7 @@ import serial
 from serial import SerialException
 from serial.tools.list_ports_windows import comports
 
-os.path.abspath(".")
+os.path.abspath("..")
 """
     @Project:pythonProject_seevision
     @File:stressTest.py
@@ -246,8 +246,9 @@ def test_area(oldversion, newversion, st_obj, cycle_times):
                 print("B->A降级成功")
                 st_obj.toTxt("Result：【第{}次测试: B->A降级成功】\n".format(str(i + 1)))
             # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
-    print("测试结束，请查看Result.txt查看结果")
-    st_obj.toTxt("测试结束，请查看Result.txt查看结果")
+    print("{}测试结束，请查看Result.txt查看结果".format(st_obj.port_obj.portstr))
+    st_obj.toTxt("{}测试结束，请查看Result.txt查看结果".format(st_obj.port_obj.portstr))
+    process.terminate()
 
 
 def log_area(st_obj):
@@ -276,7 +277,7 @@ def log_area(st_obj):
 def initCOMTest(comNumber):
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
-    cycle_times = 1000
+    cycle_times = 200
     """
         刷316,检测到done\Version: 3.1.6
         重启一次,需检测"未升级xmos"
@@ -285,6 +286,7 @@ def initCOMTest(comNumber):
     """
     oldversion = "./release_A/"
     newversion = "./release_B/"
+
     t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times,))
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
@@ -293,19 +295,19 @@ def initCOMTest(comNumber):
     t2.start()
 
 
+def single_test_control(coms):
+    print("Current com is 【{}】".format(coms))
+    initCOMTest(coms)
+
+
 if __name__ == '__main__':
     ports = []
     for port in list(comports()):
         if "Silicon Labs CP210x USB to UART Bridge" in str(port):
             current_port = re.findall("\((.*)\)", str(port))[0]
             ports.append(current_port)
-    print(ports)
-    test_pool = multiprocessing.Pool(len(ports))
+    print("当前待测机器端口号列表为：【{}】".format(ports))
     for coms in ports:
-        # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
-        test_pool.apply_async(func=initCOMTest, args=(coms,))
-        sleep(150)
-    test_pool.close()
-    test_pool.join()
-
-
+        global process
+        process = multiprocessing.Process(target=single_test_control, args=(coms,))
+        process.start()
