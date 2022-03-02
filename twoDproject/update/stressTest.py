@@ -217,13 +217,12 @@ class StreeTest:
         return serial_no
 
     def setSerial_no(self):
-        print("A")
         print(self.enterBootloaderMode())
         self.serial_no = self.getFastboot_devices()[0]
         print("serial is: {}".format(self.serial_no))
         subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
         subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
-        sleep(10)
+        sleep(20)
 
 
 def test_area(oldversion, newversion, st_obj, cycle_times):
@@ -299,6 +298,7 @@ def initCOMTest(comNumber):
     st_obj = StreeTest(comNumber, 115200)
     cycle_times = 2
     # 需要先将每台设备的序列号存下来存到self.serial_no中
+    需要增加映射，在测试前，先把所有的一起遍历一遍并存下对应的端口和序列号来进行设置
     st_obj.setSerial_no()
     """
         刷316,检测到done\Version: 3.1.6
