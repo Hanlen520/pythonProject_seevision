@@ -302,7 +302,8 @@ if __name__ == '__main__':
     print(ports)
     test_pool = multiprocessing.Pool(len(ports))
     for coms in ports:
+        # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
         test_pool.apply_async(func=initCOMTest, args=(coms,))
-        sleep(10)
+        sleep(150)
     test_pool.close()
     test_pool.join()
