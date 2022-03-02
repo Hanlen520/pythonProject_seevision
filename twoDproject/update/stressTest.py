@@ -36,6 +36,7 @@ class StreeTest:
         self.com_id = com_id
         self.baud_rate = baud_rate
         self.port_obj = serial.Serial(self.com_id, baudrate=self.baud_rate)
+        self.serial_no = ""
 
     def enterBootloaderMode(self):
         if self.checkPortOpen():
@@ -45,9 +46,9 @@ class StreeTest:
                                                                                        self.port_obj.baudrate))
             self.enterADPSD()
             self.port_obj.write("reboot-bootloader\r\n".encode("UTF-8"))
-            self.port_obj.close()
+            # self.port_obj.close()
             sleep(3)
-            return "Enter Bootloader Done"
+            return "boot loader done"
         else:
             self.toTxt("port not open")
             print("port not open")
@@ -63,11 +64,14 @@ class StreeTest:
     def flashModuleUpdate(self, image_path):
         print("Start MODULE upgrade")
         self.toTxt("Start MODULE upgrade")
-        subprocess.Popen("fastboot flash lk {}lk.bin".format(image_path), shell=True).communicate()
-        subprocess.Popen("fastboot flash boot {}boot.img".format(image_path), shell=True).communicate()
-        subprocess.Popen("fastboot flash system {}system.img".format(image_path), shell=True).communicate()
-        subprocess.Popen("fastboot oem finish_upgrade", shell=True).communicate()
-        subprocess.Popen("fastboot reboot", shell=True).communicate()
+        subprocess.Popen("fastboot -s {} flash lk {}lk.bin".format(self.serial_no, image_path),
+                         shell=True).communicate()
+        subprocess.Popen("fastboot -s {} flash boot {}boot.img".format(self.serial_no, image_path),
+                         shell=True).communicate()
+        subprocess.Popen("fastboot -s {} flash system {}system.img".format(self.serial_no, image_path),
+                         shell=True).communicate()
+        subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
+        subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
         print("MODULE upgrade done !!!")
         self.toTxt("MODULE upgrade done !!!")
         fieldCheckR = self.check_SpecificField()
@@ -169,9 +173,9 @@ class StreeTest:
                         return "Version: 3.1.6"
 
     def falsh_into_SpecificVersion(self, image_path):
-        enterBootLM = self.enterBootloaderMode()
-        print(enterBootLM)
-        self.toTxt(enterBootLM)
+        bootloader_status = self.enterBootloaderMode()
+        print(bootloader_status)
+        self.toTxt(bootloader_status)
         flashMU = self.flashModuleUpdate(image_path)
         print(flashMU)
         self.toTxt(flashMU)
@@ -203,6 +207,23 @@ class StreeTest:
                         return "结果获取完毕：xmos firmware upgrade start!!!"
                     elif "timed out" in field:
                         return
+
+    def getFastboot_devices(self):
+        sleep(5)
+        devices_stream = os.popen("fastboot devices")
+        devices = devices_stream.read()
+        serial_no = re.findall("(.*)\tfastboot", devices)
+        devices_stream.close()
+        return serial_no
+
+    def setSerial_no(self):
+        print("A")
+        print(self.enterBootloaderMode())
+        self.serial_no = self.getFastboot_devices()[0]
+        print("serial is: {}".format(self.serial_no))
+        subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
+        subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
+        sleep(10)
 
 
 def test_area(oldversion, newversion, st_obj, cycle_times):
@@ -276,7 +297,9 @@ def log_area(st_obj):
 def initCOMTest(comNumber):
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
-    cycle_times = 1000
+    cycle_times = 2
+    # 需要先将每台设备的序列号存下来存到self.serial_no中
+    st_obj.setSerial_no()
     """
         刷316,检测到done\Version: 3.1.6
         重启一次,需检测"未升级xmos"
@@ -304,8 +327,6 @@ if __name__ == '__main__':
     for coms in ports:
         # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
         test_pool.apply_async(func=initCOMTest, args=(coms,))
-        sleep(150)
+        sleep(30)
     test_pool.close()
     test_pool.join()
-
-

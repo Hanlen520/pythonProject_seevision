@@ -303,7 +303,6 @@ def single_test_control(coms):
 
 
 if __name__ == '__main__':
-
     # 此脚本为实测脚本，循环遍历逐个测试，局限于serial问题，串口通信互相干扰
     ports = []
     for port in list(comports()):
