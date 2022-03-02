@@ -1,5 +1,4 @@
 # coding = utf8
-import multiprocessing
 import os
 import re
 import subprocess
@@ -204,51 +203,57 @@ class StreeTest:
                     elif "timed out" in field:
                         return
 
-
 def test_area(oldversion, newversion, st_obj, cycle_times):
     """
         1、先刷入旧Firmware版本，循环测试开始
     """
-    image_path = oldversion
-    st_obj.falsh_into_SpecificVersion(image_path)
-    for i in range(cycle_times):
-        print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
-        st_obj.toTxt("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
-        # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
-        # sbin/dfu_i2c -> write upgrade-> reboot-> read version
-        # \\file.ad.seevision.cn\DailyBuild\sytj0101\sytj0101\20220226_172822_for_xmos_ota
+    try:
+        image_path = oldversion
+        st_obj.falsh_into_SpecificVersion(image_path)
+        sleep(10)
+        t2 = threading.Thread(target=log_area, args=(st_obj,))
+        t2.start()
+        
+        for i in range(cycle_times):
+            print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
+            st_obj.toTxt("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
+            # 下一步 xmos刷机流程，需要发送指令过去执行刷机操作，每次写入之前需要输入一次密码,xmos的固件奇哥暂时刷入到339的vendor里面了，但不是正式的提测固件，先验证dfu_i2c的功能在脚本压测正常
+            # sbin/dfu_i2c -> write upgrade-> reboot-> read version
+            # \\file.ad.seevision.cn\DailyBuild\sytj0101\sytj0101\20220226_172822_for_xmos_ota
 
-        # 会自动升级到3.1.7,新版本Firmware刷入,自动输入xmos，339刷完等待60s即可xmos自动完成，获取版本对比
-        """
-            2、检测当前Xmos版本，如果是旧版本，则开始刷入新Firmware然后等待60sxmos自动升级完成
-        """
-        if st_obj.getXmosVersion() == "Version: 3.1.6":
-            # 刷入newversion
-            image_path = newversion
-            st_obj.falsh_into_SpecificVersion(image_path)
-            sleep(60)
-            print("Xmos version Flash done : to 3.1.7")
-            st_obj.toTxt("Xmos version Flash done : to 3.1.7")
-            if st_obj.getXmosVersion() == "Version: 3.1.7":
-                print("A->B升级成功")
-                st_obj.toTxt("Result：【第{}次测试: A->B升级成功】\n".format(str(i + 1)))
-        else:
+            # 会自动升级到3.1.7,新版本Firmware刷入,自动输入xmos，339刷完等待60s即可xmos自动完成，获取版本对比
             """
-                3、检测当前Xmos版本，如果是新版本，则开始刷入旧Firmware然后手动刷入Xmos旧版本等待降级完成
+                2、检测当前Xmos版本，如果是旧版本，则开始刷入新Firmware然后等待60sxmos自动升级完成
             """
-            image_path = oldversion
-            st_obj.falsh_into_SpecificVersion(image_path)
-            sleep(60)
-            # st_obj.writeXmosUpgrade()
-            print("Xmos version Flash done : to 3.1.6")
-            st_obj.toTxt("Xmos version Flash done : to 3.1.6")
             if st_obj.getXmosVersion() == "Version: 3.1.6":
-                print("B->A降级成功")
-                st_obj.toTxt("Result：【第{}次测试: B->A降级成功】\n".format(str(i + 1)))
-            # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
-    print("{}测试结束，请查看Result.txt查看结果".format(st_obj.port_obj.portstr))
-    st_obj.toTxt("{}测试结束，请查看Result.txt查看结果".format(st_obj.port_obj.portstr))
-    process.terminate()
+                # 刷入newversion
+                image_path = newversion
+                st_obj.falsh_into_SpecificVersion(image_path)
+                sleep(60)
+                print("Xmos version Flash done : to 3.1.7")
+                st_obj.toTxt("Xmos version Flash done : to 3.1.7")
+                if st_obj.getXmosVersion() == "Version: 3.1.7":
+                    print("A->B升级成功")
+                    st_obj.toTxt("Result：【第{}次测试: A->B升级成功】\n".format(str(i + 1)))
+            else:
+                """
+                    3、检测当前Xmos版本，如果是新版本，则开始刷入旧Firmware然后手动刷入Xmos旧版本等待降级完成
+                """
+                image_path = oldversion
+                st_obj.falsh_into_SpecificVersion(image_path)
+                sleep(60)
+                # st_obj.writeXmosUpgrade()
+                print("Xmos version Flash done : to 3.1.6")
+                st_obj.toTxt("Xmos version Flash done : to 3.1.6")
+                if st_obj.getXmosVersion() == "Version: 3.1.6":
+                    print("B->A降级成功")
+                    st_obj.toTxt("Result：【第{}次测试: B->A降级成功】\n".format(str(i + 1)))
+                # 需要执行刷机刷入Version3.1.6版本进行降级，旧版本Firmware刷入，需要手动执行刷入
+        print("{}测试结束，请查看Result.txt查看结果".format(st_obj.port_obj.portstr))
+        st_obj.toTxt("{}测试结束，请查看Result.txt查看结果".format(st_obj.port_obj.portstr))
+        raise Exception
+    except Exception:
+        print("test thread Done")
 
 
 def log_area(st_obj):
@@ -256,6 +261,7 @@ def log_area(st_obj):
     if not st_obj.port_obj.is_open:
         st_obj.port_obj.open()
         st_obj.enterADPSD()
+
     while True:
         try:
             sleep(0.1)
@@ -277,7 +283,7 @@ def log_area(st_obj):
 def initCOMTest(comNumber):
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
-    cycle_times = 200
+    cycle_times = 2
     """
         刷316,检测到done\Version: 3.1.6
         重启一次,需检测"未升级xmos"
@@ -286,13 +292,9 @@ def initCOMTest(comNumber):
     """
     oldversion = "./release_A/"
     newversion = "./release_B/"
-
-    t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times,))
-    t2 = threading.Thread(target=log_area, args=(st_obj,))
-    t1.start()
+    test_area(oldversion, newversion, st_obj, cycle_times)
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
-    sleep(10)
-    t2.start()
+    
 
 
 def single_test_control(coms):
@@ -301,6 +303,8 @@ def single_test_control(coms):
 
 
 if __name__ == '__main__':
+
+    # 此脚本为实测脚本，循环遍历逐个测试，局限于serial问题，串口通信互相干扰
     ports = []
     for port in list(comports()):
         if "Silicon Labs CP210x USB to UART Bridge" in str(port):
@@ -308,6 +312,5 @@ if __name__ == '__main__':
             ports.append(current_port)
     print("当前待测机器端口号列表为：【{}】".format(ports))
     for coms in ports:
-        global process
-        process = multiprocessing.Process(target=single_test_control, args=(coms,))
-        process.start()
+        print("当前测试为：【{}】".format(coms))
+        single_test_control(coms)
