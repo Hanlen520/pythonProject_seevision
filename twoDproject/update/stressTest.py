@@ -276,7 +276,7 @@ def log_area(st_obj):
 def initCOMTest(comNumber):
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
-    cycle_times = 10
+    cycle_times = 1000
     """
         刷316,检测到done\Version: 3.1.6
         重启一次,需检测"未升级xmos"
