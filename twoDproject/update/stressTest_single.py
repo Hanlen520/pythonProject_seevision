@@ -44,7 +44,7 @@ class StreeTest:
                                                                                        self.port_obj.baudrate))
             self.enterADPSD()
             self.port_obj.write("reboot-bootloader\r\n".encode("UTF-8"))
-            self.port_obj.close()
+            # self.port_obj.close()
             sleep(3)
             return "Enter Bootloader Done"
         else:
@@ -69,6 +69,11 @@ class StreeTest:
         subprocess.Popen("fastboot reboot", shell=True).communicate()
         print("MODULE upgrade done !!!")
         self.toTxt("MODULE upgrade done !!!")
+        sleep(10)
+        self.enterADPSD()
+        self.port_obj.write("reboot\r\n".encode("UTF-8"))
+        sleep(10)
+        self.enterADPSD()
         fieldCheckR = self.check_SpecificField()
         self.toTxt(fieldCheckR)
         print(fieldCheckR)
@@ -203,6 +208,7 @@ class StreeTest:
                     elif "timed out" in field:
                         return
 
+
 def test_area(oldversion, newversion, st_obj, cycle_times):
     """
         1、先刷入旧Firmware版本，循环测试开始
@@ -213,7 +219,7 @@ def test_area(oldversion, newversion, st_obj, cycle_times):
         sleep(10)
         t2 = threading.Thread(target=log_area, args=(st_obj,))
         t2.start()
-        
+
         for i in range(cycle_times):
             print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
             st_obj.toTxt("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
@@ -294,7 +300,6 @@ def initCOMTest(comNumber):
     newversion = "./release_B/"
     test_area(oldversion, newversion, st_obj, cycle_times)
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
-    
 
 
 def single_test_control(coms):

@@ -1,5 +1,5 @@
 # coding = utf8
-import multiprocessing
+import json
 import os
 import re
 import subprocess
@@ -64,16 +64,18 @@ class StreeTest:
     def flashModuleUpdate(self, image_path):
         print("Start MODULE upgrade")
         self.toTxt("Start MODULE upgrade")
-        subprocess.Popen("fastboot -s {} flash lk {}lk.bin".format(self.serial_no, image_path),
-                         shell=True).communicate()
-        subprocess.Popen("fastboot -s {} flash boot {}boot.img".format(self.serial_no, image_path),
-                         shell=True).communicate()
-        subprocess.Popen("fastboot -s {} flash system {}system.img".format(self.serial_no, image_path),
-                         shell=True).communicate()
-        subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
-        subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
+        subprocess.Popen("fastboot flash lk {}lk.bin".format(image_path), shell=True).communicate()
+        subprocess.Popen("fastboot flash boot {}boot.img".format(image_path), shell=True).communicate()
+        subprocess.Popen("fastboot flash system {}system.img".format(image_path), shell=True).communicate()
+        subprocess.Popen("fastboot oem finish_upgrade", shell=True).communicate()
+        subprocess.Popen("fastboot reboot", shell=True).communicate()
         print("MODULE upgrade done !!!")
         self.toTxt("MODULE upgrade done !!!")
+        sleep(10)
+        self.enterADPSD()
+        self.port_obj.write("reboot\r\n".encode("UTF-8"))
+        sleep(10)
+        self.enterADPSD()
         fieldCheckR = self.check_SpecificField()
         self.toTxt(fieldCheckR)
         print(fieldCheckR)
@@ -216,13 +218,16 @@ class StreeTest:
         devices_stream.close()
         return serial_no
 
-    def setSerial_no(self):
+    def getSerial_no(self):
         print(self.enterBootloaderMode())
-        self.serial_no = self.getFastboot_devices()[0]
-        print("serial is: {}".format(self.serial_no))
-        subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
-        subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
+        # self.serial_no = self.getFastboot_devices()[0]
+        serialNo = self.getFastboot_devices()[0]
+        # print("serial is: {}".format(self.serial_no))
+        print("serial is: {}".format(serialNo))
+        subprocess.Popen("fastboot -s {} oem finish_upgrade".format(serialNo), shell=True).communicate()
+        subprocess.Popen("fastboot -s {} reboot".format(serialNo), shell=True).communicate()
         sleep(20)
+        return serialNo
 
 
 def test_area(oldversion, newversion, st_obj, cycle_times):
@@ -293,13 +298,40 @@ def log_area(st_obj):
             continue
 
 
+def serial2COM(ports):
+    serialDict = {}
+    for port in ports:
+        print("正在获取{}端口的序列号……".format(port))
+        st_obj = StreeTest(port, 115200)
+        serialNo = st_obj.getSerial_no()
+        serialDict[port] = serialNo
+        print("当前端口{}的序列号是：{}".format(port, serialDict[port]))
+    f_path = "./serialNos.json"
+    with open(f_path, "w") as f:
+        print("正在写入序列号……")
+        json.dump(serialDict, f)
+    return f_path
+
+
+def readJson(f_path):
+    with open(f_path, "r") as f:
+        # print("序列号列表获取")
+        serialDict = json.load(f)
+        # print("序列号列表：{}".format(serialDict))
+    return serialDict
+
+
 def initCOMTest(comNumber):
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
     cycle_times = 2
     # 需要先将每台设备的序列号存下来存到self.serial_no中
-    需要增加映射，在测试前，先把所有的一起遍历一遍并存下对应的端口和序列号来进行设置
-    st_obj.setSerial_no()
+    # 需要增加映射，在测试前，先把所有的一起遍历一遍并存下对应的端口和序列号来进行设置
+
+    """
+        此处通过com获取到对应的serialno
+    """
+
     """
         刷316,检测到done\Version: 3.1.6
         重启一次,需检测"未升级xmos"
@@ -323,10 +355,14 @@ if __name__ == '__main__':
             current_port = re.findall("\((.*)\)", str(port))[0]
             ports.append(current_port)
     print(ports)
-    test_pool = multiprocessing.Pool(len(ports))
+    # f_path = serial2COM(ports)
+    f_path = "./serialNos.json"
+    serialDict = readJson(f_path)
+    # test_pool = multiprocessing.Pool(len(ports))
     for coms in ports:
-        # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
-        test_pool.apply_async(func=initCOMTest, args=(coms,))
-        sleep(30)
-    test_pool.close()
-    test_pool.join()
+        print("{}端口对应序列号为：{}".format(coms, serialDict[coms]))
+    #     # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
+    #     test_pool.apply_async(func=initCOMTest, args=(coms,))
+    #     sleep(30)
+    # test_pool.close()
+    # test_pool.join()

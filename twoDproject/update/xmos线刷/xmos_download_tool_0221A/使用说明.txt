@@ -1,0 +1,11 @@
+发布时间:2022-2-18
+1、使用说明：
+    双击xmos_download.bat文件按提示进行刷机；
+    双击xmos_tool文件夹下的pr.bat 用于将读取的参数列表导出到目录下，并以时间为后缀命名的 .txt 文件。
+    双击xmos_tool文件夹下的read_version.bat文件读取固件版本；
+    双击xmos_tool文件夹下的reboot.bat文件重启。
+
+2、注意：
+    xmos_tool文件夹下的两个.exe执行程序（dfu_usb.exe、vfctl_usb.exe）是脚本调用到的工具，不可删除。
+    烧录的固件需要放到firmware文件夹中，且固件命名以 Vxxx_dfu.bin结尾（xxx为版本号）。
+    firmware文件夹中只能有一个固件。
