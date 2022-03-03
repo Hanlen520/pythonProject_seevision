@@ -62,6 +62,13 @@ class StreeTest:
         sleep(3)
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
 
+    def reboot_device(self):
+        sleep(10)
+        self.enterADPSD()
+        self.port_obj.write("reboot\r\n".encode("UTF-8"))
+        sleep(10)
+        self.enterADPSD()
+
     def flashModuleUpdate(self, image_path):
         print("Start MODULE upgrade for serial : {}".format(self.serial_no))
         self.toTxt("Start MODULE upgrade for serial : {}".format(self.serial_no))
@@ -75,11 +82,7 @@ class StreeTest:
         subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
         print("MODULE upgrade done !!!")
         self.toTxt("MODULE upgrade done !!!")
-        sleep(10)
-        self.enterADPSD()
-        self.port_obj.write("reboot\r\n".encode("UTF-8"))
-        sleep(10)
-        self.enterADPSD()
+        self.reboot_device()
         fieldCheckR = self.check_SpecificField()
         self.toTxt(fieldCheckR)
         print(fieldCheckR)
@@ -241,6 +244,8 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
     image_path = oldversion
     st_obj.serial_no = serialNo
     st_obj.falsh_into_SpecificVersion(image_path)
+    sleep(60)
+    print("第一次旧设备刷机完成！")
     for i in range(cycle_times):
         print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
         st_obj.toTxt("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
