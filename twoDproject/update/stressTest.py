@@ -1,5 +1,6 @@
 # coding = utf8
 import json
+import multiprocessing
 import os
 import re
 import subprocess
@@ -62,13 +63,16 @@ class StreeTest:
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
 
     def flashModuleUpdate(self, image_path):
-        print("Start MODULE upgrade")
-        self.toTxt("Start MODULE upgrade")
-        subprocess.Popen("fastboot flash lk {}lk.bin".format(image_path), shell=True).communicate()
-        subprocess.Popen("fastboot flash boot {}boot.img".format(image_path), shell=True).communicate()
-        subprocess.Popen("fastboot flash system {}system.img".format(image_path), shell=True).communicate()
-        subprocess.Popen("fastboot oem finish_upgrade", shell=True).communicate()
-        subprocess.Popen("fastboot reboot", shell=True).communicate()
+        print("Start MODULE upgrade for serial : {}".format(self.serial_no))
+        self.toTxt("Start MODULE upgrade for serial : {}".format(self.serial_no))
+        subprocess.Popen("fastboot -s {} flash lk {}lk.bin".format(self.serial_no, image_path),
+                         shell=True).communicate()
+        subprocess.Popen("fastboot -s {} flash boot {}boot.img".format(self.serial_no, image_path),
+                         shell=True).communicate()
+        subprocess.Popen("fastboot -s {} flash system {}system.img".format(self.serial_no, image_path),
+                         shell=True).communicate()
+        subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
+        subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
         print("MODULE upgrade done !!!")
         self.toTxt("MODULE upgrade done !!!")
         sleep(10)
@@ -230,11 +234,12 @@ class StreeTest:
         return serialNo
 
 
-def test_area(oldversion, newversion, st_obj, cycle_times):
+def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
     """
         1、先刷入旧Firmware版本，循环测试开始
     """
     image_path = oldversion
+    st_obj.serial_no = serialNo
     st_obj.falsh_into_SpecificVersion(image_path)
     for i in range(cycle_times):
         print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
@@ -321,7 +326,7 @@ def readJson(f_path):
     return serialDict
 
 
-def initCOMTest(comNumber):
+def initCOMTest(comNumber, serialNo):
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
     cycle_times = 2
@@ -340,7 +345,7 @@ def initCOMTest(comNumber):
     """
     oldversion = "./release_A/"
     newversion = "./release_B/"
-    t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times,))
+    t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times, serialNo,))
     t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
@@ -355,14 +360,14 @@ if __name__ == '__main__':
             current_port = re.findall("\((.*)\)", str(port))[0]
             ports.append(current_port)
     print(ports)
-    # f_path = serial2COM(ports)
-    f_path = "./serialNos.json"
+    f_path = serial2COM(ports)
+    # f_path = "./serialNos.json"
     serialDict = readJson(f_path)
-    # test_pool = multiprocessing.Pool(len(ports))
+    test_pool = multiprocessing.Pool(len(ports))
     for coms in ports:
         print("{}端口对应序列号为：{}".format(coms, serialDict[coms]))
-    #     # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
-    #     test_pool.apply_async(func=initCOMTest, args=(coms,))
-    #     sleep(30)
-    # test_pool.close()
-    # test_pool.join()
+        # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
+        test_pool.apply_async(func=initCOMTest, args=(coms, serialDict[coms],))
+        sleep(30)
+    test_pool.close()
+    test_pool.join()
