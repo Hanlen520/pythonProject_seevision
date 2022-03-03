@@ -213,9 +213,13 @@ class StreeTest:
                     print("正在Get specific field : [{}]……".format(field))
                     self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
+                        print("xmos无需升级，等待20s后会进行reboot")
+                        self.toTxt("xmos无需升级，等待20s后会进行reboot")
                         sleep(20)
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "firmware upgrade" in field:
+                        print("xmos需要升级，等待70s后会进行reboot")
+                        self.toTxt("xmos需要升级，等待70s后会进行reboot")
                         sleep(70)
                         return "结果获取完毕：xmos firmware upgrade start!!!"
                     elif "timed out" in field:
