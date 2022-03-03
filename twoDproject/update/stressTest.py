@@ -84,8 +84,8 @@ class StreeTest:
         subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
         print("MODULE upgrade done sleep 60s to wait!!!")
         self.toTxt("MODULE upgrade done sleep 60s to wait!!!")
-        sleep(60)
-        self.reboot_device()
+        # 刷完339等20s系统启动后，再去读取specificfield
+        sleep(70)
         fieldCheckR = self.check_SpecificField()
         self.toTxt(fieldCheckR)
         print(fieldCheckR)
@@ -106,7 +106,6 @@ class StreeTest:
         self.toTxt("Begin getCurrentVersion")
         if self.checkPortOpen():
             while True:
-                sleep(0.1)
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
@@ -165,7 +164,6 @@ class StreeTest:
         self.toTxt("Begin XMOS version： getXmosVersion")
         if self.checkPortOpen():
             while True:
-                sleep(0.1)
                 self.toTxt("正在获取当前XMOS版本……")
                 print("正在获取当前XMOS版本……")
                 self.port_obj.write(
@@ -214,11 +212,14 @@ class StreeTest:
                     print("正在Get specific field : [{}]……".format(field))
                     # self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
+                        sleep(20)
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "upgrade start" in field:
+                        sleep(70)
+                        self.reboot_device()
                         return "结果获取完毕：xmos firmware upgrade start!!!"
                     elif "timed out" in field:
-                        return
+                        continue
 
     def getFastboot_devices(self):
         sleep(5)
@@ -247,7 +248,6 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
     image_path = oldversion
     st_obj.serial_no = serialNo
     st_obj.falsh_into_SpecificVersion(image_path)
-    sleep(60)
     print("【{}】第一次旧设备刷机完成,即将开始刷机循环测试！".format(st_obj.serial_no))
     st_obj.toTxt("【{}】第一次旧设备刷机完成,即将开始刷机循环测试！".format(st_obj.serial_no))
     for i in range(cycle_times):
@@ -353,11 +353,11 @@ def initCOMTest(comNumber, serialNo):
     oldversion = "./release_A/"
     newversion = "./release_B/"
     t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times, serialNo,))
-    t2 = threading.Thread(target=log_area, args=(st_obj,))
+    # t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
-    sleep(10)
-    t2.start()
+    # sleep(10)
+    # t2.start()
 
 
 if __name__ == '__main__':
