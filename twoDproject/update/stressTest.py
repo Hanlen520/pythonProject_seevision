@@ -80,8 +80,9 @@ class StreeTest:
                          shell=True).communicate()
         subprocess.Popen("fastboot -s {} oem finish_upgrade".format(self.serial_no), shell=True).communicate()
         subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
-        print("MODULE upgrade done !!!")
-        self.toTxt("MODULE upgrade done !!!")
+        print("MODULE upgrade done sleep 60s to wait!!!")
+        self.toTxt("MODULE upgrade done sleep 60s to wait!!!")
+        sleep(60)
         self.reboot_device()
         fieldCheckR = self.check_SpecificField()
         self.toTxt(fieldCheckR)
@@ -262,7 +263,6 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
             # 刷入newversion
             image_path = newversion
             st_obj.falsh_into_SpecificVersion(image_path)
-            sleep(60)
             print("Xmos version Flash done : to 3.1.7")
             st_obj.toTxt("Xmos version Flash done : to 3.1.7")
             if st_obj.getXmosVersion() == "Version: 3.1.7":
@@ -274,7 +274,6 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
             """
             image_path = oldversion
             st_obj.falsh_into_SpecificVersion(image_path)
-            sleep(60)
             # st_obj.writeXmosUpgrade()
             print("Xmos version Flash done : to 3.1.6")
             st_obj.toTxt("Xmos version Flash done : to 3.1.6")
