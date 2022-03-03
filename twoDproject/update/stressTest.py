@@ -63,10 +63,12 @@ class StreeTest:
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
 
     def reboot_device(self):
-        sleep(10)
+        sleep(20)
+        self.enterADPSD()
         self.enterADPSD()
         self.port_obj.write("reboot\r\n".encode("UTF-8"))
-        sleep(10)
+        sleep(20)
+        self.enterADPSD()
         self.enterADPSD()
 
     def flashModuleUpdate(self, image_path):
