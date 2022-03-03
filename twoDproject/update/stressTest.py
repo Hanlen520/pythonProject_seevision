@@ -245,7 +245,8 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
     st_obj.serial_no = serialNo
     st_obj.falsh_into_SpecificVersion(image_path)
     sleep(60)
-    print("第一次旧设备刷机完成！")
+    print("【{}】第一次旧设备刷机完成,即将开始刷机循环测试！".format(st_obj.serial_no))
+    st_obj.toTxt("【{}】第一次旧设备刷机完成,即将开始刷机循环测试！".format(st_obj.serial_no))
     for i in range(cycle_times):
         print("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
         st_obj.toTxt("第{}次升降级反复刷机从【Version: 3.1.6】->【Version: 3.1.7】测试".format(str(i + 1)))
