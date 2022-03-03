@@ -86,9 +86,10 @@ class StreeTest:
         self.toTxt("MODULE upgrade done sleep 60s to wait!!!")
         # 刷完339等20s系统启动后，再去读取specificfield
         fieldCheckR = self.check_SpecificField()
-        self.toTxt(fieldCheckR)
-        sleep(70)
         print(fieldCheckR)
+        self.toTxt(fieldCheckR)
+        self.reboot_device()
+        sleep(3)
         # sleep(30)
         return "Flash Module Update Done"
 
@@ -215,8 +216,7 @@ class StreeTest:
                         sleep(20)
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "firmware upgrade" in field:
-                        sleep(20)
-                        self.reboot_device()
+                        sleep(70)
                         return "结果获取完毕：xmos firmware upgrade start!!!"
                     elif "timed out" in field:
                         continue
