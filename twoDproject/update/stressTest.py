@@ -366,6 +366,7 @@ def initCOMTest(comNumber, serialNo):
     t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times, serialNo,))
     # t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
+    sleep(5)
     # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
     # sleep(10)
     # t2.start()
@@ -386,6 +387,6 @@ if __name__ == '__main__':
         print("{}端口对应序列号为：{}".format(coms, serialDict[coms]))
         # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
         test_pool.apply_async(func=initCOMTest, args=(coms, serialDict[coms],))
-        sleep(30)
+        sleep(40)
     test_pool.close()
     test_pool.join()
