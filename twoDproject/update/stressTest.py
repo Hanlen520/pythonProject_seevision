@@ -109,7 +109,7 @@ class StreeTest:
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
-                    # self.toTxt(data)
+                    self.toTxt(data)
                     print(data)
                     if "Linux" in data:
                         print("339版本刷机成功！")
@@ -172,7 +172,7 @@ class StreeTest:
                 if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
                     print(data)
-                    # self.toTxt(data)
+                    self.toTxt(data)
                     if "Version: 3.1.7" in data:
                         print("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
                         self.toTxt("Xmos版本升级成功，版本匹配正确：Version: 3.1.7, 开始降级刷机到Version 3.1.6！")
@@ -210,7 +210,7 @@ class StreeTest:
                 if self.port_obj.inWaiting() > 0:
                     field = str(self.port_obj.readline())
                     print("正在Get specific field : [{}]……".format(field))
-                    # self.toTxt("正在Get specific field : [{}]……".format(field))
+                    self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
                         sleep(20)
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
@@ -230,11 +230,14 @@ class StreeTest:
         return serial_no
 
     def getSerial_no(self):
-        print(self.enterBootloaderMode())
+        enter_mode = self.enterBootloaderMode()
+        self.toTxt(enter_mode)
+        print(enter_mode)
         # self.serial_no = self.getFastboot_devices()[0]
         serialNo = self.getFastboot_devices()[0]
         # print("serial is: {}".format(self.serial_no))
         print("serial is: {}".format(serialNo))
+        self.toTxt("serial is: {}".format(serialNo))
         subprocess.Popen("fastboot -s {} oem finish_upgrade".format(serialNo), shell=True).communicate()
         subprocess.Popen("fastboot -s {} reboot".format(serialNo), shell=True).communicate()
         sleep(20)
@@ -311,6 +314,8 @@ def log_area(st_obj):
 
 
 def serial2COM(ports):
+    # Warning !
+    global st_obj
     serialDict = {}
     for port in ports:
         print("正在获取{}端口的序列号……".format(port))
@@ -318,9 +323,11 @@ def serial2COM(ports):
         serialNo = st_obj.getSerial_no()
         serialDict[port] = serialNo
         print("当前端口{}的序列号是：{}".format(port, serialDict[port]))
+        st_obj.toTxt("当前端口{}的序列号是：{}".format(port, serialDict[port]))
     f_path = "./serialNos.json"
     with open(f_path, "w") as f:
         print("正在写入序列号……")
+        st_obj.toTxt("正在写入序列号……")
         json.dump(serialDict, f)
     return f_path
 
