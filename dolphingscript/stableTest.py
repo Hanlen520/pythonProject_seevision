@@ -5,7 +5,7 @@ import re
 import subprocess
 
 from airtest.core.api import *
-from airtest.core.error import DeviceConnectionError, AdbError
+from airtest.core.error import AdbError
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 from poco.exceptions import PocoNoSuchNodeException
 
@@ -58,7 +58,8 @@ def device_reboot(device_, poco, times):
                     device_ready_now = connect_device("Android:///{}".format(device_serialno))
                     device_ready_now.wake()
                     device_ready_now.unlock()
-                    if "com.example.sampleleanbacklauncher" in device_ready_now.shell("dumpsys window | grep mCurrentFocus"):
+                    if "com.example.sampleleanbacklauncher" in device_ready_now.shell(
+                            "dumpsys window | grep mCurrentFocus"):
                         device_reboot_result = True
                         device_end_reboot_time = time.strftime("%Y%m%d_%H%M%S")
                         break
@@ -90,13 +91,14 @@ def device_reboot(device_, poco, times):
         i += 1
     current_time = time.strftime("%Y%m%d_%H%M%S")
     result_calculate(result_list, "result_此次重启测试运行{}次结果_{}.csv".format(str(i), current_time))
-    
+
     # 重启测试完成后进行Monkey测试
     test_poolMonkey = multiprocessing.Pool(1)
     test_poolMonkey.apply_async(func=monkeyTest)
     test_poolMonkey.close()
     test_poolMonkey.join()
-    
+
+
 """
     结果生成区域：
     使用csv脚本统一记录：测试次数、测试时间、结果
@@ -125,9 +127,11 @@ def log_process():
     subprocess.Popen("adb logcat -b all>./{}_reboot_monkeyTestLogcat.log".format(cur_time),
                      shell=True).communicate()[0]
 
+
 def monkeyTest():
     sleep(3)
-    subprocess.Popen("adb shell monkey --ignore-crashes --ignore-timeouts --throttle 300 10000000",shell=True).communicate()
+    subprocess.Popen("adb shell monkey --ignore-crashes --ignore-timeouts --throttle 300 10000000",
+                     shell=True).communicate()
 
 
 """
@@ -141,15 +145,10 @@ def auto_case_test(device_, poco):
     test_pool.apply_async(func=log_process)
     # 这里func改成需要测试的case方法名即可
     # test_pool.apply_async(func=camera_operate(device_, poco, 1000))
-    #test_pool.apply_async(func=camera_operate_capture_noGap(device_, poco, 2000))
+    # test_pool.apply_async(func=camera_operate_capture_noGap(device_, poco, 2000))
     test_pool.apply_async(func=device_reboot(device_, poco, 2000))
     test_pool.close()
     test_pool.join()
-    
-    
-    
-    
-    
 
 
 if __name__ == '__main__':
@@ -158,4 +157,3 @@ if __name__ == '__main__':
         auto_case_test(device_ready[0], device_ready[1])
     except AdbError:
         pass
-    
