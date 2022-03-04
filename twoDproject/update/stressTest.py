@@ -20,26 +20,30 @@ os.path.abspath(".")
     @Date:2022/2/25 9:52
 """
 
-"""
-    脚本执行流程：
-    设备连接串口线 + USB线
-    1、获取到当前连接的设备的COM端口号，通过COM + baud rate控制对应的端口 -- 拿到该设备的连接对象 ->进入BootLoader模式
-    2、fastboot进行刷机 -- 等待结束
-    3、step2完成后，对XMOS进行刷机->等待刷机结束->本次刷机流程结束
-"""
-
 cur_time = time.strftime("%Y%m%d_%H%M%S")
 
 
 class StreeTest:
 
     def __init__(self, com_id, baud_rate):
+        """
+        串口初始化函数，每台设备对应一个串口，初始化一个串口压测object
+        self.serial_no在初始化获取对应串口设备的序列号后第一次进行赋值
+        :param com_id:串口号
+        :param baud_rate:波特率
+        """
         self.com_id = com_id
         self.baud_rate = baud_rate
         self.port_obj = serial.Serial(self.com_id, baudrate=self.baud_rate)
         self.serial_no = ""
 
     def enterBootloaderMode(self):
+        """
+        设备进入BootLoader模式：
+        1、通过串口发送输入root账号密码的指令
+        2、通过串口刷入reboot-bootloader进入
+        :return:返回设备进入BootLoader模式操作已完成
+        """
         if self.checkPortOpen():
             print("进入BootLoader模式 - port open,current port info:[{} - {}]".format(self.port_obj.portstr,
                                                                                   self.port_obj.baudrate))
@@ -55,6 +59,10 @@ class StreeTest:
             print("port not open")
 
     def enterADPSD(self):
+        """
+        通过串口发送账号密码进行串口通信授权
+        :return:None
+        """
         print("输入账号密码……")
         self.toTxt("输入账号密码……")
         self.port_obj.write("\r\n".encode("UTF-8"))
@@ -63,6 +71,10 @@ class StreeTest:
         self.port_obj.write("bunengshuo\r\n".encode("UTF-8"))
 
     def reboot_device(self):
+        """
+        通过串口发送reboot指令进行设备重启
+        :return:None
+        """
         sleep(20)
         self.enterADPSD()
         self.enterADPSD()
@@ -72,6 +84,13 @@ class StreeTest:
         self.enterADPSD()
 
     def flashModuleUpdate(self, image_path):
+        """
+        固件刷写操作，通过fastboot指令将设备固件刷入，指定对应设备刷入，防止其他设备执行fastboot影响其他设备的xmos静默升级导致i2c接口丢失
+        1、刷完后检测是否有对应字段上报，以判断下一步操作是否需要等待xmos静默升级
+        2、xmos升级完成后，对设备进行重启使版本字段更新
+        :param image_path:固件版本路径
+        :return:返回当前固件刷写操作已完成
+        """
         print("Start MODULE upgrade for serial : {}".format(self.serial_no))
         self.toTxt("Start MODULE upgrade for serial : {}".format(self.serial_no))
         subprocess.Popen("fastboot -s {} flash lk {}lk.bin".format(self.serial_no, image_path),
@@ -94,6 +113,12 @@ class StreeTest:
         return "Flash Module Update Done"
 
     def checkPortOpen(self):
+        """
+        检测串口通信是否处于打开的状态
+        1、如果当前串口通信未打开，将串口打开，并输入账号密码授权
+        2、如果已经是打开状态，也输入一次账号密码授权以防刷机操作那边授权失效
+        :return:返回串口状态检测操作已完成
+        """
         if not self.port_obj.is_open:
             self.port_obj.open()
             self.enterADPSD()
@@ -103,6 +128,13 @@ class StreeTest:
             return True
 
     def getCurrentVersion(self):
+        """
+        获取当前模组固件的版本，此处因为没有API，所以通过获取Linux的版本来判断当前模组固件是否已经启动
+        1、检测端口打开
+        2、通过串口写入读取Linux版本指令
+        3、判断是否模组已经启动完成
+        :return:None
+        """
         print("Begin getCurrentVersion")
         self.toTxt("Begin getCurrentVersion")
         if self.checkPortOpen():
@@ -138,29 +170,35 @@ class StreeTest:
     #     else:
     #         print("NOK")
 
-    def writeXmosUpgrade(self):
-        print("Begin XMOS Upgrade")
-        self.toTxt("Begin XMOS Upgrade")
-        if self.checkPortOpen():
-            self.port_obj.write(
-                "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
-                    "UTF-8"))
-            # while True:
-            #     sleep(0.1)
-            #     print("正在XMOS刷机……")
-            #     if self.port_obj.inWaiting()>0:
-            #         data = str(self.port_obj.readline())
-            #         print(data)
-            #         if "done" in data:
-            #             print("Xmos版本升级成功！")
-            #             break
-            print("正在XMOS刷机……")
-            self.toTxt("正在XMOS刷机……")
-            sleep(60)
-            print("Xmos版本升级成功！")
-            self.toTxt("Xmos版本升级成功！")
+    # def writeXmosUpgrade(self):
+    #     print("Begin XMOS Upgrade")
+    #     self.toTxt("Begin XMOS Upgrade")
+    #     if self.checkPortOpen():
+    #         self.port_obj.write(
+    #             "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
+    #                 "UTF-8"))
+    #         # while True:
+    #         #     sleep(0.1)
+    #         #     print("正在XMOS刷机……")
+    #         #     if self.port_obj.inWaiting()>0:
+    #         #         data = str(self.port_obj.readline())
+    #         #         print(data)
+    #         #         if "done" in data:
+    #         #             print("Xmos版本升级成功！")
+    #         #             break
+    #         print("正在XMOS刷机……")
+    #         self.toTxt("正在XMOS刷机……")
+    #         sleep(60)
+    #         print("Xmos版本升级成功！")
+    #         self.toTxt("Xmos版本升级成功！")
 
     def getXmosVersion(self):
+        """
+        获取Xmos模组的版本：
+        1、通过串口发送读取xmos版本的指令
+        2、循环读取直到对应版本上报数据接收到，版本刷机完成
+        :return:返回当前读取到的xmos版本号
+        """
         print("Begin XMOS version： getXmosVersion")
         self.toTxt("Begin XMOS version： getXmosVersion")
         if self.checkPortOpen():
@@ -184,6 +222,14 @@ class StreeTest:
                         return "Version: 3.1.6"
 
     def falsh_into_SpecificVersion(self, image_path):
+        """
+        指定对应版本刷写的过程定义函数
+        1、启动Bootloader
+        2、刷入固件
+        3、将刷机结果写入文件
+        :param image_path:刷入固件路径
+        :return:None
+        """
         bootloader_status = self.enterBootloaderMode()
         print(bootloader_status)
         self.toTxt(bootloader_status)
@@ -192,11 +238,12 @@ class StreeTest:
         self.toTxt(flashMU)
         self.getCurrentVersion()
 
-    # def check_reboot_version(self):
-    #     self.port_obj.write("reboot\r\n".encode("UTF-8"))
-    #     sleep(60)
-
     def toTxt(self, result):
+        """
+        结果写入函数：将每次的结果追加写入各自串口的结果文本中
+        :param result:每次刷机后版本判断结果
+        :return:None
+        """
         try:
             with open("./【{}】Result.txt".format(self.port_obj.portstr), "a+") as f:
                 f.write(result + "\n")
@@ -204,6 +251,13 @@ class StreeTest:
             pass
 
     def check_SpecificField(self):
+        """
+        该函数用于判断当前xmos版本是否需要刷写，检测对应上报字段来进行判断
+        1、检测端口开启
+        2、持续获取字段并进行筛选
+        3、如果是no need说明是无需升级无需等待，如果是firmware upgrade说明需要xmos静默升级需要等待70s
+        :return:返回是否需要等待xmos静默升级
+        """
         print("Get specific field")
         self.toTxt("Get specific field")
         if self.checkPortOpen():
@@ -226,6 +280,11 @@ class StreeTest:
                         continue
 
     def getFastboot_devices(self):
+        """
+        获取不同串口设备的唯一序列号
+        通过fastboot devices获取当前所连接的设备的序列号数据信息（只有在bootloader模式的设备才能被获取到，因此逐个获取再与串口对应名称进行映射）
+        :return:返回当前所有的序列号数据
+        """
         sleep(5)
         devices_stream = os.popen("fastboot devices")
         devices = devices_stream.read()
@@ -234,6 +293,13 @@ class StreeTest:
         return serial_no
 
     def getSerial_no(self):
+        """
+        获取设备序列号并写入json文件过程函数
+        1、设备进入bootloader模式
+        2、获取当前设备序列号
+        3、将设备退出bootloader模式
+        :return:返回该设备序列号
+        """
         enter_mode = self.enterBootloaderMode()
         self.toTxt(enter_mode)
         print(enter_mode)
@@ -249,6 +315,15 @@ class StreeTest:
 
 
 def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
+    """
+    升降级刷机压力测试过程函数
+    :param oldversion:旧版本路径
+    :param newversion:新版本路径
+    :param st_obj:串口对象
+    :param cycle_times:测试次数
+    :param serialNo:设备序列号
+    :return:None
+    """
     """
         1、先刷入旧Firmware版本，循环测试开始
     """
@@ -266,7 +341,7 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
 
         # 会自动升级到3.1.7,新版本Firmware刷入,自动输入xmos，339刷完等待60s即可xmos自动完成，获取版本对比
         """
-            2、检测当前Xmos版本，如果是旧版本，则开始刷入新Firmware然后等待60sxmos自动升级完成
+            2、检测当前Xmos版本，如果是旧版本，则开始刷入新Firmware然后等待70sxmos自动升级完成
         """
         if st_obj.getXmosVersion() == "Version: 3.1.6":
             # 刷入newversion
@@ -294,30 +369,35 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
     st_obj.toTxt("测试结束，请查看Result.txt查看结果")
 
 
-def log_area(st_obj):
-    print("Begin log process")
-    if not st_obj.port_obj.is_open:
-        st_obj.port_obj.open()
-        st_obj.enterADPSD()
-    while True:
-        try:
-            sleep(0.1)
-            if st_obj.port_obj.inWaiting() > 0:
-                try:
-                    data = str(st_obj.port_obj.readline())
-                except (AttributeError, TypeError):
-                    data = "empty"
-                if not os.path.exists("./log/"):
-                    os.mkdir("./log/")
-                with open("./log/{}【{}】_serialLog.log".format(st_obj.port_obj.portstr, cur_time), "a+") as logF:
-                    logF.write(data + "\n")
-            else:
-                continue
-        except SerialException:
-            continue
+# def log_area(st_obj):
+#     print("Begin log process")
+#     if not st_obj.port_obj.is_open:
+#         st_obj.port_obj.open()
+#         st_obj.enterADPSD()
+#     while True:
+#         try:
+#             sleep(0.1)
+#             if st_obj.port_obj.inWaiting() > 0:
+#                 try:
+#                     data = str(st_obj.port_obj.readline())
+#                 except (AttributeError, TypeError):
+#                     data = "empty"
+#                 if not os.path.exists("./log/"):
+#                     os.mkdir("./log/")
+#                 with open("./log/{}【{}】_serialLog.log".format(st_obj.port_obj.portstr, cur_time), "a+") as logF:
+#                     logF.write(data + "\n")
+#             else:
+#                 continue
+#         except SerialException:
+#             continue
 
 
 def serial2COM(ports):
+    """
+    串口与序列号映射并写入json文件函数
+    :param ports:当前串口号
+    :return:json文件路径
+    """
     # Warning !
     global st_obj
     serialDict = {}
@@ -337,6 +417,11 @@ def serial2COM(ports):
 
 
 def readJson(f_path):
+    """
+    json文件读取函数
+    :param f_path:json文件路径
+    :return:返回字典形式的信息
+    """
     with open(f_path, "r") as f:
         # print("序列号列表获取")
         serialDict = json.load(f)
@@ -345,6 +430,12 @@ def readJson(f_path):
 
 
 def initCOMTest(comNumber, serialNo):
+    """
+    测试前初始化区域
+    :param comNumber:串口号
+    :param serialNo:序列号
+    :return:None
+    """
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
     cycle_times = 500
@@ -364,15 +455,14 @@ def initCOMTest(comNumber, serialNo):
     oldversion = "./release_A/"
     newversion = "./release_B/"
     t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times, serialNo,))
-    # t2 = threading.Thread(target=log_area, args=(st_obj,))
     t1.start()
     sleep(5)
-    # 有缓冲了再启动log线程去获取写入log，保证log不会缺失，log机制是有log就存，没有就等
-    # sleep(10)
-    # t2.start()
 
 
 if __name__ == '__main__':
+    """
+        Main函数，给每台设备分配一个独立进程，完全隔离开：目的在通过线程对不同设备的执行测试过程进行控制，互相不干扰又能够同时执行，提高测试效率
+    """
     ports = []
     for port in list(comports()):
         if "Silicon Labs CP210x USB to UART Bridge" in str(port):
