@@ -278,6 +278,7 @@ class StreeTest:
                         print("xmos需要升级，等待获取upgrade done关键字后系统启动完毕")
                         self.toTxt("xmos需要升级，等待获取upgrade done关键字后系统启动完毕")
                         while True:
+                            sleep(3)
                             if self.port_obj.inWaiting() > 0:
                                 print("正在进行Xmos升级……，请稍等哦，大约50+秒完成！")
                                 data = str(self.port_obj.read_all())
