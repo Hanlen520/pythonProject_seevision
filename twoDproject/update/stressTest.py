@@ -140,7 +140,7 @@ class StreeTest:
             while True:
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
-                    data = str(self.port_obj.readline())
+                    data = str(self.port_obj.read_all())
                     self.toTxt(data)
                     print(data)
                     if "Linux" in data:
@@ -157,7 +157,7 @@ class StreeTest:
     #             if self.port_obj.inWaiting() > 0:
     #                 sleep(0.1)
     #                 try:
-    #                     data = str(self.port_obj.readline())
+    #                     data = str(self.port_obj.read_all())
     #                 except AttributeError:
     #                     data = "empty"
     #                 if not os.path.exists("./log/"):
@@ -180,7 +180,7 @@ class StreeTest:
     #         #     sleep(0.1)
     #         #     print("正在XMOS刷机……")
     #         #     if self.port_obj.inWaiting()>0:
-    #         #         data = str(self.port_obj.readline())
+    #         #         data = str(self.port_obj.read_all())
     #         #         print(data)
     #         #         if "done" in data:
     #         #             print("Xmos版本升级成功！")
@@ -208,8 +208,7 @@ class StreeTest:
                     "dfu_i2c read_version\r\n".encode(
                         "UTF-8"))
                 if self.port_obj.inWaiting() > 0:
-                    # if self.port_obj.inWaiting() > 0:
-                    data = str(self.port_obj.readline())
+                    data = str(self.port_obj.read_all())
                     print(data)
                     self.toTxt(data)
                     if "Version: 3.1.7" in data:
@@ -264,7 +263,7 @@ class StreeTest:
         if self.checkPortOpen():
             while True:
                 if self.port_obj.inWaiting() > 0:
-                    field = str(self.port_obj.readline())
+                    field = str(self.port_obj.read_all())
                     print("正在Get specific field : [{}]……".format(field))
                     self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
@@ -483,3 +482,5 @@ if __name__ == '__main__':
         sleep(40)
     test_pool.close()
     test_pool.join()
+    # st_obj = StreeTest("COM35", 115200)
+    # print(st_obj.getXmosVersion())
