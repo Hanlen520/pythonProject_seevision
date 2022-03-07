@@ -106,9 +106,8 @@ class StreeTest:
         fieldCheckR = self.check_SpecificField()
         print(fieldCheckR)
         self.toTxt(fieldCheckR)
-        self.reboot_device()
-        # sleep(30)
-        return "Flash Module Update Done"
+        # self.reboot_device()
+        return "Flash Module + XMOS Update Done"
 
     def checkPortOpen(self):
         """
@@ -271,14 +270,20 @@ class StreeTest:
                     print("正在Get specific field : [{}]……".format(field))
                     self.toTxt("正在Get specific field : [{}]……".format(field))
                     if "no need" in field:
-                        print("xmos无需升级，等待20s后会进行reboot")
-                        self.toTxt("xmos无需升级，等待20s后会进行reboot")
+                        print("xmos无需升级，等待20s后系统启动完毕")
+                        sleep(20)
+                        self.toTxt("xmos无需升级，等待20s后系统启动完毕")
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "firmware upgrade" in field:
-                        print("xmos需要升级，等待70s后会进行reboot")
-                        self.toTxt("xmos需要升级，等待70s后会进行reboot")
-                        sleep(80)
-                        return "结果获取完毕：xmos firmware upgrade start!!!"
+                        print("xmos需要升级，等待获取upgrade done关键字后系统启动完毕")
+                        self.toTxt("xmos需要升级，等待获取upgrade done关键字后系统启动完毕")
+                        while True:
+                            if self.port_obj.inWaiting() > 0:
+                                print("正在进行Xmos升级……，请稍等哦，大约50+秒完成！")
+                                data = str(self.port_obj.read_all())
+                                print(data)
+                                if "upgrade done" in data:
+                                    return "结果获取完毕：xmos firmware upgrade Done!!!"
                     elif "timed out" in field:
                         print("[Warning:]Happened timed out in check_SpecificField()")
                         self.toTxt("[Warning:]Happened timed out in check_SpecificField()")
