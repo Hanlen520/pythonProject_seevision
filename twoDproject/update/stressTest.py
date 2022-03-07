@@ -204,6 +204,7 @@ class StreeTest:
             while True:
                 self.toTxt("正在获取当前XMOS版本……")
                 print("正在获取当前XMOS版本……")
+                sleep(1)
                 self.port_obj.write(
                     "dfu_i2c read_version\r\n".encode(
                         "UTF-8"))
