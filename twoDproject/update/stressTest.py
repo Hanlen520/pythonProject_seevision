@@ -78,7 +78,7 @@ class StreeTest:
         self.enterADPSD()
         self.enterADPSD()
         self.port_obj.write("reboot\r\n".encode("UTF-8"))
-        sleep(20)
+        sleep(30)
         self.enterADPSD()
         self.enterADPSD()
 
@@ -107,7 +107,6 @@ class StreeTest:
         print(fieldCheckR)
         self.toTxt(fieldCheckR)
         self.reboot_device()
-        sleep(3)
         # sleep(30)
         return "Flash Module Update Done"
 
@@ -137,7 +136,6 @@ class StreeTest:
         print("Begin getCurrentVersion")
         self.toTxt("Begin getCurrentVersion")
         if self.checkPortOpen():
-            self.enterADPSD()
             while True:
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
@@ -148,7 +146,6 @@ class StreeTest:
                         print("339版本刷机成功！")
                         self.toTxt("339版本刷机成功！")
                         break
-            sleep(0.5)
 
     # def log_process(self):
     #     print("Begin log process")
@@ -202,7 +199,6 @@ class StreeTest:
         print("Begin XMOS version： getXmosVersion")
         self.toTxt("Begin XMOS version： getXmosVersion")
         if self.checkPortOpen():
-            self.enterADPSD()
             while True:
                 self.toTxt("正在获取当前XMOS版本……")
                 print("正在获取当前XMOS版本……")
@@ -222,14 +218,10 @@ class StreeTest:
                         self.toTxt("Xmos版本升级成功，版本匹配正确：Version: 3.1.6, 开始降升级刷机到Version 3.1.7！")
                         return "Version: 3.1.6"
                     # 如果出现timeout的情况，重启设备，出现getXmoVersion
-                    # elif "timed out" in data:
-                    #     print("Happened timed out in get xmos version, need give to check!")
-                    #     self.toTxt("Happened timed out in get xmos version, need give to check!")
-                    #     self.enterBootloaderMode()
-                    #     subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
-                    #     sleep(20)
-                    #     self.enterADPSD()
-                    #     continue
+                    elif "timed out" in data:
+                        print("Error:Happened timed out in get xmos version, need give to check!")
+                        self.toTxt("Error:Happened timed out in get xmos version, need give to check!")
+                        break
 
     def falsh_into_SpecificVersion(self, image_path):
         """
@@ -281,15 +273,15 @@ class StreeTest:
                     if "no need" in field:
                         print("xmos无需升级，等待20s后会进行reboot")
                         self.toTxt("xmos无需升级，等待20s后会进行reboot")
-                        sleep(20)
                         return "结果获取完毕：xmos firmware no need for upgrade!!!"
                     elif "firmware upgrade" in field:
                         print("xmos需要升级，等待70s后会进行reboot")
                         self.toTxt("xmos需要升级，等待70s后会进行reboot")
-                        sleep(70)
+                        sleep(80)
                         return "结果获取完毕：xmos firmware upgrade start!!!"
                     elif "timed out" in field:
-                        continue
+                        print("[Warning:]Happened timed out in check_SpecificField()")
+                        self.toTxt("[Warning:]Happened timed out in check_SpecificField()")
 
     def getFastboot_devices(self):
         """
@@ -297,7 +289,7 @@ class StreeTest:
         通过fastboot devices获取当前所连接的设备的序列号数据信息（只有在bootloader模式的设备才能被获取到，因此逐个获取再与串口对应名称进行映射）
         :return:返回当前所有的序列号数据
         """
-        sleep(5)
+        sleep(3)
         devices_stream = os.popen("fastboot devices")
         devices = devices_stream.read()
         serial_no = re.findall("(.*)\tfastboot", devices)
@@ -470,7 +462,6 @@ def initCOMTest(comNumber, serialNo):
     newversion = "./release_B/"
     t1 = threading.Thread(target=test_area, args=(oldversion, newversion, st_obj, cycle_times, serialNo,))
     t1.start()
-    sleep(5)
 
 
 if __name__ == '__main__':
@@ -491,8 +482,7 @@ if __name__ == '__main__':
         print("{}端口对应序列号为：{}".format(coms, serialDict[coms]))
         # 每隔150s，是一台机器从刷339到xmos完成的时间，间隔开，这样就不会因为fastboot导致另外一台的339可能被中断的问题
         test_pool.apply_async(func=initCOMTest, args=(coms, serialDict[coms],))
-        sleep(40)
+        sleep(20)
     test_pool.close()
     test_pool.join()
     # st_obj = StreeTest("COM35", 115200)
-    # print(st_obj.getXmosVersion())
