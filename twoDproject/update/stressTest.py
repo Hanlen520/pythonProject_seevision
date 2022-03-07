@@ -9,7 +9,6 @@ import time
 from time import sleep
 
 import serial
-from serial import SerialException
 from serial.tools.list_ports_windows import comports
 
 os.path.abspath(".")
@@ -248,6 +247,7 @@ class StreeTest:
             with open("./【{}】Result.txt".format(self.port_obj.portstr), "a+") as f:
                 f.write(result + "\n")
         except (AttributeError, TypeError) as ex:
+            print("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
             f.write("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
 
     def check_SpecificField(self):
