@@ -207,7 +207,7 @@ class StreeTest:
                 self.port_obj.write(
                     "dfu_i2c read_version\r\n".encode(
                         "UTF-8"))
-                while self.port_obj.inWaiting() > 0:
+                if self.port_obj.inWaiting() > 0:
                     # if self.port_obj.inWaiting() > 0:
                     data = str(self.port_obj.readline())
                     print(data)
