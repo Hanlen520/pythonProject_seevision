@@ -1,6 +1,6 @@
 1、测试钉钉APP：测试相机、音响的效果、软件的各项功能 -- done，3月4日发出钉钉功能测试报告
 2、测试TV桌面（SenaryVideoConference）APP内的各项APP功能 -- to do
-3、晚上压力测试挂起来 -- 只挂monkey就可以，周一汇总压力测试报告 -- ongoing
+3、晚上压力测试挂起来 -- 只挂monkey就可以，周一汇总压力测试报告 -- done
 
 bug:
 seesion串口log + logcat log
