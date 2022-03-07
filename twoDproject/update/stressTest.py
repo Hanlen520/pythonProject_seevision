@@ -137,6 +137,7 @@ class StreeTest:
         print("Begin getCurrentVersion")
         self.toTxt("Begin getCurrentVersion")
         if self.checkPortOpen():
+            self.enterADPSD()
             while True:
                 self.port_obj.write("uname -a\r\n".encode("UTF-8"))
                 if self.port_obj.inWaiting() > 0:
@@ -201,6 +202,7 @@ class StreeTest:
         print("Begin XMOS version： getXmosVersion")
         self.toTxt("Begin XMOS version： getXmosVersion")
         if self.checkPortOpen():
+            self.enterADPSD()
             while True:
                 self.toTxt("正在获取当前XMOS版本……")
                 print("正在获取当前XMOS版本……")
@@ -219,6 +221,15 @@ class StreeTest:
                         print("Xmos版本升级成功，版本匹配正确：Version: 3.1.6, 开始降升级刷机到Version 3.1.7！")
                         self.toTxt("Xmos版本升级成功，版本匹配正确：Version: 3.1.6, 开始降升级刷机到Version 3.1.7！")
                         return "Version: 3.1.6"
+                    # 如果出现timeout的情况，重启设备，出现getXmoVersion
+                    # elif "timed out" in data:
+                    #     print("Happened timed out in get xmos version, need give to check!")
+                    #     self.toTxt("Happened timed out in get xmos version, need give to check!")
+                    #     self.enterBootloaderMode()
+                    #     subprocess.Popen("fastboot -s {} reboot".format(self.serial_no), shell=True).communicate()
+                    #     sleep(20)
+                    #     self.enterADPSD()
+                    #     continue
 
     def falsh_into_SpecificVersion(self, image_path):
         """
@@ -261,6 +272,7 @@ class StreeTest:
         print("Get specific field")
         self.toTxt("Get specific field")
         if self.checkPortOpen():
+            self.enterADPSD()
             while True:
                 if self.port_obj.inWaiting() > 0:
                     field = str(self.port_obj.read_all())
