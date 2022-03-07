@@ -408,11 +408,13 @@ def serial2COM(ports):
         serialDict[port] = serialNo
         print("当前端口{}的序列号是：{}".format(port, serialDict[port]))
         st_obj.toTxt("当前端口{}的序列号是：{}".format(port, serialDict[port]))
+        st_obj.port_obj.close()
     f_path = "./serialNos.json"
     with open(f_path, "w") as f:
         print("正在写入序列号……")
         st_obj.toTxt("正在写入序列号……")
         json.dump(serialDict, f)
+
     return f_path
 
 
