@@ -450,7 +450,8 @@ def initCOMTest(comNumber, serialNo):
     """
     # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
-    cycle_times = 2000
+    # 已跑204， 2000 - 204 = 1796
+    cycle_times = 1796
     # 需要先将每台设备的序列号存下来存到self.serial_no中
     # 需要增加映射，在测试前，先把所有的一起遍历一遍并存下对应的端口和序列号来进行设置
 
