@@ -435,7 +435,7 @@ def readJson(f_path):
     :return:返回字典形式的信息
     """
     with open(f_path, "r") as f:
-        # print("序列号列表获取")
+        # print("序列号列表获取")heb
         serialDict = json.load(f)
         # print("序列号列表：{}".format(serialDict))
     return serialDict
