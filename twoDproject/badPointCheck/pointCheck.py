@@ -85,22 +85,32 @@ class PointCheck:
         if bad_point_list:
             print("当前图片总像素点【{}】，坏点数【{}】".format(len(point_coordinate), len(bad_point_list)))
             if len(bad_point_list) / len(point_coordinate) <= 0.00002:
-                picture_infos = {"bad_point_list": bad_point_list, "result": "PASS"}
+                picture_infos = {"bad_point_list": bad_point_list, "result": "PASS",
+                                 "wholePointCount": len(point_coordinate)}
             else:
-                picture_infos = {"bad_point_list": bad_point_list, "result": "FALSE"}
+                picture_infos = {"bad_point_list": bad_point_list, "result": "FALSE",
+                                 "wholePointCount": len(point_coordinate)}
             # 返回每张图片的检测结果和坏点列表（包含每个坏点的坐标和亮度值）再对每张图片进行坏点突出绘制一张新的图片
             return picture_infos
 
-    def rebuild_picture_forBADPoint(self, picture_infos):
+    def rebuild_picture_forBADPoint(self, picture_infos, picture):
         # 图片命名 原图片名+总像素点数+坏点数.jpg
-        print(picture_infos)
+        # print(picture_infos)
+        bad_point_list = picture_infos["bad_point_list"]
+        for one_point in bad_point_list:
+            self.img_src.putpixel((one_point["coordinate"][0], one_point["coordinate"][1]), (234, 53, 57, 255))
+        self.img_src = self.img_src.convert("RGB")
+        if not os.path.exists("./convertPicture/"):
+            os.mkdir("./convertPicture/")
+        self.img_src.save(
+            "./convertPicture/总点数{}有{}个坏点_{}".format(picture_infos["wholePointCount"], len(bad_point_list), picture))
 
 
-def bad_check_area(picture_path, check_type):
+def bad_check_area(picture_path, check_type, picture):
     pc = PointCheck(picture_path, check_type)
     point_coordinate = pc.getAll_pixelsCoordinate(pc.getPictureSize())
     picture_infos = pc.analysis_point_info(pc.getPicturePixels(), point_coordinate, check_type)
-    pc.rebuild_picture_forBADPoint(picture_infos)
+    pc.rebuild_picture_forBADPoint(picture_infos, picture)
 
 
 if __name__ == '__main__':
@@ -110,6 +120,6 @@ if __name__ == '__main__':
     # 每张图片独立一个进程去操作
     for picture in pictureFile:
         picture_path = "./pictures/{}".format(picture)
-        pool.apply_async(func=bad_check_area, args=(picture_path, check_type,))
+        pool.apply_async(func=bad_check_area, args=(picture_path, check_type, picture,))
     pool.close()
     pool.join()
