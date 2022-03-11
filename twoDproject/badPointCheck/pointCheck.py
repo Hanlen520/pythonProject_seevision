@@ -14,8 +14,8 @@ os.path.abspath(".")
 """
     Description:
     图片坏点检测：
-    1、0 - 纯白图片检测：判断每个像素点Y亮度大于60即为坏点
-    2、1 - 纯黑图片检测：判断每个像素点Y亮度小于-5即为坏点
+    1、0 - 纯白图片检测：判断每个像素点Y亮度小于-5即为坏点
+    2、1 - 纯黑图片检测：判断每个像素点Y亮度大于60即为坏点
     
     换算公式：
     Y(亮度)=(0.299*R)+(0.587*G)+(0.114*B)
@@ -74,15 +74,15 @@ class PointCheck:
             # print(point_Y)
             """
             图片坏点检测：
-            1、0 - 纯白图片检测：判断每个像素点Y亮度大于60即为坏点
-            2、1 - 纯黑图片检测：判断每个像素点Y亮度小于-5即为坏点
+            1、0 - 纯白图片检测：判断每个像素点Y亮度小于-5即为坏点
+            2、1 - 纯黑图片检测：判断每个像素点Y亮度大于60即为坏点
             
             判断单张图片是否PASS：坏点数不超过0.002%
             """
-            if check_type == 0:
+            if check_type == 1:
                 if point_Y > 60:
                     bad_point_list.append({"coordinate": point, "Y": point_Y})
-            elif check_type == 1:
+            elif check_type == 0:
                 if point_Y < -5:
                     bad_point_list.append({"coordinate": point, "Y": point_Y})
         if bad_point_list:
@@ -121,12 +121,25 @@ def bad_check_area(picture_path, check_type, picture):
 
 
 if __name__ == '__main__':
+    """
+        Description:
+        图片坏点检测：
+        1、0 - 纯白图片检测：判断每个像素点Y亮度小于-5即为坏点
+        2、1 - 纯黑图片检测：判断每个像素点Y亮度大于60即为坏点
+
+        换算公式：
+        Y(亮度)=(0.299*R)+(0.587*G)+(0.114*B)
+
+        判断单张图片是否PASS：坏点数不超过0.002%
+
+    """
+
     image_path = "./pictures/"
     # image_path = "./pictures_cat/"
     pictureFile = os.listdir(image_path)
     pool = multiprocessing.Pool(len(pictureFile))
     check_type = 1
-    # check_type = 1
+    # check_type = 0
     # 每张图片独立一个进程去操作
     for picture in pictureFile:
         if len(pictureFile) >= 10:
