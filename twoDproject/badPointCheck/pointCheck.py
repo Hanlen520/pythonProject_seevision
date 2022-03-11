@@ -62,6 +62,7 @@ class PointCheck:
             point_r = point_info[0]
             point_g = point_info[1]
             point_b = point_info[2]
+            # print(point_info)
             # print("R is：{}".format(point_r))
             # print("G is：{}".format(point_g))
             # print("B is：{}".format(point_b))
@@ -94,6 +95,8 @@ class PointCheck:
                                  "wholePointCount": len(point_coordinate)}
             # 返回每张图片的检测结果和坏点列表（包含每个坏点的坐标和亮度值）再对每张图片进行坏点突出绘制一张新的图片
             return picture_infos
+        else:
+            print("{} - 图片没有坏点!!!".format(self.picture_name))
 
     def rebuild_picture_forBADPoint(self, picture_infos):
         # 图片命名 原图片名+总像素点数+坏点数.jpg
@@ -122,7 +125,8 @@ if __name__ == '__main__':
     # image_path = "./pictures_cat/"
     pictureFile = os.listdir(image_path)
     pool = multiprocessing.Pool(len(pictureFile))
-    check_type = 0
+    check_type = 1
+    # check_type = 1
     # 每张图片独立一个进程去操作
     for picture in pictureFile:
         if len(pictureFile) >= 10:
