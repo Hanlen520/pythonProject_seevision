@@ -28,10 +28,11 @@ from PIL import Image
 
 class PointCheck:
 
-    def __init__(self, picture_path, check_type):
+    def __init__(self, picture_path, check_type, picture_name):
         self.picture_path = picture_path
         self.check_type = check_type
         self.img_src = Image.open(self.picture_path)
+        self.picture_name = picture_name
 
     def getPictureSize(self):
         return self.img_src.size
@@ -83,7 +84,7 @@ class PointCheck:
                 if point_Y < -5:
                     bad_point_list.append({"coordinate": point, "Y": point_Y})
         if bad_point_list:
-            print("当前图片总像素点【{}】，坏点数【{}】".format(len(point_coordinate), len(bad_point_list)))
+            print("当前图片【{}】总像素点【{}】，坏点数【{}】".format(self.picture_name, len(point_coordinate), len(bad_point_list)))
             if len(bad_point_list) / len(point_coordinate) <= 0.00002:
                 picture_infos = {"bad_point_list": bad_point_list, "result": "PASS",
                                  "wholePointCount": len(point_coordinate)}
@@ -93,7 +94,7 @@ class PointCheck:
             # 返回每张图片的检测结果和坏点列表（包含每个坏点的坐标和亮度值）再对每张图片进行坏点突出绘制一张新的图片
             return picture_infos
 
-    def rebuild_picture_forBADPoint(self, picture_infos, picture):
+    def rebuild_picture_forBADPoint(self, picture_infos):
         # 图片命名 原图片名+总像素点数+坏点数.jpg
         # print(picture_infos)
         bad_point_list = picture_infos["bad_point_list"]
@@ -103,14 +104,15 @@ class PointCheck:
         if not os.path.exists("./convertPicture/"):
             os.mkdir("./convertPicture/")
         self.img_src.save(
-            "./convertPicture/总点数{}有{}个坏点_{}".format(picture_infos["wholePointCount"], len(bad_point_list), picture))
+            "./convertPicture/总点数{}有{}个坏点_{}".format(picture_infos["wholePointCount"], len(bad_point_list),
+                                                     self.picture_name))
 
 
 def bad_check_area(picture_path, check_type, picture):
-    pc = PointCheck(picture_path, check_type)
+    pc = PointCheck(picture_path, check_type, picture)
     point_coordinate = pc.getAll_pixelsCoordinate(pc.getPictureSize())
     picture_infos = pc.analysis_point_info(pc.getPicturePixels(), point_coordinate, check_type)
-    pc.rebuild_picture_forBADPoint(picture_infos, picture)
+    pc.rebuild_picture_forBADPoint(picture_infos)
 
 
 if __name__ == '__main__':
