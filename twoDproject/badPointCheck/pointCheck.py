@@ -1,6 +1,7 @@
 # coding = utf8
 import multiprocessing
 import os
+from time import sleep
 
 os.path.abspath(".")
 """
@@ -117,12 +118,17 @@ def bad_check_area(picture_path, check_type, picture):
 
 
 if __name__ == '__main__':
-    pictureFile = os.listdir("./pictures/")
+    image_path = "./pictures/"
+    # image_path = "./pictures_cat/"
+    pictureFile = os.listdir(image_path)
     pool = multiprocessing.Pool(len(pictureFile))
     check_type = 0
     # 每张图片独立一个进程去操作
     for picture in pictureFile:
-        picture_path = "./pictures/{}".format(picture)
+        if len(pictureFile) >= 10:
+            sleep(1)
+        print("正在分析图片：{},图片较多请耐心等候！ ".format(picture))
+        picture_path = "{}/{}".format(image_path, picture)
         pool.apply_async(func=bad_check_area, args=(picture_path, check_type, picture,))
     pool.close()
     pool.join()
