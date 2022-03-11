@@ -104,8 +104,9 @@ class PointCheck:
         if not os.path.exists("./convertPicture/"):
             os.mkdir("./convertPicture/")
         self.img_src.save(
-            "./convertPicture/总点数{}有{}个坏点_{}".format(picture_infos["wholePointCount"], len(bad_point_list),
-                                                     self.picture_name))
+            "./convertPicture/测试结果【{}】总点数{}有{}个坏点_{}".format(picture_infos["result"], picture_infos["wholePointCount"],
+                                                             len(bad_point_list),
+                                                             self.picture_name))
 
 
 def bad_check_area(picture_path, check_type, picture):
