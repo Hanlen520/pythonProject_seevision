@@ -103,7 +103,10 @@ class PointCheck:
         # print(picture_infos)
         bad_point_list = picture_infos["bad_point_list"]
         for one_point in bad_point_list:
-            self.img_src.putpixel((one_point["coordinate"][0], one_point["coordinate"][1]), (234, 53, 57, 255))
+            # print(one_point)
+            point_l = (one_point["coordinate"][0], one_point["coordinate"][1])
+            self.img_src.putpixel(point_l, (234, 53, 57, 255))
+        print("Done")
         self.img_src = self.img_src.convert("RGB")
         if not os.path.exists("./convertPicture/"):
             os.mkdir("./convertPicture/")
