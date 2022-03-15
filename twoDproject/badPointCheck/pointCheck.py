@@ -123,7 +123,7 @@ def bad_check_area(picture_path, check_type, picture):
     pc.rebuild_picture_forBADPoint(picture_infos)
 
 
-if __name__ == '__main__':
+def interface_Out(image_path):
     """
         Description:
         图片坏点检测：
@@ -137,8 +137,8 @@ if __name__ == '__main__':
 
     """
 
-    image_path = "./pictures/"
-    # image_path = "./pictures_cat/"
+    # image_path = "./pictures/"
+    # # image_path = "./pictures_cat/"
     pictureFile = os.listdir(image_path)
     pool = multiprocessing.Pool(len(pictureFile))
     check_type = 1
@@ -152,3 +152,8 @@ if __name__ == '__main__':
         pool.apply_async(func=bad_check_area, args=(picture_path, check_type, picture,))
     pool.close()
     pool.join()
+
+
+if __name__ == '__main__':
+    image_path = "./pictures/"
+    interface_Out(image_path)
