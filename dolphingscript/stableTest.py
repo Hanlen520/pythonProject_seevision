@@ -4,6 +4,7 @@ import multiprocessing
 import re
 import subprocess
 
+from PyQt5.QtCore import QTimer
 from airtest.core.api import *
 from airtest.core.error import AdbError
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
