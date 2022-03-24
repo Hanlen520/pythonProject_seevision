@@ -22,14 +22,15 @@ def getConnectCOMs():
             current_com = re.findall("\((.*)\)", str(com))[0]
             coms.append(current_com)
     if coms:
-        print("Current connect coms have:[{}]".format(coms))
+        print("当前存在的串口为:[{}]".format(coms))
     else:
-        print("No com connect ,please check!")
+        print("未检测到有串口，请检查!")
     return coms
 
 
 def initCom(com_id, baud_rate):
     com_obj = serial.Serial(com_id, baudrate=baud_rate)
+    print("[{}]串口初始化完成".format(com_id))
     return com_obj
 
 
@@ -39,6 +40,7 @@ def enterPSD(com_obj):
     com_obj.write("root\r\n".encode("UTF-8"))
     sleep(1)
     com_obj.write("bunengshuo\r\n".encode("UTF-8"))
+    print("账号密码输入完成！")
 
 
 def getWaitingData(com_obj):
@@ -50,5 +52,17 @@ def getWaitingData(com_obj):
             return data
 
 
+def exitRootMode(com_obj):
+    print("退出root模式……")
+    com_obj.write("exit\r\n".encode("UTF-8"))
+    sleep(1)
+    print("已退出root模式")
+
+
 if __name__ == '__main__':
-    com_obj = initCom(getConnectCOMs(),)
+    com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
+    enterPSD(com_obj)
+    print(getWaitingData(com_obj))
+    exitRootMode(com_obj)
+    getWaitingData(com_obj)
+
