@@ -1,0 +1,3 @@
+2022-03-25 17:08:36.474 windowsControl.py[34] switchResolution -> Find Control Timeout(10s): {AutomationId: '3008', ControlType: ComboBoxControl}
+Window is not Metro!
+2022-03-25 17:19:32.580 windowsControl.py[37] switchResolution -> Find Control Timeout(10s): {AutomationId: '3008', ControlType: ComboBoxControl}
