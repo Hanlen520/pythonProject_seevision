@@ -43,10 +43,18 @@ def enterPSD(com_obj):
     print("账号密码输入完成！")
 
 
+def dmesg_n5(com_obj):
+    print("打开关键Log输出……")
+    com_obj.write("dmesg -n5\r\n".encode("UTF-8"))
+    sleep(1)
+    print("关键Log输出已打开！")
+
+
 def getWaitingData(com_obj):
     print("获取本次接收数据……")
     while True:
         if com_obj.inWaiting() > 0:
+            sleep(1)
             data = str(com_obj.read_all())
             print("本次获取数据内容：[{}]".format(data))
             return data
@@ -62,7 +70,8 @@ def exitRootMode(com_obj):
 if __name__ == '__main__':
     com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
     enterPSD(com_obj)
-    print(getWaitingData(com_obj))
-    exitRootMode(com_obj)
-    getWaitingData(com_obj)
-
+    # print(getWaitingData(com_obj))
+    # exitRootMode(com_obj)
+    # getWaitingData(com_obj)
+    while True:
+        getWaitingData(com_obj)
