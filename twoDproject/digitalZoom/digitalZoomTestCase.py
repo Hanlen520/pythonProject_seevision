@@ -1,6 +1,10 @@
 # coding = utf8
 import os
 
+import numpy as np
+import openpyxl
+import pandas as pd
+
 os.path.abspath(".")
 """
     @Project:pythonProject_seevision
@@ -91,3 +95,27 @@ os.path.abspath(".")
                     缩小40step
                         [1、]
 """
+
+
+# 从excel中读取数据并返回（element）
+def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
+    df = pd.read_excel(form, sheet_name=sheet_name, index_col="测试分辨率", engine="openpyxl")
+    # original_data = df.loc[1, "测试点"]
+    test_case_list = []
+    for i in range(1, df.shape[0]):
+        original_data = df.loc[i, "测试点"]
+        test_case_list.append([i, original_data])
+    return test_case_list
+
+
+def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1):
+    wb = openpyxl.load_workbook(form)
+    ws = wb[sheet_name]
+    ws.cell(row + 1, column).value = "PASS"
+    wb.save(form)
+
+
+if __name__ == '__main__':
+    # print(read_excel_for_page_element()[0])
+    row = read_excel_for_page_element()[5][0]
+    write_into_excel(row=row, column=7)

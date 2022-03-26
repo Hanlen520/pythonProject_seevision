@@ -91,13 +91,29 @@ def hidReset():
     pass
 
 
+# 获取当前摄像头支持的格式
+def getFormatList():
+    settings_frame.ComboBoxControl(AutomationId="3008").Click()
+    sleep(1)
+    format_list = settings_frame.ListControl(searchDepth=5, Name="格式：")
+    all_format = format_list.GetChildren()
+    formatList = []
+    for format in all_format:
+        # 筛选掉重复的分辨率格式
+        if (str(format) != "开始播放时选择格式") | (str(format) != "默认格式(推荐)"):
+            if "(P" in str(format):
+                formatList.append(format.Name)
+    return formatList
+
+
 if __name__ == '__main__':
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     openPotplayer(potplayer_path)
     enterDeviceSettings()
-    resolution = "YUY2 960×540P 30(P 16:9)"
-    switchResolution(resolution)
-    closePotplayer()
-    hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
-    openHidTool(hidtool_path)
-    closeHidTool()
+    print(getFormatList())
+    # resolution = "YUY2 960×540P 30(P 16:9)"
+    # switchResolution(resolution)
+    # closePotplayer()
+    # hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
+    # openHidTool(hidtool_path)
+    # closeHidTool()
