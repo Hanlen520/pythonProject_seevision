@@ -1,4 +1,5 @@
 # coding = utf8
+import glob
 import multiprocessing
 import os
 from time import sleep
@@ -136,6 +137,12 @@ def interface_Out(image_path):
         判断单张图片是否PASS：坏点数不超过0.002%
 
     """
+    # glob 优化筛选模式
+    types = ("*.jpg", "*.bmp")
+    files_list = []
+    for files in types:
+        files_list.extend(glob.glob(os.path.join(image_path, files)))
+    print(files_list)
 
     # image_path = "./pictures/"
     # # image_path = "./pictures_cat/"
@@ -144,12 +151,12 @@ def interface_Out(image_path):
     check_type = 1
     # check_type = 0
     # 每张图片独立一个进程去操作
-    for picture in pictureFile:
-        if len(pictureFile) >= 10:
+    for picture in files_list:
+        if len(files_list) >= 10:
             sleep(1)
         print("正在分析图片：{},图片较多请耐心等候！ ".format(picture))
-        picture_path = "{}/{}".format(image_path, picture)
-        pool.apply_async(func=bad_check_area, args=(picture_path, check_type, picture,))
+        # picture_path = "{}/{}".format(image_path, picture)
+        pool.apply_async(func=bad_check_area, args=(picture, check_type, picture.split("\\")[1],))
     pool.close()
     pool.join()
 
@@ -157,3 +164,6 @@ def interface_Out(image_path):
 if __name__ == '__main__':
     image_path = "./pictures/"
     interface_Out(image_path)
+
+    # for picture_path in glob.glob(os.path.join(image_path, "*.jpg")):
+    #     print(picture_path)
