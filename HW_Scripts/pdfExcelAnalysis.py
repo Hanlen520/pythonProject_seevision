@@ -2,6 +2,8 @@
 
 import os
 
+import pandas as pd
+
 os.path.abspath(".")
 
 import fitz
@@ -29,6 +31,14 @@ def toTxt(result):
         f.write(result + "\n")
 
 
+# 从excel中读取数据并返回（element）
+def read_excel_for_page_element(form="./page_sheet.xlsx", sheet_name="calendar_page",
+                                element_name="guide_got_it"):
+    df = pd.read_excel(form, sheet_name=sheet_name, index_col="element_name", engine="openpyxl")
+    original_data = df.loc[element_name, "element_data"]
+    return original_data
+
+
 if __name__ == '__main__':
     # pdf_file = "./Mac os极简用法及设置.pdf"
     pdf_file = "./AndroidTool_Guide.pdf"
@@ -38,3 +48,4 @@ if __name__ == '__main__':
         toTxt(pdfContent)
         # if "office" in pdfContent:
         #     print("PASS")
+    print(read_excel_for_page_element())
