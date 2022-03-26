@@ -37,63 +37,9 @@ os.path.abspath(".")
                             1、放大的公式：w=w1-step*64，h=h1-step*36
                             2、缩小的公式：w=w1+step*64，h=h1+step*36
                             3、右移动的公式：x=x1+step*32, y=y1
-                    放大10step
-                    放大14step
-                    放大17step
-                    放大20step
-                    放大23step
-                    放大25step
-                    放大27step
-                    放大28step
-                    放大30step
-                    放大31step
-                    放大33step
-                    放大34step
-                    放大35step
-                    放大36step
-                    放大37step
-                    放大38step
-                    放大39step
-                    放大40step
                 放大40step->缩小->右移动画面1step：
                     缩小1step
                         [1、zoom: 0, step 40，2、x: 1280, y: 720, w: 1280, h: 720，3、zoom: 1, step 1，4、x: 1248, y: 702, w: 1344, h: 756，5、direction: 3, step 1，6、x: 1280, y: 702]
-                    缩小2step
-                        [1、]
-                    缩小3step
-                        [1、]
-                    缩小4step
-                        [1、]
-                    缩小5step
-                        [1、]
-                    缩小6step
-                        [1、]
-                    缩小7step
-                        [1、]
-                    缩小9step
-                        [1、]
-                    缩小10step
-                        [1、]
-                    缩小12step
-                        [1、]
-                    缩小13step
-                        [1、]
-                    缩小15step
-                        [1、]
-                    缩小18step
-                        [1、]
-                    缩小20step
-                        [1、]
-                    缩小23step
-                        [1、]
-                    缩小26step
-                        [1、]
-                    缩小30step
-                        [1、]
-                    缩小35step
-                        [1、]
-                    缩小40step
-                        [1、]
 """
 
 
