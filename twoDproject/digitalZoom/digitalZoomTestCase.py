@@ -4,7 +4,7 @@ import os
 os.path.abspath(".")
 """
     @Project:pythonProject_seevision
-    @File:digitalZoomTest.py
+    @File:digitalZoomTestCase.py
     @Author:十二点前要睡觉
     @Date:2022/3/23 10:33
     @Description:自动化测试点分解：
@@ -17,7 +17,7 @@ os.path.abspath(".")
             H264 1280*720
         2、测试点：
             a、错误值：
-                无缩放状态->缩小1step
+                无缩放状态->缩小1step  [1、弹框操作失败，2、[App] setEPTZZoom zoom: 1, step 1]
                 无缩放状态->过度放大53step
                 放大40step状态->过度缩小53step
             b、有效值：

@@ -53,9 +53,10 @@ def dmesg_n5(com_obj):
 def getWaitingData(com_obj):
     print("获取本次接收数据……")
     while True:
-        if com_obj.inWaiting() > 0:
-            sleep(1)
-            data = str(com_obj.read_all())
+        count = com_obj.inWaiting()
+        sleep(1)
+        if count > 0:
+            data = str(com_obj.read(count))
             print("本次获取数据内容：[{}]".format(data))
             return data
 
