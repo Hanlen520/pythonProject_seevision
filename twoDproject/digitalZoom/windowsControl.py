@@ -76,6 +76,21 @@ def closePotplayer():
         potplayer.kill()
 
 
+# 放大
+def hidZoomIn(step):
+    pass
+
+
+# 缩小
+def hidZoomOut(step):
+    pass
+
+
+# 复位
+def hidReset():
+    pass
+
+
 if __name__ == '__main__':
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     openPotplayer(potplayer_path)
