@@ -1,7 +1,6 @@
 # coding = utf8
 import os
 
-import numpy as np
 import openpyxl
 import pandas as pd
 
@@ -47,29 +46,24 @@ os.path.abspath(".")
 """
 
 
-# Case 错误值 无变焦缩小1
-def case_1_errorValue(row, resolution, step):
-    pass
-
-
-# Case 错误值 无变焦放大53
-def case_53_errorValue(row, resolution, step):
-    pass
+# Case 错误值 无变焦缩小1 无变焦放大53
+def case_1or53_errorValue(row, resolution, step):
+    print("【case{}】测试分辨率【{}】测试步长【{}】".format(row, resolution, step))
 
 
 # Case 错误值 先放大40再缩小53
 def case_40_53_errorValue(row, resolution, step1, step2):
-    pass
+    print("【case{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, resolution, step1, step2))
 
 
 # case 放大 step
 def caseZoomIn(row, resolution, step):
-    pass
+    print("【case{}】测试分辨率【{}】测试步长【{}】".format(row, resolution, step))
 
 
 # case 缩小 step
 def caseZoomOut(row, resolution, step1, step2):
-    pass
+    print("【case{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, resolution, step1, step2))
 
 
 # 错误值弹框检测
@@ -91,7 +85,7 @@ def checkMoveCorrectLog():
 def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
     test_case_list = []
-    for i in range(1, df.shape[0]):
+    for i in range(1, df.shape[0] + 1):
         original_data = df.loc[i, "测试点"]
         test_case_list.append([i, original_data])
     return test_case_list
@@ -105,11 +99,44 @@ def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name=
 
 
 # Case分配主控测试区域
+"""
+    0 - 错误值测试case - [1, '0,MJPG 3840×2160P 30(P 16:9),-1']
+    1 - 放大测试case - [2, '1,MJPG 3840×2160P 30(P 16:9),5']
+    2 - 缩小测试case - [22, '2,MJPG 3840×2160P 30(P 16:9),40,-1']
+"""
+
+
 def TestControlArea():
-    case_data = read_excel_for_page_element()
-    print(case_data)
-    row = case_data[5][0]
-    write_into_excel(row=row, column=7, value="FAIL")
+    for case in read_excel_for_page_element():
+        case_row = int(case[0])
+        original_data = case[1].split(",")
+        case_type = int(original_data[0])
+        case_resolution = str(original_data[1])
+        if len(original_data) >= 4:
+            step1 = int(original_data[2])
+            step2 = int(original_data[3])
+            # 2 step 分支：
+            # 正确值 缩小
+            if case_type == 2:
+                caseZoomOut(case_row, case_resolution, step1, step2)
+            # 2 step 分支：
+            # 错误值 缩小
+            if case_type == 0:
+                case_40_53_errorValue(case_row, case_resolution, step1, step2)
+        else:
+            # 1 step 分支：
+            # 错误值 无变焦缩小1
+            # 错误值 无变焦放大53
+            step = int(original_data[2])
+            if case_type == 0:
+                case_1or53_errorValue(case_row, case_resolution, step)
+            # 1 step 分支：
+            # 正确值 放大
+            if case_type == 1:
+                caseZoomIn(case_row, case_resolution, step)
+
+    # row = case_data[5][0]
+    # write_into_excel(row=row, column=7, value="FAIL")
 
 
 if __name__ == '__main__':
