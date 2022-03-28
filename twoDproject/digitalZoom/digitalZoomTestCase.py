@@ -47,15 +47,28 @@ os.path.abspath(".")
 """
 
 
-def case1_errorValue_1(row, resolution, step):
+# Case 错误值 无变焦缩小1
+def case_1_errorValue(row, resolution, step):
     pass
 
 
-def case1_errorValue_53(row, resolution, step):
+# Case 错误值 无变焦放大53
+def case_53_errorValue(row, resolution, step):
     pass
 
 
-def case1_errorValue_40_53(row, resolution, step1, step2):
+# Case 错误值 先放大40再缩小53
+def case_40_53_errorValue(row, resolution, step1, step2):
+    pass
+
+
+# case 放大 step
+def caseZoomIn():
+    pass
+
+
+# case 缩小 step
+def caseZoomOut():
     pass
 
 
