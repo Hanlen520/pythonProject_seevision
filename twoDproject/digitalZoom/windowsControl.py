@@ -80,7 +80,7 @@ def closePotplayer():
 # 放大
 def hidZoomIn(step):
     step_edit = uiautomation.EditControl(AutomationId="eptz_size_textbox_length")
-    step_edit.SendKeys("")
+    step_edit.GetValuePattern().SetValue("")
     step_edit.SendKeys(str(step))
     uiautomation.ButtonControl(AutomationId="button2").Click()
     sleep(1)
@@ -89,7 +89,7 @@ def hidZoomIn(step):
 # 缩小
 def hidZoomOut(step):
     step_edit = uiautomation.EditControl(AutomationId="eptz_size_textbox_length")
-    step_edit.SendKeys("")
+    step_edit.GetValuePattern().SetValue("")
     step_edit.SendKeys(str(step))
     uiautomation.ButtonControl(AutomationId="button3").Click()
     sleep(1)
