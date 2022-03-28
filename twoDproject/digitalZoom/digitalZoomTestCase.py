@@ -69,12 +69,16 @@ def caseZoomOut(row, resolution, step1, step2):
 
 # 错误值弹框检测
 def checkErrorMessage():
-    if "操作失败" in str(uiautomation.TextControl(AutomationId="65535").Name):
-        print("错误值检测PASS，返回检测失败！")
-        value = "PASS"
-    else:
+    value = "FAIL"
+    try:
+        if "操作失败" in str(uiautomation.TextControl(AutomationId="65535").Name):
+            print("错误值检测PASS，返回检测失败！")
+            value = "PASS"
+    except LookupError:
+        print("错误值检测FAIL，返回检测失败！")
         value = "FAIL"
-    return value
+    finally:
+        return value
 
 
 # 缩放正确值log检测
@@ -113,7 +117,7 @@ def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name=
 
 
 def TestControlArea():
-    for case in read_excel_for_page_element():
+    for case in read_excel_for_page_element(sheet_name="数码变焦case自动化部分_Test"):
         case_row = int(case[0])
         original_data = case[1].split(",")
         case_type = int(original_data[0])
@@ -148,4 +152,5 @@ def TestControlArea():
 if __name__ == '__main__':
     # case_data = read_excel_for_page_element()
     # print(case_data)
-    TestControlArea()
+    # TestControlArea()
+    print(checkErrorMessage())
