@@ -41,10 +41,26 @@ os.path.abspath(".")
                     缩小1step
                         [1、zoom: 0, step 40，2、x: 1280, y: 720, w: 1280, h: 720，3、zoom: 1, step 1，4、x: 1248, y: 702, w: 1344, h: 756，5、direction: 3, step 1，6、x: 1280, y: 702]
         3、Case执行方式：
-        0 - 错误值测试case
-        1 - 放大测试case
-        2 - 缩小测试case
+        0 - 错误值测试case - [1, '0,MJPG 3840×2160P 30(P 16:9),-1']
+        1 - 放大测试case - [2, '1,MJPG 3840×2160P 30(P 16:9),5']
+        2 - 缩小测试case - [22, '2,MJPG 3840×2160P 30(P 16:9),40,-1']
 """
+
+
+def case1_errorValue_1(row, resolution, step):
+    pass
+
+
+def case1_errorValue_53(row, resolution, step):
+    pass
+
+
+def case1_errorValue_40_53(row, resolution, step1, step2):
+    pass
+
+
+def checkErrorMessage():
+    pass
 
 
 # 从excel中读取数据并返回（element）
