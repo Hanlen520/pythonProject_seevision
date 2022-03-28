@@ -50,6 +50,7 @@ def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", 
     test_case_list = []
     for i in range(1, df.shape[0]):
         original_data = df.loc[i, "测试点"]
+        print(original_data)
         test_case_list.append([i, original_data])
     return test_case_list
 

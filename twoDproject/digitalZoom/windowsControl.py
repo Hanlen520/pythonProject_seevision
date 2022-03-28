@@ -42,6 +42,7 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
             resolution_checked = settings_frame.ListItemControl(searchDepth=6, Name=resolution)
             findResolution = str(re.findall("Rect:(.*)(\[)", str(resolution_checked))[0][0]).strip()
             if findResolution != "(0,0,0,0)":
+                find = True
                 resolution_checked.Click()
                 break
         else:
@@ -78,17 +79,22 @@ def closePotplayer():
 
 # 放大
 def hidZoomIn(step):
-    pass
+    uiautomation.EditControl(AutomationId="eptz_size_textbox_length").SendKeys(str(step))
+    uiautomation.ButtonControl(AutomationId="button2").Click()
+    sleep(1)
 
 
 # 缩小
 def hidZoomOut(step):
-    pass
+    uiautomation.EditControl(AutomationId="eptz_size_textbox_length").SendKeys(str(step))
+    uiautomation.ButtonControl(AutomationId="button3").Click()
+    sleep(1)
 
 
 # 复位
 def hidReset():
-    pass
+    uiautomation.ButtonControl(AutomationId="button4").Click()
+    sleep(1)
 
 
 # 获取当前摄像头支持的格式
@@ -110,10 +116,12 @@ if __name__ == '__main__':
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     openPotplayer(potplayer_path)
     enterDeviceSettings()
-    print(getFormatList())
-    # resolution = "YUY2 960×540P 30(P 16:9)"
-    # switchResolution(resolution)
+    resolution = "YUY2 960×540P 30(P 16:9)"
+    switchResolution(resolution)
     # closePotplayer()
-    # hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
-    # openHidTool(hidtool_path)
+    hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
+    openHidTool(hidtool_path)
     # closeHidTool()
+    hidZoomIn(5)
+    hidZoomOut(1)
+    hidReset()

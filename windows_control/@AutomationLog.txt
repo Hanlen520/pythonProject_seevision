@@ -2,3 +2,4 @@
 2022-01-07 19:20:01.226 uiautomation_win.py[98] switchResolution -> Can not move cursor. ListItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'YUY2 640×360P 30(P 16:9)', ControlType: ListItemControl}
 2022-01-10 20:07:29.886 uiautomation_win.py[94] switchResolution -> Find Control Timeout: {Name: 'MJPG 320×240P 30(P 4:3)', ControlType: ListItemControl}
 2022-01-10 20:41:22.098 uiautomation_win.py[96] switchResolution -> Find Control Timeout: {Name: 'MJPG 176×144P 30(P 11:9)', ControlType: ListItemControl}
+2022-03-28 09:13:16.940 uiautomation_win.py[83] switchResolution -> 
