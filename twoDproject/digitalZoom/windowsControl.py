@@ -79,14 +79,18 @@ def closePotplayer():
 
 # 放大
 def hidZoomIn(step):
-    uiautomation.EditControl(AutomationId="eptz_size_textbox_length").SendKeys(str(step))
+    step_edit = uiautomation.EditControl(AutomationId="eptz_size_textbox_length")
+    step_edit.SendKeys("")
+    step_edit.SendKeys(str(step))
     uiautomation.ButtonControl(AutomationId="button2").Click()
     sleep(1)
 
 
 # 缩小
 def hidZoomOut(step):
-    uiautomation.EditControl(AutomationId="eptz_size_textbox_length").SendKeys(str(step))
+    step_edit = uiautomation.EditControl(AutomationId="eptz_size_textbox_length")
+    step_edit.SendKeys("")
+    step_edit.SendKeys(str(step))
     uiautomation.ButtonControl(AutomationId="button3").Click()
     sleep(1)
 
@@ -118,10 +122,8 @@ if __name__ == '__main__':
     enterDeviceSettings()
     resolution = "YUY2 960×540P 30(P 16:9)"
     switchResolution(resolution)
-    # closePotplayer()
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     openHidTool(hidtool_path)
-    # closeHidTool()
     hidZoomIn(5)
     hidZoomOut(1)
     hidReset()
