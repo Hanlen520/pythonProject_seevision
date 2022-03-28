@@ -40,29 +40,33 @@ os.path.abspath(".")
                 放大40step->缩小->右移动画面1step：
                     缩小1step
                         [1、zoom: 0, step 40，2、x: 1280, y: 720, w: 1280, h: 720，3、zoom: 1, step 1，4、x: 1248, y: 702, w: 1344, h: 756，5、direction: 3, step 1，6、x: 1280, y: 702]
+        3、Case执行方式：
+        0 - 错误值测试case
+        1 - 放大测试case
+        2 - 缩小测试case
 """
 
 
 # 从excel中读取数据并返回（element）
 def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
-    df = pd.read_excel(form, sheet_name=sheet_name, index_col="测试分辨率", engine="openpyxl")
+    df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
     # original_data = df.loc[1, "测试点"]
     test_case_list = []
     for i in range(1, df.shape[0]):
         original_data = df.loc[i, "测试点"]
-        print(original_data)
         test_case_list.append([i, original_data])
     return test_case_list
 
 
-def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1):
+def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1, value="PASS"):
     wb = openpyxl.load_workbook(form)
     ws = wb[sheet_name]
-    ws.cell(row + 1, column).value = "PASS"
+    ws.cell(row + 1, column).value = value
     wb.save(form)
 
 
 if __name__ == '__main__':
-    # print(read_excel_for_page_element()[0])
-    row = read_excel_for_page_element()[5][0]
-    write_into_excel(row=row, column=7)
+    case_data = read_excel_for_page_element()
+    print(case_data)
+    row = case_data[5][0]
+    write_into_excel(row=row, column=7, value="FAIL")

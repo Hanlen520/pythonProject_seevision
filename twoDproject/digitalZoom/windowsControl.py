@@ -101,6 +101,14 @@ def hidReset():
     sleep(1)
 
 
+def rightNarrow(step):
+    step_edit = uiautomation.EditControl(AutomationId="eptz_move_textbox_length")
+    step_edit.GetValuePattern().SetValue("")
+    step_edit.SendKeys(str(step))
+    uiautomation.ButtonControl(AutomationId="right_narrow").Click()
+    sleep(1)
+
+
 # 获取当前摄像头支持的格式
 def getFormatList():
     settings_frame.ComboBoxControl(AutomationId="3008").Click()
@@ -117,6 +125,19 @@ def getFormatList():
 
 
 if __name__ == '__main__':
+    """
+    ['YUY2 640×360P 30(P 16:9)', 'YUY2 160×90P 30(P 16:9)', 'YUY2 160×120P 30(P 4:3)', 'YUY2 176×144P 30(P 11:9)',
+     'YUY2 320×180P 30(P 16:9)', 'YUY2 320×240P 30(P 4:3)', 'YUY2 352×288P 30(P 11:9)', 'YUY2 480×270P 30(P 16:9)',
+     'YUY2 640×480P 30(P 4:3)', 'YUY2 800×600P 30(P 4:3)', 'YUY2 960×540P 30(P 16:9)', 'MJPG 1920×1080P 30(P 16:9)',
+     'MJPG 160×90P 30(P 16:9)', 'MJPG 160×120P 30(P 4:3)', 'MJPG 176×144P 30(P 11:9)', 'MJPG 320×180P 30(P 16:9)',
+     'MJPG 320×240P 30(P 4:3)', 'MJPG 352×288P 30(P 11:9)', 'MJPG 480×270P 30(P 16:9)', 'MJPG 640×360P 30(P 16:9)',
+     'MJPG 640×480P 30(P 4:3)', 'MJPG 800×600P 30(P 4:3)', 'MJPG 960×540P 30(P 16:9)', 'MJPG 1024×576P 30(P 16:9)',
+     'MJPG 1280×720P 30(P 16:9)', 'MJPG 2560×1440P 30(P 16:9)', 'MJPG 3840×2160P 30(P 16:9)',
+     'H264 1920×1080P 30(P 16:9)', 'H264 1280×720P 30(P 16:9)', 'H264 1024×576P 30(P 16:9)', 'H264 960×540P 30(P 16:9)',
+     'H264 800×600P 30(P 4:3)', 'H264 640×480P 30(P 4:3)', 'H264 640×360P 30(P 16:9)', 'H264 480×270P 30(P 16:9)',
+     'H264 352×288P 30(P 11:9)', 'H264 320×240P 30(P 4:3)', 'H264 320×180P 30(P 16:9)', 'H264 2560×1440P 30(P 16:9)',
+     'H264 3840×2160P 30(P 16:9)']
+     """
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     openPotplayer(potplayer_path)
     enterDeviceSettings()
@@ -126,4 +147,5 @@ if __name__ == '__main__':
     openHidTool(hidtool_path)
     hidZoomIn(5)
     hidZoomOut(1)
+    rightNarrow(1)
     hidReset()
