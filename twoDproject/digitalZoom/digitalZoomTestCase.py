@@ -3,6 +3,7 @@ import os
 
 import openpyxl
 import pandas as pd
+import uiautomation
 
 os.path.abspath(".")
 """
@@ -40,7 +41,7 @@ os.path.abspath(".")
                     缩小1step
                         [1、zoom: 0, step 40，2、x: 1280, y: 720, w: 1280, h: 720，3、zoom: 1, step 1，4、x: 1248, y: 702, w: 1344, h: 756，5、direction: 3, step 1，6、x: 1280, y: 702]
         3、Case执行方式：
-        0 - 错误值测试case - [1, '0,MJPG 3840×2160P 30(P 16:9),-1']
+        0 - 错误值测试case - [1, '0,MJPG 3840×2160P 30(P 16:9),-1'] -- 弹框“操作失败”关键字
         1 - 放大测试case - [2, '1,MJPG 3840×2160P 30(P 16:9),5']
         2 - 缩小测试case - [22, '2,MJPG 3840×2160P 30(P 16:9),40,-1']
 """
@@ -48,27 +49,32 @@ os.path.abspath(".")
 
 # Case 错误值 无变焦缩小1 无变焦放大53
 def case_1or53_errorValue(row, resolution, step):
-    print("【case{}】测试分辨率【{}】测试步长【{}】".format(row, resolution, step))
+    print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "错误值测试", resolution, step))
 
 
 # Case 错误值 先放大40再缩小53
 def case_40_53_errorValue(row, resolution, step1, step2):
-    print("【case{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, resolution, step1, step2))
+    print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "错误值测试", resolution, step1, step2))
 
 
 # case 放大 step
 def caseZoomIn(row, resolution, step):
-    print("【case{}】测试分辨率【{}】测试步长【{}】".format(row, resolution, step))
+    print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
 
 
 # case 缩小 step
 def caseZoomOut(row, resolution, step1, step2):
-    print("【case{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, resolution, step1, step2))
+    print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "缩小测试", resolution, step1, step2))
 
 
 # 错误值弹框检测
 def checkErrorMessage():
-    pass
+    if "操作失败" in str(uiautomation.TextControl(AutomationId="65535").Name):
+        print("错误值检测PASS，返回检测失败！")
+        value = "PASS"
+    else:
+        value = "FAIL"
+    return value
 
 
 # 缩放正确值log检测
