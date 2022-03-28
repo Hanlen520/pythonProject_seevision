@@ -64,24 +64,22 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 
 # case 放大 step
 def caseZoomIn(row, resolution, step):
+    # serial area
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
-    global com_obj
-    com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
     enterPSD(com_obj)
     dmesg_n5(com_obj)
 
-    potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
+    # operate area
     openPotplayer(potplayer_path)
     enterDeviceSettings()
-    resolution = "YUY2 960×540P 30(P 16:9)"
     switchResolution(resolution)
-    hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     openHidTool(hidtool_path)
-    hidZoomIn(5)
+    hidZoomIn(step)
 
-    checkZoomCorrectLog()
-    # print("OK")
-    # checkZoomCorrectLog()
+    # check area
+    # 所有分辨率都是以4K进行step缩放的
+    check_result = checkZoomCorrectLog(3840, 2160, step)
+    print("本次放大【{}】step测试比对结果为：【{}】".format(step, check_result))
 
 
 # case 缩小 step
@@ -104,7 +102,7 @@ def checkErrorMessage():
 
 
 # 缩放正确值log检测
-def checkZoomCorrectLog():
+def checkZoomCorrectLog(w, h, step):
     """
         1、放大的公式：w=w1-step*64，h=h1-step*36
         2、缩小的公式：w=w1+step*64，h=h1+step*36
@@ -112,13 +110,20 @@ def checkZoomCorrectLog():
     """
     original_data = re.findall("setEPTZZoom x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
     print(original_data)
-    x = str(original_data[0][0]).strip()
-    y = str(original_data[0][1]).strip()
-    w = str(original_data[0][2]).strip()
-    h = str(original_data[0][3]).strip().split("\\")[0]
-    after_data = [x, y, w, h]
-
+    result_x = str(original_data[0][0]).strip()
+    result_y = str(original_data[0][1]).strip()
+    result_w = str(original_data[0][2]).strip()
+    result_h = str(original_data[0][3]).strip().split("\\")[0]
+    after_data = [result_x, result_y, result_w, result_h]
     print(after_data)
+    value = ""
+    print(w, h)
+    if int(result_w) == w - step * 64:
+        if int(result_h) == h - step * 36:
+            value = "PASS"
+    else:
+        value = "FAIL"
+    return value
 
 
 # 移动正确值log检测
@@ -189,4 +194,11 @@ if __name__ == '__main__':
     # print(case_data)
     # TestControlArea()
     # print(checkErrorMessage())
-    caseZoomIn(1, "Test", 2)
+
+    row = 1
+    step = 5
+    com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
+    potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
+    hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
+    resolution = "YUY2 960×540P 30(P 16:9)"
+    caseZoomIn(row, resolution, step)
