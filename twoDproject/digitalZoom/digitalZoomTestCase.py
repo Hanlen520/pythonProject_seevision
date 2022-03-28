@@ -90,7 +90,6 @@ def checkMoveCorrectLog():
 # 从excel中读取数据并返回（element）
 def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
-    # original_data = df.loc[1, "测试点"]
     test_case_list = []
     for i in range(1, df.shape[0]):
         original_data = df.loc[i, "测试点"]
@@ -105,8 +104,15 @@ def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name=
     wb.save(form)
 
 
-if __name__ == '__main__':
+# Case分配主控测试区域
+def TestControlArea():
     case_data = read_excel_for_page_element()
     print(case_data)
     row = case_data[5][0]
     write_into_excel(row=row, column=7, value="FAIL")
+
+
+if __name__ == '__main__':
+    # case_data = read_excel_for_page_element()
+    # print(case_data)
+    TestControlArea()
