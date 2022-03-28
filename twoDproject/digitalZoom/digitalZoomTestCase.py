@@ -63,16 +63,27 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 
 
 # case 放大 step
-def caseZoomIn():
+def caseZoomIn(row, resolution, step):
     pass
 
 
 # case 缩小 step
-def caseZoomOut():
+def caseZoomOut(row, resolution, step1, step2):
     pass
 
 
+# 错误值弹框检测
 def checkErrorMessage():
+    pass
+
+
+# 缩放正确值log检测
+def checkZoomCorrectLog():
+    pass
+
+
+# 移动正确值log检测
+def checkMoveCorrectLog():
     pass
 
 
