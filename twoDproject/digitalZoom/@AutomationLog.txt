@@ -4,4 +4,4 @@ Window is not Metro!
 2022-03-28 09:04:50.737 windowsControl.py[43] switchResolution -> Find Control Timeout(10s): {Name: 'YUY2 960×540P 30(P 16:9)', ControlType: ListItemControl}
 2022-03-28 09:07:13.613 windowsControl.py[43] switchResolution -> Find Control Timeout(10s): {Name: 'YUY2 960×540P 30(P 16:9)', ControlType: ListItemControl}
 2022-03-28 09:08:27.298 windowsControl.py[45] switchResolution -> Find Control Timeout(10s): {Name: 'YUY2 960×540P 30(P 16:9)', ControlType: ListItemControl}
-2022-03-28 14:06:42.805 digitalZoomTestCase.py[72] checkErrorMessage -> 2022-03-28 14:08:18.997 digitalZoomTestCase.py[74] checkErrorMessage -> 
+2022-03-28 14:06:42.805 digitalZoomTestCase.py[72] checkErrorMessage -> 2022-03-28 14:08:18.997 digitalZoomTestCase.py[74] checkErrorMessage -> 2022-03-28 15:29:15.648 windowsControl.py[43] switchResolution -> 

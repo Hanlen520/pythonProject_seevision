@@ -1,9 +1,14 @@
 # coding = utf8
 import os
+import re
 
 import openpyxl
 import pandas as pd
 import uiautomation
+
+from twoDproject.digitalZoom.serialControl import initCom, getConnectCOMs, enterPSD, getWaitingData, dmesg_n5
+from twoDproject.digitalZoom.windowsControl import openHidTool, openPotplayer, enterDeviceSettings, switchResolution, \
+    hidZoomIn
 
 os.path.abspath(".")
 """
@@ -60,6 +65,23 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 # case 放大 step
 def caseZoomIn(row, resolution, step):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
+    global com_obj
+    com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
+    enterPSD(com_obj)
+    dmesg_n5(com_obj)
+
+    potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
+    openPotplayer(potplayer_path)
+    enterDeviceSettings()
+    resolution = "YUY2 960×540P 30(P 16:9)"
+    switchResolution(resolution)
+    hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
+    openHidTool(hidtool_path)
+    hidZoomIn(5)
+
+    checkZoomCorrectLog()
+    # print("OK")
+    # checkZoomCorrectLog()
 
 
 # case 缩小 step
@@ -83,7 +105,20 @@ def checkErrorMessage():
 
 # 缩放正确值log检测
 def checkZoomCorrectLog():
-    pass
+    """
+        1、放大的公式：w=w1-step*64，h=h1-step*36
+        2、缩小的公式：w=w1+step*64，h=h1+step*36
+        3、右移动的公式：x=x1+step*32, y=y1
+    """
+    original_data = re.findall("setEPTZZoom x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
+    print(original_data)
+    x = str(original_data[0][0]).strip()
+    y = str(original_data[0][1]).strip()
+    w = str(original_data[0][2]).strip()
+    h = str(original_data[0][3]).strip().split("\\")[0]
+    after_data = [x, y, w, h]
+
+    print(after_data)
 
 
 # 移动正确值log检测
@@ -153,4 +188,5 @@ if __name__ == '__main__':
     # case_data = read_excel_for_page_element()
     # print(case_data)
     # TestControlArea()
-    print(checkErrorMessage())
+    # print(checkErrorMessage())
+    caseZoomIn(1, "Test", 2)

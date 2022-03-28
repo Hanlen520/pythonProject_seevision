@@ -54,10 +54,10 @@ def getWaitingData(com_obj):
     print("获取本次接收数据……")
     while True:
         count = com_obj.inWaiting()
-        sleep(1)
+        sleep(3)
         if count > 0:
             data = str(com_obj.read(count))
-            print("本次获取数据内容：[{}]".format(data))
+            # print("本次获取数据内容：[{}]".format(data))
             return data
 
 

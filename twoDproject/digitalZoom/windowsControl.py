@@ -146,6 +146,6 @@ if __name__ == '__main__':
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     openHidTool(hidtool_path)
     hidZoomIn(5)
-    hidZoomOut(1)
-    rightNarrow(1)
+    # hidZoomOut(1)
+    # rightNarrow(1)
     hidReset()
