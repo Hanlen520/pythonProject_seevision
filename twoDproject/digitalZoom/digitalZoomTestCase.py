@@ -327,31 +327,12 @@ def TestControlArea():
             if case_type == 1:
                 caseZoomIn(case_type, case_row, case_resolution, step)
 
-    # row = case_data[5][0]
-    # write_into_excel(row=row, column=7, value="FAIL")
-
 
 if __name__ == '__main__':
-    # case_data = read_excel_for_page_element()
-    # print(case_data)
-    # TestControlArea()
-    # print(checkErrorMessage())
-
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     form = "./doc/数码变焦测试用例V2.0.xlsx"
     sheet_name = "数码变焦case自动化部分_Test"
+    # 测试结果所在列索引
     column = 7
     TestControlArea()
-    # resolution = "YUY2 960×540P 30(P 16:9)"
-    # type = 1
-    # step1 = 40
-    # for step in range(1, 10):
-    #     # caseZoomIn(type, row, resolution, step)
-    #     caseZoomOut(type, row, resolution, step1, step)
-    # caseZoomOut(type, row, resolution, 40, abs(-4))
-    # caseZoomIn(type, row, resolution, 40)
-    # case_1or53_errorValue(row, resolution, -1)
-    # case_1or53_errorValue(row, resolution, 53)
-    # case_40_53_errorValue(row, resolution, 40, abs(-53))
-    # caseZoomOut(type, row, resolution, 40, abs(-40))
