@@ -112,6 +112,7 @@ def caseZoomIn(type, row, resolution, step):
     enterDeviceSettings()
     switchResolution(resolution)
     openHidTool(hidtool_path)
+
     hidZoomIn(step)
 
     # check area
@@ -154,6 +155,7 @@ def caseZoomOut(type, row, resolution, step1, step2):
     enterDeviceSettings()
     switchResolution(resolution)
     openHidTool(hidtool_path)
+
     hidZoomIn(step1)
     first_data = getZoomLogData(com_obj)
     w1 = first_data[2]
@@ -386,6 +388,12 @@ def TestControlArea():
                 closeHidTool()
             except Exception:
                 pass
+            write_into_excel(form=form, sheet_name=sheet_name, row=case_row, column=7, value="当前Case运行出现异常，需要Check")
+            print("等待10s系统重新启动……")
+            log_toTxt("等待10s系统重新启动……")
+            time.sleep(10)
+            enterPSD(com_obj)
+            dmesg_n5(com_obj)
             continue
 
 

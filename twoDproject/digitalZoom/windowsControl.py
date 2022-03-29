@@ -5,6 +5,7 @@ import subprocess
 from time import sleep
 
 import pyautogui
+pyautogui.FAILSAFE = True
 from uiautomation import uiautomation
 
 os.path.abspath(".")
