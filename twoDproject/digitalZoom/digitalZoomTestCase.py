@@ -55,11 +55,44 @@ os.path.abspath(".")
 # Case 错误值 无变焦缩小1 无变焦放大53
 def case_1or53_errorValue(row, resolution, step):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "错误值测试", resolution, step))
+    # operate area
+    openPotplayer(potplayer_path)
+    enterDeviceSettings()
+    switchResolution(resolution)
+    openHidTool(hidtool_path)
+    if step == 1:
+        hidZoomOut(abs(step))
+    elif step == 53:
+        hidZoomIn(step)
+
+    test_result = checkErrorMessage()
+    print("本次case测试结果为【{}】".format(test_result))
+
+    # case结束后关闭应用程序
+    closeHidTool()
+    closePotplayer()
+    write_into_excel(form=form, sheet_name=sheet_name, row=row, column=7, value=test_result)
 
 
 # Case 错误值 先放大40再缩小53
 def case_40_53_errorValue(row, resolution, step1, step2):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "错误值测试", resolution, step1, step2))
+    # operate area
+    openPotplayer(potplayer_path)
+    enterDeviceSettings()
+    switchResolution(resolution)
+    openHidTool(hidtool_path)
+
+    hidZoomIn(step1)
+    hidZoomOut(step2)
+
+    test_result = checkErrorMessage()
+    print("本次case测试结果为【{}】".format(test_result))
+
+    # case结束后关闭应用程序
+    closeHidTool()
+    closePotplayer()
+    write_into_excel(form=form, sheet_name=sheet_name, row=row, column=7, value=test_result)
 
 
 # case 放大 step
@@ -96,6 +129,7 @@ def caseZoomIn(type, row, resolution, step):
     # case结束后关闭应用程序
     closeHidTool()
     closePotplayer()
+    write_into_excel(form=form, sheet_name=sheet_name, row=row, column=7, value=test_result)
 
 
 # case 缩小 step
@@ -139,6 +173,7 @@ def caseZoomOut(type, row, resolution, step1, step2):
     # case结束后关闭应用程序
     closeHidTool()
     closePotplayer()
+    write_into_excel(form=form, sheet_name=sheet_name, row=row, column=7, value=test_result)
 
 
 # 错误值弹框检测
@@ -233,6 +268,7 @@ def checkRightMoveCorrectLog(x, y, step):
 
 # 从excel中读取数据并返回（element）
 def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
+    print("从excel中读取数据（测试数据case）并返回（element）")
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
     test_case_list = []
     for i in range(1, df.shape[0] + 1):
@@ -242,6 +278,7 @@ def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", 
 
 
 def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1, value="PASS"):
+    print("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
     wb = openpyxl.load_workbook(form)
     ws = wb[sheet_name]
     ws.cell(row + 1, column).value = value
@@ -257,7 +294,12 @@ def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name=
 
 
 def TestControlArea():
-    for case in read_excel_for_page_element(sheet_name="数码变焦case自动化部分_Test"):
+    # serial area
+    global com_obj
+    com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
+    enterPSD(com_obj)
+    dmesg_n5(com_obj)
+    for case in read_excel_for_page_element(form=form, sheet_name=sheet_name):
         case_row = int(case[0])
         original_data = case[1].split(",")
         case_type = int(original_data[0])
@@ -268,7 +310,7 @@ def TestControlArea():
             # 2 step 分支：
             # 正确值 缩小
             if case_type == 2:
-                caseZoomOut(case_row, case_resolution, step1, step2)
+                caseZoomOut(case_type, case_row, case_resolution, step1, step2)
             # 2 step 分支：
             # 错误值 缩小
             if case_type == 0:
@@ -283,7 +325,7 @@ def TestControlArea():
             # 1 step 分支：
             # 正确值 放大
             if case_type == 1:
-                caseZoomIn(case_row, case_resolution, step)
+                caseZoomIn(case_type, case_row, case_resolution, step)
 
     # row = case_data[5][0]
     # write_into_excel(row=row, column=7, value="FAIL")
@@ -295,21 +337,21 @@ if __name__ == '__main__':
     # TestControlArea()
     # print(checkErrorMessage())
 
-    row = 1
-    step = 5
-    # serial area
-    com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
-
-    enterPSD(com_obj)
-    dmesg_n5(com_obj)
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
-    resolution = "YUY2 960×540P 30(P 16:9)"
-    type = 1
-    step1 = 40
+    form = "./doc/数码变焦测试用例V2.0.xlsx"
+    sheet_name = "数码变焦case自动化部分_Test"
+    column = 7
+    TestControlArea()
+    # resolution = "YUY2 960×540P 30(P 16:9)"
+    # type = 1
+    # step1 = 40
     # for step in range(1, 10):
     #     # caseZoomIn(type, row, resolution, step)
     #     caseZoomOut(type, row, resolution, step1, step)
     # caseZoomOut(type, row, resolution, 40, abs(-4))
-    caseZoomIn(type, row, resolution, 40)
+    # caseZoomIn(type, row, resolution, 40)
+    # case_1or53_errorValue(row, resolution, -1)
+    # case_1or53_errorValue(row, resolution, 53)
+    # case_40_53_errorValue(row, resolution, 40, abs(-53))
     # caseZoomOut(type, row, resolution, 40, abs(-40))
