@@ -223,6 +223,8 @@ def checkBorderOver():
 
 
 def getZoomLogData(com_obj):
+    print("获取放大log数据……")
+    log_toTxt("获取放大log数据……")
     original_data = re.findall("setEPTZZoom x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
     result_x = str(original_data[0][0]).strip()
     result_y = str(original_data[0][1]).strip()
@@ -261,6 +263,8 @@ def checkZoomCorrectLog(type, w, h, step):
 
 
 def getMoveLogData(com_obj):
+    print("获取移动log数据……")
+    log_toTxt("获取移动log数据……")
     original_data = re.findall("setEPTZMove x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
     result_x = str(original_data[0][0]).strip()
     result_y = str(original_data[0][1]).strip()
@@ -278,6 +282,7 @@ def checkRightMoveCorrectLog(x, y, step):
     value = ""
     print(x, y)
     log_toTxt([x, y])
+    print("x = {},\n,y = {}".format(after_data[0], after_data[1]))
     if int(after_data[0]) == x + step * 32:
         if int(after_data[1]) == y:
             value = "PASS"
@@ -331,6 +336,9 @@ def TestControlArea():
     enterPSD(com_obj)
     dmesg_n5(com_obj)
     for case in read_excel_for_page_element(form=form, sheet_name=sheet_name):
+        # Important 每次case执行前把上一次case的缓存清空
+        com_obj.flushInput()
+
         case_row = int(case[0])
         print("================【case{}】测试开始================\n".format(case_row))
         log_toTxt("================【case{}】测试开始================\n".format(case_row))

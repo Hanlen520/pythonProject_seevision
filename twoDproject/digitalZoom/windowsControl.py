@@ -69,12 +69,14 @@ def openHidTool(hidtool_path="D:\HIDTools_2.5\HIDTool_2_5.exe"):
 def closeHidTool():
     if hidtool:
         hidtool.kill()
+    sleep(1)
 
 
 # 关闭Potplayer
 def closePotplayer():
     if potplayer:
         potplayer.kill()
+    sleep(1)
 
 
 # 放大
