@@ -298,7 +298,7 @@ def checkRightMoveCorrectLog(x, y, step):
 
 
 # 从excel中读取数据并返回（element）
-def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
+def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.1.xlsx", sheet_name="数码变焦case自动化部分"):
     print("从excel中读取数据（测试数据case）并返回（element）")
     log_toTxt("从excel中读取数据（测试数据case）并返回（element）")
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
@@ -309,7 +309,7 @@ def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", 
     return test_case_list
 
 
-def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1, value="PASS"):
+def write_into_excel(form="./doc/数码变焦测试用例V2.1.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1, value="PASS"):
     print("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
     log_toTxt("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
     wb = openpyxl.load_workbook(form)
@@ -400,7 +400,7 @@ def TestControlArea():
 if __name__ == '__main__':
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
-    form = "./doc/数码变焦测试用例V2.0.xlsx"
+    form = "./doc/数码变焦测试用例V2.1.xlsx"
     sheet_name = "数码变焦case自动化部分"
     # 测试结果所在列索引
     column = 7
