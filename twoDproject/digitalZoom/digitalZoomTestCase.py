@@ -1,6 +1,7 @@
 # coding = utf8
 import os
 import re
+import time
 
 import openpyxl
 import pandas as pd
@@ -50,6 +51,9 @@ os.path.abspath(".")
         1 - 放大测试case - [2, '1,MJPG 3840×2160P 30(P 16:9),5']
         2 - 缩小测试case - [22, '2,MJPG 3840×2160P 30(P 16:9),40,-1']
 """
+
+# 实时获取时间
+cur_time = time.strftime("%Y%m%d_%H%M%S")
 
 
 # Case 错误值 无变焦缩小1 无变焦放大53
@@ -330,45 +334,59 @@ def log_toTxt(result):
 
 
 def TestControlArea():
-    # serial area
     global com_obj
     com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
     enterPSD(com_obj)
     dmesg_n5(com_obj)
     for case in read_excel_for_page_element(form=form, sheet_name=sheet_name):
-        # Important 每次case执行前把上一次case的缓存清空
-        com_obj.flushInput()
-
-        case_row = int(case[0])
-        print("================【case{}】测试开始================\n".format(case_row))
-        log_toTxt("================【case{}】测试开始================\n".format(case_row))
-        original_data = case[1].split(",")
-        case_type = int(original_data[0])
-        case_resolution = str(original_data[1])
-        if len(original_data) >= 4:
-            step1 = abs(int(original_data[2]))
-            step2 = abs(int(original_data[3]))
-            # 2 step 分支：
-            # 正确值 缩小
-            if case_type == 2:
-                caseZoomOut(case_type, case_row, case_resolution, step1, step2)
-            # 2 step 分支：
-            # 错误值 缩小
-            if case_type == 0:
-                case_40_53_errorValue(case_row, case_resolution, step1, step2)
-        else:
-            # 1 step 分支：
-            # 错误值 无变焦缩小1
-            # 错误值 无变焦放大53
-            step = abs(int(original_data[2]))
-            if case_type == 0:
-                case_1or53_errorValue(case_row, case_resolution, step)
-            # 1 step 分支：
-            # 正确值 放大
-            if case_type == 1:
-                caseZoomIn(case_type, case_row, case_resolution, step)
-        print("================【case{}】测试结束================\n".format(case_row))
-        log_toTxt("================【case{}】测试结束================\n".format(case_row))
+        try:
+            # Important 每次case执行前把上一次case的缓存清空
+            com_obj.flushInput()
+            case_row = int(case[0])
+            print("================【case{}】测试开始================\n".format(case_row))
+            log_toTxt("================【case{}】测试开始================\n".format(case_row))
+            original_data = case[1].split(",")
+            case_type = int(original_data[0])
+            case_resolution = str(original_data[1])
+            if len(original_data) >= 4:
+                step1 = abs(int(original_data[2]))
+                step2 = abs(int(original_data[3]))
+                # 2 step 分支：
+                # 正确值 缩小
+                if case_type == 2:
+                    caseZoomOut(case_type, case_row, case_resolution, step1, step2)
+                # 2 step 分支：
+                # 错误值 缩小
+                if case_type == 0:
+                    case_40_53_errorValue(case_row, case_resolution, step1, step2)
+            else:
+                # 1 step 分支：
+                # 错误值 无变焦缩小1
+                # 错误值 无变焦放大53
+                step = abs(int(original_data[2]))
+                if case_type == 0:
+                    case_1or53_errorValue(case_row, case_resolution, step)
+                # 1 step 分支：
+                # 正确值 放大
+                if case_type == 1:
+                    caseZoomIn(case_type, case_row, case_resolution, step)
+            print("================【case{}】测试结束================\n".format(case_row))
+            log_toTxt("================【case{}】测试结束================\n".format(case_row))
+        except Exception as ex:
+            print(
+                "【{}】【Error need check,current case【{}】 is need rerun after all case finished】：Error\n{}\n".format(
+                    cur_time,
+                    str(case), str(ex)))
+            log_toTxt(
+                "【{}】【Error need check,current case【{}】 is need rerun after all case finished】：Error\n{}\n".format(
+                    cur_time,
+                    str(case), str(ex)))
+            try:
+                closePotplayer()
+                closeHidTool()
+            except Exception:
+                pass
+            continue
 
 
 if __name__ == '__main__':
