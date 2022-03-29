@@ -1,7 +1,0 @@
-2022-03-25 17:08:36.474 windowsControl.py[34] switchResolution -> Find Control Timeout(10s): {AutomationId: '3008', ControlType: ComboBoxControl}
-Window is not Metro!
-2022-03-25 17:19:32.580 windowsControl.py[37] switchResolution -> Find Control Timeout(10s): {AutomationId: '3008', ControlType: ComboBoxControl}
-2022-03-28 09:04:50.737 windowsControl.py[43] switchResolution -> Find Control Timeout(10s): {Name: 'YUY2 960×540P 30(P 16:9)', ControlType: ListItemControl}
-2022-03-28 09:07:13.613 windowsControl.py[43] switchResolution -> Find Control Timeout(10s): {Name: 'YUY2 960×540P 30(P 16:9)', ControlType: ListItemControl}
-2022-03-28 09:08:27.298 windowsControl.py[45] switchResolution -> Find Control Timeout(10s): {Name: 'YUY2 960×540P 30(P 16:9)', ControlType: ListItemControl}
-2022-03-28 14:06:42.805 digitalZoomTestCase.py[72] checkErrorMessage -> 2022-03-28 14:08:18.997 digitalZoomTestCase.py[74] checkErrorMessage -> 2022-03-28 15:29:15.648 windowsControl.py[43] switchResolution -> 2022-03-28 19:34:33.772 windowsControl.py[43] switchResolution -> 2022-03-29 11:36:44.340 digitalZoomTestCase.py[180] checkErrorMessage -> 

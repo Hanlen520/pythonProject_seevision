@@ -244,7 +244,7 @@ def checkZoomCorrectLog(type, w, h, step):
     after_data = getZoomLogData(com_obj)
     value = ""
     print(w, h)
-    log_toTxt(w, h)
+    log_toTxt([w, h])
     if type == 1:
         if int(after_data[2]) == w - step * 64:
             if int(after_data[3]) == h - step * 36:
@@ -277,7 +277,7 @@ def checkRightMoveCorrectLog(x, y, step):
     after_data = getMoveLogData(com_obj)
     value = ""
     print(x, y)
-    log_toTxt(x, y)
+    log_toTxt([x, y])
     if int(after_data[0]) == x + step * 32:
         if int(after_data[1]) == y:
             value = "PASS"
@@ -310,7 +310,7 @@ def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name=
 def log_toTxt(result):
     try:
         with open("./自动化变焦测试CaseRunningLog.log", "a+") as f:
-            f.write(result + "\n")
+            f.write(str(result) + "\n")
     except (AttributeError, TypeError) as ex:
         print("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
         f.write("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
