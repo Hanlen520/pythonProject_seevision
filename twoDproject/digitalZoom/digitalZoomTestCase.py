@@ -8,7 +8,7 @@ import uiautomation
 
 from twoDproject.digitalZoom.serialControl import initCom, getConnectCOMs, enterPSD, getWaitingData, dmesg_n5
 from twoDproject.digitalZoom.windowsControl import openHidTool, openPotplayer, enterDeviceSettings, switchResolution, \
-    hidZoomIn
+    hidZoomIn, closeHidTool, closePotplayer, hidZoomOut, rightNarrow
 
 os.path.abspath(".")
 """
@@ -63,12 +63,8 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 
 
 # case 放大 step
-def caseZoomIn(row, resolution, step):
-    # serial area
+def caseZoomIn(type, row, resolution, step):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
-    enterPSD(com_obj)
-    dmesg_n5(com_obj)
-
     # operate area
     openPotplayer(potplayer_path)
     enterDeviceSettings()
@@ -77,14 +73,72 @@ def caseZoomIn(row, resolution, step):
     hidZoomIn(step)
 
     # check area
-    # 所有分辨率都是以4K进行step缩放的
-    check_result = checkZoomCorrectLog(3840, 2160, step)
-    print("本次放大【{}】step测试比对结果为：【{}】".format(step, check_result))
+    # 所有分辨率都是以4K进行step缩放的 - 缩放结果
+    data1 = checkZoomCorrectLog(type, 3840, 2160, step)
+    zoom_check_result = data1[0]
+    print("本次放大【{}】step测试比对结果为：【{}】".format(step, zoom_check_result))
+
+    if zoom_check_result == "PASS":
+        test_result = "PASS"
+        # 移动结果
+        rightNarrow(1)
+        move_check_result = checkRightMoveCorrectLog(int(data1[1]), int(data1[2]), 1)
+        print("本次移动【{}】step测试比对结果为：【{}】".format(1, move_check_result))
+        if test_result == move_check_result:
+            test_result = "PASS"
+        else:
+            test_result = "FAIL"
+            print("当前case移动1step失败，FAIL")
+    else:
+        test_result = "FAIL"
+    print("本次case测试结果为【{}】".format(test_result))
+
+    # case结束后关闭应用程序
+    closeHidTool()
+    closePotplayer()
 
 
 # case 缩小 step
-def caseZoomOut(row, resolution, step1, step2):
+def caseZoomOut(type, row, resolution, step1, step2):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "缩小测试", resolution, step1, step2))
+    # operate area
+    openPotplayer(potplayer_path)
+    enterDeviceSettings()
+    switchResolution(resolution)
+    openHidTool(hidtool_path)
+    hidZoomIn(step1)
+    first_data = getZoomLogData(com_obj)
+    w1 = first_data[2]
+    h1 = first_data[3]
+    print("缩小测试：第一次放大返回w为【{}】，h为【{}】".format(w1, h1))
+    hidZoomOut(step2)
+
+    # check area
+    data1 = ""
+    if step1 == abs(step2):
+        zoom_check_result = checkBorderOver()
+    else:
+        data1 = checkZoomCorrectLog(type, int(w1), int(h1), step2)
+        zoom_check_result = data1[0]
+    print("本次先放大【{}】后缩小【{}】step测试比对结果为：【{}】".format(step1, step2, zoom_check_result))
+    if zoom_check_result == "PASS":
+        test_result = "PASS"
+        if step1 != abs(step2):
+            # 移动结果
+            rightNarrow(1)
+            move_check_result = checkRightMoveCorrectLog(int(data1[1]), int(data1[2]), 1)
+            print("本次移动【{}】step测试比对结果为：【{}】".format(1, move_check_result))
+            if test_result == move_check_result:
+                test_result = "PASS"
+            else:
+                test_result = "FAIL"
+                print("当前case移动1step失败，FAIL")
+    else:
+        test_result = "FAIL"
+    print("本次case测试结果为【{}】".format(test_result))
+    # case结束后关闭应用程序
+    closeHidTool()
+    closePotplayer()
 
 
 # 错误值弹框检测
@@ -101,34 +155,80 @@ def checkErrorMessage():
         return value
 
 
-# 缩放正确值log检测
-def checkZoomCorrectLog(w, h, step):
-    """
-        1、放大的公式：w=w1-step*64，h=h1-step*36
-        2、缩小的公式：w=w1+step*64，h=h1+step*36
-        3、右移动的公式：x=x1+step*32, y=y1
-    """
+# 边界值到达检测
+def checkBorderOver():
+    value = "FAIL"
+    try:
+        if "当前已到达边界" in str(uiautomation.TextControl(AutomationId="65535").Name):
+            print("当前已到达边界，弹框出现")
+            value = "PASS"
+    except LookupError:
+        print("当前已到达边界，弹框未出现")
+        value = "FAIL"
+    finally:
+        return value
+
+
+def getZoomLogData(com_obj):
     original_data = re.findall("setEPTZZoom x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
-    print(original_data)
     result_x = str(original_data[0][0]).strip()
     result_y = str(original_data[0][1]).strip()
     result_w = str(original_data[0][2]).strip()
     result_h = str(original_data[0][3]).strip().split("\\")[0]
     after_data = [result_x, result_y, result_w, result_h]
     print(after_data)
+    return after_data
+
+
+# 缩放正确值log检测
+def checkZoomCorrectLog(type, w, h, step):
+    """
+        1、放大的公式：w=w1-step*64，h=h1-step*36
+        2、缩小的公式：w=w1+step*64，h=h1+step*36
+        3、右移动的公式：x=x1+step*32, y=y1
+    """
+    after_data = getZoomLogData(com_obj)
+    print(after_data)
     value = ""
     print(w, h)
-    if int(result_w) == w - step * 64:
-        if int(result_h) == h - step * 36:
+    if type == 1:
+        if int(after_data[2]) == w - step * 64:
+            if int(after_data[3]) == h - step * 36:
+                value = "PASS"
+        else:
+            value = "FAIL"
+    if type == 2:
+        if int(after_data[2]) == w + step * 64:
+            if int(after_data[3]) == h + step * 36:
+                value = "PASS"
+        else:
+            value = "FAIL"
+    return value, after_data[0], after_data[1]
+
+
+def getMoveLogData(com_obj):
+    original_data = re.findall("setEPTZMove x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
+    result_x = str(original_data[0][0]).strip()
+    result_y = str(original_data[0][1]).strip()
+    result_w = str(original_data[0][2]).strip()
+    result_h = str(original_data[0][3]).strip().split("\\")[0]
+    after_data = [result_x, result_y, result_w, result_h]
+    print(after_data)
+    return after_data
+
+
+# 向右移动正确值log检测
+def checkRightMoveCorrectLog(x, y, step):
+    after_data = getMoveLogData(com_obj)
+    print(after_data)
+    value = ""
+    print(x, y)
+    if int(after_data[0]) == x + step * 32:
+        if int(after_data[1]) == y:
             value = "PASS"
     else:
         value = "FAIL"
     return value
-
-
-# 移动正确值log检测
-def checkMoveCorrectLog():
-    pass
 
 
 # 从excel中读取数据并返回（element）
@@ -163,8 +263,8 @@ def TestControlArea():
         case_type = int(original_data[0])
         case_resolution = str(original_data[1])
         if len(original_data) >= 4:
-            step1 = int(original_data[2])
-            step2 = int(original_data[3])
+            step1 = abs(int(original_data[2]))
+            step2 = abs(int(original_data[3]))
             # 2 step 分支：
             # 正确值 缩小
             if case_type == 2:
@@ -177,7 +277,7 @@ def TestControlArea():
             # 1 step 分支：
             # 错误值 无变焦缩小1
             # 错误值 无变焦放大53
-            step = int(original_data[2])
+            step = abs(int(original_data[2]))
             if case_type == 0:
                 case_1or53_errorValue(case_row, case_resolution, step)
             # 1 step 分支：
@@ -197,8 +297,19 @@ if __name__ == '__main__':
 
     row = 1
     step = 5
+    # serial area
     com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
+
+    enterPSD(com_obj)
+    dmesg_n5(com_obj)
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     resolution = "YUY2 960×540P 30(P 16:9)"
-    caseZoomIn(row, resolution, step)
+    type = 1
+    step1 = 40
+    # for step in range(1, 10):
+    #     # caseZoomIn(type, row, resolution, step)
+    #     caseZoomOut(type, row, resolution, step1, step)
+    # caseZoomOut(type, row, resolution, 40, abs(-4))
+    caseZoomIn(type, row, resolution, 40)
+    # caseZoomOut(type, row, resolution, 40, abs(-40))

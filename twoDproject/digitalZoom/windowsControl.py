@@ -102,6 +102,7 @@ def hidReset():
 
 
 def rightNarrow(step):
+    print("开始右移动【{}】step".format(step))
     step_edit = uiautomation.EditControl(AutomationId="eptz_move_textbox_length")
     step_edit.GetValuePattern().SetValue("")
     step_edit.SendKeys(str(step))
