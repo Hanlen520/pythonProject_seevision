@@ -34,6 +34,7 @@ def enterDeviceSettings():
 
 def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
     settings_frame.ComboBoxControl(AutomationId="3008").Click()
+    settings_frame.SetFocus()
     sleep(1)
     find = False
     count = 0
