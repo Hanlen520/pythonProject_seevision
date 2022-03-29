@@ -1,0 +1,22 @@
+环境搭建：
+1、python + windows
+2、命令行输入以下安装对应库
+pip3 install openpyxl
+pip3 install pandas
+pip3 install uiautomation
+pip3 install pyserial
+pip3 install pyautogui
+3、电脑需要有Potplayer和HIDTool
+4、打开脚本digitalZoomTestCase.py，修改如下工具路径：
+main函数下：（改成自己电脑对应的工具路径即可）
+potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
+hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
+
+测试说明：
+1、数码变焦Case存放在doc目录下，已经按照自动化和手动测试进行分类，自动化测试case位于sheet：数码变焦case自动化部分
+这部分case请勿修改，测试结果可以在每次测试前进行删除
+2、运行脚本：python digitalZoomTestCase.py即可开始运行脚本，运行期间电脑勿动，等待测试完成即可
+3、测试完成结果：自动化测试完成后，会在数码变焦case自动化部分 sheet中，对应每条case的测试结果都会进行更新：
+PASS - 该case测试通过
+FAIL - 该case测试不通过
+其他 - 需要自行手动重跑该case检查问题情况

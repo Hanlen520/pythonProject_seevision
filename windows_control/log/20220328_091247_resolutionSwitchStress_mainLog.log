@@ -1,0 +1,4 @@
+2022-03-28 09:13:03,904 - resolutionSwitchStress - INFO - 
+ 当前存在40种分辨率，即将对这些分辨率格式开始测试……
+2022-03-28 09:13:03,904 - resolutionSwitchStress - INFO - 第1次测试 -- 当前测试分辨率为：YUY2 640×360P 30(P 16:9)
+2022-03-28 09:13:16,942 - resolutionSwitchStress - ERROR - Some error happened : Find Control Timeout(10s): {AutomationId: '3008', ControlType: ComboBoxControl}
