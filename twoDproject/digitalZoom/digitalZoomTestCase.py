@@ -55,6 +55,7 @@ os.path.abspath(".")
 # Case 错误值 无变焦缩小1 无变焦放大53
 def case_1or53_errorValue(row, resolution, step):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "错误值测试", resolution, step))
+    log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "错误值测试", resolution, step))
     # operate area
     openPotplayer(potplayer_path)
     enterDeviceSettings()
@@ -67,6 +68,7 @@ def case_1or53_errorValue(row, resolution, step):
 
     test_result = checkErrorMessage()
     print("本次case测试结果为【{}】".format(test_result))
+    log_toTxt("本次case测试结果为【{}】".format(test_result))
 
     # case结束后关闭应用程序
     closeHidTool()
@@ -77,6 +79,7 @@ def case_1or53_errorValue(row, resolution, step):
 # Case 错误值 先放大40再缩小53
 def case_40_53_errorValue(row, resolution, step1, step2):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "错误值测试", resolution, step1, step2))
+    log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "错误值测试", resolution, step1, step2))
     # operate area
     openPotplayer(potplayer_path)
     enterDeviceSettings()
@@ -88,6 +91,7 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 
     test_result = checkErrorMessage()
     print("本次case测试结果为【{}】".format(test_result))
+    log_toTxt("本次case测试结果为【{}】".format(test_result))
 
     # case结束后关闭应用程序
     closeHidTool()
@@ -98,6 +102,7 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 # case 放大 step
 def caseZoomIn(type, row, resolution, step):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
+    log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
     # operate area
     openPotplayer(potplayer_path)
     enterDeviceSettings()
@@ -110,6 +115,7 @@ def caseZoomIn(type, row, resolution, step):
     data1 = checkZoomCorrectLog(type, 3840, 2160, step)
     zoom_check_result = data1[0]
     print("本次放大【{}】step测试比对结果为：【{}】".format(step, zoom_check_result))
+    log_toTxt("本次放大【{}】step测试比对结果为：【{}】".format(step, zoom_check_result))
 
     if zoom_check_result == "PASS":
         test_result = "PASS"
@@ -117,14 +123,17 @@ def caseZoomIn(type, row, resolution, step):
         rightNarrow(1)
         move_check_result = checkRightMoveCorrectLog(int(data1[1]), int(data1[2]), 1)
         print("本次移动【{}】step测试比对结果为：【{}】".format(1, move_check_result))
+        log_toTxt("本次移动【{}】step测试比对结果为：【{}】".format(1, move_check_result))
         if test_result == move_check_result:
             test_result = "PASS"
         else:
             test_result = "FAIL"
             print("当前case移动1step失败，FAIL")
+            log_toTxt("当前case移动1step失败，FAIL")
     else:
         test_result = "FAIL"
     print("本次case测试结果为【{}】".format(test_result))
+    log_toTxt("本次case测试结果为【{}】".format(test_result))
 
     # case结束后关闭应用程序
     closeHidTool()
@@ -135,6 +144,7 @@ def caseZoomIn(type, row, resolution, step):
 # case 缩小 step
 def caseZoomOut(type, row, resolution, step1, step2):
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "缩小测试", resolution, step1, step2))
+    log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "缩小测试", resolution, step1, step2))
     # operate area
     openPotplayer(potplayer_path)
     enterDeviceSettings()
@@ -145,6 +155,7 @@ def caseZoomOut(type, row, resolution, step1, step2):
     w1 = first_data[2]
     h1 = first_data[3]
     print("缩小测试：第一次放大返回w为【{}】，h为【{}】".format(w1, h1))
+    log_toTxt("缩小测试：第一次放大返回w为【{}】，h为【{}】".format(w1, h1))
     hidZoomOut(step2)
 
     # check area
@@ -155,6 +166,7 @@ def caseZoomOut(type, row, resolution, step1, step2):
         data1 = checkZoomCorrectLog(type, int(w1), int(h1), step2)
         zoom_check_result = data1[0]
     print("本次先放大【{}】后缩小【{}】step测试比对结果为：【{}】".format(step1, step2, zoom_check_result))
+    log_toTxt("本次先放大【{}】后缩小【{}】step测试比对结果为：【{}】".format(step1, step2, zoom_check_result))
     if zoom_check_result == "PASS":
         test_result = "PASS"
         if step1 != abs(step2):
@@ -162,6 +174,7 @@ def caseZoomOut(type, row, resolution, step1, step2):
             rightNarrow(1)
             move_check_result = checkRightMoveCorrectLog(int(data1[1]), int(data1[2]), 1)
             print("本次移动【{}】step测试比对结果为：【{}】".format(1, move_check_result))
+            log_toTxt("本次移动【{}】step测试比对结果为：【{}】".format(1, move_check_result))
             if test_result == move_check_result:
                 test_result = "PASS"
             else:
@@ -170,6 +183,7 @@ def caseZoomOut(type, row, resolution, step1, step2):
     else:
         test_result = "FAIL"
     print("本次case测试结果为【{}】".format(test_result))
+    log_toTxt("本次case测试结果为【{}】".format(test_result))
     # case结束后关闭应用程序
     closeHidTool()
     closePotplayer()
@@ -182,9 +196,11 @@ def checkErrorMessage():
     try:
         if "操作失败" in str(uiautomation.TextControl(AutomationId="65535").Name):
             print("错误值检测PASS，返回检测失败！")
+            log_toTxt("错误值检测PASS，返回检测失败！")
             value = "PASS"
     except LookupError:
         print("错误值检测FAIL，返回检测失败！")
+        log_toTxt("错误值检测FAIL，返回检测失败！")
         value = "FAIL"
     finally:
         return value
@@ -196,9 +212,11 @@ def checkBorderOver():
     try:
         if "当前已到达边界" in str(uiautomation.TextControl(AutomationId="65535").Name):
             print("当前已到达边界，弹框出现")
+            log_toTxt("当前已到达边界，弹框出现")
             value = "PASS"
     except LookupError:
         print("当前已到达边界，弹框未出现")
+        log_toTxt("当前已到达边界，弹框未出现")
         value = "FAIL"
     finally:
         return value
@@ -212,6 +230,7 @@ def getZoomLogData(com_obj):
     result_h = str(original_data[0][3]).strip().split("\\")[0]
     after_data = [result_x, result_y, result_w, result_h]
     print(after_data)
+    log_toTxt(after_data)
     return after_data
 
 
@@ -223,9 +242,9 @@ def checkZoomCorrectLog(type, w, h, step):
         3、右移动的公式：x=x1+step*32, y=y1
     """
     after_data = getZoomLogData(com_obj)
-    print(after_data)
     value = ""
     print(w, h)
+    log_toTxt(w, h)
     if type == 1:
         if int(after_data[2]) == w - step * 64:
             if int(after_data[3]) == h - step * 36:
@@ -249,15 +268,16 @@ def getMoveLogData(com_obj):
     result_h = str(original_data[0][3]).strip().split("\\")[0]
     after_data = [result_x, result_y, result_w, result_h]
     print(after_data)
+    log_toTxt(after_data)
     return after_data
 
 
 # 向右移动正确值log检测
 def checkRightMoveCorrectLog(x, y, step):
     after_data = getMoveLogData(com_obj)
-    print(after_data)
     value = ""
     print(x, y)
+    log_toTxt(x, y)
     if int(after_data[0]) == x + step * 32:
         if int(after_data[1]) == y:
             value = "PASS"
@@ -269,6 +289,7 @@ def checkRightMoveCorrectLog(x, y, step):
 # 从excel中读取数据并返回（element）
 def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分"):
     print("从excel中读取数据（测试数据case）并返回（element）")
+    log_toTxt("从excel中读取数据（测试数据case）并返回（element）")
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
     test_case_list = []
     for i in range(1, df.shape[0] + 1):
@@ -279,10 +300,20 @@ def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.0.xlsx", 
 
 def write_into_excel(form="./doc/数码变焦测试用例V2.0.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1, value="PASS"):
     print("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
+    log_toTxt("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
     wb = openpyxl.load_workbook(form)
     ws = wb[sheet_name]
     ws.cell(row + 1, column).value = value
     wb.save(form)
+
+
+def log_toTxt(result):
+    try:
+        with open("./自动化变焦测试CaseRunningLog.log", "a+") as f:
+            f.write(result + "\n")
+    except (AttributeError, TypeError) as ex:
+        print("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
+        f.write("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
 
 
 # Case分配主控测试区域
@@ -301,6 +332,8 @@ def TestControlArea():
     dmesg_n5(com_obj)
     for case in read_excel_for_page_element(form=form, sheet_name=sheet_name):
         case_row = int(case[0])
+        print("================【case{}】测试开始================\n".format(case_row))
+        log_toTxt("================【case{}】测试开始================\n".format(case_row))
         original_data = case[1].split(",")
         case_type = int(original_data[0])
         case_resolution = str(original_data[1])
@@ -326,6 +359,8 @@ def TestControlArea():
             # 正确值 放大
             if case_type == 1:
                 caseZoomIn(case_type, case_row, case_resolution, step)
+        print("================【case{}】测试结束================\n".format(case_row))
+        log_toTxt("================【case{}】测试结束================\n".format(case_row))
 
 
 if __name__ == '__main__':
