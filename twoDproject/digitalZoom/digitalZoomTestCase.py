@@ -375,7 +375,7 @@ if __name__ == '__main__':
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     form = "./doc/数码变焦测试用例V2.0.xlsx"
-    sheet_name = "数码变焦case自动化部分_Test"
+    sheet_name = "数码变焦case自动化部分"
     # 测试结果所在列索引
     column = 7
     TestControlArea()
