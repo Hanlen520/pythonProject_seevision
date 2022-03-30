@@ -58,6 +58,15 @@ cur_time = time.strftime("%Y%m%d_%H%M%S")
 
 # Case 错误值 无变焦缩小1 无变焦放大53
 def case_1or53_errorValue(row, resolution, step):
+    """
+    覆盖数码变焦测试case：错误值
+    1、无变焦缩小1
+    2、无变焦放大53
+    :param row:case对应在excel中所在行
+    :param resolution:case对应的测试分辨率
+    :param step:case对应测试步长
+    :return:None
+    """
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "错误值测试", resolution, step))
     log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "错误值测试", resolution, step))
     # operate area
@@ -82,6 +91,15 @@ def case_1or53_errorValue(row, resolution, step):
 
 # Case 错误值 先放大40再缩小53
 def case_40_53_errorValue(row, resolution, step1, step2):
+    """
+    覆盖数码变焦测试case：错误值
+    先放大40再缩小53
+    :param row:case对应在excel中所在行
+    :param resolution:case对应的测试分辨率
+    :param step1:case对应测试步长1
+    :param step2:case对应测试步长2
+    :return:None
+    """
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "错误值测试", resolution, step1, step2))
     log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "错误值测试", resolution, step1, step2))
     # operate area
@@ -105,6 +123,14 @@ def case_40_53_errorValue(row, resolution, step1, step2):
 
 # case 放大 step
 def caseZoomIn(type, row, resolution, step):
+    """
+    覆盖数码变焦测试case：放大
+    :param type:case类型 - 放大
+    :param row:case对应在excel中所在行
+    :param resolution:case对应的测试分辨率
+    :param step:case对应测试步长
+    :return:None
+    """
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
     log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长【{}】".format(row, "放大测试", resolution, step))
     # operate area
@@ -148,6 +174,15 @@ def caseZoomIn(type, row, resolution, step):
 
 # case 缩小 step
 def caseZoomOut(type, row, resolution, step1, step2):
+    """
+    覆盖数码变焦测试case：缩小
+    :param type:case类型 - 缩小
+    :param row:case对应在excel中所在行
+    :param resolution:case对应的测试分辨率
+    :param step1:case对应测试步长1
+    :param step2:case对应测试步长2
+    :return:None
+    """
     print("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "缩小测试", resolution, step1, step2))
     log_toTxt("【case{}】测试类型【{}】测试分辨率【{}】测试步长1【{}】测试步长2【{}】".format(row, "缩小测试", resolution, step1, step2))
     # operate area
@@ -198,6 +233,10 @@ def caseZoomOut(type, row, resolution, step1, step2):
 
 # 错误值弹框检测
 def checkErrorMessage():
+    """
+    错误值弹框检测，用于错误值测试结果判断
+    :return:返回检测结果
+    """
     value = "FAIL"
     try:
         if "操作失败" in str(uiautomation.TextControl(AutomationId="65535").Name):
@@ -214,6 +253,10 @@ def checkErrorMessage():
 
 # 边界值到达检测
 def checkBorderOver():
+    """
+    边界值到达检测，用于边界值测试结果判断
+    :return:返回检测结果
+    """
     value = "FAIL"
     try:
         if "当前已到达边界" in str(uiautomation.TextControl(AutomationId="65535").Name):
@@ -229,6 +272,11 @@ def checkBorderOver():
 
 
 def getZoomLogData(com_obj):
+    """
+    获取缩放操作后的log并进行数据处理获取缩放后的x、y、w、h值
+    :param com_obj:串口对象
+    :return:返回处理后的数据
+    """
     print("获取放大log数据……")
     log_toTxt("获取放大log数据……")
     original_data = re.findall("setEPTZZoom x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
@@ -244,6 +292,14 @@ def getZoomLogData(com_obj):
 
 # 缩放正确值log检测
 def checkZoomCorrectLog(type, w, h, step):
+    """
+    对缩放值进行log检测，并给出检测结果判断当前缩放是否符合公式
+    :param type:case缩放类型
+    :param w:缩放后的宽度
+    :param h:缩放后的高度
+    :param step:缩放操作步长
+    :return:返回与公式的匹配结果以及缩放后的x、y值用于后续case进行移动操作结果判断
+    """
     """
         1、放大的公式：w=w1-step*64，h=h1-step*36
         2、缩小的公式：w=w1+step*64，h=h1+step*36
@@ -269,6 +325,11 @@ def checkZoomCorrectLog(type, w, h, step):
 
 
 def getMoveLogData(com_obj):
+    """
+    获取移动操作后的log并进行数据处理获取缩放后的x、y、w、h值
+    :param com_obj:串口对象
+    :return:返回处理后的数据
+    """
     print("获取移动log数据……")
     log_toTxt("获取移动log数据……")
     original_data = re.findall("setEPTZMove x:(.*), y: (.*), w:(.*), h:(.*)", getWaitingData(com_obj))
@@ -284,6 +345,13 @@ def getMoveLogData(com_obj):
 
 # 向右移动正确值log检测
 def checkRightMoveCorrectLog(x, y, step):
+    """
+    对移动值进行log检测，并给出检测结果判断当前移动是否符合公式
+    :param x:缩放前的x值
+    :param y:缩放前的y值
+    :param step:步长
+    :return:返回与公式的匹配结果
+    """
     after_data = getMoveLogData(com_obj)
     value = ""
     print(x, y)
@@ -299,6 +367,12 @@ def checkRightMoveCorrectLog(x, y, step):
 
 # 从excel中读取数据并返回（element）
 def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.1.xlsx", sheet_name="数码变焦case自动化部分"):
+    """
+    通过Pandas模块读取case测试点内容，用于后续遍历case执行测试
+    :param form:待读取case Excel文件路径
+    :param sheet_name:待读取case Excel文件指定sheet表名
+    :return:返回对应case所在行以及对应改行case测试点
+    """
     print("从excel中读取数据（测试数据case）并返回（element）")
     log_toTxt("从excel中读取数据（测试数据case）并返回（element）")
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="CaseNumber", engine="openpyxl")
@@ -310,6 +384,15 @@ def read_excel_for_page_element(form="./doc/数码变焦测试用例V2.1.xlsx", 
 
 
 def write_into_excel(form="./doc/数码变焦测试用例V2.1.xlsx", sheet_name="数码变焦case自动化部分", row=1, column=1, value="PASS"):
+    """
+    通过openpyxl模块将每一行case的测试结果写入对应每一行的结果列中
+    :param form:待写入case Excel文件路径
+    :param sheet_name:待写入case Excel文件指定sheet表名
+    :param row:待写入case测试结果所在行
+    :param column:待写入case测试结果所在列
+    :param value:待写入测试结果
+    :return:None
+    """
     print("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
     log_toTxt("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
     wb = openpyxl.load_workbook(form)
@@ -319,6 +402,11 @@ def write_into_excel(form="./doc/数码变焦测试用例V2.1.xlsx", sheet_name=
 
 
 def log_toTxt(result):
+    """
+    将执行log写入txt文件中，a+追加模式
+    :param result:每条case待写入的测试结果
+    :return:None
+    """
     try:
         with open("./自动化变焦测试CaseRunningLog.log", "a+") as f:
             f.write(str(result) + "\n")
@@ -336,6 +424,10 @@ def log_toTxt(result):
 
 
 def TestControlArea():
+    """
+    数码变焦自动化case分配控制测试区域
+    :return:None
+    """
     global com_obj
     com_obj = initCom(getConnectCOMs()[0], baud_rate=115200)
     enterPSD(com_obj)
@@ -398,6 +490,13 @@ def TestControlArea():
 
 
 if __name__ == '__main__':
+    """
+        数码变焦自动化测试执行区域Main函数
+        不同测试环境下需要修改：
+        （改成自己电脑对应的工具路径即可）
+        1、potplayer_path
+        2、hidtool_path
+    """
     potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     form = "./doc/数码变焦测试用例V2.1.xlsx"

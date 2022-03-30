@@ -5,6 +5,7 @@ import subprocess
 from time import sleep
 
 import pyautogui
+
 pyautogui.FAILSAFE = True
 from uiautomation import uiautomation
 
@@ -14,10 +15,16 @@ os.path.abspath(".")
     @File:windowsControl.py
     @Author:十二点前要睡觉
     @Date:2022/3/23 10:35
+    @Description:通用HidTool、Potplayer控制文件，可复用
 """
 
 
 def openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe"):
+    """
+    打开Potplayer
+    :param potplayer_path:你本机的Potplayer启动软件的路径
+    :return:None
+    """
     global potplayer
     potplayer = subprocess.Popen(potplayer_path)
     sleep(2)
@@ -26,6 +33,10 @@ def openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe"):
 
 
 def enterDeviceSettings():
+    """
+    进入Potplayer设备设置页
+    :return:None
+    """
     global potplayer_frame
     global settings_frame
     potplayer_frame = uiautomation.WindowControl(searchDepth=1, Name="PotPlayer")
@@ -34,6 +45,11 @@ def enterDeviceSettings():
 
 
 def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
+    """
+    Potplayer切换指定分辨率（滚动查找）
+    :param resolution:需要切换的分辨率
+    :return:None
+    """
     settings_frame.ComboBoxControl(AutomationId="3008").Click()
     settings_frame.SetFocus()
     sleep(1)
@@ -63,12 +79,21 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
 
 
 def openHidTool(hidtool_path="D:\HIDTools_2.5\HIDTool_2_5.exe"):
+    """
+    打开HidTool2.5工具
+    :param hidtool_path:你本机的HidTool启动软件的路径
+    :return:None
+    """
     global hidtool
     hidtool = subprocess.Popen(hidtool_path)
     sleep(2)
 
 
 def closeHidTool():
+    """
+    关闭HidTool2.5工具
+    :return:None
+    """
     if hidtool:
         hidtool.kill()
     sleep(1)
@@ -76,6 +101,10 @@ def closeHidTool():
 
 # 关闭Potplayer
 def closePotplayer():
+    """
+    关闭Potplayer
+    :return:None
+    """
     if potplayer:
         potplayer.kill()
     sleep(1)
@@ -83,6 +112,11 @@ def closePotplayer():
 
 # 放大
 def hidZoomIn(step):
+    """
+    HidTool放大操作
+    :param step:放大的步长
+    :return:None
+    """
     step_edit = uiautomation.EditControl(AutomationId="eptz_size_textbox_length")
     step_edit.GetValuePattern().SetValue("")
     step_edit.SendKeys(str(step))
@@ -92,6 +126,11 @@ def hidZoomIn(step):
 
 # 缩小
 def hidZoomOut(step):
+    """
+    HidTool缩小操作
+    :param step:缩小的步长
+    :return:None
+    """
     step_edit = uiautomation.EditControl(AutomationId="eptz_size_textbox_length")
     step_edit.GetValuePattern().SetValue("")
     step_edit.SendKeys(str(step))
@@ -101,11 +140,20 @@ def hidZoomOut(step):
 
 # 复位
 def hidReset():
+    """
+    HidTool缩放复位操作
+    :return:None
+    """
     uiautomation.ButtonControl(AutomationId="button4").Click()
     sleep(1)
 
 
 def rightNarrow(step):
+    """
+    HidTool右移操作
+    :param step:右移动的步长
+    :return:None
+    """
     print("开始右移动【{}】step".format(step))
     step_edit = uiautomation.EditControl(AutomationId="eptz_move_textbox_length")
     step_edit.GetValuePattern().SetValue("")
@@ -116,6 +164,10 @@ def rightNarrow(step):
 
 # 获取当前摄像头支持的格式
 def getFormatList():
+    """
+    通过Potplayer获取当前摄像头支持的分辨率格式
+    :return:返回所支持的分辨率格式列表
+    """
     settings_frame.ComboBoxControl(AutomationId="3008").Click()
     sleep(1)
     format_list = settings_frame.ListControl(searchDepth=5, Name="格式：")
@@ -130,6 +182,9 @@ def getFormatList():
 
 
 if __name__ == '__main__':
+    """
+        用于调试
+    """
     """
     ['YUY2 640×360P 30(P 16:9)', 'YUY2 160×90P 30(P 16:9)', 'YUY2 160×120P 30(P 4:3)', 'YUY2 176×144P 30(P 11:9)',
      'YUY2 320×180P 30(P 16:9)', 'YUY2 320×240P 30(P 4:3)', 'YUY2 352×288P 30(P 11:9)', 'YUY2 480×270P 30(P 16:9)',
