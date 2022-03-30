@@ -106,7 +106,6 @@ class StreeTest:
         fieldCheckR = self.check_SpecificField()
         print(fieldCheckR)
         self.toTxt(fieldCheckR)
-        # self.reboot_device()
         return "Flash Module + XMOS Update Done"
 
     def checkPortOpen(self):
@@ -145,48 +144,6 @@ class StreeTest:
                         print("339版本刷机成功！")
                         self.toTxt("339版本刷机成功！")
                         break
-
-    # def log_process(self):
-    #     print("Begin log process")
-    #     if self.checkPortOpen():
-    #         # while self.port_obj.inWaiting() > 0:
-    #         while True:
-    #             if self.port_obj.inWaiting() > 0:
-    #                 sleep(0.1)
-    #                 try:
-    #                     data = str(self.port_obj.read_all())
-    #                 except AttributeError:
-    #                     data = "empty"
-    #                 if not os.path.exists("./log/"):
-    #                     os.mkdir("./log/")
-    #                 with open("./log/{}_serialLog.log".format(cur_time), "a+") as logF:
-    #                     logF.write(data + "\n")
-    #             else:
-    #                 break
-    #     else:
-    #         print("NOK")
-
-    # def writeXmosUpgrade(self):
-    #     print("Begin XMOS Upgrade")
-    #     self.toTxt("Begin XMOS Upgrade")
-    #     if self.checkPortOpen():
-    #         self.port_obj.write(
-    #             "dfu_i2c write_upgrade /customer/vendor/app_vf_stereo_base_i2c_i8o2_I2Sref_I2ScommOutputDOATX1J_24bit_V316dfu.bin\r\n".encode(
-    #                 "UTF-8"))
-    #         # while True:
-    #         #     sleep(0.1)
-    #         #     print("正在XMOS刷机……")
-    #         #     if self.port_obj.inWaiting()>0:
-    #         #         data = str(self.port_obj.read_all())
-    #         #         print(data)
-    #         #         if "done" in data:
-    #         #             print("Xmos版本升级成功！")
-    #         #             break
-    #         print("正在XMOS刷机……")
-    #         self.toTxt("正在XMOS刷机……")
-    #         sleep(60)
-    #         print("Xmos版本升级成功！")
-    #         self.toTxt("Xmos版本升级成功！")
 
     def getXmosVersion(self):
         """
@@ -313,9 +270,7 @@ class StreeTest:
         enter_mode = self.enterBootloaderMode()
         self.toTxt(enter_mode)
         print(enter_mode)
-        # self.serial_no = self.getFastboot_devices()[0]
         serialNo = self.getFastboot_devices()[0]
-        # print("serial is: {}".format(self.serial_no))
         print("serial is: {}".format(serialNo))
         self.toTxt("serial is: {}".format(serialNo))
         subprocess.Popen("fastboot -s {} oem finish_upgrade".format(serialNo), shell=True).communicate()
@@ -379,29 +334,6 @@ def test_area(oldversion, newversion, st_obj, cycle_times, serialNo):
     st_obj.toTxt("测试结束，请查看Result.txt查看结果")
 
 
-# def log_area(st_obj):
-#     print("Begin log process")
-#     if not st_obj.port_obj.is_open:
-#         st_obj.port_obj.open()
-#         st_obj.enterADPSD()
-#     while True:
-#         try:
-#             sleep(0.1)
-#             if st_obj.port_obj.inWaiting() > 0:
-#                 try:
-#                     data = str(st_obj.port_obj.readline())
-#                 except (AttributeError, TypeError):
-#                     data = "empty"
-#                 if not os.path.exists("./log/"):
-#                     os.mkdir("./log/")
-#                 with open("./log/{}【{}】_serialLog.log".format(st_obj.port_obj.portstr, cur_time), "a+") as logF:
-#                     logF.write(data + "\n")
-#             else:
-#                 continue
-#         except SerialException:
-#             continue
-
-
 def serial2COM(ports):
     """
     串口与序列号映射并写入json文件函数
@@ -435,9 +367,7 @@ def readJson(f_path):
     :return:返回字典形式的信息
     """
     with open(f_path, "r") as f:
-        # print("序列号列表获取")heb
         serialDict = json.load(f)
-        # print("序列号列表：{}".format(serialDict))
     return serialDict
 
 
@@ -448,9 +378,7 @@ def initCOMTest(comNumber, serialNo):
     :param serialNo:序列号
     :return:None
     """
-    # st_obj = StreeTest("COM3", 115200)
     st_obj = StreeTest(comNumber, 115200)
-    # 已跑204， 2000 - 204 = 1796
     cycle_times = 1000
     # 需要先将每台设备的序列号存下来存到self.serial_no中
     # 需要增加映射，在测试前，先把所有的一起遍历一遍并存下对应的端口和序列号来进行设置
@@ -482,7 +410,6 @@ if __name__ == '__main__':
             ports.append(current_port)
     print(ports)
     f_path = serial2COM(ports)
-    # f_path = "./serialNos.json"
     serialDict = readJson(f_path)
     test_pool = multiprocessing.Pool(len(ports))
     for coms in ports:
@@ -492,4 +419,3 @@ if __name__ == '__main__':
         sleep(20)
     test_pool.close()
     test_pool.join()
-    # st_obj = StreeTest("COM35", 115200)
