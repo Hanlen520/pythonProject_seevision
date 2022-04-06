@@ -1,0 +1,1 @@
+2022-04-03 19:21:49.941 windowsControl.py[53] switchResolution -> 
