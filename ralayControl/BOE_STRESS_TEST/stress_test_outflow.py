@@ -18,6 +18,7 @@ os.path.abspath(".")
     @File:stress_test_outflow.py
     @Author:十二点前要睡觉
     @Date:2022/2/17 14:10
+    @Description:BOE_TOF控制继电器上下电压力测试
 """
 
 
