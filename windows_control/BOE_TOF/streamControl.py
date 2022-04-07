@@ -11,7 +11,7 @@ import uiautomation as ui
 import pandas as pd
 
 """
-    控制BOE_TOF上位机开关
+    控制BOE_TOF上位机开关压力测试
     1、连接固件，检查端口和更新驱动程序，SecureCRTPortable连接端口
     2、运行脚本进行测试，打开相机，关闭相机
     3、第一场景，关闭相机5秒后打开相机

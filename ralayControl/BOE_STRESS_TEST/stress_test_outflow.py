@@ -134,7 +134,7 @@ if __name__ == '__main__':
     original_image = "./originalImage.jpg"
 
     open_BOE_TOF(boe_tof_path)
-    for i in range(2500):
+    for i in range(3000):
         # for i in range(5):
         i += 1
         voltage_12V_on(serialControl)
