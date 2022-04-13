@@ -2,10 +2,13 @@
 import os
 from time import sleep
 
+import cv2
 import pyautogui
+import pytesseract
+from PIL import Image
 
 pyautogui.FAILSAFE = True
-pyautogui.PAUSE = 0.5
+# pyautogui.PAUSE = 0.5
 os.path.abspath(".")
 """
     @Project:pythonProject_seevision
@@ -57,18 +60,94 @@ def catchFramePicture(name):
     if not os.path.exists("./screenshot/"):
         os.mkdir("./screenshot/")
     x, y = pyautogui.position()
-    pyautogui.screenshot("./screenshot/{}.jpeg".format(name), region=(x - 325, y - 175, 650, 350))
+    imagePath = "./screenshot/{}.jpeg".format(name)
+    catch_x, catch_y = x - GoodX / 2, y - GoodY / 2
+    catch_w, catch_h = GoodX, GoodY
+    # pyautogui.screenshot(imagePath, region=(x - 325, y - 200, 650, 350))
+    pyautogui.screenshot(imagePath, region=(catch_x, catch_y, catch_w, catch_h))
+    return imagePath
+
+
+def ocr_analysis(name, img):
+    text = pytesseract.image_to_string(Image.open(img), lang="eng", config="--psm 6").replace("\n",
+                                                                                              "").strip().replace(
+        " ", "").replace(".","").replace(")","")
+    print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
+    if name.replace(".jpeg", "") == text:
+        print("image:{} text is:{},result is 【{}】".format(img, text, "PASS"))
+    else:
+        print("image:{} text is:{},result is 【{}】".format(img, text, "FAIL"))
+
+
+def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
+    # turn to black and white picture
+    img = Image.open(imagePath)
+    img_gray = img.convert("L")
+    if not os.path.exists("./screenshot/Gray/"):
+        os.mkdir("./screenshot/Gray/")
+    if not os.path.exists("./screenshot/BLACK&WHITE/"):
+        os.mkdir("./screenshot/BLACK&WHITE/")
+    img_gray.save("./screenshot/Gray/【Gray】{}".format(name))
+    img_black_white = img_gray.point(lambda x: 0 if x > 200 else 255)
+    bw = "./screenshot/BLACK&WHITE/【BLACK&WHITE】{}".format(name)
+    img_black_white.save(bw)
+    sleep(1)
+
+    # noise optimize
+    # img_cv = cv2.imread(bw)
+    # im = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
+    # cv2.adaptiveThreshold(im, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 1)
+
+    # img = Image.open(bw)
+    # last_picture = "./screenshot/[code_result]{}".format(name)
+    # h, w = img.shape[:2]
+    # for y in range(0, w):
+    #     for x in range(0, h):
+    #         if y == 0 or y == w - 1 or x == 0 or x == h - 1:
+    #             img[x, y] = 255
+    #             continue
+    #         count = 0
+    #         if img[x, y - 1] == 255:
+    #             count += 1
+    #         if img[x, y + 1] == 255:
+    #             count += 1
+    #         if img[x - 1, y] == 255:
+    #             count += 1
+    #         if img[x + 1, y] == 255:
+    #             count += 1
+    #         if count > 2:
+    #             img[x, y] = 255
+    #     cv2.imwrite(last_picture, img)
+    # return name, last_picture
+    return name, bw
 
 
 if __name__ == '__main__':
     # openPADSLayout()
     # openPcbFile()
+    screenX, screenY = pyautogui.size()
+    GoodX = screenX * 0.3
+    GoodY = screenY * 0.23
+    print(GoodX, GoodY)
+    #
     sleep(3)
-    demo_list = ["D15", "D16", "CM12", "CM23", "CM21", "C93"]
-    # for demo in demo_list:
-    #     openSearchBox(demo)
-    #     sleep(1)
-    #     resize_home()
-    name = "D15"
-    openSearchBox(name)
-    catchFramePicture(name)
+    demo_list = ["C19", "D15", "D16", "CM12", "CM23", "CM21", "C93", "U15", "R16", "C30"]
+    fixed_imageList = []
+    for demo in demo_list:
+        openSearchBox(demo)
+        # sleep(1)
+        imagePath = catchFramePicture(demo)
+        picture_Fixed(demo + ".jpeg", imagePath)
+        # ocr_analysis(demo, imagePath)
+        resize_home()
+
+    for fixedImage in os.listdir("./screenshot/BLACK&WHITE/"):
+        if "【BLACK&WHITE】" in fixedImage:
+            print(fixedImage)
+            if "BLACK&WHITE" in fixedImage:
+                if fixedImage.endswith(".jpeg"):
+                    ocr_analysis(fixedImage.split(".")[0].split("】")[1], "./screenshot/BLACK&WHITE/" + fixedImage)
+    # name = "D15"
+    # openSearchBox(name)
+    # catchFramePicture(name)
+    # ocr_analysis()
