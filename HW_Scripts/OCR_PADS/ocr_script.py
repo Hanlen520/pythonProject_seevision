@@ -5,7 +5,8 @@ from time import sleep
 import cv2
 import pyautogui
 import pytesseract
-from PIL import Image
+from PIL import Image, ImageEnhance
+from jieba import xrange
 
 pyautogui.FAILSAFE = True
 # pyautogui.PAUSE = 0.5
@@ -71,7 +72,7 @@ def catchFramePicture(name):
 def ocr_analysis(name, img):
     text = pytesseract.image_to_string(Image.open(img), lang="eng", config="--psm 6").replace("\n",
                                                                                               "").strip().replace(
-        " ", "").replace(".","").replace(")","")
+        " ", "").replace(".", "").replace(")", "")
     print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
     if name.replace(".jpeg", "") == text:
         print("image:{} text is:{},result is 【{}】".format(img, text, "PASS"))
@@ -97,7 +98,7 @@ def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
     # img_cv = cv2.imread(bw)
     # im = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
     # cv2.adaptiveThreshold(im, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 1)
-
+    #
     # img = Image.open(bw)
     # last_picture = "./screenshot/[code_result]{}".format(name)
     # h, w = img.shape[:2]
@@ -119,7 +120,38 @@ def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
     #             img[x, y] = 255
     #     cv2.imwrite(last_picture, img)
     # return name, last_picture
-    return name, bw
+
+    im = Image.open(bw)
+    enhancer = ImageEnhance.Contrast(im)
+    im = enhancer.enhance(2)
+    im = im.convert("1")
+    data = im.getdata()
+    w, h = im.size
+    black_point = 0
+    for x in xrange(1, w - 1):
+        for y in xrange(1, h - 1):
+            mid_pixel = data[w * y + x]  # 中央像素点像素值
+            if mid_pixel == 0:  # 找出上下左右四个方向像素点像素值
+                top_pixel = data[w * (y - 1) + x]
+                left_pixel = data[w * y + (x - 1)]
+                down_pixel = data[w * (y + 1) + x]
+                right_pixel = data[w * y + (x + 1)]
+                # 判断上下左右的黑色像素点总个数
+                if top_pixel == 0:
+                    black_point += 1
+                if left_pixel == 0:
+                    black_point += 1
+                if down_pixel == 0:
+                    black_point += 1
+                if right_pixel == 0:
+                    black_point += 1
+                if black_point >= 3:
+                    im.putpixel((x, y), 0)
+                black_point = 0
+    last_picture = "./screenshot/[code_result]{}".format(name)
+    im.save(last_picture)
+    sleep(1)
+    return name, last_picture
 
 
 if __name__ == '__main__':
