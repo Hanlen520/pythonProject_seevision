@@ -70,7 +70,7 @@ def catchFramePicture(name):
 
 
 def ocr_analysis(name, img):
-    text = pytesseract.image_to_string(Image.open(img), lang="eng", config="--psm 7").replace("\n",
+    text = pytesseract.image_to_string(Image.open(img), lang="cgt", config="--psm 7").replace("\n",
                                                                                               "").strip().replace(
         " ", "").replace(".", "").replace(")", "")
     print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
@@ -158,16 +158,16 @@ if __name__ == '__main__':
     # openPADSLayout()
     # openPcbFile()
     screenX, screenY = pyautogui.size()
-    GoodX = screenX * 0.3
-    GoodY = screenY * 0.23
+    GoodX = screenX * 0.2
+    GoodY = screenY * 0.15
     print(GoodX, GoodY)
     #
     # sleep(3)
     # contain 1\2\3\4\5\6\7\8\9\0 A~Z data training
     # demo_list = ["C19", "D15", "D16", "CM12", "CM23", "CM21", "C93", "U15", "R16", "C30"]
-    """
-        转tiff->Merge->analysis picture->train picture->put data into tesseract tool
-    """
+    # """
+    #     转tiff->Merge->analysis picture->train picture->put data into tesseract tool
+    # """
     # demo_list = ["AB01", "CD23", "EF45", "GH67", "IJ89", "KL10", "MN11", "OP12", "QR13", "ST14", "UV15", "WX16", "YZ18"]
     # fixed_imageList = []
     # for demo in demo_list:
