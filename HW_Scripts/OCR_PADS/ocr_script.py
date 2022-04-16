@@ -2,7 +2,8 @@
 import os
 from time import sleep
 
-import cv2
+import openpyxl
+import pandas as pd
 import pyautogui
 import pytesseract
 from PIL import Image, ImageEnhance
@@ -69,15 +70,18 @@ def catchFramePicture(name):
     return imagePath
 
 
-def ocr_analysis(name, img):
+def ocr_analysis(name, img, row):
     text = pytesseract.image_to_string(Image.open(img), lang="cgt", config="--psm 7").replace("\n",
                                                                                               "").strip().replace(
         " ", "").replace(".", "").replace(")", "")
     print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
     if name.replace(".jpeg", "") == text:
         print("image:{} text is:{},result is 【{}】".format(img, text, "PASS"))
+        write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=12, value="PASS")
     else:
         print("image:{} text is:{},result is 【{}】".format(img, text, "FAIL"))
+        write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=12, value="FAIL")
+    write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=13, value=text)
 
 
 def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
@@ -154,7 +158,50 @@ def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
     return name, last_picture
 
 
+"""
+    test form read - excel operate
+"""
+
+
+# 从excel中读取数据并返回（element）
+
+def read_excel_for_page_element(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1"):
+    """
+    通过Pandas模块读取case测试点内容，用于后续遍历case执行测试
+    :param form:待读取case Excel文件路径
+    :param sheet_name:待读取case Excel文件指定sheet表名
+    :return:返回对应case所在行以及对应改行case测试点
+    """
+    print("从excel中读取数据（测试数据case）并返回（element）")
+    df = pd.read_excel(form, sheet_name=sheet_name, index_col="number", engine="openpyxl")
+    test_case_list = []
+    for i in range(1, df.shape[0] + 1):
+        original_data = df.loc[i, "RefDes"]
+        test_case_list.append([i, original_data])
+    return test_case_list
+
+
+def write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=1, column=12, value="PASS"):
+    """
+    通过openpyxl模块将每一行case的测试结果写入对应每一行的结果列中
+    :param form:待写入case Excel文件路径
+    :param sheet_name:待写入case Excel文件指定sheet表名
+    :param row:待写入case测试结果所在行
+    :param column:待写入case测试结果所在列
+    :param value:待写入测试结果
+    :return:None
+    """
+    print("将测试结果写入excel表格对应Case的行 - 测试结果处：【{}】".format(value))
+    wb = openpyxl.load_workbook(form)
+    ws = wb[sheet_name]
+    ws.cell(row + 1, column).value = value
+    wb.save(form)
+
+
 if __name__ == '__main__':
+    element_list = read_excel_for_page_element()
+    print(element_list)
+
     # openPADSLayout()
     # openPcbFile()
     screenX, screenY = pyautogui.size()
@@ -162,28 +209,36 @@ if __name__ == '__main__':
     GoodY = screenY * 0.15
     print(GoodX, GoodY)
     #
-    # sleep(3)
+    sleep(5)
     # contain 1\2\3\4\5\6\7\8\9\0 A~Z data training
     # demo_list = ["C19", "D15", "D16", "CM12", "CM23", "CM21", "C93", "U15", "R16", "C30"]
-    # """
-    #     转tiff->Merge->analysis picture->train picture->put data into tesseract tool
-    # """
+    """
+        转tiff->Merge->analysis picture->train picture->put data into tesseract tool
+    """
     # demo_list = ["AB01", "CD23", "EF45", "GH67", "IJ89", "KL10", "MN11", "OP12", "QR13", "ST14", "UV15", "WX16", "YZ18"]
-    # fixed_imageList = []
-    # for demo in demo_list:
-    #     openSearchBox(demo)
-    #     # sleep(1)
-    #     imagePath = catchFramePicture(demo)
-    #     picture_Fixed(demo + ".jpeg", imagePath)
-    #     # ocr_analysis(demo, imagePath)
-    #     resize_home()
-
-    for fixedImage in os.listdir("./screenshot/BLACK&WHITE/"):
-        if "【BLACK&WHITE】" in fixedImage:
-            print(fixedImage)
-            if "BLACK&WHITE" in fixedImage:
-                if fixedImage.endswith(".jpeg"):
-                    ocr_analysis(fixedImage.split(".")[0].split("】")[1], "./screenshot/BLACK&WHITE/" + fixedImage)
+    fixed_imageList = []
+    row_list = []
+    for demo in element_list:
+        demo = demo[1]
+        row = demo[0]
+        row_list.append({"demo": row})
+        openSearchBox(demo)
+        # sleep(1)
+        imagePath = catchFramePicture(demo)
+        picture_Fixed(demo + ".jpeg", imagePath)
+        ocr_analysis(demo, imagePath, row)
+        resize_home()
+    #
+    # row = 1
+    # for fixedImage in os.listdir("./screenshot/BLACK&WHITE/"):
+    #     if "【BLACK&WHITE】" in fixedImage:
+    #         print(fixedImage)
+    #         if "BLACK&WHITE" in fixedImage:
+    #             if fixedImage.endswith(".jpeg"):
+    #                 name = fixedImage.split(".")[0].split("】")[1]
+    #                 img = "./screenshot/BLACK&WHITE/" + fixedImage
+    #                 ocr_analysis(name, img, row=row)
+    #                 row += 1
     # name = "D15"
     # openSearchBox(name)
     # catchFramePicture(name)
