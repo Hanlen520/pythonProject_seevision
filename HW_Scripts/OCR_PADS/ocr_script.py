@@ -71,7 +71,7 @@ def catchFramePicture(name):
 
 
 def ocr_analysis(name, img, row):
-    text = pytesseract.image_to_string(Image.open(img), lang="cgt", config="--psm 7").replace("\n",
+    text = pytesseract.image_to_string(Image.open(img), lang="test1", config="--psm 7").replace("\n",
                                                                                               "").strip().replace(
         " ", "").replace(".", "").replace(")", "")
     print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
@@ -219,14 +219,15 @@ if __name__ == '__main__':
     fixed_imageList = []
     row_list = []
     for demo in element_list:
-        demo = demo[1]
         row = demo[0]
+        demo = demo[1]
+        print("row is {} and demo is {}".format(row, demo))
         row_list.append({"demo": row})
         openSearchBox(demo)
         # sleep(1)
         imagePath = catchFramePicture(demo)
         picture_Fixed(demo + ".jpeg", imagePath)
-        ocr_analysis(demo, imagePath, row)
+        ocr_analysis(demo, imagePath, int(row))
         resize_home()
     #
     # row = 1
