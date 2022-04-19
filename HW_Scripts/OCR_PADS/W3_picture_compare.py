@@ -164,7 +164,7 @@ if __name__ == '__main__':
     screenX, screenY = pyautogui.size()
 
     # 手动先设置显示top 或者 bottom的内容
-    testSide = "Top"
+    testSide = "Bottom"
     for element in element_list:
         e_row = element[0]
         e_type = element[1]
