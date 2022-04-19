@@ -70,92 +70,92 @@ def catchFramePicture(name):
     return imagePath
 
 
-def ocr_analysis(name, img, row):
-    text = pytesseract.image_to_string(Image.open(img), lang="test1", config="--psm 7").replace("\n",
-                                                                                              "").strip().replace(
-        " ", "").replace(".", "").replace(")", "")
-    print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
-    if name.replace(".jpeg", "") == text:
-        print("image:{} text is:{},result is 【{}】".format(img, text, "PASS"))
-        write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=12, value="PASS")
-    else:
-        print("image:{} text is:{},result is 【{}】".format(img, text, "FAIL"))
-        write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=12, value="FAIL")
-    write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=13, value=text)
+# def ocr_analysis(name, img, row):
+#     text = pytesseract.image_to_string(Image.open(img), lang="test1", config="--psm 7").replace("\n",
+#                                                                                               "").strip().replace(
+#         " ", "").replace(".", "").replace(")", "")
+#     print("【{}】 -- 【{}】".format(name.replace(".jpeg", ""), text))
+#     if name.replace(".jpeg", "") == text:
+#         print("image:{} text is:{},result is 【{}】".format(img, text, "PASS"))
+#         write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=12, value="PASS")
+#     else:
+#         print("image:{} text is:{},result is 【{}】".format(img, text, "FAIL"))
+#         write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=12, value="FAIL")
+#     write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=row, column=13, value=text)
 
 
-def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
-    # turn to black and white picture
-    img = Image.open(imagePath)
-    img_gray = img.convert("L")
-    if not os.path.exists("./screenshot/Gray/"):
-        os.mkdir("./screenshot/Gray/")
-    if not os.path.exists("./screenshot/BLACK&WHITE/"):
-        os.mkdir("./screenshot/BLACK&WHITE/")
-    img_gray.save("./screenshot/Gray/【Gray】{}".format(name))
-    img_black_white = img_gray.point(lambda x: 0 if x > 200 else 255)
-    bw = "./screenshot/BLACK&WHITE/【BLACK&WHITE】{}".format(name)
-    img_black_white.save(bw)
-    sleep(1)
-
-    # noise optimize
-    # img_cv = cv2.imread(bw)
-    # im = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
-    # cv2.adaptiveThreshold(im, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 1)
-    #
-    # img = Image.open(bw)
-    # last_picture = "./screenshot/[code_result]{}".format(name)
-    # h, w = img.shape[:2]
-    # for y in range(0, w):
-    #     for x in range(0, h):
-    #         if y == 0 or y == w - 1 or x == 0 or x == h - 1:
-    #             img[x, y] = 255
-    #             continue
-    #         count = 0
-    #         if img[x, y - 1] == 255:
-    #             count += 1
-    #         if img[x, y + 1] == 255:
-    #             count += 1
-    #         if img[x - 1, y] == 255:
-    #             count += 1
-    #         if img[x + 1, y] == 255:
-    #             count += 1
-    #         if count > 2:
-    #             img[x, y] = 255
-    #     cv2.imwrite(last_picture, img)
-    # return name, last_picture
-
-    im = Image.open(bw)
-    enhancer = ImageEnhance.Contrast(im)
-    im = enhancer.enhance(2)
-    im = im.convert("1")
-    data = im.getdata()
-    w, h = im.size
-    black_point = 0
-    for x in xrange(1, w - 1):
-        for y in xrange(1, h - 1):
-            mid_pixel = data[w * y + x]  # 中央像素点像素值
-            if mid_pixel == 0:  # 找出上下左右四个方向像素点像素值
-                top_pixel = data[w * (y - 1) + x]
-                left_pixel = data[w * y + (x - 1)]
-                down_pixel = data[w * (y + 1) + x]
-                right_pixel = data[w * y + (x + 1)]
-                # 判断上下左右的黑色像素点总个数
-                if top_pixel == 0:
-                    black_point += 1
-                if left_pixel == 0:
-                    black_point += 1
-                if down_pixel == 0:
-                    black_point += 1
-                if right_pixel == 0:
-                    black_point += 1
-                if black_point >= 3:
-                    im.putpixel((x, y), 0)
-                black_point = 0
-    last_picture = "./screenshot/[code_result]{}".format(name)
-    im.save(last_picture)
-    sleep(1)
-    return name, last_picture
+# def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
+#     # turn to black and white picture
+#     img = Image.open(imagePath)
+#     img_gray = img.convert("L")
+#     if not os.path.exists("./screenshot/Gray/"):
+#         os.mkdir("./screenshot/Gray/")
+#     if not os.path.exists("./screenshot/BLACK&WHITE/"):
+#         os.mkdir("./screenshot/BLACK&WHITE/")
+#     img_gray.save("./screenshot/Gray/【Gray】{}".format(name))
+#     img_black_white = img_gray.point(lambda x: 0 if x > 200 else 255)
+#     bw = "./screenshot/BLACK&WHITE/【BLACK&WHITE】{}".format(name)
+#     img_black_white.save(bw)
+#     sleep(1)
+#
+#     # noise optimize
+#     # img_cv = cv2.imread(bw)
+#     # im = cv2.cvtColor(img_cv, cv2.COLOR_BGR2GRAY)
+#     # cv2.adaptiveThreshold(im, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 1)
+#     #
+#     # img = Image.open(bw)
+#     # last_picture = "./screenshot/[code_result]{}".format(name)
+#     # h, w = img.shape[:2]
+#     # for y in range(0, w):
+#     #     for x in range(0, h):
+#     #         if y == 0 or y == w - 1 or x == 0 or x == h - 1:
+#     #             img[x, y] = 255
+#     #             continue
+#     #         count = 0
+#     #         if img[x, y - 1] == 255:
+#     #             count += 1
+#     #         if img[x, y + 1] == 255:
+#     #             count += 1
+#     #         if img[x - 1, y] == 255:
+#     #             count += 1
+#     #         if img[x + 1, y] == 255:
+#     #             count += 1
+#     #         if count > 2:
+#     #             img[x, y] = 255
+#     #     cv2.imwrite(last_picture, img)
+#     # return name, last_picture
+#
+#     im = Image.open(bw)
+#     enhancer = ImageEnhance.Contrast(im)
+#     im = enhancer.enhance(2)
+#     im = im.convert("1")
+#     data = im.getdata()
+#     w, h = im.size
+#     black_point = 0
+#     for x in xrange(1, w - 1):
+#         for y in xrange(1, h - 1):
+#             mid_pixel = data[w * y + x]  # 中央像素点像素值
+#             if mid_pixel == 0:  # 找出上下左右四个方向像素点像素值
+#                 top_pixel = data[w * (y - 1) + x]
+#                 left_pixel = data[w * y + (x - 1)]
+#                 down_pixel = data[w * (y + 1) + x]
+#                 right_pixel = data[w * y + (x + 1)]
+#                 # 判断上下左右的黑色像素点总个数
+#                 if top_pixel == 0:
+#                     black_point += 1
+#                 if left_pixel == 0:
+#                     black_point += 1
+#                 if down_pixel == 0:
+#                     black_point += 1
+#                 if right_pixel == 0:
+#                     black_point += 1
+#                 if black_point >= 3:
+#                     im.putpixel((x, y), 0)
+#                 black_point = 0
+#     last_picture = "./screenshot/[code_result]{}".format(name)
+#     im.save(last_picture)
+#     sleep(1)
+#     return name, last_picture
 
 
 """
@@ -165,7 +165,7 @@ def picture_Fixed(name, imagePath="./screenshot/C93.jpeg"):
 
 # 从excel中读取数据并返回（element）
 
-def read_excel_for_page_element(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1"):
+def read_excel_for_page_element(form="./sytj0101/SEE0102M_V01_0415.xlsx", sheet_name="Sheet1"):
     """
     通过Pandas模块读取case测试点内容，用于后续遍历case执行测试
     :param form:待读取case Excel文件路径
@@ -176,8 +176,11 @@ def read_excel_for_page_element(form="./sytj0101/工作簿1.xlsx", sheet_name="S
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="number", engine="openpyxl")
     test_case_list = []
     for i in range(1, df.shape[0] + 1):
-        original_data = df.loc[i, "RefDes"]
-        test_case_list.append([i, original_data])
+        part_type = df.loc[i, "PartType"]
+        ref_des = df.loc[i, "RefDes"]
+        layer = df.loc[i, "Layer"]
+        orientation = df.loc[i, "Orient."]
+        test_case_list.append([i, part_type, ref_des, layer, orientation])
     return test_case_list
 
 
@@ -201,46 +204,21 @@ def write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row
 if __name__ == '__main__':
     element_list = read_excel_for_page_element()
     print(element_list)
-
-    # openPADSLayout()
-    # openPcbFile()
-    screenX, screenY = pyautogui.size()
-    GoodX = screenX * 0.2
-    GoodY = screenY * 0.15
-    print(GoodX, GoodY)
-    #
-    sleep(5)
-    # contain 1\2\3\4\5\6\7\8\9\0 A~Z data training
-    # demo_list = ["C19", "D15", "D16", "CM12", "CM23", "CM21", "C93", "U15", "R16", "C30"]
-    """
-        转tiff->Merge->analysis picture->train picture->put data into tesseract tool
-    """
-    # demo_list = ["AB01", "CD23", "EF45", "GH67", "IJ89", "KL10", "MN11", "OP12", "QR13", "ST14", "UV15", "WX16", "YZ18"]
-    fixed_imageList = []
-    row_list = []
-    for demo in element_list:
-        row = demo[0]
-        demo = demo[1]
-        print("row is {} and demo is {}".format(row, demo))
-        row_list.append({"demo": row})
-        openSearchBox(demo)
-        # sleep(1)
-        imagePath = catchFramePicture(demo)
-        picture_Fixed(demo + ".jpeg", imagePath)
-        ocr_analysis(demo, imagePath, int(row))
-        resize_home()
-    #
-    # row = 1
-    # for fixedImage in os.listdir("./screenshot/BLACK&WHITE/"):
-    #     if "【BLACK&WHITE】" in fixedImage:
-    #         print(fixedImage)
-    #         if "BLACK&WHITE" in fixedImage:
-    #             if fixedImage.endswith(".jpeg"):
-    #                 name = fixedImage.split(".")[0].split("】")[1]
-    #                 img = "./screenshot/BLACK&WHITE/" + fixedImage
-    #                 ocr_analysis(name, img, row=row)
-    #                 row += 1
-    # name = "D15"
-    # openSearchBox(name)
-    # catchFramePicture(name)
-    # ocr_analysis()
+    # screenX, screenY = pyautogui.size()
+    # GoodX = screenX * 0.2
+    # GoodY = screenY * 0.15
+    # print(GoodX, GoodY)
+    # sleep(5)
+    # """
+    #     转tiff->Merge->analysis picture->train picture->put data into tesseract tool
+    # """
+    # fixed_imageList = []
+    # row_list = []
+    # for demo in element_list:
+    #     row = demo[0]
+    #     demo = demo[1]
+    #     print("row is {} and demo is {}".format(row, demo))
+    #     row_list.append({"demo": row})
+    #     openSearchBox(demo)
+    #     imagePath = catchFramePicture(demo)
+    #     resize_home()
