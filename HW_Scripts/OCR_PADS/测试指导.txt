@@ -1,3 +1,6 @@
+脚本介绍：
+该脚本用于PADS Layout导出元件的excel表格后进行元件逐个抓取的操作，将抓取后的图片存放在screenshot文件夹中,并在excel表格中对对应元件的抓取情况进行描述，方便后续人员对元件摆放位置的检查
+
 环境配置：
 1、Windows电脑
 2、安装Python + PADS Layout
