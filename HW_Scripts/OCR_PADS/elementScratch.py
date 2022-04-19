@@ -10,7 +10,7 @@ pyautogui.FAILSAFE = True
 os.path.abspath(".")
 """
     @Project:pythonProject_seevision
-    @File:W3_picture_compare.py
+    @File:elementScratch.py
     @Author:十二点前要睡觉
     @Date:2022/4/18 17:29
 """
