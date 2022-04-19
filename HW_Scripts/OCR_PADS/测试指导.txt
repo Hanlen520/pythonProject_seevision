@@ -1,0 +1,27 @@
+环境配置：
+1、Windows电脑
+2、安装Python + PADS Layout
+3、安装python运行库：
+(安装好python后打开win+r打开CMD，输入如下命令进行安装)
+pip3 install openpyxl
+pip3 install pandas
+pip3 install pyautogui
+
+执行步骤：
+（每次只能获取Top或Bottom图层的元件，因此需要执行两次才能把Top和Bottom的都获取完毕）
+1、打开PADS Layout->打开对应需要核对的pcb文件->导出相应的excel表格->在excel表格最前面增加一列名为number，值为从1递增到最后一行
+2、PADS Layout->ctrl+alt+c打开颜色设置->
+    A、先抓取Top层数据：
+    勾选对象类型：参考编号、顶面、底面
+    勾选层：Top、Silkscreen Top、Assembly Drawing Top
+
+    B、再抓取Bottom层数据：
+    勾选对象类型：参考编号、顶面、底面
+    勾选层：Bottom、Silkscreen Bottom、Assembly Drawing Bottom
+
+    ->点击确定
+3、打开elementScratch.py脚本：
+    修改testSide = "Top"
+    修改write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=e_row, column=12, value=result)
+    的form为当前导出并修改后的excel表格路径
+4、打开CMD->python elementsScratch.py->立即切换到PADS Layout->等待完成后->修改第三步中的testSide = "Bottom"再次运行脚本，完成剩余的元件抓取
