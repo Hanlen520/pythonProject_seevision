@@ -162,9 +162,20 @@ if __name__ == '__main__':
     element_list = read_excel_for_page_element()
     print(element_list)
     screenX, screenY = pyautogui.size()
+    # top： 只要参考编号 + 顶面 + 底面
+    # 1、Top
+    # 2、Silkscreen Top
+    # 3、Assembly Drawing Top
+
+    # bottom：
+    # 1、Bottom
+    # 2、Silkscreen Bottom
+    # 3、Assembly Drawing Bottom
 
     # 手动先设置显示top 或者 bottom的内容
     testSide = "Bottom"
+    # 手动设置元件表格路径
+    form = "./sytj0101/工作簿1.xlsx"
     for element in element_list:
         e_row = element[0]
         e_type = element[1]
@@ -174,22 +185,12 @@ if __name__ == '__main__':
         # 只显示top或bottom的内容
         print(e_row, e_type, e_name, e_topOrbottom)
         if e_topOrbottom in testSide:
-            # 增加判断，当是Top，就打开top的显示，是bottom就打开bottom的显示
-            # top： 只要参考编号 + 顶面 + 底面
-            # 1、Top
-            # 2、Silkscreen Top
-            # 3、Assembly Drawing Top
-
-            # bottom：
-            # 1、Bottom
-            # 2、Silkscreen Bottom
-            # 3、Assembly Drawing Bottom
             result = catchFramePicture(e_name, e_type, e_degree)
             if result == "Skip":
                 pass
             else:
-                write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=e_row, column=12, value=result)
+                write_into_excel(form=form, sheet_name="Sheet1", row=e_row, column=12, value=result)
         else:
-            write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row=e_row, column=12, value="")
+            write_into_excel(form=form, sheet_name="Sheet1", row=e_row, column=12, value="")
         # if e_row == 10:
         #     break
