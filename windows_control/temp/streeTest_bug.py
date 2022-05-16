@@ -16,6 +16,7 @@ os.path.abspath(".")
 
 import pyautogui
 import uiautomation
+
 from time import sleep, strftime
 
 # 实时获取时间
@@ -26,6 +27,7 @@ def logger_config(log_path, logging_name):
     # 获取logger对象,取名
     logger = logging.getLogger(logging_name)
     logger.setLevel(logging.INFO)
+
     handler = logging.FileHandler(log_path, encoding='UTF-8')
     # 生成并设置文件日志格式
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')

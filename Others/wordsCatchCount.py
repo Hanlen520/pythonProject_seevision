@@ -12,7 +12,6 @@ os.path.abspath(".")
 """
 
 if __name__ == '__main__':
-
     sync_word_list = []
     with open("./sync帧率&中途掉线", "r") as f:
         lines_words = f.readlines()
