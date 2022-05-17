@@ -19,6 +19,8 @@ from time import sleep
 com_id = "COM22"
 
 
+
+
 class SerialSwitch(object):
 
     def __init__(self, com_id):
