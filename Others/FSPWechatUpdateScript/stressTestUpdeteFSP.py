@@ -125,7 +125,12 @@ if __name__ == '__main__':
     aimgtool_winPath = r".\aimgtool_win\aimgtool.exe"
     initDevicePort(deviceComId)
     initRalayPort(ralayComId)
-    # test_count = 5000
+
+    """
+        测完5000次会进入2000次异常刷机测试，脚本需要放在image目录下，修改设备的comid和继电器的comid为当前设备管理器中显示的即可
+    """
+
     # Case 1:5000次刷机正常测试
-    # fiveThousandTest(test_count)
-    twoThousandTest(5)
+    fiveThousandTest()
+    # Case 2:2000次刷机正常测试
+    twoThousandTest()
