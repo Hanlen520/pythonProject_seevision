@@ -17,7 +17,7 @@ from uiautomation import uiautomation as ui
 from time import sleep
 
 
-def getVIbus(testCount):
+def getVIbus(xlsxName="VIbusRecord.xlsx", testCount=0):
     data = [["number", "VBUS", "IBUS"]]
     for i in range(1, testCount + 1):
         sleep(0.3)
@@ -26,7 +26,7 @@ def getVIbus(testCount):
         ibus = childrenList[1].GetChildren()[1].Name
         print("current vbus is [{}], ibus is [{}]".format(vbus, ibus))
         data.append([i, vbus, ibus])
-        write_into_excel("VIbusRecord.xlsx", data)
+        write_into_excel(xlsxName, data)
 
 
 def write_into_excel(filename, data):
@@ -43,6 +43,6 @@ if __name__ == '__main__':
     """
         每切换一个分辨率后，录制1000组对应的V\IBus的数据
     """
-    testCount = 10
-    getVIbus(testCount)
-
+    testCount = 1000
+    xlsxName = "MJPEG1080P"
+    getVIbus(xlsxName, testCount)
