@@ -24,7 +24,7 @@ def getVIbus(xlsxName="VIbusRecord.xlsx", testCount=0):
         childrenList = ui.GroupControl(searchDepth=5, Name="参数显示").GetChildren()
         vbus = childrenList[0].GetChildren()[1].Name
         ibus = childrenList[1].GetChildren()[1].Name
-        print("current vbus is [{}], ibus is [{}]".format(vbus, ibus))
+        print("catch time is 【{}】current vbus is [{}], ibus is [{}]".format(i, vbus, ibus))
         data.append([i, vbus, ibus])
         write_into_excel(xlsxName, data)
 
@@ -43,6 +43,6 @@ if __name__ == '__main__':
     """
         每切换一个分辨率后，录制1000组对应的V\IBus的数据
     """
-    testCount = 1000
-    xlsxName = "MJPEG1080P"
+    testCount = 10000
+    xlsxName = "MJPEG1080P.xlsx"
     getVIbus(xlsxName, testCount)
