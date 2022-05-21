@@ -110,6 +110,7 @@ def switchResolution(resolution="YUY2 960×540P 30(P 16:9)"):
     settings_frame.ButtonControl(searchDepth=3, Name="打开设备(O)").Click()
     # -- Need Modified, 等待时间
     sleep(5)  # sleep(3)
+    pyautogui.hotkey("alt", "1")
 
 
 # 获取当前分辨率下的摄像头的帧率和位率并返回一个list
@@ -158,7 +159,7 @@ def test_standard_test_data(potplayerPath):
                 openPotplayer(potplayer_path=potplayerPath)
                 enterDeviceSettings()
                 switchResolution(format)
-                testCount = 1000
+                testCount = 100
                 xlsxName = format
                 getVIbus(xlsxName, testCount)
                 closePotplayer()
@@ -173,6 +174,9 @@ def test_standard_test_data(potplayerPath):
 
 
 def getVIbus(xlsxName="VIbusRecord.xlsx", testCount=0):
+    xlsxName = xlsxName + ".xlsx"
+    xlsxName = xlsxName.strip().replace(":", "_")
+    print(xlsxName)
     data = [["number", "VBUS", "IBUS"]]
     for i in range(1, testCount + 1):
         sleep(0.3)
