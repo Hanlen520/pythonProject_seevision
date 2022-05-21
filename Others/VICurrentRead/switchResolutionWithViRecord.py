@@ -135,7 +135,7 @@ def closePotplayer():
 
 
 # 传入potplayer启动exe路径
-def test_standard_test_data(potplayerPath):
+def test_standard_test_data(potplayerPath, calculate_count):
     if not os.path.exists("./log/"):
         os.makedirs("./log/")
     logger = logger_config(log_path="./log/{}_{}_{}.log".format(cur_time, "resolutionSwitchStress", "mainLog"),
@@ -159,7 +159,7 @@ def test_standard_test_data(potplayerPath):
                 openPotplayer(potplayer_path=potplayerPath)
                 enterDeviceSettings()
                 switchResolution(format)
-                testCount = 100
+                testCount = calculate_count
                 xlsxName = format
                 getVIbus(xlsxName, testCount)
                 closePotplayer()
@@ -204,8 +204,9 @@ if __name__ == '__main__':
         修改自身potplayer的打开目录，测试相机通过usb电流计连接（指定），并打开电流计上位机程序
     """
     potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
+    calculate_count = 1000
     try:
-        test_standard_test_data(potplayerPath)
+        test_standard_test_data(potplayerPath, calculate_count)
     except Exception as ex:
         print("Main program has error please check: {}".format(str(ex)))
     finally:
