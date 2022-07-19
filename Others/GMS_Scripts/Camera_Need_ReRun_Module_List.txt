@@ -1,0 +1,10 @@
+module:
+armeabi-v7a CtsAppOpsTestCases
+armeabi-v7a CtsAppTestCases
+armeabi-v7a CtsAppTestCases[instant]
+armeabi-v7a CtsCameraTestCases[instant]
+armeabi-v7a CtsAppEnumerationTestCases
+armeabi-v7a CtsAppSecurityHostTestCases
+armeabi-v7a CtsCameraTestCases[instant]
+
+
