@@ -103,7 +103,8 @@ if __name__ == '__main__':
             for imgPath in os.listdir(video_path + videoName):
                 singleImagePath = video_path + videoName + "\\" + imgPath
                 single_result = PT.DELAY_TEST_MAIN(singleImagePath)
-                if len(result) >= 10:
+                if len(result) >= 30:
+                #
                     break
                 if single_result is not None:
                     result.append(single_result)
