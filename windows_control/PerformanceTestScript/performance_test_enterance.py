@@ -104,7 +104,7 @@ if __name__ == '__main__':
                 singleImagePath = video_path + videoName + "\\" + imgPath
                 single_result = PT.DELAY_TEST_MAIN(singleImagePath)
                 if len(result) >= 30:
-                #
+                # 需要增加过滤机制，将重复的数据流进行去除（暂时不增加阈值控制200以下的延迟数据）
                     break
                 if single_result is not None:
                     result.append(single_result)
