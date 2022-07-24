@@ -1,6 +1,7 @@
 # coding = utf8
 
 import os
+import subprocess
 from time import sleep
 
 os.path.abspath(".")
@@ -31,9 +32,11 @@ def run_singleSpecific_module(number=0, module_name="armeabi-v7a CtsAppOpsTestCa
     # step3: exit current test case
     # Run whole cycle till all module run out
 
-    os.system("./cts-tradefed run cts -m {}".format(module_name))
+    # os.system("./cts-tradefed run cts -m {}".format(module_name))
+    subprocess.Popen("./cts-tradefed run cts -m {}".format(module_name))
     print("【{}】 Module rerun finished, please wait others module done and check all result.".format(module_name),
           end="\n\n")
+    sleep(5)
 
 
 if __name__ == "__main__":

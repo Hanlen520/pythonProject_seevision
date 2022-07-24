@@ -4,7 +4,7 @@ import os
 
 def create_10_folder():
     # path = r"D:\音视频一体机\GM1_48M_114\testData\PART2\\"
-    path = r"D:\音视频一体机\8M\testData\PART1\4CODECSWITCH\\"
+    path = r"D:\For_Work\PandaOs性能测试_study\temp\\"
     # parFolder = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "H265"]
     for i in range(10):
         i += 1
@@ -24,17 +24,18 @@ def create_10_folder():
 
 
 if __name__ == "__main__":
-    path = r"D:\BOE_TOF\最新机器2022\testdata\2"
-    # videoCount = 10
+    path = r"D:\For_Work\PandaOs性能测试_study\temp"
+    create_10_folder()
+    videoCount = 10
     # videoCount = 1
-    videoCount = 5
+    # videoCount = 5
     for i in range(videoCount):
         i += 1
         print(i)
         command = r"ffmpeg -i {}\{}.mp4 -q:v 1 -f image2 {}\{}\xxx_%05d.jpg".format(path, i, path, i)
         print(command)
         os.system(command)
-    # create_10_folder()
+
 
 
     # ffmpeg -i D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh.mp4 -q:v 1 -f image2 D:\PycharmProjects\pythonProject_seevision\windows_control\temp\temp_test\Sample\Seventh\xxx_%05d.jpg
