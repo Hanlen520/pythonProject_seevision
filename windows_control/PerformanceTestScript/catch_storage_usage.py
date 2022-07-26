@@ -53,7 +53,7 @@ def getAllPorts():
 
 
 if __name__ == '__main__':
-    catch_gap_time = 3000
+    catch_gap_time = 300
     print("开始持续抓取内存使用情况，自定义抓取间隔时间，当前间隔时间为【{}】秒".format(catch_gap_time))
     ports = getAllPorts()
     print(ports)

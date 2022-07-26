@@ -179,7 +179,7 @@ def getVIbus(xlsxName="VIbusRecord.xlsx", testCount=0):
     print(xlsxName)
     data = [["number", "VBUS", "IBUS"]]
     for i in range(1, testCount + 1):
-        sleep(0.3)
+        sleep(1)
         childrenList = ui.GroupControl(searchDepth=5, Name="参数显示").GetChildren()
         vbus = childrenList[0].GetChildren()[1].Name
         ibus = childrenList[1].GetChildren()[1].Name
@@ -204,7 +204,7 @@ if __name__ == '__main__':
         修改自身potplayer的打开目录，测试相机通过usb电流计连接（指定），并打开电流计上位机程序
     """
     potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
-    calculate_count = 1000
+    calculate_count = 60
     try:
         test_standard_test_data(potplayerPath, calculate_count)
     except Exception as ex:

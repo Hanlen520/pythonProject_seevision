@@ -43,6 +43,6 @@ if __name__ == '__main__':
     """
         每切换一个分辨率后，录制1000组对应的V\IBus的数据
     """
-    testCount = 10000
+    testCount = 1000
     xlsxName = "MJPEG1080P.xlsx"
     getVIbus(xlsxName, testCount)
