@@ -3,7 +3,7 @@ import os
 import re
 import time
 
-from windows_control.uiautomation_win import openPotplayer, enterDeviceSettings, switchResolution, closePotplayer
+from uiautomation_win import openPotplayer, enterDeviceSettings, switchResolution, closePotplayer
 
 os.path.abspath(".")
 """
