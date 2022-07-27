@@ -42,6 +42,11 @@ class CatchStorageUsage:
             print("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
             f.write("【Error need check, maybe not important】 : \r\n{}\r\n".format(str(ex)))
 
+    def login_root(self):
+        self.sendPortCommand("root\r\n")
+        time.sleep(1)
+        self.sendPortCommand("bunengshuo\r\n")
+
 
 def getAllPorts():
     ports = []
@@ -58,6 +63,7 @@ if __name__ == '__main__':
     ports = getAllPorts()
     print(ports)
     csu = CatchStorageUsage(ports[0], "115200")
+    csu.login_root()
     TEST_RESOLUTIONS = ["MJPG 3840×2160P 20(P 16:9)", "MJPG 1920×1080P 30(P 16:9)",
                         "MJPG 1280×720P 30(P 16:9)", "H264 3840×2160P 20(P 16:9)",
                         "YUY2 960×540P 30(P 16:9)"]
