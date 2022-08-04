@@ -62,6 +62,9 @@ def flashIntoVersion(version):
 
 
 if __name__ == '__main__':
+    """
+        该脚本用于进行临时的一体机新旧版本搭配HidTool进行升降级反复刷机压力测试
+    """
     old = "2.3.1"
     new = "2.3.4"
     test_count = 4000
