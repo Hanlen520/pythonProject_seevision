@@ -50,7 +50,7 @@ if __name__ == "__main__":
     """
         Tip:Serial comport deliver in and Operation wait
     """
-    com_id = "COM35"
+    com_id = "COM3"
     try:
         switch_obj = SerialSwitch(com_id)
         for i in range(10):
