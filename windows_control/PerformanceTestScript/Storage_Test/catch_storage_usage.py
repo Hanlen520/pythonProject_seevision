@@ -64,6 +64,7 @@ if __name__ == '__main__':
     print(ports)
     csu = CatchStorageUsage(ports[1], "115200")
     csu.login_root()
+    # change the resolution as your own project's behaviour.
     TEST_RESOLUTIONS = ["MJPG 3840×2160P 30(P 16:9)", "MJPG 1920×1080P 30(P 16:9)",
                         "MJPG 1280×720P 30(P 16:9)", "H264 3840×2160P 30(P 16:9)",
                         "YUY2 960×540P 30(P 16:9)"]
