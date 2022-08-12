@@ -1,13 +1,12 @@
 # coding = utf8
+import multiprocessing
 import os
 import subprocess
 from time import sleep
 
 import pandas as pd
 import uiautomation
-from serial import SerialException
 
-from ralayControl import serialComportList
 from ralayControl.serialControl import SerialSwitch
 
 os.path.abspath(".")
@@ -53,7 +52,7 @@ def toExcel(data):
     df.to_excel("./result.xlsx")
 
 
-def flashIntoVersion(version):
+def flashIntoVersion(version, old, new, old_Version, new_Version):
     print(version)
     if version == old:
         path_ = old_Version
@@ -78,17 +77,20 @@ def flashIntoVersion(version):
 if __name__ == '__main__':
     """
         该脚本用于进行临时的一体机新旧版本搭配HidTool进行升降级反复刷机压力测试
+        在升级过程中断电，再上电，看是否能够继续正常刷机
     """
     com_id = "COM35"
     switch_obj = SerialSwitch(com_id)
     print("Begin relay power on/off test")
     print("打开继电器开关……")
     switch_obj.open_all_comport()
-    sleep(30)
+    sleep(90)
 
-    old = "2.3.1"
-    new = "2.3.4"
-    test_count = 4000
+    global old
+    global new
+    old = "1.1.1"
+    new = "1.1.3"
+    test_count = 1000
     hidTool = r"C:\Users\CHENGUANGTAO\Desktop\视熙测试部脚本以及测试工具\测试工具\HIDTool2.8\HIDTool.exe"
     old_Version = r"./2_3_1/"
     new_Version = r"./2_3_4/"
@@ -111,23 +113,32 @@ if __name__ == '__main__':
         openHidTool(hidTool)
         enterBootloader()
         closeHidTool()
-        flashIntoVersion(version)
+
+        testPool = multiprocessing.Pool(2)
+        testPool.apply_async(func=flashIntoVersion, args=(version, old, new, old_Version, new_Version,))
+        sleep(3)
+        testPool.apply_async(func=switch_obj.close_all_comport())
+        testPool.close()
+        testPool.join()
+
+        # flashIntoVersion(version)
+        # sleep(5)
+        # switch_obj.close_all_comport()
+        # sleep(1)
+
         sleep(5)
-        switch_obj.close_all_comport()
-        sleep(1)
         switch_obj.open_all_comport()
+        sleep(90)
+        flashIntoVersion(version, old, new, old_Version, new_Version)
         sleep(90)
         openHidTool(hidTool)
         audio_version_2 = getVersion()
         audio_version_2 = str(audio_version_2).split(":")[1].replace(" ", "").strip()
         closeHidTool()
-        openHidTool(hidTool)
-        enterBootloader()
-        closeHidTool()
-        flashIntoVersion(version)
-        sleep(90)
         data_list_j.append(audio_version_2)
-        if (version == new) & (audio_version_2 == new) | (version == old) & (audio_version_2 == old):
+        # if (version == new) & (audio_version_2 == new) | (version == old) & (audio_version_2 == old):
+        print("Version is {}  ------  {}".format(audio_version, audio_version_2))
+        if audio_version_2 == audio_version:
             data_list_r.append("PASS")
         else:
             data_list_r.append("FAIL")

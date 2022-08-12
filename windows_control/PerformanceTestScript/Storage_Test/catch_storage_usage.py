@@ -51,7 +51,7 @@ class CatchStorageUsage:
 def getAllPorts():
     ports = []
     for port in list(comports()):
-        if "Silicon Labs CP210x USB to UART Bridge" in str(port):
+        if "Silicon Labs CP210x USB to UART Bridge" or "USB Serial Port" in str(port):
             current_port = re.findall("\((.*)\)", str(port))[0]
             ports.append(current_port)
     return ports
@@ -62,10 +62,10 @@ if __name__ == '__main__':
     print("开始持续抓取内存使用情况，自定义抓取间隔时间，当前间隔时间为【{}】秒".format(catch_gap_time))
     ports = getAllPorts()
     print(ports)
-    csu = CatchStorageUsage(ports[0], "115200")
+    csu = CatchStorageUsage(ports[1], "115200")
     csu.login_root()
-    TEST_RESOLUTIONS = ["MJPG 3840×2160P 20(P 16:9)", "MJPG 1920×1080P 30(P 16:9)",
-                        "MJPG 1280×720P 30(P 16:9)", "H264 3840×2160P 20(P 16:9)",
+    TEST_RESOLUTIONS = ["MJPG 3840×2160P 30(P 16:9)", "MJPG 1920×1080P 30(P 16:9)",
+                        "MJPG 1280×720P 30(P 16:9)", "H264 3840×2160P 30(P 16:9)",
                         "YUY2 960×540P 30(P 16:9)"]
     for resolution in TEST_RESOLUTIONS:
         potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
