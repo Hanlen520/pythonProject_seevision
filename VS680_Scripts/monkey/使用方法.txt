@@ -1,0 +1,33 @@
+运行原理：
+使用bytedance的Fastbot-Android增加黑名单，跳过恢复出厂设置的activity界面：
+1、恢复出厂设置的activity：com.android.fm.tvsettings.MainActivity
+运行时：
+adb -s 设备号 shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey -p 包名 --agent reuseq  --act-blacklist-file /sdcard/abl.strings --running-minutes 遍历时长 --throttle 事件频率 -v -v
+adb -s 130040A22272800120A shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq  --act-blacklist-file /sdcard/abl.strings --running-minutes 1 --throttle 500 -v -v
+
+step：
+1、cmd进入Fastbot_Android-main文件夹目录下，执行以下命令将jar包和依赖库push进测试设备
+adb push fastbot-thirdpart.jar framework.jar monkeyq.jar /sdcard
+adb push libs/arm64-v8a libs/armeabi-v7a libs/x86 libs/x86_64 /data/local/tmp/
+2、将已编辑好的黑名单文件abl.strings，push进测试设备
+adb push abl.strings  /sdcard
+3、输入以下指令执行monkey测试，当前模式默认不指定包，会全局运行
+需要修改的：
+-s 后的对应设备序列号
+--running-minutes 1 1指的monkey会运行1分钟，修改成对应的测试时间即可
+--throttle 500 500指的是每个事件的下发间隔是500ms，推荐500-800ms
+adb -s 130040A22272800120A shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq  --act-blacklist-file /sdcard/abl.strings --running-minutes 1 --throttle 500 -v -v
+
+
+
+
+使用方法：使用bat前，修改序列号，运行时间，测试间隔即可
+封装成bat脚本：
+@echo START Monkey...
+adb push ./Fastbot_Android-main/Fastbot_Android-main/fastbot-thirdpart.jar ./Fastbot_Android-main/Fastbot_Android-main/framework.jar ./Fastbot_Android-main/Fastbot_Android-main/monkeyq.jar /sdcard
+adb push ./Fastbot_Android-main/Fastbot_Android-main/libs/arm64-v8a ./Fastbot_Android-main/Fastbot_Android-main/libs/armeabi-v7a ./Fastbot_Android-main/Fastbot_Android-main/libs/x86 ./Fastbot_Android-main/Fastbot_Android-main/libs/x86_64 /data/local/tmp/
+adb push ./abl.strings  /sdcard
+adb -s 130040A22272800120A shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq  --act-blacklist-file /sdcard/abl.strings --running-minutes 1 --throttle 500 -v -v
+@echo Monkey DONE!!!
+pause
+

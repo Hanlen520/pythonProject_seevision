@@ -29,7 +29,7 @@ set ZERO=0
 if %HOUR% LEQ %NINE% set HOUR=%ZERO%%TMP_HOUR%
 set CURRENT_DATE_TIME_STAMP=%YEAR%%MONTH%%DAY%_%HOUR%%MINUTE%%SECOND%%MILLISECIOND%
 mkdir %CURRENT_DATE_TIME_STAMP%
-sleep 1
+timeout /T 1
 adb root
 adb remount
 adb shell dmesg > ./%CURRENT_DATE_TIME_STAMP%/dmesg.txt
