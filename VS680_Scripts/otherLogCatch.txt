@@ -1,0 +1,3 @@
+other log catch:
+adb shell logcat -b all>logcat.log
+adb shell top -m 10>top.txt
