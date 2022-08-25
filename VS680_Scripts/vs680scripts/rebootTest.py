@@ -10,7 +10,11 @@ from poco.exceptions import PocoNoSuchNodeException
 cur_time = time.strftime("%Y%m%d_%H%M%S")
 
 os.path.abspath("..")
-
+"""
+    此脚本用于Android项目 - VS680重启压力测试
+    原理：
+    通过UI自动化控制设备重启，并获取重启后的状态，反复压测
+"""
 """
     设备初始化区域：
     1、获取设备序列号

@@ -15,7 +15,11 @@ os.path.abspath(".")
     @Author:十二点前要睡觉
     @Date:2022/8/23 11:28
 """
-
+"""
+    此脚本用于Android项目 - VS680的电源开关机压力测试
+    原理：
+    通过程控继电器，控制电源输入端的开关状态，来进行开关机压力测试，通过串口通信实时获取设备上电后的状态
+"""
 RELAY_CONTROL_COMPORT_1_OPEN = [0xFE, 0x05, 0x00, 0x00, 0xFF, 0x00, 0x98, 0x35]
 RELAY_CONTROL_COMPORT_1_CLOSE = [0xFE, 0x05, 0x00, 0x00, 0x00, 0x00, 0xD9, 0xC5]
 

@@ -10,6 +10,12 @@ os.path.abspath(".")
     @Author:十二点前要睡觉
     @Date:2022/8/24 14:51
 """
+"""
+    此脚本用于Android项目 - VS680的系统各模块APP稳定性压力测试
+    原理：
+    通过adb筛选出具有Launcher界面的APP（用户能够接触到的APP）
+    将这些APP进行Fastbot_Android_Monkey全路径遍历30min测试
+"""
 
 """
     adb push ./Fastbot_Android-main/Fastbot_Android-main/fastbot-thirdpart.jar ./Fastbot_Android-main/Fastbot_Android-main/framework.jar ./Fastbot_Android-main/Fastbot_Android-main/monkeyq.jar /sdcard
