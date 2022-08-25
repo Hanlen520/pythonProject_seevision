@@ -27,7 +27,7 @@ def fastbot_monkey_cover_test(package):
         "adb push ./Fastbot_Android-main/Fastbot_Android-main/libs/arm64-v8a ./Fastbot_Android-main/Fastbot_Android-main/libs/armeabi-v7a ./Fastbot_Android-main/Fastbot_Android-main/libs/x86 ./Fastbot_Android-main/Fastbot_Android-main/libs/x86_64 /data/local/tmp/")
     os.system("adb push ./abl.strings  /sdcard")
     os.system(
-        "adb shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey -p {}  --agent reuseq  --act-blacklist-file /sdcard/abl.strings --bugreport --output-directory /sdcard/monkeyCrashLog/crash --ignore-crashes --ignore-timeouts --kill-process-after-error --ignore-security-exceptions  --running-minutes 60 --throttle 500 -v -v".format(
+        "adb shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey -p {}  --agent reuseq  --act-blacklist-file /sdcard/abl.strings --bugreport --output-directory /sdcard/monkeyCrashLog/crash --ignore-crashes --ignore-timeouts --kill-process-after-error --ignore-security-exceptions  --running-minutes 30 --throttle 500 -v -v".format(
             package))
 
 
