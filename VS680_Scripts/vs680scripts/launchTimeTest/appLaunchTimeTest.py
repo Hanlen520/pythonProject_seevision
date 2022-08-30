@@ -59,7 +59,7 @@ runResult = {}
 
 
 def runTest(app, launchActivity):
-    runResponse = str(subprocess.Popen("adb shell am start -S -R 20 -W {}".format(launchActivity), shell=True,
+    runResponse = str(subprocess.Popen("adb shell am start -S -R 30 -W {}".format(launchActivity), shell=True,
                                        stdout=subprocess.PIPE).communicate()[0]).replace(" ", "").replace("b''", "")
     print(runResponse)
     # if len(runResponse) != 20:
