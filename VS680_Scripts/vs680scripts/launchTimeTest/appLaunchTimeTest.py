@@ -93,6 +93,7 @@ def toExcel(runResult):
 
 
 """
+    接入相机后测试，每个app20组测试数据
     pip3 install xlsxwriter
     pip3 install pandas                                               
 """
