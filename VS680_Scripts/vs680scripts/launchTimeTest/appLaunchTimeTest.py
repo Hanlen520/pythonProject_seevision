@@ -104,11 +104,11 @@ if __name__ == '__main__':
         print("待测APP对应的Activity分别是：{}".format(appAndActivity))
     sleep(1)
     # appAndActivity = {
-    #     'com.seevision.screencastingassistant': 'com.seevision.screencastingassistant/.ScreencastingMainActivity',
+    #     'com.seevision.screencastingassistant': 'com.seevision.scr    eencastingassistant/.ScreencastingMainActivity',
     #     'com.seevision.android.documentsui': 'com.seevision.android.documentsui/com.filemanager.FilesCategoryActivity'}
     for app, activity in appAndActivity.items():
         print(app + " : ----- : " + activity)
         runTest(app, activity)
     if runResult:
-        print("最终所有的APP对应的启动测试10次后的结果为：\n {} ".format(runResult))
+        print("最终所有的APP对应的启动测试30次后的结果为：\n {} ".format(runResult))
         toExcel(runResult)
