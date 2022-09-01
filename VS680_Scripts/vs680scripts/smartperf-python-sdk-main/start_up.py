@@ -87,20 +87,20 @@ class SmartPerfSdk(AdbUtils, Licence):
 
 
 if __name__ == '__main__':
-
     # test03 app_key="l5iivi1c", app_secret="9e7f521bdd8c5c9eb5cb498631bb1a7e"
     # # 标准调用试例
-    sdk = SmartPerfSdk(app_key="l5iivi1c", app_secret="9e7f521bdd8c5c9eb5cb498631bb1a7e", app_text="QQ")
-    sdk.start_app()
-    sdk.start_record_and_upload_oss(algorithm_id='50')
+    # sdk = SmartPerfSdk(app_key="l5iivi1c", app_secret="9e7f521bdd8c5c9eb5cb498631bb1a7e", app_text="飞书")
+    # sdk.crate_task()
+    # sdk.start_app()
+    # sdk.start_record_and_upload_oss(algorithm_id='50')
 
     # 自定义调用示例
     # 初始化鉴权，app_text用于指定点击的文本元素
-    #sdk = SmartPerfSdk(app_key="l5iivi1c", app_secret="9e7f521bdd8c5c9eb5cb498631bb1a7e", app_text="QQ")
+    sdk = SmartPerfSdk(app_key="l5iivi1c", app_secret="9e7f521bdd8c5c9eb5cb498631bb1a7e", app_text="QQ")
     # 根据当前窗口xml，查找app_text内容，并进行点击
     # sdk.start_app()
     # sdk.start_app 这里会自根据默认路径，自生成视频文件,
     # 如果想使用自己录制的视频，可以跳过sdk.start_app()定义视频文件路径
-    #video_path = "D://test/A.mp4"
-    #sdk.crate_task(video_path, 50)
-    #sdk.get_task_report()
+    video_path = "D://test/A.mp4"
+    sdk.crate_task(video_path, 50)
+    sdk.get_task_report()

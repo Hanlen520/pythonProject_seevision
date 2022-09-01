@@ -72,17 +72,17 @@ class AdbUtils(Config):
         :return:
         """
         try:
-            #subprocess.Popen(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}", shell=True, stdout=subprocess.PIPE).communicate()[0]
+            # subprocess.Popen(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}", shell=True, stdout=subprocess.PIPE).communicate()[0]
             os.popen(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}")
-            #os.system(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}")
+            # os.system(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}")
             time.sleep(0.5)
             os.popen(f'adb -s {self.device_id} shell input tap {x_pos} {y_pos}')
-            #os.popen(f'adb -s {self.device_id} shell input tap {x_pos} {y_pos}')
-            #os.system(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}")
+            # os.popen(f'adb -s {self.device_id} shell input tap {x_pos} {y_pos}')
+            # os.system(f"adb shell screenrecord /sdcard/{self.device_id}.mp4 --time-limit {duration}")
         except Exception as e:
             print(f"{e}")
             raise Exception("adb录制不支持，请联系smartperf产品方")
-        time.sleep(duration+1)
+        time.sleep(duration + 1)
         os.system(f"adb pull /sdcard/{self.device_id}.mp4 {video_path}")
 
     def xml_root(self):
