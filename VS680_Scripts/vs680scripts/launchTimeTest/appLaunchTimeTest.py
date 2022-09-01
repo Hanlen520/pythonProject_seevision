@@ -65,7 +65,11 @@ def runTest(app, launchActivity):
     # if len(runResponse) != 20:
     #     runResult[app] = ["No result", "No result", "No result", "No result", "No result", "No result", "No result",
     #                       "No result", "No result", "No result", "No result"]
-    runResult[app] = re.findall("TotalTime:(\d*)", runResponse)
+    # runResult[app] = re.findall("TotalTime:(\d*)", runResponse).insert(0, app)
+    times = re.findall("TotalTime:(\d*)", runResponse)
+    times.insert(0, app)
+    runResult[app] = times
+    print(runResult[app], end="\n\n")
     sleep(0.3)
     killApp(app)
 
@@ -82,8 +86,14 @@ def toExcel(runResult):
     for app, run_result in runResult.items():
         df = pd.DataFrame(data=run_result, columns=["启动时间(TotalTime)"])
         dfList.append(df)
+        # findName = 'adb shell "dumpsys package {} |grep path"'.format(app)
+        # apkPath = str(subprocess.Popen(findName, shell=True, stdout=subprocess.PIPE).communicate()[0]).replace(" ",
+        #                                                                                                        "").replace(
+        #     "b'", "").replace("\\r\\n'", "")
+        # print(apkPath)
+        # apkPath = re.findall("path:(.*)", apkPath)
+        # print("APK PATH is: {}".format(apkPath), end="\n\n")
         # sheet_name_list.append(str(app[-31:]).split(".")[-1])
-
         sheet_name_list.append(str(app[-31:]))
     for i in range(len(dfList)):
         dfList[i] = dfList[i].style.set_properties(**{'text-align': 'center'})
@@ -99,7 +109,8 @@ def toExcel(runResult):
     pip3 install pandas                                               
 """
 if __name__ == '__main__':
-    for package in controlAppRange():
+    launchableApp_list = controlAppRange()
+    for package in launchableApp_list:
         getLaunchableActivity(package)
     if appAndActivity:
         print("待测APP对应的Activity分别是：{}".format(appAndActivity))
