@@ -83,6 +83,7 @@ def toExcel(runResult):
         df = pd.DataFrame(data=run_result, columns=["启动时间(TotalTime)"])
         dfList.append(df)
         # sheet_name_list.append(str(app[-31:]).split(".")[-1])
+
         sheet_name_list.append(str(app[-31:]))
     for i in range(len(dfList)):
         dfList[i] = dfList[i].style.set_properties(**{'text-align': 'center'})
