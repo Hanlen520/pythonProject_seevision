@@ -59,7 +59,7 @@ runResult = {}
 
 
 def runTest(app, launchActivity):
-    runResponse = str(subprocess.Popen("adb shell am start -S -R 10 -W {}".format(launchActivity), shell=True,
+    runResponse = str(subprocess.Popen("adb shell am start -S -R 30 -W {}".format(launchActivity), shell=True,
                                        stdout=subprocess.PIPE).communicate()[0]).replace(" ", "").replace("b''", "")
     print(runResponse)
     # if len(runResponse) != 20:
@@ -82,24 +82,13 @@ def runTest(app, launchActivity):
 def toExcel(runResult):
     writer = pd.ExcelWriter(r"./APP启动时间.xlsx")
     dfList = []
-    sheet_name_list = []
     for app, run_result in runResult.items():
-        df = pd.DataFrame(data=run_result, columns=["启动时间(TotalTime)"])
-        dfList.append(df)
-        # findName = 'adb shell "dumpsys package {} |grep path"'.format(app)
-        # apkPath = str(subprocess.Popen(findName, shell=True, stdout=subprocess.PIPE).communicate()[0]).replace(" ",
-        #                                                                                                        "").replace(
-        #     "b'", "").replace("\\r\\n'", "")
-        # print(apkPath)
-        # apkPath = re.findall("path:(.*)", apkPath)
-        # print("APK PATH is: {}".format(apkPath), end="\n\n")
-        # sheet_name_list.append(str(app[-31:]).split(".")[-1])
-        sheet_name_list.append(str(app[-31:]))
-    for i in range(len(dfList)):
-        dfList[i] = dfList[i].style.set_properties(**{'text-align': 'center'})
-        dfList[i].to_excel(writer, sheet_name=sheet_name_list[i])
-        worksheet = writer.sheets[sheet_name_list[i]]
-        worksheet.set_column('A:B', 16)
+        dfList.extend(run_result)
+    df = pd.DataFrame(data=dfList, columns=["启动时间(TotalTime)"])
+    df = df.style.set_properties(**{'text-align': 'center'})
+    df.to_excel(writer, sheet_name="result")
+    worksheet = writer.sheets["result"]
+    worksheet.set_column('A:B', 16)
     writer.close()
 
 
