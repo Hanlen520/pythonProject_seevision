@@ -6,6 +6,8 @@ import subprocess
 import time
 import xml.etree.cElementTree as et
 
+from VS680_Scripts.vs680scripts.launchTimeTest.grantPermission import grant_permission
+
 os.path.abspath(".")
 
 
@@ -89,21 +91,28 @@ def clearAppDataBuffer(packageName="com.tencent.wemeet.app"):
     print("APP {} 数据清除完成".format(packageName))
 
 
+def TouchAppTest(packageName, app_text, activityName):
+    clearAppDataBuffer(packageName=packageName)
+    x_pos, y_pos = getAppCenteralPosition(app_text=app_text)
+    print(touchApp(x_pos, y_pos, activityName=activityName))
+
+
+def readExcel():
+    packageName, app_text, activityName = "", "", ""
+
+    return packageName, app_text, activityName
+
+
 if __name__ == '__main__':
-    # # 获取所有有launcher界面的app以及对应的activity
-    # launchableApp_list = controlAppRange()
-    # for package in launchableApp_list:
-    #     getLaunchableActivity(package)
-    # if appAndActivity:
-    #     print("待测APP对应的Activity分别是：{}".format(appAndActivity))
     """
+        目前需要保证待测的应用程序需要有app的text显示在桌面上，是依靠text进行点击的
         通过mCurrentFocus去判断启动时间结束，通过冻结ui tree，再进行position点击，对点击前后的时间差即为模拟应用启动的时间
         现在需要传入的就是待测应用的：应用名称app_text和应用启动界面activityName以及清除应用数据的packageName
+        测试前，会先将所有APP都进行授权，保证第一个Activity是应用程序的
+        USB无线投屏应用需要手动先授权
     """
-    # clearAppDataBuffer(packageName="com.tencent.mobileqq")
-    # x_pos, y_pos = getAppCenteralPosition(app_text="QQ")
-    # print(touchApp(x_pos, y_pos, activityName="com.tencent.mobileqq.activity.SplashActivity"))
-
-    clearAppDataBuffer(packageName="com.tencent.wemeet.app")
-    x_pos, y_pos = getAppCenteralPosition(app_text="腾讯会议")
-    print(touchApp(x_pos, y_pos, activityName="com.tencent.wemeet.app.StartupActivity"))
+    applist_range = controlAppRange()
+    for app in applist_range:
+        clearAppDataBuffer(app)
+    grant_permission(applist_range)
+    TouchAppTest("com.tencent.wemeet.app", "腾讯会议", "com.tencent.wemeet.app.StartupActivity")
