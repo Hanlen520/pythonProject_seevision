@@ -6,7 +6,8 @@ import subprocess
 import time
 import xml.etree.cElementTree as et
 
-from VS680_Scripts.vs680scripts.launchTimeTest.grantPermission import grant_permission
+from excel_tools import read_excel_for_page_element
+from grantPermission import grant_permission
 
 os.path.abspath(".")
 
@@ -48,6 +49,10 @@ def keepWaitingActivity(activityName="com.tencent.wemeet.sdk.meeting.premeeting.
             subprocess.Popen('adb shell "dumpsys window | grep mCurrentFocus"', shell=True,
                              stdout=subprocess.PIPE).communicate()[0]).replace("b'", "").replace("\\n'", "")
         print(returnLine)
+        # 特殊情况3：微信多次kill会触发安全模式，需要兼容下再Kill掉
+        if "com.tencent.mm.recovery.ui.RecoveryUI" in returnLine:
+            killApp("com.tencent.mm")
+            return 0
         if activityName in returnLine:
             print("APP启动完成")
             time2 = getMSTime()
@@ -92,15 +97,19 @@ def clearAppDataBuffer(packageName="com.tencent.wemeet.app"):
 
 
 def TouchAppTest(packageName, app_text, activityName):
-    clearAppDataBuffer(packageName=packageName)
+    # clearAppDataBuffer(packageName=packageName)
     x_pos, y_pos = getAppCenteralPosition(app_text=app_text)
-    print(touchApp(x_pos, y_pos, activityName=activityName))
+    test_time = touchApp(x_pos, y_pos, activityName=activityName)
+    print("当前测试的启动时间：【{}】".format(test_time))
+    return test_time
 
 
-def readExcel():
-    packageName, app_text, activityName = "", "", ""
-
-    return packageName, app_text, activityName
+def specialToHomeOperate():
+    os.system("adb shell input keyevent 20")
+    time.sleep(1)
+    os.system("adb shell input keyevent 20")
+    time.sleep(1)
+    os.system("adb shell input keyevent 20")
 
 
 if __name__ == '__main__':
@@ -109,10 +118,35 @@ if __name__ == '__main__':
         通过mCurrentFocus去判断启动时间结束，通过冻结ui tree，再进行position点击，对点击前后的时间差即为模拟应用启动的时间
         现在需要传入的就是待测应用的：应用名称app_text和应用启动界面activityName以及清除应用数据的packageName
         测试前，会先将所有APP都进行授权，保证第一个Activity是应用程序的
-        USB无线投屏应用需要手动先授权
+        USB无线投屏应用需要手动先授权，点击一次立即激活即可
     """
-    applist_range = controlAppRange()
-    for app in applist_range:
-        clearAppDataBuffer(app)
-    grant_permission(applist_range)
-    TouchAppTest("com.tencent.wemeet.app", "腾讯会议", "com.tencent.wemeet.app.StartupActivity")
+    test_times = 1
+    test_result = {}
+    # applist_range = controlAppRange()
+    # for app in applist_range:
+    #     clearAppDataBuffer(app)
+    # grant_permission(applist_range)
+    test_data = read_excel_for_page_element(form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试")
+    for app_info in test_data:
+        app_text = app_info[0]
+        packageName = app_info[1]
+        activityName = app_info[2]
+        # 特殊情况1，当是switchhdmi的时候，需要将焦点放到最底部才会显示应用名称
+        test_timess = []
+        for i in range(test_times):
+            if app_text == "switchhdmi":
+                specialToHomeOperate()
+            test_time = TouchAppTest(packageName, app_text, activityName)
+            test_timess.append(test_time)
+            time.sleep(1)
+            if app_text == "USB无线投屏":
+                os.popen("adb shell input keyevent 4")
+                time.sleep(1)
+                killApp("com.bozee.usbdisplay")
+            else:
+                killApp(packageName)
+            # 特殊情况2，当是screencasting guide的时候，需要返回键回到Home界面
+            if packageName == "com.seevision.screencastingassistant":
+                os.popen("adb shell input keyevent 4")
+        test_result[app_text] = test_timess
+    print("测试结束，当前测试次数，每个APP测试【{}】次，总测试结果为：\n{}".format(test_times, test_result))

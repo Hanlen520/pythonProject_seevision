@@ -11,38 +11,6 @@ os.path.abspath(".")
 """
 
 """
-    @description:read_excel_for_case_parametrize，通过excel表格形式对case的参数进行管理
-    @param:
-        form:表格路径
-        sheet_name:指定sheet名称
-        case_name:指定case名称
-"""
-
-
-# 从excel中读取数据并返回（case）
-def read_excel_for_case_parametrize(form="../test_case/before_fota_data.xlsx", sheet_name="before_fota",
-                                    case_name="test_send_message"):
-    df = pd.read_excel(form, sheet_name=sheet_name, index_col="case_name")
-    original_data = df.loc[case_name, "case_data"]
-    # 将数据获得后进行处理重新拼接为list
-    final_data = []
-    if "int" in str(type(original_data)):
-        original_data = str(original_data)
-        final_data.append(original_data)
-    else:
-        if "(" in original_data:
-            dl = []
-            d1 = original_data.split(",")[0].replace("(", "").strip()
-            d2 = original_data.split(",")[1].replace(")", "").strip()
-            dl.append(d1)
-            dl.append(d2)
-            final_data.append(tuple(dl))
-        else:
-            final_data.append(original_data)
-    return final_data
-
-
-"""
     @description:read_excel_for_page_element，通过excel表格形式对element控件的参数进行管理
     @param:
         form:表格路径
@@ -52,14 +20,18 @@ def read_excel_for_case_parametrize(form="../test_case/before_fota_data.xlsx", s
 
 
 # 从excel中读取数据并返回（element）
-def read_excel_for_page_element(form="../page_android/page_sheet.xlsx", sheet_name="calendar_page",
-                                element_name="guide_got_it"):
-    df = pd.read_excel(form, sheet_name=sheet_name, index_col="element_name")
-    original_data = df.loc[element_name, "element_data"]
-    return original_data
+def read_excel_for_page_element(form="../page_android/page_sheet.xlsx", sheet_name="calendar_page"):
+    df = pd.read_excel(form, sheet_name=sheet_name, index_col="case序号")
+    rows = df.shape[0]
+    test_data = []
+    for row in range(1, rows + 1):
+        app_text = df.loc[row, "测试应用名称"]
+        packageName = df.loc[row, "测试应用包名"]
+        activityName = df.loc[row, "待测应用Activity"]
+        test_data.append([app_text, packageName, activityName])
+    return test_data
 
 
 if __name__ == '__main__':
-    print(read_excel_for_page_element())
-    # read_excel_for_case_parametrize()
-    print(type(read_excel_for_page_element()))
+    test_data = read_excel_for_page_element(form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试")
+    print(test_data)
