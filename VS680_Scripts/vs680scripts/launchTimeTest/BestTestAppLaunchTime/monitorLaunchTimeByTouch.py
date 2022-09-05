@@ -6,6 +6,8 @@ import subprocess
 import time
 import xml.etree.cElementTree as et
 
+import numpy as np
+
 from excel_tools import read_excel_for_page_element, write_excel_with_specific_data
 from grantPermission import grant_permission
 
@@ -120,12 +122,12 @@ if __name__ == '__main__':
         测试前，会先将所有APP都进行授权，保证第一个Activity是应用程序的
         USB无线投屏应用需要手动先授权，点击一次立即激活即可
     """
-    test_times = 3
+    test_times = 30
     test_result = {}
-    # applist_range = controlAppRange()
-    # for app in applist_range:
-    #     clearAppDataBuffer(app)
-    # grant_permission(applist_range)
+    applist_range = controlAppRange()
+    for app in applist_range:
+        clearAppDataBuffer(app)
+    grant_permission(applist_range)
     test_data = read_excel_for_page_element(form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试")
     for app_info in test_data:
         app_text = app_info[0]
@@ -150,8 +152,8 @@ if __name__ == '__main__':
                 os.popen("adb shell input keyevent 4")
         test_result[app_text] = test_timess
         if test_result[app_text]:
-            test_temp = []
-            test_temp = [test_times, ]
-            write_excel_with_specific_data(app_text, "", form="./Touch启动时间测试用例.xlsx",
+            average = round(float(np.mean(test_timess)), 3)
+            test_temp = [test_times, str(test_timess) + "_" + str(average)]
+            write_excel_with_specific_data(app_text, test_temp, form="./Touch启动时间测试用例.xlsx",
                                            sheet_name="Touch启动时间测试")
     print("测试结束，当前测试次数，每个APP测试【{}】次，总测试结果为：\n{}".format(test_times, test_result))
