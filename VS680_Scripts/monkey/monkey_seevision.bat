@@ -2,12 +2,9 @@
 adb push ./Fastbot_Android-main/Fastbot_Android-main/fastbot-thirdpart.jar ./Fastbot_Android-main/Fastbot_Android-main/framework.jar ./Fastbot_Android-main/Fastbot_Android-main/monkeyq.jar /sdcard
 adb push ./Fastbot_Android-main/Fastbot_Android-main/libs/arm64-v8a ./Fastbot_Android-main/Fastbot_Android-main/libs/armeabi-v7a ./Fastbot_Android-main/Fastbot_Android-main/libs/x86 ./Fastbot_Android-main/Fastbot_Android-main/libs/x86_64 /data/local/tmp/
 adb push ./abl.strings  /sdcard
-adb -s 130040A22272800033A shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq  --act-blacklist-file /sdcard/abl.strings --bugreport --output-directory /sdcard/monkeyCrashLog/crash --ignore-crashes --ignore-timeouts --kill-process-after-error --ignore-security-exceptions  --running-minutes 10000000 --throttle 500 -v -v
+adb shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq --pct-rotation 0  --act-blacklist-file /sdcard/abl.strings --bugreport --output-directory /sdcard/monkeyCrashLog --ignore-crashes --ignore-timeouts --kill-process-after-error --ignore-security-exceptions  --running-minutes 1 --throttle 500 -v -v
 @echo Monkey DONE!!!
-@echo 开始导出Log：！！！
-adb pull /sdcard/crash-dump.log ./
-adb pull /sdcard/monkeyCrashLog/crash/ ./
-@echo START Catch log from device...
+@echo 开始导出Log：
 :: 设置CMD显示的编码格式为UTF-8(防止中文乱码)
 chcp 65001
 
@@ -52,5 +49,12 @@ adb pull /data/tombstones .\%CURRENT_DATE_TIME_STAMP%/tombstones
 adb shell cat proc/meminfo > ./%CURRENT_DATE_TIME_STAMP%/meminfo.txt
 adb shell procrank > ./%CURRENT_DATE_TIME_STAMP%/procrank.txt
 adb shell dumpsys window > ./%CURRENT_DATE_TIME_STAMP%/dump_window.txt
-@echo Catch log Finished!!!!!!!!
+adb pull /sdcard/crash-dump.log ./%CURRENT_DATE_TIME_STAMP%
+adb pull /sdcard/monkeyCrashLog ./%CURRENT_DATE_TIME_STAMP%
+@echo START Catch log from device...
+@echo Catch log Finished!!!!!!!!，【开始导出adb logcat和top日志Ctrl + C结束后，再执行top，两次Ctrl +C即可完成导出所有的Log】
+adb shell logcat -b all>./%CURRENT_DATE_TIME_STAMP%/logcat.log
+@echo 【请再次点击Ctrl + C】
+adb shell top -m 10>./%CURRENT_DATE_TIME_STAMP%/top.txt
+@echo 【所有log导出完毕，Monkey全模块测试结束！】
 pause

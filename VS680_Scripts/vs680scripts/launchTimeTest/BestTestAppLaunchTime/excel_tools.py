@@ -20,7 +20,7 @@ os.path.abspath(".")
 
 
 # 从excel中读取数据并返回（element）
-def read_excel_for_page_element(form="../page_android/page_sheet.xlsx", sheet_name="calendar_page"):
+def read_excel_for_page_element(form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试"):
     df = pd.read_excel(form, sheet_name=sheet_name, index_col="case序号")
     rows = df.shape[0]
     test_data = []
@@ -32,6 +32,22 @@ def read_excel_for_page_element(form="../page_android/page_sheet.xlsx", sheet_na
     return test_data
 
 
+def write_excel_with_specific_data(app_text, result, form="./Touch启动时间测试用例.xlsx",
+                                   sheet_name="Touch启动时间测试"):
+    df = pd.read_excel(form, sheet_name=sheet_name, index_col="case序号")
+    rows = df.shape[0]
+    for row in range(1, rows + 1):
+        if app_text == df.loc[row, "测试应用名称"]:
+            df.loc[row, "测试次数"] = 10
+            df.loc[row, "测试结果_平均值"] = "[123, 982, 134]_435"
+    # df.loc[1, "测试次数"] = 10
+    # df.loc[1, "测试结果_平均值"] = "[123, 982, 134]_435"
+    df1 = pd.DataFrame(df)
+    df1.to_excel(form, sheet_name)
+    # print(df)
+
+
 if __name__ == '__main__':
-    test_data = read_excel_for_page_element(form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试")
-    print(test_data)
+    # test_data = read_excel_for_page_element(form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试")
+    # print(test_data)
+    write_excel_with_specific_data("飞书", "", form="./Touch启动时间测试用例.xlsx", sheet_name="Touch启动时间测试")
