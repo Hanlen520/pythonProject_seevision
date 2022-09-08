@@ -5,7 +5,7 @@ nohup ./svcam3dn_sim_tm 192.168.0.200 192.168.0.201 >./log/device_running_log_0_
 sleep 3s
 while [ $i -le 5 ]
 do
-    echo 'test times: '$i                                
+    echo 'test times: '$i
     nohup ./svcam3dn_sim_tm 192.168.0.200 192.168.0.201 >./log/device_running_log_$i.log 2>&1 &
     let i++
     sleep 10s

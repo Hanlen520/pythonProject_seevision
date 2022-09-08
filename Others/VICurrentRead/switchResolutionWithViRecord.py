@@ -203,7 +203,8 @@ if __name__ == '__main__':
     """
         修改自身potplayer的打开目录，测试相机通过usb电流计连接（指定），并打开电流计上位机程序
     """
-    potplayerPath = "D:\PotPlayer\PotPlayerMini64.exe"
+    potplayerPath = r"D:\PotPlayer\PotPlayerMini64.exe"
+
     calculate_count = 60
     try:
         test_standard_test_data(potplayerPath, calculate_count)

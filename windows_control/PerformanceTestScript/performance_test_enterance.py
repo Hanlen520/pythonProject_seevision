@@ -5,8 +5,8 @@ import time
 
 import pandas as pd
 
-from windows_control.PerformanceTestScript.grabImage import grab_StopWatch, grab_CameraStopWatch
-from windows_control.PerformanceTestScript.readNumberFromPictrure import ReadNumberFromPicture
+from grabImage import grab_StopWatch, grab_CameraStopWatch
+from readNumberFromPictrure import ReadNumberFromPicture
 
 os.path.abspath(".")
 """

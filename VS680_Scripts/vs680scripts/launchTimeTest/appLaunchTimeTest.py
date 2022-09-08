@@ -59,7 +59,7 @@ runResult = {}
 
 
 def runTest(app, launchActivity):
-    runResponse = str(subprocess.Popen("adb shell am start -S -R 30 -W {}".format(launchActivity), shell=True,
+    runResponse = str(subprocess.Popen("adb shell am start -S -R 10 -W {}".format(launchActivity), shell=True,
                                        stdout=subprocess.PIPE).communicate()[0]).replace(" ", "").replace("b''", "")
     print(runResponse)
     # if len(runResponse) != 20:
@@ -111,5 +111,5 @@ if __name__ == '__main__':
         print(app + " : ----- : " + activity)
         runTest(app, activity)
     if runResult:
-        print("最终所有的APP对应的启动测试30次后的结果为：\n {} ".format(runResult))
+        print("最终所有的APP对应的启动测试10次后的结果为：\n {} ".format(runResult))
         toExcel(runResult)

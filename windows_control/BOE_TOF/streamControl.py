@@ -33,8 +33,6 @@ def open_BOE_TOF(boe_tof_path):
     sleep(1)
 
 
-
-
 def scene_test(close_time, cycle_times):
     """
     第一场景：关闭相机5s后打开相机

@@ -148,7 +148,7 @@ def standard_test_DataGenerate(result_list=[]):
         blist.append(result[1])
         clist.append(result[2])
     df = pd.DataFrame({"测试次数": alist, "测试时间": blist, "结果": clist})
-    df.to_excel("./result.xlsx", engine="openpyxl")
+    df.to_excel("./重启压力测试result.xlsx", engine="openpyxl")
 
 
 """

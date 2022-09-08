@@ -32,5 +32,5 @@ def easyocr_test():
 
 
 if __name__ == '__main__':
-    ddddocr_test()
-    # easyocr_test()
+    # ddddocr_test()
+    easyocr_test()

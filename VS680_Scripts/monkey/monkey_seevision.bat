@@ -2,7 +2,7 @@
 adb push ./Fastbot_Android-main/Fastbot_Android-main/fastbot-thirdpart.jar ./Fastbot_Android-main/Fastbot_Android-main/framework.jar ./Fastbot_Android-main/Fastbot_Android-main/monkeyq.jar /sdcard
 adb push ./Fastbot_Android-main/Fastbot_Android-main/libs/arm64-v8a ./Fastbot_Android-main/Fastbot_Android-main/libs/armeabi-v7a ./Fastbot_Android-main/Fastbot_Android-main/libs/x86 ./Fastbot_Android-main/Fastbot_Android-main/libs/x86_64 /data/local/tmp/
 adb push ./abl.strings  /sdcard
-adb shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq --pct-rotation 0  --act-blacklist-file /sdcard/abl.strings --bugreport --output-directory /sdcard/monkeyCrashLog --ignore-crashes --ignore-timeouts --kill-process-after-error --ignore-security-exceptions  --running-minutes 1 --throttle 500 -v -v
+adb shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey  --agent reuseq --pct-rotation 0  --act-blacklist-file /sdcard/abl.strings --bugreport --output-directory /sdcard/monkeyCrashLog --ignore-crashes --ignore-timeouts --kill-process-after-error --ignore-security-exceptions  --running-minutes 3000 --throttle 500 -v -v
 @echo Monkey DONE!!!
 @echo 开始导出Log：
 :: 设置CMD显示的编码格式为UTF-8(防止中文乱码)

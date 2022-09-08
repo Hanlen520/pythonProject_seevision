@@ -43,5 +43,12 @@ adb pull /data/tombstones .\%CURRENT_DATE_TIME_STAMP%/tombstones
 adb shell cat proc/meminfo > ./%CURRENT_DATE_TIME_STAMP%/meminfo.txt
 adb shell procrank > ./%CURRENT_DATE_TIME_STAMP%/procrank.txt
 adb shell dumpsys window > ./%CURRENT_DATE_TIME_STAMP%/dump_window.txt
-@echo Catch log Finished!!!!!!!!
+adb pull /sdcard/crash-dump.log ./%CURRENT_DATE_TIME_STAMP%
+adb pull /sdcard/monkeyCrashLog ./%CURRENT_DATE_TIME_STAMP%
+@echo START Catch log from device...
+@echo Catch log Finished!!!!!!!!，【开始导出adb logcat和top日志Ctrl + C结束后，再执行top，两次Ctrl +C即可完成导出所有的Log】
+adb shell logcat -b all>./%CURRENT_DATE_TIME_STAMP%/logcat.log
+@echo 【请再次点击Ctrl + C】
+adb shell top -m 10>./%CURRENT_DATE_TIME_STAMP%/top.txt
+@echo 【所有log导出完毕！】
 pause

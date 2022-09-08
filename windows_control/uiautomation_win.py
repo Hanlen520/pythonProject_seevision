@@ -52,6 +52,8 @@ def openPotplayer(potplayer_path="D:\PotPlayer\PotPlayerMini64.exe"):
     global potplayer
     potplayer = subprocess.Popen(potplayer_path)
     sleep(2)
+    if uiautomation.TextControl(searchDepth=3, Name="检查更新：").Exists():
+        pyautogui.press("esc")
 
 
 # 进入Potplayer设备连接设置页面

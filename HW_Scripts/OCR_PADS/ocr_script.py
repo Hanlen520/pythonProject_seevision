@@ -204,9 +204,9 @@ def write_into_excel(form="./sytj0101/工作簿1.xlsx", sheet_name="Sheet1", row
 if __name__ == '__main__':
     element_list = read_excel_for_page_element()
     print(element_list)
-    # screenX, screenY = pyautogui.size()
-    # GoodX = screenX * 0.2
-    # GoodY = screenY * 0.15
+    screenX, screenY = pyautogui.size()
+    GoodX = screenX * 0.2
+    GoodY = screenY * 0.15
     # print(GoodX, GoodY)
     # sleep(5)
     # """

@@ -87,7 +87,7 @@ def standard_test_DataGenerate(result_list=[]):
         blist.append(result[1])
         clist.append(result[2])
     df = pd.DataFrame({"测试次数": alist, "测试Pattern": blist, "切换结果": clist})
-    df.to_excel("./result.xlsx", engine="openpyxl")
+    df.to_excel("./切换显示输出流压力测试result.xlsx", engine="openpyxl")
 
 
 def standard_test_DataGenerate(result_list=[]):
@@ -99,7 +99,7 @@ def standard_test_DataGenerate(result_list=[]):
         blist.append(result[1])
         clist.append(result[2])
     df = pd.DataFrame({"测试次数": alist, "测试结果": blist, "截图名称": clist})
-    df.to_excel("./result.xlsx", engine="openpyxl")
+    df.to_excel("./切换显示输出流压力测试result.xlsx", engine="openpyxl")
 
 
 if __name__ == '__main__':
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     test_display_pattern = ["HDMI", "MIPI", "HDMI MPG1 + MIPI G2", "HDMI MG1 + MIPI G2", "HDMI MG1 + MIPI P"]
     device_ready_now = ""
     poco_ready_now = ""
-    test_count = 1000
+    test_count = 3
     for i in range(test_count):
         for pattern in test_display_pattern:
             try:

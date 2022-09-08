@@ -7,8 +7,8 @@ import openpyxl
 import pandas as pd
 import uiautomation
 
-from twoDproject.digitalZoom.serialControl import initCom, getConnectCOMs, enterPSD, getWaitingData, dmesg_n5
-from twoDproject.digitalZoom.windowsControl import openHidTool, openPotplayer, enterDeviceSettings, switchResolution, \
+from serialControl import initCom, getConnectCOMs, enterPSD, getWaitingData, dmesg_n5
+from windowsControl import openHidTool, openPotplayer, enterDeviceSettings, switchResolution, \
     hidZoomIn, closeHidTool, closePotplayer, hidZoomOut, rightNarrow
 
 os.path.abspath(".")
@@ -497,9 +497,7 @@ if __name__ == '__main__':
         1、potplayer_path
         2、hidtool_path
     """
-    # potplayer_path = r"D:\PotPlayer\PotPlayerMini64.exe"
     potplayer_path = r"C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe"
-    # hidtool_path = r"D:\HIDTools_2.5\HIDTool_2_5.exe"
     hidtool_path = r"C:\Users\Administrator\PycharmProjects\PyQt5Project\Seevision\exe\视熙科技测试部工具箱\Tools\HIDTools_2_5\HIDTool_2_5.exe"
     form = "./doc/数码变焦测试用例V2.1.xlsx"
     sheet_name = "数码变焦case自动化部分"
