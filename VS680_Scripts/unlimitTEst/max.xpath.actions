@@ -1,0 +1,368 @@
+[
+{
+    "prob": 1,
+    "activity":"com.tencent.wemeet.sdk.meeting.premeeting.home.GuestGuideActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.tencent.wemeet.app:id/bmw']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.tencent.wemeet.app:id/bmq']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.tencent.wemeet.app:id/g5']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.ss.lark.android.passport.biz.feature.login_input.LoginInputActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.ss.android.lark:id/phone_number_edit']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.ss.android.lark:id/btn_next']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.ss.android.lark:id/llBottomCompany']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.seevision.painter.PainterActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_undo']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_redo']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_brush']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_pen2']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_eraser']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_cut']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_texture']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_delete']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_share']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.painter:id/action_float_window']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.android.fm.tvsettings.MainActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='android:id/switch_widget']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.android.tv.settings:id/seekbar']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.android.tv.settings:id/iconView']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='android:id/title']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.synaptics.audiorouter.MainActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.synaptics.audiorouter:id/action_title']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.filemanager.FilesCategoryActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/cast_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/recent_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/photos_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/videos_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/audios_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/documents_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/all_files_item']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='android:id/icon']",
+            "action": "LONG_CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='android:id/icon']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/menu_move']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/menu_copy']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/menu_rename']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/menu_send']",
+            "action": "CLICK",
+            "throttle": 300
+        },
+        {
+            "xpath":"//*[@resource-id='com.seevision.android.documentsui:id/menu_delete']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.seevision.meetingassistant.MainActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.seevision.meetingassistant:id/menu_explain']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.seevision.screencastingassistant.ScreencastingMainActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.seevision.screencastingassistant:id/video_screen_casting']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.seevision.screencastingassistant:id/file_screen_casting']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.seevision.screencastingassistant:id/screen_mirroring']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.seevision.screencastingassistant:id/lebo_screen_casting']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.seevision.screencastingassistant:id/device_msg']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.seevision.screencastingassistant:id/wlan_msg']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.seevision.usermanual.ui.MainActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@text='欢迎']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@text='系统操作']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@text='会议助手']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@text='摄像头模式']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@text='投屏指南']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.tencent.mm.plugin.account.ui.WelcomeActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.tencent.mm:id/j_9']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/lp1']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/j_r']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/cd7']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/hfe']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/bua']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/jcx']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/g1']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/iwg']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.tencent.mm:id/en']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.synaptics.tv.settings.DisplayActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.synaptics.audiorouter:id/action_title']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+},{
+    "prob": 1,
+    "activity":"com.android.systemui.media.MediaProjectionPermissionActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='android:id/button1']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='android:id/button2']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.bozee.usbdisplay:id/single_wifi_setting_button']",
+            "action": "CLICK",
+            "throttle": 300
+        },{
+            "xpath":"//*[@resource-id='com.bozee.usbdisplay:id/wifi_register_button']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+}
+]
+
+
+
+
