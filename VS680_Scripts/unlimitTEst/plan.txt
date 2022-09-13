@@ -15,5 +15,18 @@ push max.config & max.fuzzing.strings
     用户手册：各项手册类型页
     微信：登录按钮、注册按钮、语言按钮、输入框、确认框
     USB无线投屏：按钮
+    Display mode：该应用程序目前存在卡死问题，暂时跳过，已有Bug
+    ,{
+    "prob": 1,
+    "activity":"com.synaptics.tv.settings.DisplayActivity",
+    "times": 1000,
+    "actions": [
+        {
+            "xpath":"//*[@resource-id='com.synaptics.audiorouter:id/action_title']",
+            "action": "CLICK",
+            "throttle": 300
+        }
+    ]
+}
 
 

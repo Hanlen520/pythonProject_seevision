@@ -39,7 +39,7 @@ def fastbot_monkey_cover_test():
         "adb shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process "
         "/system/bin com.android.commands.monkey.Monkey --agent reuseq  --act-blacklist-file /sdcard/abl.strings "
         "--bugreport --output-directory /sdcard/monkeyCrashLog/crash --ignore-crashes --ignore-timeouts "
-        "--kill-process-after-error --ignore-security-exceptions  --running-minutes 3000 --throttle 500 -v -v")
+        "--kill-process-after-error --ignore-security-exceptions  --running-minutes 4000 --throttle 500 -v -v")
 
 
 if __name__ == '__main__':

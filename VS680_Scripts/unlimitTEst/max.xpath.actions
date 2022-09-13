@@ -328,17 +328,6 @@
     ]
 },{
     "prob": 1,
-    "activity":"com.synaptics.tv.settings.DisplayActivity",
-    "times": 1000,
-    "actions": [
-        {
-            "xpath":"//*[@resource-id='com.synaptics.audiorouter:id/action_title']",
-            "action": "CLICK",
-            "throttle": 300
-        }
-    ]
-},{
-    "prob": 1,
     "activity":"com.android.systemui.media.MediaProjectionPermissionActivity",
     "times": 1000,
     "actions": [
