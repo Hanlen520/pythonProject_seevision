@@ -39,7 +39,8 @@ def write_excel_with_specific_data(app_text, result, form="./Touch启动时间�
     for row in range(1, rows + 1):
         if app_text == df.loc[row, "测试应用名称"]:
             df.loc[row, "测试次数"] = result[0]
-            df.loc[row, "测试结果_平均值"] = result[1]
+            df.loc[row, "测试结果"] = result[1]
+            df.loc[row, "平均值"] = result[2]
     # df.loc[1, "测试次数"] = 10
     # df.loc[1, "测试结果_平均值"] = "[123, 982, 134]_435"
     df1 = pd.DataFrame(df)

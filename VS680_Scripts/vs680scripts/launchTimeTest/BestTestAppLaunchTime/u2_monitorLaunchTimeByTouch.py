@@ -107,7 +107,7 @@ if __name__ == '__main__':
         测试前，会先将所有APP都进行授权，保证第一个Activity是应用程序的
         USB无线投屏应用需要手动先授权，点击一次立即激活即可
     """
-    test_times = 10
+    test_times = 3
     test_result = {}
     applist_range = controlAppRange()
     for app in applist_range:
@@ -124,11 +124,9 @@ if __name__ == '__main__':
             # 特殊情况1，当是switchhdmi的时候，需要将焦点放到最底部才会显示应用名称
             if app_text == "switchhdmi":
                 specialToHomeOperate()
-
             # packageName = "com.seevision.screencastingassistant"
             # activityName = "com.seevision.screencastingassistant.ScreencastingMainActivity"
             # app_text = "Screencasting Guide"
-
             test_time = TouchAppTest(device, packageName, app_text, activityName)
             test_timess.append(test_time)
             if app_text == "USB无线投屏":
@@ -150,14 +148,14 @@ if __name__ == '__main__':
             增加容错，如果没有app，则结果打上记号跳过该app
         """
         test_temp = ""
+        average = ""
         test_result[app_text] = test_timess
         if type(test_timess[0]) == type(""):
             if test_result[app_text]:
                 average = "Skip"
-                test_temp = [test_times, str(test_timess) + "_" + str(average)]
         else:
             average = round(float(np.mean(test_timess)), 3)
-            test_temp = [test_times, str(test_timess) + "_" + str(average)]
+        test_temp = [test_times, str(test_timess), str(average)]
         write_excel_with_specific_data(app_text, test_temp, form="./Touch启动时间测试用例.xlsx",
                                        sheet_name="Touch启动时间测试")
     print("测试结束，当前测试次数，每个APP测试【{}】次，总测试结果为：\n{}".format(test_times, test_result))
