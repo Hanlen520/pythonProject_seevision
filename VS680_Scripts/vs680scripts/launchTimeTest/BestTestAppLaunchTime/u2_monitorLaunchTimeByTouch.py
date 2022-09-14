@@ -107,7 +107,7 @@ if __name__ == '__main__':
         测试前，会先将所有APP都进行授权，保证第一个Activity是应用程序的
         USB无线投屏应用需要手动先授权，点击一次立即激活即可
     """
-    test_times = 3
+    test_times = 10
     test_result = {}
     applist_range = controlAppRange()
     for app in applist_range:
