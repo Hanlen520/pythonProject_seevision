@@ -1,5 +1,8 @@
 # coding = utf8
 import os
+import re
+
+import bs4
 
 os.path.abspath(".")
 """
@@ -19,28 +22,51 @@ header = {
     影音视听：http://zhushou.360.cn/list/index/cid/14/
     
 """
-def catch360AppMarketLinks(typePage="http://zhushou.360.cn/list/index/cid/1/"):
+
+
+def catch360AppMarketLinks(typePage="http://zhushou.360.cn/list/index/cid/14"):
     rq = requests.get(url=typePage)
-    print(rq.text)
-
-
-def catchUrlFromLink(downloadLink=""):
+    rq.encoding = rq.apparent_encoding
+    demo = rq.text
+    soup = bs4.BeautifulSoup(demo, "html.parser")
+    apk_list = []
     try:
-        apk_url = "http://s.shouji.qihucdn.com/220927/b60dacdbdfec24034d374ad87744f8a8/com.ss.android.ugc" \
-                  ".aweme_220601.apk?en=curpage%3D%26exp%3D1665821573%26from%3DAppList_json%26m2%3D%26ts%3D1665216773" \
-                  "%26tok%3Db6ff055a93a0a4f47c29cc44ba9ba55c%26v%3D%26f%3Dz.apk "
-        print("Downloading …… ,Please Wait ! ")
-        r = requests.get(apk_url, headers=header, allow_redirects=True, timeout=720)
+        for link in soup.find_all("a"):
+            print("Catch apk from specific link now:")
+            if "zhushou360://type=apk" in str(link):
+                apk_download_name = re.findall("name=(.*)&icon", link.get("href"))[0]
+                apk_download_link = re.findall("url=(.*).apk", link.get("href"))[0] + "apk"
+                print("【{}】 - 【{}】".format(apk_download_name, apk_download_link))
+                apk_list.append({apk_download_name: apk_download_link})
+                print("APK 【{}】 catch success !".format(apk_download_name), end="\n\n")
+    except:
+        print("Can not analysis current link to get download link need check !")
+    if apk_list:
+        return apk_list
+
+
+def catchUrlFromLink(apk_download_name, apk_download_link):
+    try:
+        print("\n ===================== Downloading 【{}】 …… ,Please Wait ! =====================".format(
+            apk_download_name))
+        r = requests.get(apk_download_link, headers=header, allow_redirects=True, timeout=720)
         status_code = r.status_code
         if status_code == 200 or status_code == 206:
-            with open("./douyin.apk", "wb") as df:
+            with open("./apks/{}.apk".format(apk_download_name), "wb") as df:
                 df.write(r.content)
-                print("Download Finished ! ")
+                print("Download 【{}】 Finished ! ".format(apk_download_name))
     except:
-        print("Can not download current APK!")
-    os.system("pause")
+        print("Can not download current APK 【{}】!".format(apk_download_name))
+
+
+def downloadApkList(apk_list):
+    if not os.path.exists("./apks/"):
+        os.mkdir("./apks/")
+    for temp in apk_list:
+        for apk_download_name, apk_download_link in temp.items():
+            catchUrlFromLink(apk_download_name, apk_download_link)
 
 
 if __name__ == '__main__':
-    # catchUrlFromLink()
-    catch360AppMarketLinks()
+    apk_list = catch360AppMarketLinks()
+    downloadApkList(apk_list)
